@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: iulspop/nettoyage_econet
 
 media_folder: static/assets
 public_folder: /assets
