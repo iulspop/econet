@@ -1,5 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
+
+const Heading = styled.h1`
+  color: red;
+`
 
 export default function IndexPageTemplate({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,7 +14,7 @@ export default function IndexPageTemplate({
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
+        <Heading>{frontmatter.title}</Heading>
         <h2>{frontmatter.date}</h2>
         <div
           className="blog-post-content"
