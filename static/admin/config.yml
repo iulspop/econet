@@ -18,12 +18,14 @@ slug: # changes how files created by CMS are named
   clean_accents: true # remove diacritics from slug char
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the NetlifyCMS UI
-    folder: "src/pages" # The path to the folder where the documents are stored relative to repo root
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document, usually in front matter
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+  - name: "page" # Used in routes, e.g., /admin/collections/pages
+    label: "Pages" # Used in the NetlifyCMS UI
+    files:
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields: # The fields for each document, usually in front matter
+          - { name: path, label: Path }
+          - { name: date, label: Date, widget: datetime }
+          - { name: title, label: Title }
+          - { name: body, label: Body, widget: markdown }
