@@ -20,7 +20,7 @@ slug: # changes how files created by CMS are named
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the NetlifyCMS UI
-    folder: "src/pages/content" # The path to the folder where the documents are stored relative to repo root
+    folder: "src/pages" # The path to the folder where the documents are stored relative to repo root
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - { name: path, label: Path }
