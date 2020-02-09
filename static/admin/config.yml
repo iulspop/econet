@@ -1,15 +1,28 @@
-backend:
-  name: git-gateway
+# for more info on NetlifyCMS configuration visit https://www.netlifycms.org/docs/add-to-your-site/#configuration
+# also for all configuration options visit https://www.netlifycms.org/docs/configuration-options/
 
-media_folder: static/assets
-public_folder: /assets
+backend:
+  name: git-gateway # Service used for auth CMS users
+  branch: master # Branch to update (optional; defaults to master)
+  publish_mode: editorial_workflow # New content entries can be reviewed and edited before updating master
+
+media_folder: static/assets # Tells NetlifyCMS where to upload images from CMS editor for use by Gatsby
+public_folder: /assets # Where those images are found on published site
+
+display_url: https://nettoyageeconet.netlify.com # adds convenient link to return to main webstite from NetlifyCMS
+
+locale: "fr" # language used by CMS
+
+slug: # changes how files created by CMS are named
+  encoding: "ascii" # do not use non-latin (non-ascii) char
+  clean_accents: true # remove diacritics from slug char
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
-    fields:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the NetlifyCMS UI
+    folder: "blog" # The path to the folder where the documents are stored relative to repo root
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
