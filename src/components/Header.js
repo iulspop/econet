@@ -3,7 +3,8 @@ import styled from "styled-components"
 
 const NavHeader = styled.header`
   width: 100%;
-  height: 135px;
+  height: 160px;
+  padding: 0 6rem;
   display: flex;
   justify-content: space-between;
 `
@@ -25,6 +26,7 @@ const Logo = styled.img`
 
 const Link = styled.a`
   align-self: center;
+  color: black;
 `
 
 const ToggleLanguage = styled.button``
