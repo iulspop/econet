@@ -6,7 +6,6 @@ const NavHeader = styled.header`
   height: 135px;
   display: flex;
   justify-content: space-between;
-  background-color: purple;
 `
 
 const Nav = styled.nav`
@@ -14,12 +13,10 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   color: blue;
-  background-color: red;
 `
 
 const LogoLink = styled.a`
   align-self: center;
-  background-color: blue;
 `
 
 const Logo = styled.img`
@@ -28,12 +25,9 @@ const Logo = styled.img`
 
 const Link = styled.a`
   align-self: center;
-  color: purple;
 `
 
-const ToggleLanguage = styled.button`
-  color: blue;
-`
+const ToggleLanguage = styled.button``
 
 export default function Header() {
   return (
