@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Layout, Header } from "../components/common"
+import { Banner } from "../components/landing"
 
 export default function IndexPageTemplate({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,7 +10,8 @@ export default function IndexPageTemplate({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <Header></Header>
+      <Header />
+      <Banner></Banner>
     </Layout>
   )
 }

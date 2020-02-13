@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { buttonReset } from "../../globals"
 
 export const Header = () => {
   return (
-    <NavHeader>
-      <LogoLink href={"/"}>
+    <Header_Container>
+      <LogoLink href={"#"}>
         <Logo
           src={"assets/logo.png"}
           alr={"Nettoyage Éconet. Nettoyage écologique de tapis et de meubles"}
@@ -18,27 +19,27 @@ export const Header = () => {
         <Link>Contact</Link>
         <ToggleLanguage>EN/FR</ToggleLanguage>
       </Nav>
-    </NavHeader>
+    </Header_Container>
   )
 }
 
-const NavHeader = styled.header`
+const Header_Container = styled.header`
   width: 100%;
-  height: 160px;
+  height: 130px;
   padding: 0 6rem;
   display: flex;
   justify-content: space-between;
 `
 
 const Nav = styled.nav`
-  flex-basis: 1000px;
+  flex-basis: 800px;
   display: flex;
   justify-content: space-between;
-  color: blue;
 `
 
 const LogoLink = styled.a`
   align-self: center;
+  line-height: 0;
 `
 
 const Logo = styled.img`
@@ -47,7 +48,9 @@ const Logo = styled.img`
 
 const Link = styled.a`
   align-self: center;
-  color: black;
+  text-transform: uppercase;
 `
 
-const ToggleLanguage = styled.button``
+const ToggleLanguage = styled.button`
+  ${buttonReset}
+`
