@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { buttonReset } from "../../globals"
+import { buttonReset } from "../../globalStyleUtils"
 
 export const Header = () => {
   return (
@@ -8,7 +8,7 @@ export const Header = () => {
       <LogoLink href={"#"}>
         <Logo
           src={"assets/logo.png"}
-          alr={"Nettoyage Éconet. Nettoyage écologique de tapis et de meubles"}
+          alt={"Nettoyage Éconet. Nettoyage écologique de tapis et de meubles"}
         ></Logo>
       </LogoLink>
       <Nav>
