@@ -5,21 +5,29 @@ import { absCenterH, linkReset } from "../../globalStyleUtils"
 export const Banner = () => {
   return (
     <Banner_Container>
-      <MainHeadingPart1>relaxez</MainHeadingPart1>
+      <MainHeading>relaxez</MainHeading>
       <DecorativeLine
         src={"assets/decorative-horizontal-line.png"}
         alt={"Ligne décorative. Decorative horizontal line."}
       ></DecorativeLine>
-      <MainHeadingPart2>on s'en occupe</MainHeadingPart2>
+      <MainHeading2>on s'en occupe</MainHeading2>
       <SecondaryHeading>
         Nous sommes une entreprise familiale écologique qui met leurs clients en
         avant
       </SecondaryHeading>
 
       <EstimationPageCTA href={"#"}>
+        <SideDecoration
+          src={"assets/side-decoration.png"}
+          alt={"Side decoration."}
+        />
         <HorizontalLineBorder />
         Demandez votre soumission
         <HorizontalLineBorder2 />
+        <SideDecoration2
+          src={"assets/side-decoration.png"}
+          alt={"Side decoration."}
+        />
       </EstimationPageCTA>
     </Banner_Container>
   )
@@ -33,41 +41,24 @@ const Banner_Container = styled.section`
     rgba(204, 228, 247, 1) 11.2%,
     rgba(237, 246, 250, 1) 100.2%
   );
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-size: cover;
-  //   background-image: url(assets/white_daisies.jpg);
-  //   filter: grayscale(70%);
-  // }
 `
 
-const MainHeadingPart1 = styled.h1`
+const MainHeading = styled.h1`
   width: 665px;
   font-size: 13.7rem;
   font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
   letter-spacing: 2rem;
+  text-align: center;
+  text-transform: uppercase;
   text-shadow: 0px 0px 4px #fff;
   ${absCenterH}
   top: -5rem;
 `
 
-const MainHeadingPart2 = styled.h1`
-  width: 665px;
+const MainHeading2 = styled(MainHeading)`
   font-size: 8.3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
   letter-spacing: -1px;
-  text-shadow: 0px 0px 4px #fff;
+  white-space: nowrap;
   position: absolute;
   top: 19rem;
   left: 50%;
@@ -120,4 +111,18 @@ const HorizontalLineBorder = styled.span`
 
 const HorizontalLineBorder2 = styled(HorizontalLineBorder)`
   top: 6rem;
+`
+
+const SideDecoration = styled.img`
+  height: 5rem;
+  position: absolute;
+  left: 20px;
+  top: 5px;
+`
+
+const SideDecoration2 = styled(SideDecoration)`
+  transform: scale(-1);
+  position: absolute;
+  left: 630px;
+  top: 5px;
 `
