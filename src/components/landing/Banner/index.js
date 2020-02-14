@@ -52,7 +52,7 @@ const MainHeading = styled.h1`
   text-transform: uppercase;
   text-shadow: 0px 0px 4px #fff;
   ${absCenterH}
-  top: -5rem;
+  top: -6rem;
 `
 
 const MainHeading2 = styled(MainHeading)`
@@ -60,15 +60,15 @@ const MainHeading2 = styled(MainHeading)`
   letter-spacing: -1px;
   white-space: nowrap;
   position: absolute;
-  top: 19rem;
+  top: 18rem;
   left: 50%;
   transform: translateX(calc(-50% + 4px));
 `
 
 const DecorativeLine = styled.img`
-  width: 870px;
+  width: 860px;
   ${absCenterH};
-  top: 22rem;
+  top: 21rem;
 `
 
 const SecondaryHeading = styled.h2`
@@ -79,7 +79,7 @@ const SecondaryHeading = styled.h2`
   text-align: center;
   text-shadow: 0px 0px 4px #fff;
   ${absCenterH};
-  top: 40rem;
+  top: 38rem;
 `
 
 const EstimationPageCTA = styled.a`
