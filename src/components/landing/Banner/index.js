@@ -19,7 +19,7 @@ export const Banner = () => {
       <EstimationPageCTA href={"#"}>
         <HorizontalLineBorder />
         Demandez votre soumission
-        <HorizontalLineBorder />
+        <HorizontalLineBorder2 />
       </EstimationPageCTA>
     </Banner_Container>
   )
@@ -103,10 +103,21 @@ const EstimationPageCTA = styled.a`
 `
 
 const HorizontalLineBorder = styled.span`
-  width: 700px;
-  height: 5px;
-  border-radius: 10px;
-  background: linear-gradient(0.25turn, #9af04f, #68a336, #9af04f);
+  width: 650px;
+  height: 2px;
+  // background: linear-gradient(0.25turn, #9af04f, #68a336, #9af04f);
+  background: -webkit-gradient(
+    radial,
+    50% 50%,
+    0,
+    50% 50%,
+    315,
+    from(#68a336),
+    to(transparent)
+  );
   ${absCenterH};
-  top: 0rem;
+`
+
+const HorizontalLineBorder2 = styled(HorizontalLineBorder)`
+  top: 6rem;
 `
