@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { absCenterH, linkReset } from "../../globalStyleUtils"
+import { theme } from "../../theme"
 
 export const Banner = () => {
   return (
@@ -97,14 +98,14 @@ const EstimationPageCTA = styled.a`
 const HorizontalLineBorder = styled.span`
   width: 650px;
   height: 2px;
-  // background: linear-gradient(0.25turn, #9af04f, #68a336, #9af04f);
+  // background: linear-gradient(0.25turn, #9af04f, ${theme.colors.primary}, #9af04f);
   background: -webkit-gradient(
     radial,
     50% 50%,
     0,
     50% 50%,
     315,
-    from(#68a336),
+    from(${theme.colors.primary}),
     to(transparent)
   );
   ${absCenterH};

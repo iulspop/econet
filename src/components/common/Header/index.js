@@ -1,6 +1,7 @@
 import React from "react"
-import styled from "styled-components"
-import { buttonReset } from "../../globalStyleUtils"
+import styled, { css } from "styled-components"
+import { buttonReset, linkReset } from "../../globalStyleUtils"
+import { theme } from "../../theme"
 
 export const Header = () => {
   return (
@@ -12,11 +13,11 @@ export const Header = () => {
         ></Logo>
       </LogoLink>
       <Nav>
-        <Link>Accueil</Link>
-        <Link>À Propos</Link>
-        <Link>Services</Link>
-        <Link>Estimation</Link>
-        <Link>Contact</Link>
+        <Link href={"#"}>. Accueil .</Link>
+        <Link href={"#"}>. À Propos .</Link>
+        <Link href={"#"}>. Services .</Link>
+        <Link2 href={"#"}>. Estimation .</Link2>
+        <Link href={"#"}>. Contact .</Link>
         <ToggleLanguage>EN/FR</ToggleLanguage>
       </Nav>
     </Header_Container>
@@ -47,8 +48,23 @@ const Logo = styled.img`
 `
 
 const Link = styled.a`
+  ${linkReset};
   align-self: center;
+  text-align: center;
   text-transform: uppercase;
+  width: 110px;
+  height: 40px;
+  transform: translateY(6px);
+
+  &:hover {
+    font-weight: 700;
+    color: ${theme.colors.primary};
+    border-bottom: 8px dotted ${theme.colors.primary};
+  }
+`
+
+const Link2 = styled(Link)`
+  width: 130px;
 `
 
 const ToggleLanguage = styled.button`
