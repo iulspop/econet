@@ -1,11 +1,11 @@
 import React from "react"
-import { GlobalStyle } from "./globalStyles"
+import { Global } from "./styles"
 import "./fonts/stylesheet.css"
 
 export const Layout = ({ children }) => {
   return (
     <React.Fragment>
-      <GlobalStyle />
+      <Global />
       {children}
     </React.Fragment>
   )

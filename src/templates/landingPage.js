@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Layout, Header } from "../components/common"
 import { Banner } from "../components/landing"
 
-export default function IndexPageTemplate({
+export default function landingPageTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data

@@ -40,10 +40,11 @@ const Header_Container = styled.div`
 `
 
 const Header_Child = styled.header`
-  max-width: 1800px;
   width: 100%;
+  max-width: 1800px;
   height: 130px;
   padding: 0 6rem;
+
   display: flex;
   justify-content: space-between;
 
@@ -53,14 +54,9 @@ const Header_Child = styled.header`
   }
 `
 
-const Nav = styled.nav`
-  flex-basis: 900px;
-  display: flex;
-  justify-content: space-between;
-`
-
 const LogoLink = styled.a`
   align-self: center;
+
   line-height: 0;
 `
 
@@ -72,9 +68,17 @@ const Logo = styled.img`
   }
 `
 
+const Nav = styled.nav`
+  flex-basis: 900px;
+
+  display: flex;
+  justify-content: space-between;
+`
+
 const Link = styled.a`
-  ${linkReset};
   align-self: center;
+
+  ${linkReset};
   text-align: center;
   text-transform: uppercase;
   width: 110px;
