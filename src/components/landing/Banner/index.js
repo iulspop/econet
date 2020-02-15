@@ -6,42 +6,51 @@ import { theme } from "../../theme"
 export const Banner = () => {
   return (
     <Banner_Container>
-      <MainHeading>relaxez</MainHeading>
-      <DecorativeLine
-        src={"assets/decorative-horizontal-line.png"}
-        alt={"Ligne décorative. Decorative horizontal line."}
-      ></DecorativeLine>
-      <MainHeading2>on s'en occupe</MainHeading2>
-      <SecondaryHeading>
-        Nous sommes une entreprise familiale écologique qui met leurs clients en
-        avant
-      </SecondaryHeading>
+      <Banner_Child>
+        <MainHeading>relaxez</MainHeading>
+        <DecorativeLine
+          src={"assets/decorative-horizontal-line.png"}
+          alt={"Ligne décorative. Decorative horizontal line."}
+        ></DecorativeLine>
+        <MainHeading2>on s'en occupe</MainHeading2>
+        <SecondaryHeading>
+          Nous sommes une entreprise familiale écologique qui met leurs clients
+          en avant
+        </SecondaryHeading>
 
-      <EstimationPageCTA href={"#"}>
-        <SideDecoration
-          src={"assets/side-decoration.png"}
-          alt={"Side decoration."}
-        />
-        <HorizontalLineBorder />
-        Demandez votre soumission
-        <HorizontalLineBorder2 />
-        <SideDecoration2
-          src={"assets/side-decoration.png"}
-          alt={"Side decoration."}
-        />
-      </EstimationPageCTA>
+        <EstimationPageCTA href={"#"}>
+          <SideDecoration
+            src={"assets/side-decoration.png"}
+            alt={"Side decoration."}
+          />
+          <HorizontalLineBorder />
+          Demandez votre soumission
+          <HorizontalLineBorder2 />
+          <SideDecoration2
+            src={"assets/side-decoration.png"}
+            alt={"Side decoration."}
+          />
+        </EstimationPageCTA>
+      </Banner_Child>
     </Banner_Container>
   )
 }
 
 const Banner_Container = styled.section`
   height: calc(100vh - 130px);
+  min-height: 695px;
   position: relative;
   background-image: linear-gradient(
     109.6deg,
     rgba(204, 228, 247, 1) 11.2%,
     rgba(237, 246, 250, 1) 100.2%
   );
+`
+
+const Banner_Child = styled.div`
+  // @media only screen and (max-width: 1250px) {
+  //   transform: scale(0.9, 0.9);
+  // }
 `
 
 const MainHeading = styled.h1`
