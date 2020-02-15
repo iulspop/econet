@@ -21,7 +21,7 @@ export const Global = createGlobalStyle`
 		box-sizing: border-box;
 
 		font-family: sofia_prolight;
-		font-size: 1.8rem;
+		font-size: 2.1rem;
 		font-weight: 400;
 		line-height: 1.7;
 	}
