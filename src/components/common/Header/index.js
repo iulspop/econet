@@ -21,15 +21,15 @@ export const Header = () => {
         </LogoLink>
 
         <Nav>
-          <Link href={"#"}>. Accueil .</Link>
+          <Link href={"#"} currentPage>
+            . Accueil .
+          </Link>
           <Link href={"#"}>. À Propos .</Link>
           <Link href={"#"}>. Services .</Link>
           <Link2 href={"#"}>. Estimation .</Link2>
           <Link href={"#"}>. Contact .</Link>
           <LinkNumber href={"#"}>514-555-5555</LinkNumber>
-          <LinkToggleLanguage href={"#"}>
-            <ToggleBold bold>EN</ToggleBold> / <ToggleBold>FR</ToggleBold>
-          </LinkToggleLanguage>
+          <LinkToggleLanguage href={"#"}>EN</LinkToggleLanguage>
         </Nav>
 
         <Hamburger />
@@ -83,7 +83,7 @@ const Logo = styled.img`
 `
 
 const Nav = styled.nav`
-  flex-basis: 900px;
+  flex-basis: 1000px;
 
   display: flex;
   justify-content: space-between;
@@ -97,12 +97,17 @@ const Link = styled.a`
   align-self: center;
 
   ${linkReset};
-  width: 110px;
+  width: 120px;
   height: 40px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: center;
   text-transform: uppercase;
   transform: translateY(6px); // to center after adding border on hover
+
+  font-weight: ${props => (props.currentPage ? "700" : "400")};
+  color: ${props => (props.currentPage ? `${theme.colors.primary}` : "black")};
+  border-bottom: ${props =>
+    props.currentPage ? `8px dotted ${theme.colors.primary}` : ""}};
 
   &:hover {
     font-weight: 700;
@@ -112,21 +117,25 @@ const Link = styled.a`
 `
 
 const Link2 = styled(Link)`
-  width: 130px;
+  width: 140px;
 `
 
 const LinkNumber = styled(Link)`
   width: 200px;
   height: 55px;
-  transform: translateY(-3px);
+  transform: translateY(0px);
   font-size: 2.9rem;
   font-weight: 700;
+
+  &:hover {
+    border-bottom: 0px;
+  }
 `
 
 const LinkToggleLanguage = styled(Link)`
-  width: 80px;
-`
+  width: 40px;
 
-const ToggleBold = styled.span`
-  font-weight: ${props => (props.bold ? "900" : "400")};
+  &:hover {
+    border-bottom: 0px;
+  }
 `
