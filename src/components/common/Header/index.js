@@ -1,6 +1,6 @@
 import React from "react"
-import styled, { css } from "styled-components"
-import { buttonReset, linkReset } from "../../global"
+import styled from "styled-components"
+import { linkReset } from "../../global"
 import { theme } from "../../theme"
 
 export const Header = () => {

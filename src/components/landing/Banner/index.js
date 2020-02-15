@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { absCenterH, linkReset } from "../../globalStyleUtils"
+import { absCenterH, linkReset } from "../../global"
 import { theme } from "../../theme"
 
 export const Banner = () => {
