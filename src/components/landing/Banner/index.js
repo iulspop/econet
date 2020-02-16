@@ -4,18 +4,9 @@ import { absCenterH, linkReset } from "../../global"
 import { theme } from "../../theme"
 
 export const Banner = () => {
-  const myRef = React.createRef()
-
-  window.onresize = function() {
-    const width = window.innerWidth
-    if (width < 800) {
-      myRef.current.style.transform = `scale(calc(${width} / 800))`
-    }
-  }
-
   return (
-    <BannerContainer>
-      <BannerChild ref={myRef}>
+    <StyledBanner>
+      <ScaleBanner>
         <MainHeading>relaxez</MainHeading>
         <DecorativeLine
           src={"assets/decorative-horizontal-line.png"}
@@ -40,17 +31,23 @@ export const Banner = () => {
             alt={"Side decoration."}
           />
         </EstimationPageCTA>
-      </BannerChild>
-    </BannerContainer>
+      </ScaleBanner>
+    </StyledBanner>
   )
 }
 
 const media = {
   shortenDecorativeLine: "(max-width: 900px)",
   scaleBanner: "(max-width: 800px)",
+  scaleBanner2: "(max-width: 700px)",
+  scaleBanner3: "(max-width: 600px)",
+  scaleBanner4: "(max-width: 500px)",
+  scaleBanner5: "(max-width: 400px)",
+  scaleBanner6: "(max-width: 370px)",
+  scaleBanner7: "(max-width: 330px)",
 }
 
-const BannerContainer = styled.section`
+const StyledBanner = styled.section`
   height: calc(100vh - 130px);
   min-height: 695px;
   position: relative;
@@ -61,14 +58,38 @@ const BannerContainer = styled.section`
   );
 `
 
-const BannerChild = styled.div`
-  // calc([minimum size 0.4] + ([maximum size 1] - [minimum size 0.4]) * ((100vw - [minimum viewport width 300px]) / ([maximum viewport width 800px] - [minimum viewport width 300px])))
-  // calc(0.4 + (1 - 0.4) * ((100vw - 300px) / (800 - 300)))
-  // calc((100vw - 300px) / 500)
+const ScaleBanner = styled.div`
+  @media only screen and ${media.scaleBanner} {
+    transform: scale(0.9);
+  }
 
-  // @media only screen and ${media.scaleBanner} {
-	// 	transform: scale(calc(100% / 800))
-  // }
+  @media only screen and ${media.scaleBanner1} {
+    transform: scale(0.85);
+  }
+
+  @media only screen and ${media.scaleBanner2} {
+    transform: scale(0.8);
+  }
+
+  @media only screen and ${media.scaleBanner3} {
+    transform: scale(0.7);
+  }
+
+  @media only screen and ${media.scaleBanner4} {
+    transform: scale(0.54);
+  }
+
+  @media only screen and ${media.scaleBanner5} {
+    transform: scale(0.5);
+  }
+
+  @media only screen and ${media.scaleBanner6} {
+    transform: scale(0.45);
+  }
+
+  @media only screen and ${media.scaleBanner7} {
+    transform: scale(0.42);
+  }
 `
 
 const MainHeading = styled.h1`
