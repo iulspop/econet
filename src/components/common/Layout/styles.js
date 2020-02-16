@@ -20,7 +20,7 @@ export const Global = createGlobalStyle`
 	body {
 		box-sizing: border-box;
 
-		font-family: sofia_prolight;
+		font-family: sofia_prolight, sans-serif;
 		font-size: 2.1rem;
 		font-weight: 400;
 		line-height: 1.7;
