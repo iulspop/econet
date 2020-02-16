@@ -4,9 +4,18 @@ import { absCenterH, linkReset } from "../../global"
 import { theme } from "../../theme"
 
 export const Banner = () => {
+  const myRef = React.createRef()
+
+  window.onresize = function() {
+    const width = window.innerWidth
+    if (width < 800) {
+      myRef.current.style.transform = `scale(calc(${width} / 800))`
+    }
+  }
+
   return (
-    <Banner_Container>
-      <Banner_Child>
+    <BannerContainer>
+      <BannerChild ref={myRef}>
         <MainHeading>relaxez</MainHeading>
         <DecorativeLine
           src={"assets/decorative-horizontal-line.png"}
@@ -31,12 +40,17 @@ export const Banner = () => {
             alt={"Side decoration."}
           />
         </EstimationPageCTA>
-      </Banner_Child>
-    </Banner_Container>
+      </BannerChild>
+    </BannerContainer>
   )
 }
 
-const Banner_Container = styled.section`
+const media = {
+  shortenDecorativeLine: "(max-width: 900px)",
+  scaleBanner: "(max-width: 800px)",
+}
+
+const BannerContainer = styled.section`
   height: calc(100vh - 130px);
   min-height: 695px;
   position: relative;
@@ -47,9 +61,13 @@ const Banner_Container = styled.section`
   );
 `
 
-const Banner_Child = styled.div`
-  // @media only screen and (max-width: 1250px) {
-  //   transform: scale(0.9, 0.9);
+const BannerChild = styled.div`
+  // calc([minimum size 0.4] + ([maximum size 1] - [minimum size 0.4]) * ((100vw - [minimum viewport width 300px]) / ([maximum viewport width 800px] - [minimum viewport width 300px])))
+  // calc(0.4 + (1 - 0.4) * ((100vw - 300px) / (800 - 300)))
+  // calc((100vw - 300px) / 500)
+
+  // @media only screen and ${media.scaleBanner} {
+	// 	transform: scale(calc(100% / 800))
   // }
 `
 
@@ -81,6 +99,11 @@ const DecorativeLine = styled.img`
 
   ${absCenterH};
   top: 20rem;
+
+  @media only screen and ${media.shortenDecorativeLine} {
+    width: 720px;
+    transform: translateX(calc(-50% + 4px));
+  }
 `
 
 const SecondaryHeading = styled.h2`
