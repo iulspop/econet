@@ -24,7 +24,7 @@ export const Banner = () => {
             alt={"Side decoration."}
           />
           <HorizontalLineBorder />
-          Demandez votre soumission
+          Demandez votre estimation
           <HorizontalLineBorder2 />
           <SideDecoration2
             src={"assets/side-decoration.png"}
