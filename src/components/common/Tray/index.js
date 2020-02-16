@@ -15,7 +15,8 @@ const StyledTray = styled.nav`
   z-index: 2;
   background-color: purple;
 
-  display: ${props => (props.showNav ? "block" : "none")};
-
   transition: 0.3s ease;
+
+  transform: ${props => (props.showNav ? "" : "translateX(-300px)")};
+  overflow: ${props => (props.showNav ? "" : "hidden")};
 `
