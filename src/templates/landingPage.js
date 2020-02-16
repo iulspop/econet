@@ -11,7 +11,7 @@ export default function landingPageTemplate({
   return (
     <Layout>
       <Header />
-      <Banner></Banner>
+      <Banner />
     </Layout>
   )
 }

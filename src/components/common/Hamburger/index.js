@@ -2,66 +2,61 @@ import React from "react"
 import styled from "styled-components"
 import { buttonReset } from "../../global"
 
-export class Hamburger extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      showNav: false,
-    }
-  }
+export const Hamburger = props => {
+  const { toggleNav, showNav } = props
 
-  handleClick() {
-    this.state.showNav
-      ? this.setState({ showNav: false })
-      : this.setState({ showNav: true })
-  }
-
-  render() {
-    return (
-      <Hamburger2>
-        <HamburgerIcon
-          onClick={() => this.handleClick()}
-          showNav={this.props.showNav}
-        >
-          &nbsp;
-        </HamburgerIcon>
-      </Hamburger2>
-    )
-  }
+  return (
+    <StyledHamburger onClick={toggleNav} showNav={showNav}>
+      <HamburgerIcon showNav={showNav} />
+    </StyledHamburger>
+  )
 }
 
-const Hamburger2 = styled.button`
-  ${buttonReset}
+export const media = {
+  enableHamburger: "(max-width: 1350px)",
+}
 
+const StyledHamburger = styled.button`
+  align-self: center;
+
+  ${buttonReset}
+  display: none;
+  height: 100%;
+  width: 40px;
+
+  justify-content: center;
+
+  @media only screen and ${media.enableHamburger} {
+    display: flex;
+  }
+
+  // belongs to HamburgerIcon, but put it here so can hover on button to get effect :_(
   &:hover > span::before {
-    top: -1rem;
+    top: ${props => (props.showNav ? "0" : "-1rem")};
   }
 
   &:hover > span::after {
-    top: 1rem;
-  }
-
-  @media only screen and (min-width: 1015px) {
-    display: none;
+    top: ${props => (props.showNav ? "0" : "1rem")};
   }
 `
 
 const HamburgerIcon = styled.span`
+  align-self: center;
+
   position: relative;
-  margin-top: 2.5rem;
 
   &,
   &::before,
   &::after {
     width: 2.5rem;
     height: 2px;
-    background-color: black;
     display: inline-block;
   }
 
   &::before,
   &::after {
     content: "";
+    background-color: black;
     position: absolute;
     left: 0;
     transition: all 0.2s;
@@ -73,5 +68,17 @@ const HamburgerIcon = styled.span`
 
   &::after {
     top: 0.8rem;
+  }
+
+  background-color: ${props => (props.showNav ? "transparent" : "black")};
+
+  &::before {
+    top: ${props => (props.showNav ? "0" : "-0.8rem")};
+    transform: ${props => (props.showNav ? "rotate(135deg)" : "")};
+  }
+
+  &::after {
+    top: ${props => (props.showNav ? "0" : "0.8rem")};
+    transform: ${props => (props.showNav ? "rotate(-135deg)" : "")};
   }
 `

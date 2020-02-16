@@ -1,16 +1,19 @@
 import React from "react"
 import styled from "styled-components"
-import { Hamburger } from "../Hamburger"
+import { MobileNav } from "../MobileNav"
 import { linkReset } from "../../global"
 import { theme } from "../../theme"
 
 export const Header = () => {
   return (
-    <Header_Container>
-      <Header_Child>
+    <StyledHeader>
+      <Container>
         <LogoLink href={"#"}>
           <picture>
-            <source media="(max-width: 1300px)" srcset="assets/logo-slim.png" />
+            <source
+              media={`${media.disableNav}`}
+              srcset="assets/logo-slim.png"
+            />
             <Logo
               src={"assets/logo.png"}
               alt={
@@ -32,18 +35,24 @@ export const Header = () => {
           <LinkToggleLanguage href={"#"}>EN</LinkToggleLanguage>
         </Nav>
 
-        <Hamburger />
-      </Header_Child>
-    </Header_Container>
+        <MobileNav />
+      </Container>
+    </StyledHeader>
   )
 }
 
-const Header_Container = styled.div`
+export const media = {
+  slimNav: "(max-width: 1350px)",
+  slimNavMore: "(max-width: 1015px)",
+  disableNav: "(max-width: 1350px)",
+}
+
+const StyledHeader = styled.div`
   display: flex;
   justify-content: center;
 `
 
-const Header_Child = styled.header`
+const Container = styled.header`
   width: 100%;
   max-width: 1800px;
   height: 130px;
@@ -52,12 +61,12 @@ const Header_Child = styled.header`
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 1300px) {
+  @media only screen and ${media.slimNav} {
     height: 100px;
     padding: 0 3rem;
   }
 
-  @media only screen and (max-width: 1015px) {
+  @media only screen and ${media.slimNavMore} {
     height: 65px;
     padding: 0 2rem;
   }
@@ -66,18 +75,18 @@ const Header_Child = styled.header`
 const LogoLink = styled.a`
   align-self: center;
 
-  margin-right: 2rem; // near 1015px to prevent nav links from touching logo
+  margin-right: 3rem;
   line-height: 0;
 `
 
 const Logo = styled.img`
   height: 100px;
 
-  @media only screen and (max-width: 1300px) {
+  @media only screen and ${media.slimNav} {
     height: 50px;
   }
 
-  @media only screen and (max-width: 1015px) {
+  @media only screen and ${media.slimNavMore} {
     height: 43px;
   }
 `
@@ -88,7 +97,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 1015px) {
+  @media only screen and ${media.disableNav} {
     display: none;
   }
 `
