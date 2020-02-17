@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { MobileNav } from "../MobileNav"
-import { linkReset } from "../../global"
-import { theme } from "../../theme"
+import { MobileNav } from "./MobileNav"
+import { linkReset } from "./mixins"
+import { theme } from "../theme"
 
 export const Header = () => {
   return (

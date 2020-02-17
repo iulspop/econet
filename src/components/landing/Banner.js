@@ -1,18 +1,21 @@
 import React from "react"
 import styled from "styled-components"
-import { absCenterH, linkReset } from "../../global"
-import { theme } from "../../theme"
+import { absCenterH, linkReset } from "../common/mixins"
+import { theme } from "../theme"
 
 export const Banner = () => {
   return (
     <StyledBanner>
       <Container>
-        <MainHeading>relaxez</MainHeading>
+        <MainHeading>
+          relaxe<CorrectLastLetter>z</CorrectLastLetter>
+          <br></br>
+          <MainHeading2>on s'en occupe</MainHeading2>
+        </MainHeading>
         <DecorativeLine
           src={"assets/decorative-horizontal-line.png"}
           alt={"Ligne décorative. Decorative horizontal line."}
         />
-        <MainHeading2>on s'en occupe</MainHeading2>
       </Container>
 
       <Container>
@@ -78,73 +81,76 @@ const Container = styled.div`
 `
 
 const MainHeading = styled.h1`
-	width: 700px
-  margin: 8rem auto;
+  width: 74rem;
+  margin: 0 auto;
+  margin-top: 3rem;
 
   font-size: 13.8rem;
-  letter-spacing: 2rem;
   font-weight: 700;
+  letter-spacing: 2.5rem;
   text-align: center;
   text-transform: uppercase;
 
-  line-height: 0;
+  line-height: 1;
 
-  white-space: nowrap;
+  // font-size: calc([minimum size]4rem + ([maximum size]8rem - [minimum size]4rem) * ((100vw - [minimum viewport width])320 / ([maximum viewport width]800 - [minimum viewport width]300)));
+  // calc(4rem + (8rem - 4rem) * ((100vw - 320px) / (800px - 300px)))
 
-	transform: translateX(7px);
-	
-	// font-size: calc([minimum size]4rem + ([maximum size]8rem - [minimum size]4rem) * ((100vw - [minimum viewport width])320 / ([maximum viewport width]800 - [minimum viewport width]300)));
-	// calc(4rem + (8rem - 4rem) * ((100vw - 320px) / (800px - 300px)))
+  @media only screen and ${media.tablet} {
+    width: 48rem;
+    font-size: 8rem;
+  }
 
-	@media only screen and ${media.tablet} {
-		font-size: 8rem;
-	}
-	
-	@media only screen and ${media.phone} {
-		font-size: 4rem;
-		margin-top: 5rem;
+  @media only screen and ${media.phone} {
+    width: 32rem;
+    font-size: 3.7rem;
+    margin-top: 3rem;
   }
 `
 
-const MainHeading2 = styled(MainHeading)`
-  margin: 5rem auto;
+const CorrectLastLetter = styled.span`
+  letter-spacing: initial;
+`
 
-  font-size: 8.3rem;
-  letter-spacing: -1px;
-  transform: translateX(0px);
+const MainHeading2 = styled.span`
+  font-size: 8.5rem;
+  letter-spacing: initial;
 
   @media only screen and ${media.tablet} {
-    font-size: 5rem;
+    font-size: 5.7rem;
     margin: 4rem auto;
   }
 
   @media only screen and ${media.phone} {
-    font-size: 3rem;
-    margin: 2rem auto;
+    font-size: 3.6rem;
+    line-height: 3;
   }
 `
 
 const DecorativeLine = styled.img`
-  display: block;
+  ${absCenterH};
   width: 860px;
-  margin: 0 auto;
+  top: 16.7rem;
 
   @media only screen and ${media.shortenDecorativeLine} {
     width: 720px;
   }
 
   @media only screen and ${media.tablet} {
-    width: 450px;
+    width: 475px;
+    top: 11rem;
   }
 
   @media only screen and ${media.phone} {
     width: 300px;
+    top: 8rem;
   }
 `
 
 const SecondaryHeading = styled.h2`
   width: 700px;
-  margin: 5rem auto;
+  margin: 2rem auto;
+  margin-top: 0rem;
 
   font-size: 2.5rem;
   line-height: 5rem;
