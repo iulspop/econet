@@ -11,7 +11,7 @@ export const MobileNav = () => {
 
   return (
     <>
-      <Tray showNav={showNav} />
+      <Tray toggleNav={toggleNav} showNav={showNav} />
       <Hamburger toggleNav={toggleNav} showNav={showNav} />
     </>
   )
