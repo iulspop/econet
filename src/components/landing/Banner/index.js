@@ -7,30 +7,37 @@ export const Banner = () => {
   return (
     <StyledBanner>
       <ScaleBanner>
-        <MainHeading>relaxez</MainHeading>
-        <DecorativeLine
-          src={"assets/decorative-horizontal-line.png"}
-          alt={"Ligne décorative. Decorative horizontal line."}
-        />
-        <MainHeading2>on s'en occupe</MainHeading2>
-        <SecondaryHeading>
-          Nous sommes une entreprise familiale écologique qui met leurs clients
-          en avant
-        </SecondaryHeading>
+        <Container>
+          <MainHeading>relaxez</MainHeading>
+          <DecorativeLine
+            src={"assets/decorative-horizontal-line.png"}
+            alt={"Ligne décorative. Decorative horizontal line."}
+          />
+          <MainHeading2>on s'en occupe</MainHeading2>
+        </Container>
 
-        <EstimationPageCTA href={"#"}>
-          <SideDecoration
-            src={"assets/side-decoration.png"}
-            alt={"Side decoration."}
-          />
-          <HorizontalLineBorder />
-          Demandez votre estimation
-          <HorizontalLineBorder2 />
-          <SideDecoration2
-            src={"assets/side-decoration.png"}
-            alt={"Side decoration."}
-          />
-        </EstimationPageCTA>
+        <Container2>
+          <SecondaryHeading>
+            Nous sommes une entreprise familiale écologique qui met leurs
+            clients en avant
+          </SecondaryHeading>
+        </Container2>
+
+        <Container3>
+          <EstimationPageCTA href={"#"}>
+            <SideDecoration
+              src={"assets/side-decoration.png"}
+              alt={"Side decoration."}
+            />
+            <HorizontalLineBorder />
+            Demandez votre estimation
+            <HorizontalLineBorder2 />
+            <SideDecoration2
+              src={"assets/side-decoration.png"}
+              alt={"Side decoration."}
+            />
+          </EstimationPageCTA>
+        </Container3>
       </ScaleBanner>
     </StyledBanner>
   )
@@ -50,7 +57,6 @@ const media = {
 const StyledBanner = styled.section`
   height: calc(100vh - 130px);
   min-height: 695px;
-  position: relative;
   background-image: linear-gradient(
     109.6deg,
     rgba(204, 228, 247, 1) 11.2%,
@@ -59,6 +65,13 @@ const StyledBanner = styled.section`
 `
 
 const ScaleBanner = styled.div`
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   @media only screen and ${media.scaleBanner} {
     transform: scale(0.9);
   }
@@ -92,6 +105,14 @@ const ScaleBanner = styled.div`
   }
 `
 
+const Container = styled.div`
+  position: relative;
+`
+
+const Container2 = styled(Container)``
+
+const Container3 = styled(Container)``
+
 const MainHeading = styled.h1`
   width: 665px;
   font-size: 13.7rem;
@@ -101,7 +122,7 @@ const MainHeading = styled.h1`
   text-transform: uppercase;
 
   position: absolute;
-  top: -7rem;
+  top: -16rem;
   left: 50%;
   transform: translateX(calc(-50% - 11px));
 `
@@ -111,7 +132,7 @@ const MainHeading2 = styled(MainHeading)`
   letter-spacing: -1px;
   white-space: nowrap;
 
-  top: 17rem;
+  top: 8rem;
   transform: translateX(calc(-50% - 7px));
 `
 
@@ -119,7 +140,7 @@ const DecorativeLine = styled.img`
   width: 860px;
 
   ${absCenterH};
-  top: 20rem;
+  top: 11rem;
 
   @media only screen and ${media.shortenDecorativeLine} {
     width: 720px;
@@ -136,7 +157,7 @@ const SecondaryHeading = styled.h2`
   text-shadow: 0px 0px 4px #fff;
 
   ${absCenterH};
-  top: 37rem;
+  // top: 37rem;
 `
 
 const EstimationPageCTA = styled.a`
@@ -148,7 +169,7 @@ const EstimationPageCTA = styled.a`
   text-transform: uppercase;
 
   ${absCenterH};
-  top: 56rem;
+  // top: 56rem;
 `
 
 const HorizontalLineBorder = styled.span`
@@ -168,14 +189,14 @@ const HorizontalLineBorder = styled.span`
 `
 
 const HorizontalLineBorder2 = styled(HorizontalLineBorder)`
-  top: 6rem;
+  // top: 6rem;
 `
 
 const SideDecoration = styled.img`
   height: 5rem;
 
   position: absolute;
-  top: 6px;
+  // top: 6px;
   left: 20px;
 `
 
