@@ -21,8 +21,8 @@ export const Tray = props => {
 }
 
 const StyledTray = styled.nav`
-  width: 300px;
-  max-width: 70vw;
+  width: 320px;
+  max-width: 80vw;
   height: 100vh;
   position: fixed;
   left: 0;
