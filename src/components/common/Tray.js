@@ -21,13 +21,14 @@ export const Tray = props => {
 }
 
 const StyledTray = styled.nav`
-  width: 320px;
-  max-width: 80vw;
+  width: 300px;
+  max-width: 75vw;
   height: 100vh;
   position: fixed;
   left: 0;
   z-index: 2;
   background-color: white;
+  overflow: scroll;
 
   display: flex;
   flex-direction: column;
