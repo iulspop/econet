@@ -258,6 +258,6 @@ const SideDecoration2 = styled(SideDecoration)`
   }
 
   @media only screen and ${media.phone} {
-    left: 296px;
+    left: 304px;
   }
 `
