@@ -166,7 +166,7 @@ const SecondaryHeading = styled.h2`
   @media only screen and ${media.phone} {
     width: auto;
     padding: 0 2rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 `
 
@@ -189,7 +189,7 @@ const EstimationPageCTA = styled.a`
 
   @media only screen and ${media.phone} {
     width: 310px;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 `
 
@@ -212,7 +212,7 @@ const HorizontalLineBorder = styled.span`
   }
 
   @media only screen and ${media.phone} {
-    width: 300px;
+    width: 320px;
   }
 `
 
@@ -224,7 +224,7 @@ const HorizontalLineBorder2 = styled(HorizontalLineBorder)`
   }
 
   @media only screen and ${media.phone} {
-    top: 3rem;
+    top: 3.3rem;
   }
 `
 
@@ -242,8 +242,8 @@ const SideDecoration = styled.img`
 
   @media only screen and ${media.phone} {
     height: 2rem;
-    top: 5px;
-    left: 2px;
+    top: 7px;
+    left: -13px;
   }
 `
 
@@ -258,6 +258,6 @@ const SideDecoration2 = styled(SideDecoration)`
   }
 
   @media only screen and ${media.phone} {
-    left: 289px;
+    left: 296px;
   }
 `
