@@ -22,15 +22,21 @@ export const MobileNav = () => {
 
 export const media = {
   enableHamburger: "(max-width: 1350px)",
+  slimNavMore: "(max-width: 1015px)",
 }
 
 const MobileLinkToggleLanguage = styled(LinkToggleLanguage)`
   position: absolute;
-  top: 12px;
-  right: 70px;
+  top: 29px;
+  right: 100px;
   display: none;
 
   @media only screen and ${media.enableHamburger} {
     display: block;
+  }
+
+  @media only screen and ${media.slimNavMore} {
+    top: 12px;
+    right: 70px;
   }
 `
