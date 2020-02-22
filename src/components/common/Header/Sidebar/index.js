@@ -1,26 +1,27 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, LinkNumber } from "./Links"
+import { Link, LinkNumber } from "../Links"
 
-export const Tray = props => {
-  const { toggleNav, showNav } = props
+export const Sidebar = props => {
+  const { showNav } = props
 
   return (
     <>
-      <StyledTray showNav={showNav}>
-        <MobileLink currentPage>Accueil</MobileLink>
+      <StyledSidebar showNav={showNav}>
+        <MobileLink currentPage href={"/"}>
+          Accueil
+        </MobileLink>
         <MobileLink href={"#"}>À Propos</MobileLink>
         <MobileLink href={"#"}>Services</MobileLink>
-        <MobileLink2 href={"#"}>Estimation</MobileLink2>
+        <MobileLink2 href={"/estimation"}>Estimation</MobileLink2>
         <MobileLink href={"#"}>Contact</MobileLink>
         <MobileLinkNumber href={"#"}>514-555-5555</MobileLinkNumber>
-      </StyledTray>
-      <OverLay onClick={toggleNav} showNav={showNav} />
+      </StyledSidebar>
     </>
   )
 }
 
-const StyledTray = styled.nav`
+const StyledSidebar = styled.nav`
   width: 300px;
   max-width: 75vw;
   height: 100vh;
@@ -49,19 +50,4 @@ const MobileLink2 = styled(MobileLink)`
 
 const MobileLinkNumber = styled(LinkNumber)`
   margin-top: 1.5rem;
-`
-
-const OverLay = styled.div`
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  z-index: 1;
-  background-color: ${props =>
-    props.showNav ? "rgba(0, 0, 0, 0.7)" : "rgba(0, 0, 0, 0)"};
-  cursor: pointer;
-
-  transition: 0.3s ease;
-
-  visibility: ${props => (props.showNav ? "" : "hidden")};
 `

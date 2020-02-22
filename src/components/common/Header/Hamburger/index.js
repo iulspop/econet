@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { buttonReset } from "./mixins"
+import { buttonReset } from "../../mixins"
 
 export const Hamburger = props => {
   const { toggleNav, showNav } = props

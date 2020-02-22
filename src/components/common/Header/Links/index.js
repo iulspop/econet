@@ -1,6 +1,13 @@
 import styled from "styled-components"
-import { linkReset } from "./mixins"
-import { theme } from "../theme"
+import { linkReset } from "../../mixins"
+import { theme } from "../../../theme"
+
+export const media = {
+  enableHamburger: "(max-width: 1350px)",
+  slimNav: "(max-width: 1350px)",
+  slimNavMore: "(max-width: 1015px)",
+  disableNav: "(max-width: 1350px)",
+}
 
 export const Link = styled.a`
   align-self: center;
@@ -46,5 +53,21 @@ export const LinkToggleLanguage = styled(Link)`
 
   &:hover {
     border-bottom: 0px;
+  }
+`
+
+export const MobileLinkToggleLanguage = styled(LinkToggleLanguage)`
+  position: absolute;
+  top: 29px;
+  right: 100px;
+  display: none;
+
+  @media only screen and ${media.enableHamburger} {
+    display: block;
+  }
+
+  @media only screen and ${media.slimNavMore} {
+    top: 12px;
+    right: 70px;
   }
 `

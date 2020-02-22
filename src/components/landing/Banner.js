@@ -26,7 +26,7 @@ export const Banner = () => {
       </Container>
 
       <Container>
-        <EstimationPageCTA href={"#"}>
+        <EstimationPageCTA href={"/estimation"}>
           <SideDecoration
             src={"assets/side-decoration.png"}
             alt={"Side decoration."}
