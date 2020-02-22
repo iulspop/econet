@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { linkReset } from "../../mixins"
-import { theme } from "../../theme"
 
 export const media = {
   enableHamburger: "(max-width: 1350px)",
@@ -21,14 +20,17 @@ export const Link = styled.a`
   transform: translateY(6px); // to center after adding border on hover
 
   font-weight: ${props => (props.currentPage ? "700" : "400")};
-  color: ${props => (props.currentPage ? `${theme.colors.primary}` : "black")};
+  color: ${props =>
+    props.currentPage ? `${props => props.theme.colors.primary}` : "black"};
   border-bottom: ${props =>
-    props.currentPage ? `8px dotted ${theme.colors.primary}` : ""}};
+    props.currentPage
+      ? `8px dotted ${props => props.theme.colors.primary}`
+      : ""}};
 
   &:hover {
     font-weight: 700;
-    color: ${theme.colors.primary};
-    border-bottom: 8px dotted ${theme.colors.primary};
+    color: ${props => props.theme.colors.primary};
+    border-bottom: 8px dotted ${props => props.theme.colors.primary};
   }
 `
 

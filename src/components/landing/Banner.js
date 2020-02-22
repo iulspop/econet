@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { absCenterH, linkReset } from "../common/mixins"
-import { theme } from "../common/theme"
 
 export const Banner = () => {
   return (
@@ -203,7 +202,7 @@ const HorizontalLineBorder = styled.span`
     0,
     50% 50%,
     315,
-    from(${theme.colors.primary}),
+    from(${props => props.theme.colors.primary}),
     to(transparent)
   );
 
