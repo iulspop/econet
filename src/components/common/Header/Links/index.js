@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { linkReset } from "../../mixins"
-import { theme } from "../../../theme"
+import { theme } from "../../theme"
 
 export const media = {
   enableHamburger: "(max-width: 1350px)",

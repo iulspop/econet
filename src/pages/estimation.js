@@ -1,10 +1,13 @@
 import React from "react"
-import { Layout, Header } from "../components/common"
+import { ThemeProvider } from "styled-components"
+import { Layout, Header, theme } from "../components/common"
 
 export default function estimationPage() {
   return (
-    <Layout>
-      <Header />
-    </Layout>
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <Header />
+      </Layout>
+    </ThemeProvider>
   )
 }

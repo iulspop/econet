@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { absCenterH, linkReset } from "../common/mixins"
-import { theme } from "../theme"
+import { theme } from "../common/theme"
 
 export const Banner = () => {
   return (
@@ -13,7 +13,7 @@ export const Banner = () => {
           <MainHeading2>on s'en occupe</MainHeading2>
         </MainHeading>
         <DecorativeLine
-          src={"assets/decorative-horizontal-line.png"}
+          src={"/assets/decorative-horizontal-line.png"}
           alt={"Ligne décorative. Decorative horizontal line."}
         />
       </Container>
@@ -28,14 +28,14 @@ export const Banner = () => {
       <Container>
         <EstimationPageCTA href={"/estimation"}>
           <SideDecoration
-            src={"assets/side-decoration.png"}
+            src={"/assets/side-decoration.png"}
             alt={"Side decoration."}
           />
           <HorizontalLineBorder />
           Demandez votre estimation
           <HorizontalLineBorder2 />
           <SideDecoration2
-            src={"assets/side-decoration.png"}
+            src={"/assets/side-decoration.png"}
             alt={"Side decoration."}
           />
         </EstimationPageCTA>

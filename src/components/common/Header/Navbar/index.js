@@ -10,7 +10,7 @@ import {
 
 export const Navbar = () => {
   return (
-    <>
+    <React.Fragment>
       <StyledNavbar>
         <Link href={"/"} currentPage>
           . Accueil .
@@ -23,7 +23,7 @@ export const Navbar = () => {
         <LinkToggleLanguage href={"#"}>EN</LinkToggleLanguage>
       </StyledNavbar>
       <MobileLinkToggleLanguage href={"#"}>EN</MobileLinkToggleLanguage>
-    </>
+    </React.Fragment>
   )
 }
 

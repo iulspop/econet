@@ -5,9 +5,9 @@ export const Logo = () => {
   return (
     <LogoLink href={"#"}>
       <picture>
-        <source media={`${media.disableNav}`} srcset="assets/logo-slim.png" />
+        <source media={`${media.disableNav}`} srcset="/assets/logo-slim.png" />
         <LogoImg
-          src={"assets/logo.png"}
+          src={"/assets/logo.png"}
           alt={"Nettoyage Éconet. Nettoyage écologique de tapis et de meubles"}
         />
       </picture>
