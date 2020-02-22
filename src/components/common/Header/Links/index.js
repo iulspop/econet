@@ -20,12 +20,9 @@ export const Link = styled.a`
   transform: translateY(6px); // to center after adding border on hover
 
   font-weight: ${props => (props.currentPage ? "700" : "400")};
-  color: ${props =>
-    props.currentPage ? `${props => props.theme.colors.primary}` : "black"};
+  color: ${props => (props.currentPage ? props.theme.colors.primary : "black")};
   border-bottom: ${props =>
-    props.currentPage
-      ? `8px dotted ${props => props.theme.colors.primary}`
-      : ""}};
+    props.currentPage ? `8px dotted ${props.theme.colors.primary}` : ""};
 
   &:hover {
     font-weight: 700;
