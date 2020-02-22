@@ -89,11 +89,7 @@ const MainHeading = styled.h1`
   letter-spacing: 2.5rem;
   text-align: center;
   text-transform: uppercase;
-
   line-height: 1;
-
-  // font-size: calc([minimum size]4rem + ([maximum size]8rem - [minimum size]4rem) * ((100vw - [minimum viewport width])320 / ([maximum viewport width]800 - [minimum viewport width]300)));
-  // calc(4rem + (8rem - 4rem) * ((100vw - 320px) / (800px - 300px)))
 
   @media only screen and ${media.tablet} {
     width: 48rem;
