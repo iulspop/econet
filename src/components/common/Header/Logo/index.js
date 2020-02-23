@@ -6,8 +6,8 @@ export const Logo = () => {
     <LogoLink href={"#"}>
       <picture>
         <source
-          media={`${props => props.theme.media.tabPort}`}
-          srcset="/assets/logo-slim.png"
+          media={"(max-width: 1200px)"}
+          srcset={"/assets/logo-slim.png"}
         />
         <LogoImg
           src={"/assets/logo.png"}
