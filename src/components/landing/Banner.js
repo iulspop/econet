@@ -43,14 +43,6 @@ export const Banner = () => {
   )
 }
 
-const media = {
-  shortenDecorativeLine: "(max-width: 900px)",
-  slimNav: "(max-width: 1350px)",
-  slimNavMore: "(max-width: 1015px)",
-  tablet: "(max-width: 800px)",
-  phone: "(max-width: 500px)",
-}
-
 const StyledBanner = styled.section`
   --nav-height: 130px;
 
