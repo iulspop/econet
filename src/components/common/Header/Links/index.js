@@ -61,11 +61,11 @@ export const MobileLinkToggleLanguage = styled(LinkToggleLanguage)`
   right: 100px;
   display: none;
 
-  @media only screen and ${media.enableHamburger} {
+  @media only screen and ${props => props.theme.media.tabLand} {
     display: block;
   }
 
-  @media only screen and ${media.slimNavMore} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     top: 12px;
     right: 70px;
   }

@@ -25,13 +25,6 @@ export const Header = () => {
   )
 }
 
-export const media = {
-  enableHamburger: "(max-width: 1350px)",
-  slimNav: "(max-width: 1350px)",
-  slimNavMore: "(max-width: 1015px)",
-  disableNav: "(max-width: 1350px)",
-}
-
 const StyledHeader = styled.div`
   display: flex;
   justify-content: center;
@@ -46,12 +39,12 @@ const Container = styled.header`
   display: flex;
   justify-content: space-between;
 
-  @media only screen and ${media.slimNav} {
+  @media only screen and ${props => props.theme.media.tabLand} {
     height: 100px;
     padding: 0 3rem;
   }
 
-  @media only screen and ${media.slimNavMore} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     height: 65px;
     padding: 0 2rem;
   }

@@ -12,10 +12,6 @@ export const Hamburger = props => {
   )
 }
 
-export const media = {
-  enableHamburger: "(max-width: 1350px)",
-}
-
 const StyledHamburger = styled.button`
   align-self: center;
 
@@ -26,7 +22,7 @@ const StyledHamburger = styled.button`
 
   justify-content: center;
 
-  @media only screen and ${media.enableHamburger} {
+  @media only screen and ${props => props.theme.media.tabLand} {
     display: flex;
   }
 

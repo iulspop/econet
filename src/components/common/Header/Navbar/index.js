@@ -27,20 +27,13 @@ export const Navbar = () => {
   )
 }
 
-export const media = {
-  enableHamburger: "(max-width: 1350px)",
-  slimNav: "(max-width: 1350px)",
-  slimNavMore: "(max-width: 1015px)",
-  disableNav: "(max-width: 1350px)",
-}
-
 const StyledNavbar = styled.nav`
   flex-basis: 1000px;
 
   display: flex;
   justify-content: space-between;
 
-  @media only screen and ${media.disableNav} {
+  @media only screen and ${props => props.theme.media.tabLand} {
     display: none;
   }
 `

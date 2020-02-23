@@ -54,11 +54,11 @@ const media = {
 const StyledBanner = styled.section`
   --nav-height: 130px;
 
-  @media only screen and ${media.slimNav} {
+  @media only screen and ${props => props.theme.media.tabLand} {
     --nav-height: 100px;
   }
 
-  @media only screen and ${media.slimNavMore} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     --nav-height: 65px;
   }
 
@@ -91,12 +91,12 @@ const MainHeading = styled.h1`
   text-transform: uppercase;
   line-height: 1;
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     width: 48rem;
     font-size: 8rem;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     width: 32rem;
     font-size: 3.7rem;
     margin-top: 3rem;
@@ -111,12 +111,12 @@ const MainHeading2 = styled.span`
   font-size: 8.5rem;
   letter-spacing: initial;
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     font-size: 5.7rem;
     margin: 4rem auto;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     font-size: 3.6rem;
     line-height: 3;
   }
@@ -127,16 +127,16 @@ const DecorativeLine = styled.img`
   width: 860px;
   top: 16.7rem;
 
-  @media only screen and ${media.shortenDecorativeLine} {
+  @media only screen and ${props => props.theme.media.tabLand} {
     width: 720px;
   }
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     width: 475px;
     top: 11rem;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     width: 300px;
     top: 8rem;
   }
@@ -153,12 +153,12 @@ const SecondaryHeading = styled.h2`
   text-transform: uppercase;
   text-shadow: 0px 0px 4px #fff;
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     width: 475px;
     font-size: 2rem;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     width: auto;
     padding: 0 2rem;
     font-size: 2rem;
@@ -177,12 +177,12 @@ const EstimationPageCTA = styled.a`
   text-align: center;
   text-transform: uppercase;
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     width: 475px;
     font-size: 2.5rem;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     width: 310px;
     font-size: 2rem;
   }
@@ -202,11 +202,11 @@ const HorizontalLineBorder = styled.span`
     to(transparent)
   );
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     width: 450px;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     width: 320px;
   }
 `
@@ -214,11 +214,11 @@ const HorizontalLineBorder = styled.span`
 const HorizontalLineBorder2 = styled(HorizontalLineBorder)`
   top: 6rem;
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     top: 4.4rem;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     top: 3.3rem;
   }
 `
@@ -230,12 +230,12 @@ const SideDecoration = styled.img`
   top: 6px;
   left: 20px;
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     height: 3rem;
     top: 8px;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     height: 2rem;
     top: 7px;
     left: -13px;
@@ -248,11 +248,11 @@ const SideDecoration2 = styled(SideDecoration)`
   position: absolute;
   left: 630px;
 
-  @media only screen and ${media.tablet} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     left: 425px;
   }
 
-  @media only screen and ${media.phone} {
+  @media only screen and ${props => props.theme.media.phone} {
     left: 304px;
   }
 `

@@ -4,4 +4,10 @@ export const theme = {
     secondary: "#5a4a42",
     tertiary: "#00aeef",
   },
+  media: {
+    phone: "(max-width: 500px)",
+    tabPort: "(max-width: 900px)",
+    tabLand: "(max-width: 1200px)",
+    bigDesktop: "(min-width: 1800px)",
+  },
 }
