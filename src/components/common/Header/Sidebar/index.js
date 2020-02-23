@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, LinkNumber } from "../Links"
+import { Link, LinkHome, LinkEstimation, LinkNumber } from "../Links"
 
 export const Sidebar = props => {
   const { showNav } = props
@@ -8,12 +8,12 @@ export const Sidebar = props => {
   return (
     <>
       <StyledSidebar showNav={showNav}>
-        <MobileLink currentPage href={"/"}>
-          Accueil
-        </MobileLink>
+        <MobileLinkHome href={"/"}>Accueil</MobileLinkHome>
         <MobileLink href={"#"}>À Propos</MobileLink>
         <MobileLink href={"#"}>Services</MobileLink>
-        <MobileLink2 href={"/estimation"}>Estimation</MobileLink2>
+        <MobileLinkEstimation href={"/estimation"}>
+          Estimation
+        </MobileLinkEstimation>
         <MobileLink href={"#"}>Contact</MobileLink>
         <MobileLinkNumber href={"#"}>514-555-5555</MobileLinkNumber>
       </StyledSidebar>
@@ -44,8 +44,12 @@ const MobileLink = styled(Link)`
   margin: 1.5rem 0;
 `
 
-const MobileLink2 = styled(MobileLink)`
-  width: 140px;
+const MobileLinkHome = styled(LinkHome)`
+  margin: 1.5rem 0;
+`
+
+const MobileLinkEstimation = styled(LinkEstimation)`
+  margin: 1.5rem 0;
 `
 
 const MobileLinkNumber = styled(LinkNumber)`

@@ -12,11 +12,6 @@ export const Link = styled.a`
   text-transform: uppercase;
   transform: translateY(6px); // to center after adding border on hover
 
-  font-weight: ${props => (props.currentPage ? "700" : "400")};
-  color: ${props => (props.currentPage ? props.theme.colors.primary : "black")};
-  border-bottom: ${props =>
-    props.currentPage ? `8px dotted ${props.theme.colors.primary}` : ""};
-
   &:hover {
     font-weight: 700;
     color: ${props => props.theme.colors.primary};
@@ -24,8 +19,26 @@ export const Link = styled.a`
   }
 `
 
-export const Link2 = styled(Link)`
+export const LinkHome = styled(Link)`
+  font-weight: ${props => (props.theme.page === "home" ? "700" : "400")};
+  color: ${props =>
+    props.theme.page === "home" ? props.theme.colors.primary : "black"};
+  border-bottom: ${props =>
+    props.theme.page === "home"
+      ? `8px dotted ${props.theme.colors.primary}`
+      : ""};
+`
+
+export const LinkEstimation = styled(Link)`
   width: 140px;
+
+  font-weight: ${props => (props.theme.page === "estimation" ? "700" : "400")};
+  color: ${props =>
+    props.theme.page === "estimation" ? props.theme.colors.primary : "black"};
+  border-bottom: ${props =>
+    props.theme.page === "estimation"
+      ? `8px dotted ${props.theme.colors.primary}`
+      : ""};
 `
 
 export const LinkNumber = styled(Link)`

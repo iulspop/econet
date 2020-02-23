@@ -7,7 +7,7 @@ export const Logo = () => {
       <picture>
         <source
           media={"(max-width: 1200px)"}
-          srcset={"/assets/logo-slim.png"}
+          srcSet={"/assets/logo-slim.png"}
         />
         <LogoImg
           src={"/assets/logo.png"}
