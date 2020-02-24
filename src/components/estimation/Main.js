@@ -8,7 +8,7 @@ export const Main = () => {
       <Container>
         <DecorativeLine
           src={"/assets/decorative-horizontal-line.png"}
-          alt={"Ligne décorative. Decorative horizontal line."}
+          alt={""}
         />
         <MainHeading>Soumission</MainHeading>
       </Container>

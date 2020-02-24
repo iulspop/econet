@@ -11,7 +11,9 @@ export const Logo = () => {
         />
         <LogoImg
           src={"/assets/logo.png"}
-          alt={"Nettoyage Éconet. Nettoyage écologique de tapis et de meubles"}
+          alt={
+            "Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
+          }
         />
       </picture>
     </LogoLink>

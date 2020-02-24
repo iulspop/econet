@@ -13,7 +13,7 @@ export const Banner = () => {
         </MainHeading>
         <DecorativeLine
           src={"/assets/decorative-horizontal-line.png"}
-          alt={"Ligne décorative. Decorative horizontal line."}
+          alt={""}
         />
       </Container>
 
@@ -26,17 +26,11 @@ export const Banner = () => {
 
       <Container>
         <EstimationPageCTA href={"/estimation"}>
-          <SideDecoration
-            src={"/assets/side-decoration.png"}
-            alt={"Side decoration."}
-          />
+          <SideDecoration src={""} alt={"Side decoration."} />
           <HorizontalLineBorder />
           Demandez votre estimation
           <HorizontalLineBorder2 />
-          <SideDecoration2
-            src={"/assets/side-decoration.png"}
-            alt={"Side decoration."}
-          />
+          <SideDecoration2 src={""} alt={"Side decoration."} />
         </EstimationPageCTA>
       </Container>
     </StyledBanner>
