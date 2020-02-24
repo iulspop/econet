@@ -26,11 +26,11 @@ export const Banner = () => {
 
       <Container>
         <EstimationPageCTA href={"/estimation"}>
-          <SideDecoration src={""} alt={"Side decoration."} />
+          <SideDecoration src={"/assets/side-decoration.png"} alt={""} />
           <HorizontalLineBorder />
           Demandez votre estimation
           <HorizontalLineBorder2 />
-          <SideDecoration2 src={""} alt={"Side decoration."} />
+          <SideDecoration2 src={"/assets/side-decoration.png"} alt={""} />
         </EstimationPageCTA>
       </Container>
     </StyledBanner>
