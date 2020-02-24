@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { Layout, Header } from "../components/common"
-import { Banner } from "../components/landing"
+import { Banner } from "../components/index"
 
 const theme = {
   colors: {

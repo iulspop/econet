@@ -1,6 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { Layout, Header } from "../components/common"
+import { Main } from "../components/estimation"
 
 const theme = {
   colors: {
@@ -22,6 +23,7 @@ export default function estimationPage() {
     <ThemeProvider theme={theme}>
       <Layout>
         <Header />
+        <Main />
       </Layout>
     </ThemeProvider>
   )
