@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Button } from "../common"
+import { ButtonLeft, ButtonRight } from "./Buttons"
 
 export const Main = () => {
   return (
@@ -14,14 +14,8 @@ export const Main = () => {
       </Container>
 
       <Container>
-        <Button>
-          <SideDecorationLeft src={"/assets/side-decoration.png"} alt={""} />
-          commercial
-        </Button>
-        <Button>
-          résidentiel
-          <SideDecorationRight src={"/assets/side-decoration.png"} alt={""} />
-        </Button>
+        <ButtonLeft />
+        <ButtonRight />
       </Container>
     </StyledMain>
   )
@@ -57,18 +51,4 @@ const MainHeading = styled.h1`
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
-`
-
-const SideDecorationLeft = styled.img`
-  width: 8rem;
-  position: absolute;
-  left: -8rem;
-
-  top: 50%;
-  transform: translateY(-50%);
-`
-
-const SideDecorationRight = styled(SideDecorationLeft)`
-  left: 100%;
-  transform: translateY(-50%) scale(-1);
 `
