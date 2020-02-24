@@ -3,17 +3,21 @@ import styled from "styled-components"
 import { buttonReset } from "../mixins"
 
 export const Button = props => {
-  return <StyledButton>{props.text}</StyledButton>
+  return <StyledButton>{props.children}</StyledButton>
 }
 
 const StyledButton = styled.button`
   ${buttonReset}
   padding: 2rem 0;
+  margin: 0 5rem;
   position: relative;
 
   font-size: 3.5rem;
   font-weight: 700;
+  color: ${props => props.theme.colors.primary};
   text-transform: uppercase;
+
+  cursor: pointer;
 
   &::before {
     width: 130%;
