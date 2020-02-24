@@ -8,18 +8,38 @@ export const Button = props => {
 
 const StyledButton = styled.button`
   ${buttonReset}
+  padding: 2rem 0;
   position: relative;
-  background-color: white;
-  z-index: 1;
+
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
 
   &::before {
-    width: 100%;
-    height: 100%;
+    width: 130%;
+    height: 3px;
     content: "";
-    background-color: green;
+    background: radial-gradient(
+      circle at center,
+      ${props => props.theme.colors.primary},
+      transparent
+    );
     position: absolute;
-    top: -1px;
-    bottom: -1px;
-    z-index: -2;
+    top: 0;
+    left: -15%;
+  }
+
+  &::after {
+    width: 130%;
+    height: 3px;
+    content: "";
+    background: radial-gradient(
+      circle at center,
+      ${props => props.theme.colors.primary},
+      transparent
+    );
+    position: absolute;
+    top: 100%;
+    left: -15%;
   }
 `
