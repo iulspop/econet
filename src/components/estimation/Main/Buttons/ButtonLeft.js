@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { Button } from "../common"
+import { Button } from "../../../common"
 
 export const ButtonLeft = () => {
   return (
     <Button>
       <SideDecorationLeft src={"/assets/side-decoration.png"} alt={""} />
-      commercial
+      résidentiel
     </Button>
   )
 }

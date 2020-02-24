@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import { Button } from "../common"
+import { Button } from "../../../common"
 import { SideDecorationLeft } from "./ButtonLeft"
 
 export const ButtonRight = () => {
   return (
     <Button>
-      <SideDecorationLeft src={"/assets/side-decoration.png"} alt={""} />
       commercial
+      <SideDecorationRight src={"/assets/side-decoration.png"} alt={""} />
     </Button>
   )
 }
