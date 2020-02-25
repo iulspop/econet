@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { ButtonLeft, ButtonRight } from "./Buttons"
+import { Form } from "./Form"
 
 export const Main = () => {
   return (
@@ -16,6 +17,10 @@ export const Main = () => {
       <Container>
         <ButtonLeft />
         <ButtonRight />
+      </Container>
+
+      <Container>
+        <Form />
       </Container>
     </StyledMain>
   )
