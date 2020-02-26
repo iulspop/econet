@@ -7,7 +7,7 @@ export const Form = () => {
       <fieldset>
         <legend>Contact</legend>
         <Label for="name">Nom Complet</Label>
-        <Input type="text" name="name" id="name" />
+        <Input type="text" name="name" id="name" placeholder="Name" />
         <Label for="company">Companie</Label>
         <Input type="text" name="company" id="company" />
         <Label for="email">Courriel</Label>
@@ -38,34 +38,74 @@ export const Form = () => {
         <Input type="checkbox" name="cirage" id="cirage" />
 
         <fieldset>
-          <legend>Tapis</legend>
+          <legend>Options Tapis</legend>
           <fieldset>
             <legend>Quelle sont les pieds carrés de l’aire à nettoyer?</legend>
             <Label for="<300sqft">300 pieds carrés ou moins</Label>
-            <Input type="radio" name="carpetArea" id="<300sqft" />
+            <Input
+              type="radio"
+              name="carpetArea"
+              id="<300sqft"
+              value="<300sqft"
+            />
             <Label for="300-700sqft">300 - 700 pieds carrés</Label>
-            <Input type="radio" name="carpetArea" id="300-700sqft" />
+            <Input
+              type="radio"
+              name="carpetArea"
+              id="300-700sqft"
+              value="300-700sqft"
+            />
             <Label for="700-1000sqft">700 – 1000 pieds carrés</Label>
-            <Input type="radio" name="carpetArea" id="700-1000sqft" />
+            <Input
+              type="radio"
+              name="carpetArea"
+              id="700-1000sqft"
+              value="700-1000sqft"
+            />
             <Label for="1000-2000sqft">1000 – 2000 pieds carrés</Label>
-            <Input type="radio" name="carpetArea" id="1000-2000sqft" />
+            <Input
+              type="radio"
+              name="carpetArea"
+              id="1000-2000sqft"
+              value="1000-2000sqft"
+            />
             <Label for="2000-3000sqft">2000 – 3000 pieds carrés</Label>
-            <Input type="radio" name="carpetArea" id="2000-3000sqft" />
+            <Input
+              type="radio"
+              name="carpetArea"
+              id="2000-3000sqft"
+              value="2000-3000sqft"
+            />
             <Label for="3000-4000sqft">3000 – 4000 pieds carrés</Label>
-            <Input type="radio" name="carpetArea" id="3000-4000sqft" />
+            <Input
+              type="radio"
+              name="carpetArea"
+              id="3000-4000sqft"
+              value="3000-4000sqft"
+            />
             <Label for="4000-5000sqft">4000 – 5000 pieds carrés</Label>
-            <Input type="radio" name="carpetArea" id="4000-5000sqft" />
+            <Input
+              type="radio"
+              name="carpetArea"
+              id="4000-5000sqft"
+              value="4000-5000sqft"
+            />
             <Label for="5000sqft">5000 + pieds carrés</Label>
-            <Input type="radio" name="carpetArea" id="5000sqft" />
+            <Input
+              type="radio"
+              name="carpetArea"
+              id="5000sqft"
+              value="5000sqft"
+            />
           </fieldset>
           <fieldset>
             <legend>
               L’aire à nettoyer est-elle une zone de haut traffic?
             </legend>
-            <Label for="trafficOui">Oui</Label>
-            <Input type="radio" name="traffic" id="trafficOui" />
-            <Label for="trafficNon">Non</Label>
-            <Input type="radio" name="traffic" id="trafficNon" />
+            <Label for="trafficYes">Oui</Label>
+            <Input type="radio" name="traffic" id="trafficYes" value="true" />
+            <Label for="trafficNo">Non</Label>
+            <Input type="radio" name="traffic" id="trafficNo" value="false" />
           </fieldset>
         </fieldset>
       </fieldset>
@@ -78,12 +118,50 @@ export const Form = () => {
         <Label for="time">
           À quelle heure préférez-vous qu’on vous prête service?
         </Label>
-        <Input type="" name="time" id="time" />
+        <select name="time" id="time">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="16">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="0">0</option>
+        </select>
+        <fieldset>
+          <legend>Y-a-t-il du stationnement sur place?</legend>
+          <Label for="parkingYes">Oui</Label>
+          <Input type="radio" name="parking" id="parkingYes" value="true" />
+          <Label for="parkingNo">Non</Label>
+          <Input type="radio" name="parking" id="parkingNo" value="false" />
+        </fieldset>
       </fieldset>
+      <button type="submit">Envoyer la demande</button>
     </StyledForm>
   )
 }
+// On aurait juste besoin de quelques informations pour vous envoyer l'estimation et rester en contact
 
-const StyledForm = styled.form``
+// Maintenant, parlez-nous des services que vous désirez
+
+const StyledForm = styled.form`
+  width: 350px;
+`
 const Label = styled.label``
 const Input = styled.input``
