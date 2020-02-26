@@ -11,7 +11,7 @@ export const Main = () => {
           src={"/assets/decorative-horizontal-line.png"}
           alt={""}
         />
-        <MainHeading>Soumission</MainHeading>
+        <MainHeading>Estimation</MainHeading>
       </Container>
 
       <Container>
@@ -48,7 +48,7 @@ const DecorativeLine = styled.img`
 `
 
 const MainHeading = styled.h1`
-  margin: 0;
+  margin: 5rem 0;
 
   font-size: 8.2rem;
   font-weight: 700;

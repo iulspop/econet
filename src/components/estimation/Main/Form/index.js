@@ -1,33 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { ContactSection } from "./ContactSection"
 
 export const Form = () => {
   return (
     <StyledForm>
-      <fieldset>
-        <legend>Contact</legend>
-        <Label for="name">Nom Complet</Label>
-        <Input type="text" name="name" id="name" placeholder="Name" />
-        <Label for="company">Companie</Label>
-        <Input type="text" name="company" id="company" />
-        <Label for="email">Courriel</Label>
-        <Input
-          type="email"
-          name="email"
-          placeholder="Exemple: john@gmail.com"
-          id="email"
-        />
-        <Label for="phone">Téléphone</Label>
-        <Input type="tel" name="phone" id="phone" />
-        <fieldset>
-          <legend>Langue dans laquelle vous préférez communiquer?</legend>
-          <Label for="french">Français</Label>
-          <Input type="radio" name="langue" id="french" value="french" />
-
-          <Label for="english">Englais</Label>
-          <Input type="radio" name="langue" id="english" value="english" />
-        </fieldset>
-      </fieldset>
+      <ContactSection />
       <fieldset>
         <legend>Service Désiré</legend>
         <Label for="tapis">Nettoyage de tapis</Label>
@@ -160,8 +138,17 @@ export const Form = () => {
 
 // Maintenant, parlez-nous des services que vous désirez
 
+// For tapis extension
+// Veuillez préciser quelques détails afin que nous puissions vous donner l'estimation la plus précise possible
+
+// Parfait! Avant de finir, quand voudriez vous qu'on vous prête service?
+
+// Merci, on votre demande d'estimation a été bien envoyé. On vous contactera sous peu. N'hésitez pas à nous joindre si vous avez des questions. On est ouvert de lundi à mardi de 9h à 17h
+
 const StyledForm = styled.form`
   width: 350px;
+  margin: 5rem 0;
 `
 const Label = styled.label``
 const Input = styled.input``
+const FieldSet = styled.fieldset``
