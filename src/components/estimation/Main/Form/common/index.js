@@ -21,7 +21,7 @@ export const Fieldset = styled.fieldset`
   border-radius: 6px;
   box-shadow: 5px 5px 5px black;
 
-  display: ${params => (params.hidden ? "hidden" : "block")};
+  display: ${params => (params.hidden ? "none" : "block")};
 `
 
 export const RadioGroup = styled.fieldset`

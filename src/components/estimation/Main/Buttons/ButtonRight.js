@@ -3,9 +3,11 @@ import styled from "styled-components"
 import { Button } from "../../../common"
 import { SideDecorationLeft } from "./ButtonLeft"
 
-export const ButtonRight = () => {
+export const ButtonRight = props => {
+  const { toggleForm } = props
+
   return (
-    <Button>
+    <Button toggleForm={toggleForm}>
       commercial
       <SideDecorationRight src={"/assets/side-decoration.png"} alt={""} />
     </Button>

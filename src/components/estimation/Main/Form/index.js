@@ -4,9 +4,11 @@ import { Contact } from "./Contact"
 import { Service } from "./Service"
 import { Visit } from "./Visit"
 
-export const Form = () => {
+export const Form = props => {
+  const { showForm } = props
+
   return (
-    <StyledForm>
+    <StyledForm showForm={showForm}>
       <Contact />
       <Service />
       <Visit />
@@ -26,11 +28,12 @@ export const Form = () => {
 // Merci, on votre demande d'estimation a été bien envoyé. On vous contactera sous peu. N'hésitez pas à nous joindre si vous avez des questions. On est ouvert de lundi à mardi de 9h à 17h
 
 const StyledForm = styled.form`
+  display: ${props => (props.showForm ? "block" : "none")};
   width: 650px;
   margin: 5rem 0;
 `
 const Button = styled.button`
-  display: block;
+  display: ${props => (props.hidden ? "none" : "block")};
   width: 15rem;
   margin: auto;
 `

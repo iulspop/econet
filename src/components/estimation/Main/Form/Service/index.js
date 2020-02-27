@@ -19,7 +19,7 @@ export const Service = () => {
       <Label for="cirage">Cirage</Label>
       <Input type="checkbox" name="cirage" id="cirage" />
 
-      <Fieldset hidden>
+      <Fieldset>
         <Legend>Options Tapis</Legend>
         <RadioGroup>
           <RadioLegend>

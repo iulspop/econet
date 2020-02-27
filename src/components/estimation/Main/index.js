@@ -1,9 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { ButtonLeft, ButtonRight } from "./Buttons"
 import { Form } from "./Form"
 
 export const Main = () => {
+  const [showForm, setShowForm] = useState(false)
+
+  function toggleForm() {
+    setShowForm(!showForm)
+  }
+
   return (
     <StyledMain>
       <Container>
@@ -14,13 +20,20 @@ export const Main = () => {
         <MainHeading>Estimation</MainHeading>
       </Container>
 
-      <Container>
-        <ButtonLeft />
-        <ButtonRight />
+      <Container showForm={showForm}>
+        <h2>
+          Afin de bien vous servir, veuillez nous indiquer quel type de service
+          vous cherchez.
+        </h2>
       </Container>
 
       <Container>
-        <Form />
+        <ButtonLeft />
+        <ButtonRight toggleForm={toggleForm} />
+      </Container>
+
+      <Container>
+        <Form showForm={showForm} />
       </Container>
     </StyledMain>
   )
@@ -31,6 +44,7 @@ const StyledMain = styled.main`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  min-height: 100vh;
 
   background-image: linear-gradient(
     109.6deg,
@@ -39,7 +53,9 @@ const StyledMain = styled.main`
   );
 `
 
-const Container = styled.div``
+const Container = styled.div`
+  display: ${props => (props.showForm ? "none" : "block")};
+`
 
 const DecorativeLine = styled.img`
   width: 700px;

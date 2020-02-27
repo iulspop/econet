@@ -3,7 +3,9 @@ import styled from "styled-components"
 import { buttonReset } from "../mixins"
 
 export const Button = props => {
-  return <StyledButton>{props.children}</StyledButton>
+  const { toggleForm } = props
+
+  return <StyledButton onClick={toggleForm}>{props.children}</StyledButton>
 }
 
 const StyledButton = styled.button`
