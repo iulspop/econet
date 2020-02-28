@@ -45,12 +45,6 @@ const StyledMain = styled.main`
   justify-content: space-around;
   align-items: center;
   min-height: 100vh;
-
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(204, 228, 247, 1) 11.2%,
-    rgba(237, 246, 250, 1) 100.2%
-  );
 `
 
 const Container = styled.div`

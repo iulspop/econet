@@ -10,7 +10,7 @@ import {
 
 export const Service = () => {
   return (
-    <Fieldset>
+    <Fieldset hidden>
       <Legend>Service Désiré</Legend>
       <Label for="tapis">Nettoyage de tapis</Label>
       <Input type="checkbox" name="tapis" id="tapis" />

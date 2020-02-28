@@ -12,7 +12,9 @@ export const Form = props => {
       <Contact />
       <Service />
       <Visit />
-      <Button type="submit">Envoyer la demande</Button>
+      <Button type="submit" hidden>
+        Envoyer la demande
+      </Button>
     </StyledForm>
   )
 }

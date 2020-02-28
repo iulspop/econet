@@ -11,7 +11,7 @@ import {
 
 export const Visit = () => {
   return (
-    <Fieldset>
+    <Fieldset hidden>
       <Legend>Visite</Legend>
       <Label for="date">
         Quelle date voulez-vous qu’on vous prête service?
