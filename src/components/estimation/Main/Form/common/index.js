@@ -4,7 +4,6 @@ import { buttonReset } from "../../../../common/mixins"
 export const Label = styled.label`
   clear: both;
   display: block;
-  // color: ${props => props.theme.colors.primary};
 `
 
 export const RadioLabel = styled.label`
@@ -30,8 +29,6 @@ export const Fieldset = styled.fieldset`
   background-color: white;
   border-radius: 1px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  // 5px 5px 5px black,
-
   display: ${params => (params.hidden ? "none" : "block")};
 `
 
@@ -70,8 +67,10 @@ export const NextButton = styled.button`
   width: 15rem;
   height: 4.2rem;
   margin-bottom: 1rem;
-  border-radius: 1px;
+  border-radius: 2px;
+  background-color: ${props => props.theme.colors.primary};
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   color: white;
-  background-color: #68a336;
   float: right;
 `
