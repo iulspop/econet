@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import {
   Label,
   Input,
@@ -8,9 +9,11 @@ import {
   RadioLegend,
 } from "../common"
 
-export const Service = () => {
+export const Service = props => {
+  const { formStep } = props
+
   return (
-    <Fieldset hidden>
+    <ServiceFieldset formStep={formStep}>
       <Legend>Service Désiré</Legend>
       <Label for="tapis">Nettoyage de tapis</Label>
       <Input type="checkbox" name="tapis" id="tapis" />
@@ -92,6 +95,10 @@ export const Service = () => {
           <Input type="radio" name="traffic" id="trafficNo" value="false" />
         </RadioGroup>
       </Fieldset>
-    </Fieldset>
+    </ServiceFieldset>
   )
 }
+
+const ServiceFieldset = styled(Fieldset)`
+  display: ${params => (params.formStep === 1 ? "block" : "none")};
+`

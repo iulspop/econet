@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Contact } from "./Contact"
 import { Service } from "./Service"
@@ -7,11 +7,17 @@ import { Visit } from "./Visit"
 export const Form = props => {
   const { showForm } = props
 
+  const [formStep, setFormStep] = useState(0)
+
+  function changeStep() {
+    setFormStep(formStep + 1)
+  }
+
   return (
     <StyledForm showForm={showForm}>
-      <Contact />
-      <Service />
-      <Visit />
+      <Contact formStep={formStep} changeStep={changeStep} />
+      <Service formStep={formStep} changeStep={changeStep} />
+      <Visit formStep={formStep} changeStep={changeStep} />
       <Button type="submit" hidden>
         Envoyer la demande
       </Button>

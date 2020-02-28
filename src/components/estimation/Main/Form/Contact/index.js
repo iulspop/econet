@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import {
   Label,
   RadioLabel,
@@ -12,9 +13,11 @@ import {
   NextButton,
 } from "../common"
 
-export const Contact = () => {
+export const Contact = props => {
+  const { formStep, changeStep } = props
+
   return (
-    <Fieldset>
+    <ContactFieldset formStep={formStep}>
       <Legend>
         On aurait juste besoin de quelques informations pour vous envoyer
         l'estimation et rester en contact
@@ -51,8 +54,14 @@ export const Contact = () => {
           />
           <RadioLabel for="indifferent">Indifférent</RadioLabel>
         </RadioGroup>
-        <NextButton type="button">Continuer</NextButton>
+        <NextButton type="button" onClick={changeStep}>
+          Continuer
+        </NextButton>
       </InputsContainer>
-    </Fieldset>
+    </ContactFieldset>
   )
 }
+
+const ContactFieldset = styled(Fieldset)`
+  display: ${params => (params.formStep === 0 ? "block" : "none")};
+`
