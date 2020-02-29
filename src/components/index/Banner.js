@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { absCenterH, linkReset } from "../common/mixins"
+import { absCenterH, linkReset } from "../../mixins"
 
 export const Banner = () => {
   return (

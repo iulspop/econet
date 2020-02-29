@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { buttonReset } from "../../../../common/mixins"
+import { buttonReset } from "../../../../../mixins"
 
 export const Label = styled.label`
   clear: both;

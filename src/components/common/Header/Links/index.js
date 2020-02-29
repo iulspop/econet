@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { linkReset } from "../../mixins"
+import { linkReset } from "../../../../mixins"
 
 export const Link = styled.a`
   align-self: center;

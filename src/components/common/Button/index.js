@@ -1,11 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { buttonReset } from "../mixins"
+import { buttonReset } from "../../../mixins"
 
-export const Button = props => {
-  const { toggleForm } = props
-
-  return <StyledButton onClick={toggleForm}>{props.children}</StyledButton>
+export const Button = ({ clickAction, children }) => {
+  return <StyledButton onClick={clickAction}>{children}</StyledButton>
 }
 
 const StyledButton = styled.button`

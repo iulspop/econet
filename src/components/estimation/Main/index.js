@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { ButtonLeft, ButtonRight } from "./Buttons"
+import { DecoratedButton } from "./Button"
 import { Form } from "./Form"
 
 export const Main = () => {
@@ -28,8 +28,8 @@ export const Main = () => {
       </Container>
 
       <Container>
-        <ButtonLeft />
-        <ButtonRight toggleForm={toggleForm} />
+        <DecoratedButton left>Résidentiel</DecoratedButton>
+        <DecoratedButton clickAction={toggleForm}>Commercial</DecoratedButton>
       </Container>
 
       <Container>
