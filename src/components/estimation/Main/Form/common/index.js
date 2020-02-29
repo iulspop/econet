@@ -41,6 +41,7 @@ export const RadioGroup = styled.fieldset`
 
 export const Legend = styled.legend`
   float: left;
+  width: 100%;
   font-weight: 700;
   font-size: 2rem;
   text-align: center;
@@ -73,4 +74,11 @@ export const NextButton = styled.button`
   cursor: pointer;
   color: white;
   float: right;
+`
+
+export const BackButton = styled(NextButton)`
+  width: 12rem;
+  border-radius: 2px;
+  background-color: #bdbdbd;
+  float: left;
 `

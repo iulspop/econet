@@ -14,7 +14,7 @@ import {
 } from "../common"
 
 export const Contact = props => {
-  const { formStep, changeStep } = props
+  const { formStep, forwardFormStep } = props
 
   return (
     <ContactFieldset formStep={formStep}>
@@ -54,7 +54,7 @@ export const Contact = props => {
           />
           <RadioLabel for="indifferent">Indifférent</RadioLabel>
         </RadioGroup>
-        <NextButton type="button" onClick={changeStep}>
+        <NextButton type="button" onClick={forwardFormStep}>
           Continuer
         </NextButton>
       </InputsContainer>

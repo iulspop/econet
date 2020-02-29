@@ -9,15 +9,23 @@ export const Form = props => {
 
   const [formStep, setFormStep] = useState(0)
 
-  function changeStep() {
+  function forwardFormStep() {
     setFormStep(formStep + 1)
+  }
+
+  function backwardFormStep() {
+    setFormStep(formStep - 1)
   }
 
   return (
     <StyledForm showForm={showForm}>
-      <Contact formStep={formStep} changeStep={changeStep} />
-      <Service formStep={formStep} changeStep={changeStep} />
-      <Visit formStep={formStep} changeStep={changeStep} />
+      <Contact formStep={formStep} forwardFormStep={forwardFormStep} />
+      <Service
+        formStep={formStep}
+        forwardFormStep={forwardFormStep}
+        backwardFormStep={backwardFormStep}
+      />
+      <Visit formStep={formStep} forwardFormStep={forwardFormStep} />
       <Button type="submit" hidden>
         Envoyer la demande
       </Button>
