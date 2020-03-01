@@ -21,6 +21,7 @@ export const Form = props => {
     <StyledForm
       showForm={showForm}
       name="commercial-estimation"
+      action="thank-you"
       method="POST"
       netlify
     >
