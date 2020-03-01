@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const Logo = () => {
   return (
-    <LogoLink href={"#"}>
+    <LogoLink href={"/"}>
       <picture>
         <source
           media={"(max-width: 1200px)"}
