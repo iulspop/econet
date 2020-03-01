@@ -32,11 +32,7 @@ export const Form = props => {
         forwardFormStep={forwardFormStep}
         backwardFormStep={backwardFormStep}
       />
-      <Visit
-        formStep={formStep}
-        forwardFormStep={forwardFormStep}
-        backwardFormStep={backwardFormStep}
-      />
+      <Visit formStep={formStep} backwardFormStep={backwardFormStep} />
     </StyledForm>
   )
 }

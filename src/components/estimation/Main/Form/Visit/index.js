@@ -16,7 +16,7 @@ import {
   BackButton,
 } from "../common"
 
-export const Visit = ({ formStep, backwardFormStep, forwardFormStep }) => {
+export const Visit = ({ formStep, backwardFormStep }) => {
   return (
     <VisitFieldset formStep={formStep}>
       <Legend>
