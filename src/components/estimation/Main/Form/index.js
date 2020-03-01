@@ -44,7 +44,7 @@ export const Form = props => {
 // Merci, on votre demande d'estimation a été bien envoyé. On vous contactera sous peu. N'hésitez pas à nous joindre si vous avez des questions. On est ouvert de lundi à mardi de 9h à 17h
 
 const StyledForm = styled.form`
-  visibility: ${props => (props.showForm ? "visible" : "collapse")};
+  display: ${props => (props.showForm ? "block" : "none")};
   width: 650px;
   margin: 5rem 0;
 `
