@@ -1,14 +1,11 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import {
-  Label,
   RadioLabel,
-  Input,
   RadioInput,
   Fieldset,
   RadioGroup,
   Legend,
-  RadioLegend,
   InputsContainer,
   NextButton,
   BackButton,
@@ -18,13 +15,25 @@ import { CarpetOptions } from "./CarpetOptions"
 export const Service = props => {
   const { formStep, backwardFormStep, forwardFormStep } = props
 
+  const [showCarpet, setShowCarpet] = useState(false)
+
+  function toggleCarpet() {
+    setShowCarpet(!showCarpet)
+    console.log("potato")
+  }
+
   return (
     <ServiceFieldset formStep={formStep}>
       <Legend>Maintenant, parlez-nous des services que vous désirez</Legend>
       <InputsContainer>
         <RadioGroup>
           <div>
-            <RadioInput type="checkbox" name="tapis" id="tapis" />
+            <RadioInput
+              type="checkbox"
+              name="tapis"
+              id="tapis"
+              onClick={toggleCarpet}
+            />
             <CheckboxLabel for="tapis">Nettoyage de tapis</CheckboxLabel>
           </div>
           <div>
@@ -37,7 +46,7 @@ export const Service = props => {
           </div>
         </RadioGroup>
 
-        <CarpetOptions />
+        <CarpetOptions showCarpet={showCarpet} />
 
         <BackButton type="button" onClick={backwardFormStep}>
           Retourner
