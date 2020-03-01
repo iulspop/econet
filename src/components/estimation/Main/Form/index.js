@@ -18,7 +18,12 @@ export const Form = props => {
   }
 
   return (
-    <StyledForm showForm={showForm} netlify>
+    <StyledForm
+      showForm={showForm}
+      name="commercial-estimation"
+      method="POST"
+      netlify
+    >
       <Contact formStep={formStep} forwardFormStep={forwardFormStep} />
       <Service
         formStep={formStep}
