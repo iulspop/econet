@@ -34,7 +34,7 @@ export const Contact = props => {
         <Input type="tel" name="phone" id="phone" />
         <RadioGroup>
           <RadioLegend>Langue de communication</RadioLegend>
-          <HiddenLabelForNetlifyForms>
+          <HiddenLabelForNetlifyForms for="french">
             Langue de communication
           </HiddenLabelForNetlifyForms>
           <RadioInput
