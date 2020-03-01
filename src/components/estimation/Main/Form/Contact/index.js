@@ -3,6 +3,7 @@ import styled from "styled-components"
 import {
   Label,
   RadioLabel,
+  HiddenLabelForNetlifyForms,
   Input,
   RadioInput,
   Fieldset,
@@ -33,7 +34,9 @@ export const Contact = props => {
         <Input type="tel" name="phone" id="phone" />
         <RadioGroup>
           <RadioLegend>Langue de communication</RadioLegend>
-
+          <HiddenLabelForNetlifyForms>
+            Langue de communication
+          </HiddenLabelForNetlifyForms>
           <RadioInput
             type="radio"
             name="langue"
