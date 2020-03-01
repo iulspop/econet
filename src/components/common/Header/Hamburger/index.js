@@ -6,7 +6,11 @@ export const Hamburger = props => {
   const { toggleNav, showNav } = props
 
   return (
-    <StyledHamburger onClick={toggleNav} showNav={showNav}>
+    <StyledHamburger
+      onClick={toggleNav}
+      showNav={showNav}
+      alt="toggle mobile navigation"
+    >
       <HamburgerIcon showNav={showNav} />
     </StyledHamburger>
   )

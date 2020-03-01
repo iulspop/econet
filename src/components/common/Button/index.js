@@ -2,8 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import { buttonReset } from "../../../mixins"
 
-export const Button = ({ clickAction, children }) => {
-  return <StyledButton onClick={clickAction}>{children}</StyledButton>
+export const Button = ({ clickAction, children, alt }) => {
+  return (
+    <StyledButton onClick={clickAction} alt={alt}>
+      {children}
+    </StyledButton>
+  )
 }
 
 const StyledButton = styled.button`

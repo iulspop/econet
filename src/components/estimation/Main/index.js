@@ -28,10 +28,19 @@ export const Main = () => {
       </Container>
 
       <Container>
-        <DecoratedButton clickAction={toggleForm} left>
+        <DecoratedButton
+          clickAction={toggleForm}
+          alt="open résidential services form to get your estimation"
+          left
+        >
           Résidentiel
         </DecoratedButton>
-        <DecoratedButton clickAction={toggleForm}>Commercial</DecoratedButton>
+        <DecoratedButton
+          clickAction={toggleForm}
+          alt="open commercial services form to get your estimation"
+        >
+          Commercial
+        </DecoratedButton>
       </Container>
 
       <Container>
