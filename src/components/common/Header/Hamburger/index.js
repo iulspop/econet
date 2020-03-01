@@ -9,7 +9,7 @@ export const Hamburger = props => {
     <StyledHamburger
       onClick={toggleNav}
       showNav={showNav}
-      alt="toggle mobile navigation"
+      aria-label="toggle mobile navigation"
     >
       <HamburgerIcon showNav={showNav} />
     </StyledHamburger>

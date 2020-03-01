@@ -2,9 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { Button } from "../../../common"
 
-export const DecoratedButton = ({ left, clickAction, children, alt }) => {
+export const DecoratedButton = ({ left, clickAction, children, ariaLabel }) => {
   return (
-    <Button clickAction={clickAction} alt={alt}>
+    <Button clickAction={clickAction} ariaLabel={ariaLabel}>
       <SideDecoration
         src={"/assets/side-decoration.png"}
         alt={""}
