@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import {
   RadioLabel,
+  HiddenLabelForNetlifyForms,
   RadioInput,
   Fieldset,
   RadioGroup,
@@ -20,6 +21,9 @@ export const CarpetOptions = ({ showCarpet }) => {
         <RadioLegend>
           Quelle sont les pieds carrés de l’aire à nettoyer?
         </RadioLegend>
+        <HiddenLabelForNetlifyForms for="<300sqft">
+          Quelle sont les pieds carrés de l’aire à nettoyer?
+        </HiddenLabelForNetlifyForms>
         <div>
           <RadioInput
             type="radio"
@@ -97,6 +101,9 @@ export const CarpetOptions = ({ showCarpet }) => {
         <RadioLegend>
           L’aire à nettoyer est-elle une zone de haut traffic?
         </RadioLegend>
+        <HiddenLabelForNetlifyForms for="trafficYes">
+          L’aire à nettoyer est-elle une zone de haut traffic?
+        </HiddenLabelForNetlifyForms>
         <RadioInput type="radio" name="traffic" id="trafficYes" value="true" />
         <RadioLabel for="trafficYes">Oui</RadioLabel>
         <RadioInput type="radio" name="traffic" id="trafficNo" value="false" />
