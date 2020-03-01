@@ -35,9 +35,6 @@ export const Form = props => {
         forwardFormStep={forwardFormStep}
         backwardFormStep={backwardFormStep}
       />
-      <Button type="submit" hidden>
-        Envoyer la demande
-      </Button>
     </StyledForm>
   )
 }
@@ -48,9 +45,4 @@ const StyledForm = styled.form`
   display: ${props => (props.showForm ? "block" : "none")};
   width: 650px;
   margin: 5rem 0;
-`
-const Button = styled.button`
-  display: ${props => (props.hidden ? "none" : "block")};
-  width: 15rem;
-  margin: auto;
 `
