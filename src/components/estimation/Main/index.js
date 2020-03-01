@@ -56,11 +56,11 @@ const Container = styled.div`
 const DecorativeLine = styled.img`
   width: 700px;
   margin: 2rem;
-  margin-top: 5rem;
+  margin-top: 0rem;
 `
 
 const MainHeading = styled.h1`
-  margin: 5rem 0;
+  margin: 3rem 0;
   margin-top: 2rem;
 
   font-size: 8.2rem;
