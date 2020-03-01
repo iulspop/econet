@@ -12,7 +12,10 @@ import {
 export const CarpetOptions = ({ showCarpet }) => {
   return (
     <CarpetOptionsFieldset showCarpet={showCarpet}>
-      <Legend>Options Tapis</Legend>
+      <Legend>
+        Veuillez préciser quelques détails afin que nous puissions vous donner
+        l'estimation la plus précise possible
+      </Legend>
       <RadioGroup>
         <RadioLegend>
           Quelle sont les pieds carrés de l’aire à nettoyer?

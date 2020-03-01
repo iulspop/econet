@@ -13,7 +13,7 @@ import {
 import { CarpetOptions } from "./CarpetOptions"
 
 export const Service = props => {
-  const { formStep, backwardFormStep, forwardFormStep } = props
+  const { formStep, forwardFormStep, backwardFormStep } = props
 
   const [showCarpet, setShowCarpet] = useState(false)
 
@@ -60,7 +60,7 @@ export const Service = props => {
 }
 
 const ServiceFieldset = styled(Fieldset)`
-  display: ${params => (params.formStep === 1 ? "block" : "none")};
+  display: ${props => (props.formStep === 1 ? "block" : "none")};
 `
 
 const CheckboxLabel = styled(RadioLabel)`

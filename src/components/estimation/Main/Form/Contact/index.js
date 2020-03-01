@@ -63,5 +63,5 @@ export const Contact = props => {
 }
 
 const ContactFieldset = styled(Fieldset)`
-  display: ${params => (params.formStep === 0 ? "block" : "none")};
+  display: ${props => (props.formStep === 0 ? "block" : "none")};
 `

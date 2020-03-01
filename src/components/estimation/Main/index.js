@@ -28,7 +28,9 @@ export const Main = () => {
       </Container>
 
       <Container>
-        <DecoratedButton left>Résidentiel</DecoratedButton>
+        <DecoratedButton clickAction={toggleForm} left>
+          Résidentiel
+        </DecoratedButton>
         <DecoratedButton clickAction={toggleForm}>Commercial</DecoratedButton>
       </Container>
 
@@ -59,6 +61,7 @@ const DecorativeLine = styled.img`
 
 const MainHeading = styled.h1`
   margin: 5rem 0;
+  margin-top: 2rem;
 
   font-size: 8.2rem;
   font-weight: 700;
