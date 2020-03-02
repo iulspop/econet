@@ -26,7 +26,11 @@ export const Form = props => {
       name={formName}
     >
       <input type="hidden" name="form-name" value={formName} />
-      <Contact formStep={formStep} forwardFormStep={forwardFormStep} />
+      <Contact
+        formStep={formStep}
+        forwardFormStep={forwardFormStep}
+        formName={formName}
+      />
       <Service
         formStep={formStep}
         forwardFormStep={forwardFormStep}

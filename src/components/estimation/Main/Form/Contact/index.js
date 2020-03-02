@@ -14,9 +14,7 @@ import {
   NextButton,
 } from "../common"
 
-export const Contact = props => {
-  const { formStep, forwardFormStep } = props
-
+export const Contact = ({ formStep, forwardFormStep, formName }) => {
   return (
     <ContactFieldset formStep={formStep}>
       <Legend>
@@ -26,8 +24,14 @@ export const Contact = props => {
       <InputsContainer>
         <Label for="name">Nom et prénom</Label>
         <Input type="text" name="name" id="name" />
-        <Label for="company">Compagnie</Label>
-        <Input type="text" name="company" id="company" />
+        {formName === "commercial-estimation" ? (
+          <>
+            <Label for="company">Compagnie</Label>
+            <Input type="text" name="company" id="company" />
+          </>
+        ) : (
+          <></>
+        )}
         <Label for="email">Courriel</Label>
         <Input type="email" name="email" id="email" />
         <Label for="phone">Téléphone</Label>
