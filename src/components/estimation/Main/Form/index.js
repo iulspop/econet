@@ -5,7 +5,7 @@ import { Service } from "./Service"
 import { Visit } from "./Visit"
 
 export const Form = props => {
-  const { showForm } = props
+  const { showForm, formName } = props
 
   const [formStep, setFormStep] = useState(0)
 
@@ -23,9 +23,9 @@ export const Form = props => {
       method="post"
       action="#"
       data-netlify="true"
-      name="commercial-estimation"
+      name={formName}
     >
-      <input type="hidden" name="form-name" value="commercial-estimation" />
+      <input type="hidden" name="form-name" value={formName} />
       <Contact formStep={formStep} forwardFormStep={forwardFormStep} />
       <Service
         formStep={formStep}

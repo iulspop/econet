@@ -44,7 +44,8 @@ export const Main = () => {
       </Container>
 
       <Container>
-        <Form showForm={showForm} />
+        <Form showForm={showForm} formName="commercial-estimation" />
+        <Form showForm={showForm} formName="residential-estimation" />
       </Container>
     </StyledMain>
   )
