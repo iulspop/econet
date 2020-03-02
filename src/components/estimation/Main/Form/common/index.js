@@ -61,7 +61,6 @@ export const RadioLegend = styled.legend``
 export const Select = styled.select`
   display: block;
   width: 10rem;
-  margin: auto;
 `
 
 export const InputsContainer = styled.div`

@@ -10,9 +10,9 @@ import {
   RadioLegend,
 } from "../../common"
 
-export const CarpetOptions = ({ showCarpet }) => {
+export const Options = ({ showOptions }) => {
   return (
-    <CarpetOptionsFieldset showCarpet={showCarpet}>
+    <OptionsFieldset showOptions={showOptions}>
       <Legend>
         Veuillez préciser quelques détails afin que nous puissions vous donner
         l'estimation la plus précise possible
@@ -25,12 +25,7 @@ export const CarpetOptions = ({ showCarpet }) => {
           Quelle sont les pieds carrés de l’aire à nettoyer?
         </HiddenLabelForNetlifyForms>
         <div>
-          <RadioInput
-            type="radio"
-            name="carpetArea"
-            id="<300sqft"
-            value="<300sqft"
-          />
+          <RadioInput type="radio" name="Area" id="<300sqft" value="<300sqft" />
           <RadioLabel for="<300sqft">300 pieds carrés ou moins</RadioLabel>
         </div>
         <div>
@@ -109,10 +104,10 @@ export const CarpetOptions = ({ showCarpet }) => {
         <RadioInput type="radio" name="traffic" id="trafficNo" value="false" />
         <RadioLabel for="trafficNo">Non</RadioLabel>
       </RadioGroup>
-    </CarpetOptionsFieldset>
+    </OptionsFieldset>
   )
 }
 
-const CarpetOptionsFieldset = styled(Fieldset)`
-  display: ${props => (props.showCarpet ? "block" : "none")};
+const OptionsFieldset = styled(Fieldset)`
+  display: ${props => (props.showOptions ? "block" : "none")};
 `

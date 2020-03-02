@@ -10,16 +10,17 @@ import {
   NextButton,
   BackButton,
 } from "../common"
-import { CarpetOptions } from "./CarpetOptions"
+import { Options } from "./Options"
 
 export const Service = props => {
   const { formStep, forwardFormStep, backwardFormStep } = props
 
-  const [showCarpet, setShowCarpet] = useState(false)
+  const [showOptions, setShowOptions] = useState(false)
 
-  function toggleCarpet() {
-    setShowCarpet(!showCarpet)
-    console.log("potato")
+  function toggleOptions() {
+    if (showOptions === false) {
+      setShowOptions(!showOptions)
+    }
   }
 
   return (
@@ -32,7 +33,7 @@ export const Service = props => {
               type="checkbox"
               name="tapis"
               id="tapis"
-              onClick={toggleCarpet}
+              onClick={toggleOptions}
             />
             <CheckboxLabel for="tapis">Nettoyage de tapis</CheckboxLabel>
           </div>
@@ -41,12 +42,17 @@ export const Service = props => {
             <CheckboxLabel for="meubles">Nettoyage de meubles</CheckboxLabel>
           </div>
           <div>
-            <RadioInput type="checkbox" name="cirage" id="cirage" />
+            <RadioInput
+              type="checkbox"
+              name="cirage"
+              id="cirage"
+              onClick={toggleOptions}
+            />
             <CheckboxLabel for="cirage">Cirage</CheckboxLabel>
           </div>
         </RadioGroup>
 
-        <CarpetOptions showCarpet={showCarpet} />
+        <Options showOptions={showOptions} />
 
         <BackButton type="button" onClick={backwardFormStep}>
           Retourner
