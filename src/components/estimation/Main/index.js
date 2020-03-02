@@ -32,6 +32,7 @@ export const Main = () => {
       <Container>
         <DecoratedButton
           clickAction={showResidentialForm}
+          active={shownForm === "residential"}
           ariaLabel="open résidential services form"
           left
         >
@@ -39,6 +40,7 @@ export const Main = () => {
         </DecoratedButton>
         <DecoratedButton
           clickAction={showCommercialForm}
+          active={shownForm === "commercial"}
           ariaLabel="open commercial services form"
         >
           Commercial
