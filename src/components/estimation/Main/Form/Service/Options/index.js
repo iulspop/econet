@@ -19,10 +19,10 @@ export const Options = ({ selectedOptions }) => {
       </Legend>
       <RadioGroup>
         <RadioLegend>
-          Quelle sont les pieds carrés de l’aire à nettoyer?
+          Quelle sont les pieds carrés de l’aire à nettoyer/cirer?
         </RadioLegend>
         <HiddenLabelForNetlifyForms for="<300sqft">
-          Quelle sont les pieds carrés de l’aire à nettoyer?
+          Quelle sont les pieds carrés de l’aire à nettoyer/cirer?
         </HiddenLabelForNetlifyForms>
         <div>
           <RadioInput type="radio" name="Area" id="<300sqft" value="<300sqft" />
