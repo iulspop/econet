@@ -10,9 +10,9 @@ import {
   RadioLegend,
 } from "../../common"
 
-export const Options = ({ showOptions }) => {
+export const Options = ({ selectedOptions }) => {
   return (
-    <OptionsFieldset showOptions={showOptions}>
+    <OptionsFieldset selectedOptions={selectedOptions}>
       <Legend>
         Veuillez préciser quelques détails afin que nous puissions vous donner
         l'estimation la plus précise possible
@@ -109,5 +109,8 @@ export const Options = ({ showOptions }) => {
 }
 
 const OptionsFieldset = styled(Fieldset)`
-  display: ${props => (props.showOptions ? "block" : "none")};
+  display: ${props =>
+    props.selectedOptions.tapis || props.selectedOptions.cirage
+      ? "block"
+      : "none"};
 `

@@ -15,12 +15,16 @@ import { Options } from "./Options"
 export const Service = props => {
   const { formStep, forwardFormStep, backwardFormStep } = props
 
-  const [showOptions, setShowOptions] = useState(false)
+  const [selectedOptions, setSelectedOptions] = useState({
+    tapis: false,
+    meubles: false,
+    cirage: false,
+  })
 
-  function toggleOptions() {
-    if (showOptions === false) {
-      setShowOptions(!showOptions)
-    }
+  function toggleOption(key) {
+    setSelectedOptions(prev => {
+      return { ...prev, [key]: !prev[key] }
+    })
   }
 
   return (
@@ -33,7 +37,7 @@ export const Service = props => {
               type="checkbox"
               name="tapis"
               id="tapis"
-              onClick={toggleOptions}
+              onClick={() => toggleOption("tapis")}
             />
             <CheckboxLabel for="tapis">Nettoyage de tapis</CheckboxLabel>
           </div>
@@ -46,13 +50,13 @@ export const Service = props => {
               type="checkbox"
               name="cirage"
               id="cirage"
-              onClick={toggleOptions}
+              onClick={() => toggleOption("cirage")}
             />
             <CheckboxLabel for="cirage">Cirage</CheckboxLabel>
           </div>
         </RadioGroup>
 
-        <Options showOptions={showOptions} />
+        <Options selectedOptions={selectedOptions} />
 
         <BackButton type="button" onClick={backwardFormStep}>
           Retourner
