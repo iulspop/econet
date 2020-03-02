@@ -4,10 +4,14 @@ import { DecoratedButton } from "./Button"
 import { Form } from "./Form"
 
 export const Main = () => {
-  const [showForm, setShowForm] = useState(false)
+  const [shownForm, setShownForm] = useState("")
 
-  function toggleForm() {
-    setShowForm(!showForm)
+  function showResidentialForm() {
+    setShownForm(prev => "residential")
+  }
+
+  function showCommercialForm() {
+    setShownForm(prev => "commercial")
   }
 
   return (
@@ -20,32 +24,30 @@ export const Main = () => {
         <MainHeading>Estimation</MainHeading>
       </Container>
 
-      <Container showForm={showForm}>
-        <h2>
-          Afin de bien vous servir, veuillez nous indiquer quel type de service
-          vous cherchez.
-        </h2>
-      </Container>
+      <SecondaryHeading shownForm={shownForm}>
+        Afin de bien vous servir, veuillez nous indiquer quel type de service
+        vous cherchez.
+      </SecondaryHeading>
 
       <Container>
         <DecoratedButton
-          clickAction={toggleForm}
-          ariaLabel="open résidential services form to get your estimation"
+          clickAction={showResidentialForm}
+          ariaLabel="open résidential services form"
           left
         >
           Résidentiel
         </DecoratedButton>
         <DecoratedButton
-          clickAction={toggleForm}
-          ariaLabel="open commercial services form to get your estimation"
+          clickAction={showCommercialForm}
+          ariaLabel="open commercial services form"
         >
           Commercial
         </DecoratedButton>
       </Container>
 
       <Container>
-        <Form showForm={showForm} formName="commercial-estimation" />
-        <Form showForm={showForm} formName="residential-estimation" />
+        <Form shownForm={shownForm} formName="commercial-estimation" />
+        <Form shownForm={shownForm} formName="residential-estimation" />
       </Container>
     </StyledMain>
   )
@@ -60,7 +62,11 @@ const StyledMain = styled.main`
 `
 
 const Container = styled.div`
-  display: ${props => (props.showForm ? "none" : "block")};
+  display: ${props => (props.shownForm ? "none" : "block")};
+`
+
+const SecondaryHeading = styled.h2`
+  display: ${props => (props.shownForm === "" ? "block" : "none")};
 `
 
 const DecorativeLine = styled.img`

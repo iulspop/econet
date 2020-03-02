@@ -5,7 +5,7 @@ import { Service } from "./Service"
 import { Visit } from "./Visit"
 
 export const Form = props => {
-  const { showForm, formName } = props
+  const { shownForm, formName } = props
 
   const [formStep, setFormStep] = useState(0)
 
@@ -19,7 +19,7 @@ export const Form = props => {
 
   return (
     <StyledForm
-      showForm={showForm}
+      shownForm={shownForm}
       method="post"
       action="#"
       data-netlify="true"
@@ -40,7 +40,15 @@ export const Form = props => {
 // Merci, on votre demande d'estimation a été bien envoyé. On vous contactera sous peu. N'hésitez pas à nous joindre si vous avez des questions. On est ouvert de lundi à mardi de 9h à 17h
 
 const StyledForm = styled.form`
-  display: ${props => (props.showForm ? "block" : "none")};
+  display: ${props => {
+    if (props.name === "commercial-estimation") {
+      return props.shownForm === "commercial" ? "block" : "none"
+    } else if (props.name === "residential-estimation") {
+      return props.shownForm === "residential" ? "block" : "none"
+    } else {
+      throw Error("invalid form name")
+    }
+  }};
   width: 650px;
   margin: 5rem 0;
 `
