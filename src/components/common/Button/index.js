@@ -2,9 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import { buttonReset } from "../../../mixins"
 
-export const Button = ({ clickAction, children, ariaLabel, active }) => {
+export const Button = ({ clickAction, children, ariaLabel, inactive }) => {
   return (
-    <StyledButton onClick={clickAction} aria-label={ariaLabel} active={active}>
+    <StyledButton
+      onClick={clickAction}
+      aria-label={ariaLabel}
+      inactive={inactive}
+    >
       {children}
     </StyledButton>
   )
@@ -18,7 +22,7 @@ const StyledButton = styled.button`
 
   font-size: 3.5rem;
   font-weight: 700;
-  color: ${props => (props.active ? props.theme.colors.primary : "grey")};
+  color: ${props => (props.inactive ? "gray" : props.theme.colors.primary)};
   text-transform: uppercase;
 
   cursor: pointer;
@@ -29,7 +33,7 @@ const StyledButton = styled.button`
     content: "";
     background: radial-gradient(
       circle at center,
-      ${props => (props.active ? props.theme.colors.primary : "grey")},
+      ${props => (props.inactive ? "gray" : props.theme.colors.primary)},
       transparent
     );
     position: absolute;
@@ -43,7 +47,7 @@ const StyledButton = styled.button`
     content: "";
     background: radial-gradient(
       circle at center,
-      ${props => (props.active ? props.theme.colors.primary : "grey")},
+      ${props => (props.inactive ? "gray" : props.theme.colors.primary)},
       transparent
     );
     position: absolute;

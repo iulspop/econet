@@ -7,15 +7,15 @@ export const DecoratedButton = ({
   clickAction,
   children,
   ariaLabel,
-  active,
+  inactive,
 }) => {
   return (
-    <Button clickAction={clickAction} ariaLabel={ariaLabel} active={active}>
+    <Button clickAction={clickAction} ariaLabel={ariaLabel} inactive={inactive}>
       <SideDecoration
         src={"/assets/side-decoration.png"}
         alt={""}
         left={left}
-        active={active}
+        inactive={inactive}
       />
       {children}
     </Button>
@@ -24,7 +24,7 @@ export const DecoratedButton = ({
 
 export const SideDecoration = styled.img`
   width: 8rem;
-  filter: ${props => (props.active ? "none" : "grayscale(100%)")};
+  filter: ${props => (props.inactive ? "grayscale(100%)" : "none")};
 
   position: absolute;
   left: ${props => (props.left ? "-8rem" : "100%")};
