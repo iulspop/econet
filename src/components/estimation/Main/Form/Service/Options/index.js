@@ -9,6 +9,8 @@ import {
   RadioGroup,
   Legend,
   RadioLegend,
+  Select,
+  Label,
 } from "../../common"
 
 export const Options = ({ selectedOptions }) => {
@@ -18,62 +20,19 @@ export const Options = ({ selectedOptions }) => {
         Veuillez préciser quelques détails afin que nous puissions vous donner
         l'estimation la plus précise possible
       </Legend>
-      <RadioGroup>
-        <RadioLegend>
-          Quelle sont les pieds carrés de l’aire à nettoyer/cirer?
-        </RadioLegend>
-        <HiddenLabelForNetlifyForms>
-          Quelle sont les pieds carrés de l’aire à nettoyer/cirer?
-        </HiddenLabelForNetlifyForms>
-        <div>
-          <RadioLabel>
-            <RadioInput type="radio" name="area" value="<300sqft" />
-            300 pieds carrés ou moins
-          </RadioLabel>
-        </div>
-        <div>
-          <RadioLabel>
-            <RadioInput type="radio" name="area" value="300-700sqft" />
-            300 - 700 pieds carrés
-          </RadioLabel>
-        </div>
-        <div>
-          <RadioLabel>
-            <RadioInput type="radio" name="area" value="700-1000sqft" />
-            700 – 1000 pieds carrés
-          </RadioLabel>
-        </div>
-        <div>
-          <RadioLabel>
-            <RadioInput type="radio" name="area" value="1000-2000sqft" />
-            1000 – 2000 pieds carrés
-          </RadioLabel>
-        </div>
-        <div>
-          <RadioLabel>
-            <RadioInput type="radio" name="area" value="2000-3000sqft" />
-            2000 – 3000 pieds carrés
-          </RadioLabel>
-        </div>
-        <div>
-          <RadioLabel>
-            <RadioInput type="radio" name="area" value="3000-4000sqft" />
-            3000 – 4000 pieds carrés
-          </RadioLabel>
-        </div>
-        <div>
-          <RadioLabel>
-            <RadioInput type="radio" name="area" value="4000-5000sqft" />
-            4000 – 5000 pieds carrés
-          </RadioLabel>
-        </div>
-        <div>
-          <RadioLabel>
-            <RadioInput type="radio" name="area" value="5000sqft" />
-            5000 + pieds carrés
-          </RadioLabel>
-        </div>
-      </RadioGroup>
+      <Label>
+        Quelle sont les pieds carrés de l’aire à nettoyer/cirer?
+        <SelectWide name="area">
+          <option value="<300">300 pieds carrés ou moins</option>
+          <option value="300-700">300 - 700 pieds carrés</option>
+          <option value="700-1000">700 – 1000 pieds carrés</option>
+          <option value="1000-2000">1000 – 2000 pieds carrés</option>
+          <option value="2000-3000">2000 – 3000 pieds carrés</option>
+          <option value="3000-4000">3000 – 4000 pieds carrés</option>
+          <option value="4000-5000">4000 – 5000 pieds carrés</option>
+          <option value="5000+">5000 + pieds carrés</option>
+        </SelectWide>
+      </Label>
       <RadioGroup>
         <RadioLegend>
           L’aire à nettoyer est-elle une zone de haut traffic?
@@ -99,4 +58,9 @@ const OptionsFieldset = styled(Fieldset)`
     props.selectedOptions.tapis || props.selectedOptions.cirage
       ? "block"
       : "none"};
+`
+
+const SelectWide = styled(Select)`
+  width: 20rem;
+  margin-top: 0.5rem;
 `
