@@ -13,8 +13,6 @@ export const HiddenLabelForNetlifyForms = styled.label`
 
 export const RadioLabel = styled.label`
   clear: both;
-  margin-left: 0.5rem;
-  margin-right: 1.5rem;
 `
 
 export const Input = styled.input`
@@ -26,10 +24,15 @@ export const Input = styled.input`
 
 export const RadioInput = styled.input`
   transform: translateY(2px);
+  margin-right: 0.5rem;
+`
+
+export const RadioInputMarginLeft = styled(RadioInput)`
+  margin-left: 1.5rem;
 `
 
 export const Fieldset = styled.fieldset`
-  margin: 2rem;
+  margin: 2rem 0;
   border: none;
   background-color: white;
   border-radius: 1px;

@@ -6,6 +6,7 @@ import {
   HiddenLabelForNetlifyForms,
   Input,
   RadioInput,
+  RadioInputMarginLeft,
   Fieldset,
   RadioGroup,
   Legend,
@@ -22,44 +23,59 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
         l'estimation et rester en contact
       </Legend>
       <InputsContainer>
-        <Label for="name">Nom et prénom</Label>
-        <Input type="text" name="name" id="name" />
+        <Label>
+          Nom et prénom
+          <Input type="text" name="name" />
+        </Label>
+
         {formName === "commercial-estimation" ? (
-          <>
-            <Label for="company">Compagnie</Label>
-            <Input type="text" name="company" id="company" />
-          </>
+          <Label>
+            Compagnie
+            <Input type="text" name="company" />
+          </Label>
         ) : (
           <></>
         )}
-        <Label for="email">Courriel</Label>
-        <Input type="email" name="email" id="email" />
-        <Label for="phone">Téléphone</Label>
-        <Input type="tel" name="phone" id="phone" />
+
+        <Label>
+          Courriel
+          <Input type="email" name="email" />
+        </Label>
+
+        <Label>
+          Téléphone
+          <Input type="tel" name="phone" />
+        </Label>
+
         <RadioGroup>
           <RadioLegend>Langue de communication</RadioLegend>
-          <HiddenLabelForNetlifyForms for="french">
+          <HiddenLabelForNetlifyForms>
             Langue de communication
           </HiddenLabelForNetlifyForms>
-          <RadioInput
-            type="radio"
-            name="langue"
-            id="french"
-            value="french"
-            defaultChecked="checked"
-          />
-          <RadioLabel for="french">Français</RadioLabel>
 
-          <RadioInput type="radio" name="langue" id="english" value="english" />
-          <RadioLabel for="english">Anglais</RadioLabel>
+          <RadioLabel>
+            <RadioInput
+              type="radio"
+              name="langue"
+              value="french"
+              defaultChecked="checked"
+            />
+            Français
+          </RadioLabel>
 
-          <RadioInput
-            type="radio"
-            name="langue"
-            id="indifferent"
-            value="indifferent"
-          />
-          <RadioLabel for="indifferent">Indifférent</RadioLabel>
+          <RadioLabel>
+            <RadioInputMarginLeft type="radio" name="langue" value="english" />
+            Anglais
+          </RadioLabel>
+
+          <RadioLabel>
+            <RadioInputMarginLeft
+              type="radio"
+              name="langue"
+              value="indifferent"
+            />
+            Indifférent
+          </RadioLabel>
         </RadioGroup>
         <NextButton type="button" onClick={forwardFormStep}>
           Continuer

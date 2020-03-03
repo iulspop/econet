@@ -33,26 +33,30 @@ export const Service = props => {
       <InputsContainer>
         <RadioGroup>
           <div>
-            <RadioInput
-              type="checkbox"
-              name="tapis"
-              id="tapis"
-              onClick={() => toggleOption("tapis")}
-            />
-            <CheckboxLabel for="tapis">Nettoyage de tapis</CheckboxLabel>
+            <CheckboxLabel>
+              <RadioInput
+                type="checkbox"
+                name="tapis"
+                onClick={() => toggleOption("tapis")}
+              />
+              Nettoyage de tapis
+            </CheckboxLabel>
           </div>
           <div>
-            <RadioInput type="checkbox" name="meubles" id="meubles" />
-            <CheckboxLabel for="meubles">Nettoyage de meubles</CheckboxLabel>
+            <CheckboxLabel>
+              <RadioInput type="checkbox" name="meubles" />
+              Nettoyage de meubles
+            </CheckboxLabel>
           </div>
           <div>
-            <RadioInput
-              type="checkbox"
-              name="cirage"
-              id="cirage"
-              onClick={() => toggleOption("cirage")}
-            />
-            <CheckboxLabel for="cirage">Cirage</CheckboxLabel>
+            <CheckboxLabel>
+              <RadioInput
+                type="checkbox"
+                name="cirage"
+                onClick={() => toggleOption("cirage")}
+              />
+              Cirage
+            </CheckboxLabel>
           </div>
         </RadioGroup>
 
