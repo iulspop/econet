@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import {
   RadioLabel,
-  HiddenLabelForNetlifyForms,
   RadioInput,
   RadioInputMarginLeft,
   SelectWide,
@@ -39,9 +38,6 @@ export const Options = ({ selectedOptions }) => {
         <RadioLegend>
           L’aire à nettoyer est-elle une zone de haut traffic?
         </RadioLegend>
-        <HiddenLabelForNetlifyForms>
-          L’aire à nettoyer est-elle une zone de haut traffic?
-        </HiddenLabelForNetlifyForms>
         <RadioLabel>
           <RadioInput type="radio" name="traffic" value="true" />
           Oui

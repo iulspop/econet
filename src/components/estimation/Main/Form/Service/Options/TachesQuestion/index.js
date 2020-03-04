@@ -3,13 +3,10 @@ import styled from "styled-components"
 import {
   CheckboxLabel,
   RadioLabel,
-  HiddenLabelForNetlifyForms,
   RadioInput,
   RadioInputMarginLeft,
   RadioGroup,
   RadioLegend,
-  SelectWide,
-  Label,
 } from "../../../common"
 
 export const TachesQuestion = () => {
@@ -29,9 +26,6 @@ export const TachesQuestion = () => {
         <RadioLegend>
           Y-a-t-il des tâches importantes sur le tapis ou meuble à nettoyer?
         </RadioLegend>
-        <HiddenLabelForNetlifyForms>
-          Y-a-t-il des tâches importantes sur le tapis ou meuble à nettoyer?
-        </HiddenLabelForNetlifyForms>
         <RadioLabel>
           <RadioInput
             type="radio"
@@ -54,9 +48,6 @@ export const TachesQuestion = () => {
 
       <StainTypesGroup showStainTypes={showStainTypes}>
         <RadioLegend>Veuillez préciser </RadioLegend>
-        <HiddenLabelForNetlifyForms>
-          Veuillez préciser
-        </HiddenLabelForNetlifyForms>
         <div>
           <CheckboxLabel>
             <RadioInput type="checkbox" name="tacheVin" />

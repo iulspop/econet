@@ -6,11 +6,6 @@ export const Label = styled.label`
   display: block;
 `
 
-// used so Netlify forms show the correct question label for radio inputs -> the legend
-export const HiddenLabelForNetlifyForms = styled.label`
-  display: none;
-`
-
 export const RadioLabel = styled.label`
   clear: both;
 `

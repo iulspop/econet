@@ -3,7 +3,6 @@ import styled from "styled-components"
 import {
   Label,
   RadioLabel,
-  HiddenLabelForNetlifyForms,
   Input,
   RadioInput,
   RadioInputMarginLeft,
@@ -57,9 +56,6 @@ export const Visit = ({ formStep, backwardFormStep }) => {
         </Label>
         <RadioGroup>
           <RadioLegend>Y-a-t-il du stationnement sur place?</RadioLegend>
-          <HiddenLabelForNetlifyForms>
-            Y-a-t-il du stationnement sur place?
-          </HiddenLabelForNetlifyForms>
           <RadioLabel>
             <RadioInput type="radio" name="parking" value="true" />
             Oui

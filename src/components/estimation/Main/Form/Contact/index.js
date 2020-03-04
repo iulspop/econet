@@ -3,7 +3,6 @@ import styled from "styled-components"
 import {
   Label,
   RadioLabel,
-  HiddenLabelForNetlifyForms,
   Input,
   RadioInput,
   RadioInputMarginLeft,
@@ -49,9 +48,6 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
 
         <RadioGroup>
           <RadioLegend>Langue de communication</RadioLegend>
-          <HiddenLabelForNetlifyForms>
-            Langue de communication
-          </HiddenLabelForNetlifyForms>
 
           <RadioLabel>
             <RadioInput
