@@ -1,20 +1,23 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import {
-  RadioLabel,
-  RadioInput,
   Fieldset,
-  RadioGroup,
   Legend,
   InputsContainer,
   NextButton,
   BackButton,
 } from "../common"
+import { CheckboxCommercial } from "./CheckboxCommercial"
+import { CheckboxResidential } from "./CheckboxResidential"
+import { AnimalsQuestion } from "./AnimalsQuestion"
 import { Options } from "./Options"
 
-export const Service = props => {
-  const { formStep, forwardFormStep, backwardFormStep } = props
-
+export const Service = ({
+  formStep,
+  forwardFormStep,
+  backwardFormStep,
+  formName,
+}) => {
   const [selectedOptions, setSelectedOptions] = useState({
     tapis: false,
     meubles: false,
@@ -31,34 +34,13 @@ export const Service = props => {
     <ServiceFieldset formStep={formStep}>
       <Legend>Maintenant, parlez-nous des services que vous désirez</Legend>
       <InputsContainer>
-        <RadioGroup>
-          <div>
-            <CheckboxLabel>
-              <RadioInput
-                type="checkbox"
-                name="tapis"
-                onClick={() => toggleOption("tapis")}
-              />
-              Nettoyage de tapis
-            </CheckboxLabel>
-          </div>
-          <div>
-            <CheckboxLabel>
-              <RadioInput type="checkbox" name="meubles" />
-              Nettoyage de meubles
-            </CheckboxLabel>
-          </div>
-          <div>
-            <CheckboxLabel>
-              <RadioInput
-                type="checkbox"
-                name="cirage"
-                onClick={() => toggleOption("cirage")}
-              />
-              Cirage
-            </CheckboxLabel>
-          </div>
-        </RadioGroup>
+        {formName === "commercial-estimation" ? (
+          <CheckboxCommercial toggleOption={toggleOption} />
+        ) : (
+          <CheckboxResidential toggleOption={toggleOption} />
+        )}
+
+        {formName === "residential-estimation" ? <AnimalsQuestion /> : <></>}
 
         <Options selectedOptions={selectedOptions} />
 
@@ -75,8 +57,4 @@ export const Service = props => {
 
 const ServiceFieldset = styled(Fieldset)`
   display: ${props => (props.formStep === 1 ? "block" : "none")};
-`
-
-const CheckboxLabel = styled(RadioLabel)`
-  margin-left: 0.7rem;
 `

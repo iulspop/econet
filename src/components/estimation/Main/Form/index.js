@@ -35,6 +35,7 @@ export const Form = props => {
         formStep={formStep}
         forwardFormStep={forwardFormStep}
         backwardFormStep={backwardFormStep}
+        formName={formName}
       />
       <Visit formStep={formStep} backwardFormStep={backwardFormStep} />
     </StyledForm>
@@ -53,6 +54,6 @@ const StyledForm = styled.form`
       throw Error("invalid form name")
     }
   }};
-  width: 650px;
+  width: 680px;
   margin: 5rem 0;
 `

@@ -5,13 +5,14 @@ import {
   HiddenLabelForNetlifyForms,
   RadioInput,
   RadioInputMarginLeft,
+  SelectWide,
   Fieldset,
   RadioGroup,
   Legend,
   RadioLegend,
-  Select,
   Label,
 } from "../../common"
+import { TachesQuestion } from "./TachesQuestion"
 
 export const Options = ({ selectedOptions }) => {
   return (
@@ -33,6 +34,7 @@ export const Options = ({ selectedOptions }) => {
           <option value="5000+">5000 + pieds carrés</option>
         </SelectWide>
       </Label>
+
       <RadioGroup>
         <RadioLegend>
           L’aire à nettoyer est-elle une zone de haut traffic?
@@ -49,6 +51,8 @@ export const Options = ({ selectedOptions }) => {
           Non
         </RadioLabel>
       </RadioGroup>
+
+      <TachesQuestion />
     </OptionsFieldset>
   )
 }
@@ -58,9 +62,4 @@ const OptionsFieldset = styled(Fieldset)`
     props.selectedOptions.tapis || props.selectedOptions.cirage
       ? "block"
       : "none"};
-`
-
-const SelectWide = styled(Select)`
-  width: 20rem;
-  margin-top: 0.5rem;
 `

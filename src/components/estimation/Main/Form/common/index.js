@@ -15,6 +15,8 @@ export const RadioLabel = styled.label`
   clear: both;
 `
 
+export const CheckboxLabel = styled(RadioLabel)``
+
 export const Input = styled.input`
   display: block;
   margin-bottom: 2rem;
@@ -64,7 +66,12 @@ export const RadioLegend = styled.legend``
 export const Select = styled.select`
   display: block;
   width: 10rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+`
+
+export const SelectWide = styled(Select)`
+  width: 20rem;
+  margin-top: 0.5rem;
 `
 
 export const InputsContainer = styled.div`
