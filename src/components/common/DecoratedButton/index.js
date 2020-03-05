@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { Button } from "../../../common"
+import { Button } from "./Button"
 
 export const DecoratedButton = ({
   left,
+  right,
   clickAction,
   children,
   ariaLabel,
@@ -11,24 +12,36 @@ export const DecoratedButton = ({
 }) => {
   return (
     <Button clickAction={clickAction} ariaLabel={ariaLabel} inactive={inactive}>
-      <SideDecoration
+      <SideDecorationLeft
         src={"/assets/side-decoration.png"}
         alt={""}
         left={left}
         inactive={inactive}
       />
       {children}
+      <SideDecorationRight
+        src={"/assets/side-decoration.png"}
+        alt={""}
+        right={right}
+        inactive={inactive}
+      />
     </Button>
   )
 }
 
-export const SideDecoration = styled.img`
+const SideDecorationLeft = styled.img`
   width: 8rem;
   filter: ${props => (props.inactive ? "grayscale(100%)" : "none")};
 
   position: absolute;
-  left: ${props => (props.left ? "-8rem" : "100%")};
   top: 50%;
-  transform: ${props =>
-    props.left ? "translateY(-50%)" : "translateY(-50%) scale(-1)"};
+  display: ${props => (props.left ? "block" : "none")};
+  left: -8rem;
+  transform: translateY(-50%);
+`
+
+const SideDecorationRight = styled(SideDecorationLeft)`
+  display: ${props => (props.right ? "block" : "none")};
+  left: 100%;
+  transform: translateY(-50%) scale(-1);
 `

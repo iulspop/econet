@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { DecoratedButton } from "./Button"
+import { DecoratedButton } from "../../common"
 import { Form } from "./Form"
 
 export const Main = () => {
@@ -39,6 +39,7 @@ export const Main = () => {
             clickAction={showCommercialForm}
             inactive={shownForm === "residential"}
             ariaLabel="open commercial services form"
+            right
           >
             Commercial
           </DecoratedButton>
