@@ -56,4 +56,8 @@ const StyledForm = styled.form`
   }};
   width: 680px;
   margin: 5rem 0;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 450px;
+  }
 `

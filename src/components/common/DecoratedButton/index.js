@@ -30,14 +30,19 @@ export const DecoratedButton = ({
 }
 
 const SideDecorationLeft = styled.img`
-  width: 8rem;
+  --decorationWidth: 80px;
+  width: var(--decorationWidth);
   filter: ${props => (props.inactive ? "grayscale(100%)" : "none")};
 
   position: absolute;
   top: 50%;
   display: ${props => (props.left ? "block" : "none")};
-  left: -8rem;
+  left: calc(0px - var(--decorationWidth));
   transform: translateY(-50%);
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    --decorationWidth: 55px;
+  }
 `
 
 const SideDecorationRight = styled(SideDecorationLeft)`

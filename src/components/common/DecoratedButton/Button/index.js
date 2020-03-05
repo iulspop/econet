@@ -27,6 +27,12 @@ const StyledButton = styled.button`
 
   cursor: pointer;
 
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: 2.3rem;
+    padding: 1.5rem 0;
+    margin: 0 3rem;
+  }
+
   &::before {
     width: 130%;
     height: 3px;

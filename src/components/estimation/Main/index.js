@@ -72,15 +72,14 @@ const Container = styled.div`
   margin-top: ${props => (props.shownForm ? "2rem" : "4.7rem")};
 `
 
-const SecondaryHeading = styled.h2`
-  display: ${props => (props.shownForm === "" ? "block" : "none")};
-  text-align: center;
-`
-
 const DecorativeLine = styled.img`
   width: 700px;
-  margin: 2rem;
-  margin-top: 0rem;
+  margin-bottom: 2rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 455px;
+    margin-top: 1rem;
+  }
 `
 
 const MainHeading = styled.h1`
@@ -92,4 +91,17 @@ const MainHeading = styled.h1`
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: 7.5rem;
+  }
+`
+
+const SecondaryHeading = styled.h2`
+  display: ${props => (props.shownForm === "" ? "block" : "none")};
+  text-align: center;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: 2.75rem;
+  }
 `
