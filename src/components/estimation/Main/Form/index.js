@@ -60,4 +60,9 @@ const StyledForm = styled.form`
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 450px;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
+    margin: 1rem 0;
+  }
 `

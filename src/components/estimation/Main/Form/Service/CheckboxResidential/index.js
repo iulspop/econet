@@ -53,7 +53,7 @@ export const CheckboxResidential = ({ toggleOption }) => {
       <div>
         <CheckboxLabel>
           <RadioInput type="checkbox" name="protectionDeTapis/Meubles" />
-          Service de protection de tapis/meubles
+          Protection de tapis/meubles
         </CheckboxLabel>
       </div>
     </RadioGroup>

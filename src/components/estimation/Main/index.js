@@ -70,6 +70,10 @@ const Flexbox = styled.div`
 const Container = styled.div`
   display: inline-block;
   margin-top: ${props => (props.shownForm ? "2rem" : "4.7rem")};
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin-top: 0rem;
+  }
 `
 
 const DecorativeLine = styled.img`
@@ -79,6 +83,10 @@ const DecorativeLine = styled.img`
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 455px;
     margin-top: 1rem;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 290px;
   }
 `
 
@@ -95,6 +103,10 @@ const MainHeading = styled.h1`
   @media only screen and ${props => props.theme.media.tabPort} {
     font-size: 7.5rem;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    font-size: 5rem;
+  }
 `
 
 const SecondaryHeading = styled.h2`
@@ -103,5 +115,9 @@ const SecondaryHeading = styled.h2`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     font-size: 2.75rem;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    font-size: 2rem;
   }
 `

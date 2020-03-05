@@ -33,6 +33,13 @@ const StyledButton = styled.button`
     margin: 0 3rem;
   }
 
+  @media only screen and ${props => props.theme.media.phone} {
+    display: block;
+    width: 150px;
+    margin: 2rem auto;
+    margin-bottom: 3rem;
+  }
+
   &::before {
     width: 130%;
     height: 3px;

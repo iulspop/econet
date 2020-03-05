@@ -54,6 +54,10 @@ export const Legend = styled.legend`
   padding-bottom: 1rem;
   border-bottom: solid 1px #d3d3d3;
   margin-bottom: 2rem;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    font-size: 1.6rem;
+  }
 `
 
 export const RadioLegend = styled.legend``
@@ -71,6 +75,10 @@ export const SelectWide = styled(Select)`
 
 export const InputsContainer = styled.div`
   margin: 0 3rem;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin: 0 1rem;
+  }
 `
 
 export const NextButton = styled.button`
@@ -84,6 +92,11 @@ export const NextButton = styled.button`
   cursor: pointer;
   color: white;
   float: right;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 12rem;
+    height: 4rem;
+  }
 `
 
 export const BackButton = styled(NextButton)`
@@ -91,4 +104,8 @@ export const BackButton = styled(NextButton)`
   border-radius: 2px;
   background-color: #bdbdbd;
   float: left;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 10rem;
+  }
 `

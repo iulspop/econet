@@ -49,29 +49,39 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
         <RadioGroup>
           <RadioLegend>Langue de communication</RadioLegend>
 
-          <RadioLabel>
-            <RadioInput
-              type="radio"
-              name="langue"
-              value="french"
-              defaultChecked="checked"
-            />
-            Français
-          </RadioLabel>
+          <DisplayBlockOnPhone>
+            <RadioLabel>
+              <RadioInput
+                type="radio"
+                name="langue"
+                value="french"
+                defaultChecked="checked"
+              />
+              Français
+            </RadioLabel>
+          </DisplayBlockOnPhone>
 
-          <RadioLabel>
-            <RadioInputMarginLeft type="radio" name="langue" value="english" />
-            Anglais
-          </RadioLabel>
+          <DisplayBlockOnPhone>
+            <RadioLabel>
+              <RadioInputMarginLeftNotOnPhone
+                type="radio"
+                name="langue"
+                value="english"
+              />
+              Anglais
+            </RadioLabel>
+          </DisplayBlockOnPhone>
 
-          <RadioLabel>
-            <RadioInputMarginLeft
-              type="radio"
-              name="langue"
-              value="indifferent"
-            />
-            Indifférent
-          </RadioLabel>
+          <DisplayBlockOnPhone>
+            <RadioLabel>
+              <RadioInputMarginLeftNotOnPhone
+                type="radio"
+                name="langue"
+                value="indifferent"
+              />
+              Indifférent
+            </RadioLabel>
+          </DisplayBlockOnPhone>
         </RadioGroup>
         <NextButton type="button" onClick={forwardFormStep}>
           Continuer
@@ -83,4 +93,16 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
 
 const ContactFieldset = styled(Fieldset)`
   display: ${props => (props.formStep === 0 ? "block" : "none")};
+`
+
+const DisplayBlockOnPhone = styled.span`
+  @media only screen and ${props => props.theme.media.phone} {
+    display: block;
+  }
+`
+
+const RadioInputMarginLeftNotOnPhone = styled(RadioInputMarginLeft)`
+  @media only screen and ${props => props.theme.media.phone} {
+    margin-left: 0;
+  }
 `

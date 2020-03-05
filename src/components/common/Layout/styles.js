@@ -23,6 +23,10 @@ export const Global = createGlobalStyle`
 		font-family: sofia_prolight, sans-serif;
 		font-size: 2.1rem;
 		font-weight: 400;
-		line-height: 1.7;
+    line-height: 1.7;
+    
+    @media only screen and ${props => props.theme.media.phone} {
+      font-size: 1.6rem;
+    }
 	}
 `
