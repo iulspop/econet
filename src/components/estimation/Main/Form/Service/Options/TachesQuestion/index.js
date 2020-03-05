@@ -24,7 +24,8 @@ export const TachesQuestion = () => {
     <>
       <RadioGroup>
         <RadioLegend>
-          Y-a-t-il des tâches importantes sur le tapis ou meuble à nettoyer?
+          Y-a-t-il des tâches importantes sur le(s) tapis ou meuble(s) à
+          nettoyer?
         </RadioLegend>
         <RadioLabel>
           <RadioInput
@@ -47,7 +48,7 @@ export const TachesQuestion = () => {
       </RadioGroup>
 
       <StainTypesGroup showStainTypes={showStainTypes}>
-        <RadioLegend>Veuillez préciser </RadioLegend>
+        <RadioLegend>Veuillez préciser</RadioLegend>
         <div>
           <CheckboxLabel>
             <RadioInput type="checkbox" name="tacheVin" />

@@ -19,8 +19,11 @@ export const Banner = () => {
 
       <Container>
         <SecondaryHeading>
-          Nous sommes une entreprise familiale écologique qui met leurs clients
-          en avant
+          L’entreprise de nettoyage de tapis et de meubles
+          <br></br>
+          écologique & familiale
+          <br></br>
+          qui met leurs clients en avant
         </SecondaryHeading>
       </Container>
 
@@ -129,7 +132,7 @@ const DecorativeLine = styled.img`
 `
 
 const SecondaryHeading = styled.h2`
-  width: 700px;
+  width: 75rem;
   margin: 2rem auto;
   margin-top: 0rem;
 
