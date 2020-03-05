@@ -16,7 +16,11 @@ export const CheckboxResidential = ({ toggleOption }) => {
       </div>
       <div>
         <CheckboxLabel>
-          <RadioInput type="checkbox" name="meubles" />
+          <RadioInput
+            type="checkbox"
+            name="meubles"
+            onClick={() => toggleOption("meubles")}
+          />
           Nettoyage de meubles
         </CheckboxLabel>
       </div>
@@ -32,7 +36,11 @@ export const CheckboxResidential = ({ toggleOption }) => {
       </div>
       <div>
         <CheckboxLabel>
-          <RadioInput type="checkbox" name="detachage" />
+          <RadioInput
+            type="checkbox"
+            name="detachage"
+            onClick={() => toggleOption("detachage")}
+          />
           Détachage
         </CheckboxLabel>
       </div>

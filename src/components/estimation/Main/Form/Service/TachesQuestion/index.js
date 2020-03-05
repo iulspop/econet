@@ -7,9 +7,9 @@ import {
   RadioInputMarginLeft,
   RadioGroup,
   RadioLegend,
-} from "../../../common"
+} from "../../common"
 
-export const TachesQuestion = () => {
+export const TachesQuestion = ({ selectedOptions }) => {
   const [showStainTypes, setShowStainTypes] = useState(false)
 
   function enableShowStainTypes() {
@@ -21,7 +21,7 @@ export const TachesQuestion = () => {
   }
 
   return (
-    <>
+    <StyledQuestion selectedOptions={selectedOptions}>
       <RadioGroup>
         <RadioLegend>
           Y-a-t-il des tâches importantes sur le(s) tapis ou meuble(s) à
@@ -80,10 +80,19 @@ export const TachesQuestion = () => {
           </CheckboxLabel>
         </div>
       </StainTypesGroup>
-    </>
+    </StyledQuestion>
   )
 }
 
 const StainTypesGroup = styled(RadioGroup)`
   display: ${props => (props.showStainTypes ? "block" : "none")};
+`
+
+const StyledQuestion = styled.div`
+  display: ${props =>
+    props.selectedOptions.tapis ||
+    props.selectedOptions.meubles ||
+    props.selectedOptions.detachage
+      ? "block"
+      : "none"};
 `

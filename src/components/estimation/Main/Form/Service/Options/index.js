@@ -11,7 +11,6 @@ import {
   RadioLegend,
   Label,
 } from "../../common"
-import { TachesQuestion } from "./TachesQuestion"
 
 export const Options = ({ selectedOptions }) => {
   return (
@@ -47,8 +46,6 @@ export const Options = ({ selectedOptions }) => {
           Non
         </RadioLabel>
       </RadioGroup>
-
-      <TachesQuestion />
     </OptionsFieldset>
   )
 }

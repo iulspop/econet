@@ -10,6 +10,7 @@ import {
 import { CheckboxCommercial } from "./CheckboxCommercial"
 import { CheckboxResidential } from "./CheckboxResidential"
 import { AnimalsQuestion } from "./AnimalsQuestion"
+import { TachesQuestion } from "./TachesQuestion"
 import { Options } from "./Options"
 
 export const Service = ({
@@ -22,6 +23,7 @@ export const Service = ({
     tapis: false,
     meubles: false,
     cirage: false,
+    detachage: false,
   })
 
   function toggleOption(key) {
@@ -41,6 +43,8 @@ export const Service = ({
         )}
 
         {formName === "residential-estimation" ? <AnimalsQuestion /> : <></>}
+
+        <TachesQuestion selectedOptions={selectedOptions} />
 
         <Options selectedOptions={selectedOptions} />
 

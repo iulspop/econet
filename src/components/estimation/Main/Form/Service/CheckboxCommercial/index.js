@@ -16,7 +16,11 @@ export const CheckboxCommercial = ({ toggleOption }) => {
       </div>
       <div>
         <CheckboxLabel>
-          <RadioInput type="checkbox" name="meubles" />
+          <RadioInput
+            type="checkbox"
+            name="meubles"
+            onClick={() => toggleOption("meubles")}
+          />
           Nettoyage de meubles
         </CheckboxLabel>
       </div>
