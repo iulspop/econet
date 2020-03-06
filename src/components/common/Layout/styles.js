@@ -26,7 +26,7 @@ export const Global = createGlobalStyle`
     line-height: 1.7;
     
     @media only screen and ${props => props.theme.media.phone} {
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
 	}
 `

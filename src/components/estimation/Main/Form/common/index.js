@@ -56,7 +56,7 @@ export const Legend = styled.legend`
   margin-bottom: 2rem;
 
   @media only screen and ${props => props.theme.media.phone} {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 `
 
