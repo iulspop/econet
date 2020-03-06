@@ -10,11 +10,10 @@ export const Sidebar = props => {
       <StyledSidebar showNav={showNav}>
         <MobileLinkHome href={"/"}>Accueil</MobileLinkHome>
         <MobileLink href={"#"}>À Propos</MobileLink>
-        <MobileLink href={"#"}>Services</MobileLink>
+        <MobileLink href={"#"}>Services Résidentiels</MobileLink>
         <MobileLinkEstimation href={"/estimation"}>
-          Estimation
+          Contact
         </MobileLinkEstimation>
-        <MobileLink href={"#"}>Contact</MobileLink>
         <MobileLinkNumber href={"#"}>514-555-5555</MobileLinkNumber>
       </StyledSidebar>
     </>

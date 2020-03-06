@@ -15,9 +15,9 @@ export const Navbar = () => {
       <StyledNavbar>
         <LinkHome href={"/"}>. Accueil .</LinkHome>
         <Link href={"#"}>. À Propos .</Link>
-        <Link href={"#"}>. Services .</Link>
-        <LinkEstimation href={"/estimation"}>. Estimation .</LinkEstimation>
-        <Link href={"#"}>. Contact .</Link>
+        <LongLink href={"#"}>Services Résidentiels</LongLink>
+        <LongLink href={"#"}>Services Commerciaux</LongLink>
+        <LinkEstimation href={"/estimation"}>. Contact .</LinkEstimation>
         <LinkNumber href={"#"}>514-555-5555</LinkNumber>
         <LinkToggleLanguage href={"#"}>EN</LinkToggleLanguage>
       </StyledNavbar>
@@ -35,4 +35,9 @@ const StyledNavbar = styled.nav`
   @media only screen and ${props => props.theme.media.tabLand} {
     display: none;
   }
+`
+
+const LongLink = styled(Link)`
+  width: 150px;
+  text-align: center;
 `
