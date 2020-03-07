@@ -8,12 +8,15 @@ import {
   LinkToggleLanguage,
   MobileLinkToggleLanguage,
 } from "../Links"
+import { useTranslation } from "react-i18next"
 
 export const Navbar = () => {
+  const { t } = useTranslation("pageHeader")
+
   return (
     <React.Fragment>
       <StyledNavbar>
-        <LinkHome href={"/"}>. Accueil .</LinkHome>
+        <LinkHome href={"/"}>{t("home")}</LinkHome>
         <Link href={"#"}>. À Propos .</Link>
         <LongLink href={"#"}>Services Résidentiels</LongLink>
         <LongLink href={"#"}>Services Commerciaux</LongLink>
