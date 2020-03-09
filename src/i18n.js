@@ -32,8 +32,8 @@ i18n
       checkWhitelist: true,
     },
 
-    lng: "fr",
-    fallbackLng: "fr",
+    lng: "en",
+    fallbackLng: "en",
     whitelist: ["en", "fr"],
     debug: true,
     ns: ["pageHeader"],
