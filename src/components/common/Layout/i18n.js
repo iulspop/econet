@@ -27,17 +27,15 @@ i18n
       loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
 
-    detect: {
+    detection: {
       order: [
         "path",
+        "htmlTag",
         "querystring",
+        "navigator",
         "cookie",
         "localStorage",
-        "navigator",
-        "htmlTag",
-        "subdomain",
       ],
-      lookupFromPathIndex: 0,
       checkWhitelist: true,
     },
 
