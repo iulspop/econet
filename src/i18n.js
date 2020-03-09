@@ -15,29 +15,29 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    lng: "fr",
-    fallbackLng: "fr",
-    whitelist: ["en", "fr"],
-    debug: true,
-
-    ns: ["pageHeader"],
-    defaultNS: "pageHeader",
-
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
 
     detection: {
       order: [
+        "querystring",
         "path",
         "htmlTag",
-        "querystring",
         "navigator",
         "cookie",
         "localStorage",
       ],
+      lookupQuerystring: "lng",
       checkWhitelist: true,
     },
+
+    lng: "fr",
+    fallbackLng: "fr",
+    whitelist: ["en", "fr"],
+    debug: true,
+    ns: ["pageHeader"],
+    defaultNS: "pageHeader",
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
