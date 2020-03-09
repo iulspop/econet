@@ -11,20 +11,34 @@ import {
 import { useTranslation } from "react-i18next"
 
 export const Navbar = () => {
-  const { t } = useTranslation("pageHeader")
-
+  const { t, i18n } = useTranslation("pageHeader")
   return (
     <React.Fragment>
       <StyledNavbar>
-        <LinkHome href={"/"}>{t("l")}</LinkHome>
+        <LinkHome href={"/"}>{t("home")}</LinkHome>
         <Link href={"#"}>. À Propos .</Link>
         <LongLink href={"#"}>Services Résidentiels</LongLink>
         <LongLink href={"#"}>Services Commerciaux</LongLink>
         <LinkEstimation href={"/estimation"}>. Contact .</LinkEstimation>
         <LinkNumber href={"#"}>514-555-5555</LinkNumber>
-        <LinkToggleLanguage href={"#"}>EN</LinkToggleLanguage>
+        <LinkToggleLanguage
+          href={"#"}
+          onClick={e => {
+            e.preventDefault()
+            i18n.changeLanguage(i18n.language == "fr" ? "en" : "fr")
+          }}
+        >
+          {i18n.language == "fr" ? "EN" : "FR"}
+        </LinkToggleLanguage>
       </StyledNavbar>
-      <MobileLinkToggleLanguage href={"#"}>EN</MobileLinkToggleLanguage>
+      <MobileLinkToggleLanguage
+        onClick={e => {
+          e.preventDefault()
+          i18n.changeLanguage("en")
+        }}
+      >
+        EN
+      </MobileLinkToggleLanguage>
     </React.Fragment>
   )
 }
