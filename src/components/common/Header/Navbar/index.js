@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <React.Fragment>
       <StyledNavbar>
-        <LinkHome href={"/"}>{t("home")}</LinkHome>
+        <LinkHome href={"/"}>{t("l")}</LinkHome>
         <Link href={"#"}>. À Propos .</Link>
         <LongLink href={"#"}>Services Résidentiels</LongLink>
         <LongLink href={"#"}>Services Commerciaux</LongLink>
