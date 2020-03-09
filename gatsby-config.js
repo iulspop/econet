@@ -5,5 +5,14 @@
  */
 
 module.exports = {
-  plugins: [`gatsby-plugin-styled-components`],
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "fr",
+        useLangKeyLayout: false,
+      },
+    },
+  ],
 }
