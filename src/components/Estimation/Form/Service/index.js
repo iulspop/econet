@@ -40,7 +40,7 @@ export const Service = ({
       <InputsContainer>
         <CheckboxGroup toggleOption={toggleOption} formName={formName} />
 
-        {formName === "residential-estimation" ? <AnimalsQuestion /> : <></>}
+        {formName === "residential" ? <AnimalsQuestion /> : <></>}
 
         <StainsQuestion selectedOptions={selectedOptions} />
 

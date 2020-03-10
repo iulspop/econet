@@ -4,9 +4,7 @@ import { Contact } from "./Contact"
 import { Service } from "./Service"
 import { Visit } from "./Visit"
 
-export const Form = props => {
-  const { shownForm, formName } = props
-
+export const Form = ({ shownForm, formName }) => {
   const [formStep, setFormStep] = useState(0)
 
   function forwardFormStep() {
@@ -46,9 +44,9 @@ export const Form = props => {
 
 const StyledForm = styled.form`
   display: ${props => {
-    if (props.name === "commercial-estimation") {
+    if (props.name === "commercial") {
       return props.shownForm === "commercial" ? "block" : "none"
-    } else if (props.name === "residential-estimation") {
+    } else if (props.name === "residential") {
       return props.shownForm === "residential" ? "block" : "none"
     } else {
       throw Error("invalid form name")

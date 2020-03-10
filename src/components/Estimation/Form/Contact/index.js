@@ -26,7 +26,7 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
           <Input type="text" name="name" />
         </Label>
 
-        {formName === "commercial-estimation" ? (
+        {formName === "commercial" ? (
           <Label>
             {t("company")}
             <Input type="text" name="company" />

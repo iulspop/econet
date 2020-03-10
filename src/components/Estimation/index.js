@@ -49,8 +49,8 @@ export const Estimation = () => {
       </Flexbox>
 
       <div>
-        <Form shownForm={shownForm} formName="commercial-estimation" />
-        <Form shownForm={shownForm} formName="residential-estimation" />
+        <Form shownForm={shownForm} formName="commercial" />
+        <Form shownForm={shownForm} formName="residential" />
       </div>
     </StyledMain>
   )
