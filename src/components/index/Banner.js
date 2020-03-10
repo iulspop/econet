@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { absCenterH, linkReset } from "../../mixins"
 import { useTranslation } from "react-i18next"
+
+import { absCenterH } from "../../mixins"
 import { DecoratedButton } from "../common"
 
 export const Banner = () => {

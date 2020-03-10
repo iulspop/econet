@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { Layout, Header } from "../components/common"
-import { Main } from "../components/estimation"
+import { Estimation } from "../components/estimation"
 import { theme } from "../theme"
 
 import { I18nextProvider } from "react-i18next"
@@ -13,7 +13,7 @@ export default function estimationPage() {
       <ThemeProvider theme={{ ...theme, page: "estimation" }}>
         <Layout>
           <Header />
-          <Main />
+          <Estimation />
         </Layout>
       </ThemeProvider>
     </I18nextProvider>
