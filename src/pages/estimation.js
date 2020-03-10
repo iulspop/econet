@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { Layout, Header } from "../components/common"
-import { Estimation } from "../components/estimation"
+import { Estimation } from "../components/Estimation"
 import { theme } from "../theme"
 
 import { I18nextProvider } from "react-i18next"

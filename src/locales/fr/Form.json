@@ -1,0 +1,12 @@
+{
+  "contactSectionLegend": "On aurait juste besoin de quelques informations pour vous envoyer l'estimation et rester en contact",
+  "name": "Nom et prénom",
+  "company": "Compagnie",
+  "email": "Courriel",
+  "phone": "Téléphone",
+  "language": "Langue de communication",
+  "french": "Français",
+  "english": "Anglais",
+  "indifferent": "Indifferent",
+  "continue": "Continuer"
+}

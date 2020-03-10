@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-
 import { DecoratedButton } from "../common"
 import { Form } from "./Form"
 
@@ -11,11 +10,11 @@ export const Estimation = () => {
   const [shownForm, setShownForm] = useState("")
 
   function showResidentialForm() {
-    setShownForm(prev => "residential")
+    setShownForm(() => "residential")
   }
 
   function showCommercialForm() {
-    setShownForm(prev => "commercial")
+    setShownForm(() => "commercial")
   }
 
   return (

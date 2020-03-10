@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useTranslation } from "react-i18next"
 import {
   Label,
   RadioLabel,
@@ -15,21 +16,19 @@ import {
 } from "../common"
 
 export const Contact = ({ formStep, forwardFormStep, formName }) => {
+  const { t } = useTranslation("Form")
   return (
     <ContactFieldset formStep={formStep}>
-      <Legend>
-        On aurait juste besoin de quelques informations pour vous envoyer
-        l'estimation et rester en contact
-      </Legend>
+      <Legend>{t("contactSectionLegend")}</Legend>
       <InputsContainer>
         <Label>
-          Nom et prénom
+          {t("name")}
           <Input type="text" name="name" />
         </Label>
 
         {formName === "commercial-estimation" ? (
           <Label>
-            Compagnie
+            {t("company")}
             <Input type="text" name="company" />
           </Label>
         ) : (
@@ -37,17 +36,17 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
         )}
 
         <Label>
-          Courriel
+          {t("email")}
           <Input type="email" name="email" />
         </Label>
 
         <Label>
-          Téléphone
+          {t("phone")}
           <Input type="tel" name="phone" />
         </Label>
 
         <RadioGroup>
-          <RadioLegend>Langue de communication</RadioLegend>
+          <RadioLegend>{t("language")}</RadioLegend>
 
           <DisplayBlockOnPhone>
             <RadioLabel>
@@ -57,7 +56,7 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
                 value="french"
                 defaultChecked="checked"
               />
-              Français
+              {t("french")}
             </RadioLabel>
           </DisplayBlockOnPhone>
 
@@ -68,7 +67,7 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
                 name="langue"
                 value="english"
               />
-              Anglais
+              {t("english")}
             </RadioLabel>
           </DisplayBlockOnPhone>
 
@@ -79,12 +78,12 @@ export const Contact = ({ formStep, forwardFormStep, formName }) => {
                 name="langue"
                 value="indifferent"
               />
-              Indifférent
+              {t("indifferent")}
             </RadioLabel>
           </DisplayBlockOnPhone>
         </RadioGroup>
         <NextButton type="button" onClick={forwardFormStep}>
-          Continuer
+          {t("continue")}
         </NextButton>
       </InputsContainer>
     </ContactFieldset>
