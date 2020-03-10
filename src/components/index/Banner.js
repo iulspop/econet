@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { absCenterH, linkReset } from "../../mixins"
 import { useTranslation } from "react-i18next"
+import { DecoratedButton } from "../common"
 
 export const Banner = () => {
   const { t, i18n } = useTranslation("Banner")
@@ -17,7 +18,7 @@ export const Banner = () => {
           </MainHeading>
         ) : (
           <MainHeading>
-            Rela<CorrectLastLetter>x</CorrectLastLetter>
+            rela<CorrectLastLetter>x</CorrectLastLetter>
             <br></br>
             <MainHeading2>we'll take care of it</MainHeading2>
           </MainHeading>
@@ -29,19 +30,11 @@ export const Banner = () => {
         />
       </Container>
 
-      <Container>
-        <SecondaryHeading>{t("secondaryHeading")}</SecondaryHeading>
-      </Container>
+      <SecondaryHeading>{t("secondaryHeading")}</SecondaryHeading>
 
-      <Container>
-        <EstimationPageCTA href={"/estimation"}>
-          <SideDecoration src={"/assets/side-decoration.png"} alt={""} />
-          <HorizontalLineBorder />
-          {t("quoteRequest")}
-          <HorizontalLineBorder2 />
-          <SideDecoration2 src={"/assets/side-decoration.png"} alt={""} />
-        </EstimationPageCTA>
-      </Container>
+      <DecoratedButton left right link href="/estimation">
+        {t("quoteRequest")}
+      </DecoratedButton>
     </StyledBanner>
   )
 }
@@ -68,6 +61,7 @@ const StyledBanner = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 `
 
 const Container = styled.div`
@@ -157,97 +151,5 @@ const SecondaryHeading = styled.h2`
     width: auto;
     padding: 0 2rem;
     font-size: 2rem;
-  }
-`
-
-const EstimationPageCTA = styled.a`
-  ${linkReset};
-  display: block;
-  position: relative;
-  width: 700px;
-  margin: 0 auto;
-  margin-bottom: 5rem;
-  font-size: 3.5rem;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 475px;
-    font-size: 2.5rem;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    width: 310px;
-    font-size: 2rem;
-  }
-`
-
-const HorizontalLineBorder = styled.span`
-  ${absCenterH};
-  width: 650px;
-  height: 2px;
-  background: -webkit-gradient(
-    radial,
-    50% 50%,
-    0,
-    50% 50%,
-    315,
-    from(${props => props.theme.colors.primary}),
-    to(transparent)
-  );
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 450px;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    width: 320px;
-  }
-`
-
-const HorizontalLineBorder2 = styled(HorizontalLineBorder)`
-  top: 6rem;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    top: 4.4rem;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    top: 3.3rem;
-  }
-`
-
-const SideDecoration = styled.img`
-  height: 5rem;
-
-  position: absolute;
-  top: 6px;
-  left: 20px;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    height: 3rem;
-    top: 8px;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    height: 2rem;
-    top: 7px;
-    left: -13px;
-  }
-`
-
-const SideDecoration2 = styled(SideDecoration)`
-  transform: scale(-1);
-
-  position: absolute;
-  left: 630px;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    left: 425px;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    left: 304px;
   }
 `

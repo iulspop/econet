@@ -6,12 +6,20 @@ export const DecoratedButton = ({
   left,
   right,
   clickAction,
+  link,
+  href,
   children,
   ariaLabel,
   inactive,
 }) => {
   return (
-    <Button clickAction={clickAction} ariaLabel={ariaLabel} inactive={inactive}>
+    <Button
+      clickAction={clickAction}
+      ariaLabel={ariaLabel}
+      inactive={inactive}
+      href={href}
+      link={link}
+    >
       <SideDecorationLeft
         src={"/assets/side-decoration.png"}
         alt={""}
