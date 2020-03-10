@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import { useTranslation } from "react-i18next"
 import {
   Fieldset,
   Legend,
@@ -19,6 +20,8 @@ export const Service = ({
   backwardFormStep,
   formName,
 }) => {
+  const { t } = useTranslation("Form")
+
   const [selectedOptions, setSelectedOptions] = useState({
     tapis: false,
     meubles: false,
@@ -34,7 +37,7 @@ export const Service = ({
 
   return (
     <ServiceFieldset formStep={formStep}>
-      <Legend>Maintenant, parlez-nous des services que vous désirez</Legend>
+      <Legend>{t("serviceSectionLegend")}</Legend>
       <InputsContainer>
         {formName === "commercial-estimation" ? (
           <CheckboxCommercial toggleOption={toggleOption} />
@@ -49,10 +52,10 @@ export const Service = ({
         <Options selectedOptions={selectedOptions} />
 
         <BackButton type="button" onClick={backwardFormStep}>
-          Retourner
+          {t("return")}
         </BackButton>
         <NextButton type="button" onClick={forwardFormStep}>
-          Continuer
+          {t("continue")}
         </NextButton>
       </InputsContainer>
     </ServiceFieldset>
