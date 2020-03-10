@@ -8,8 +8,7 @@ import {
   NextButton,
   BackButton,
 } from "../common"
-import { CheckboxCommercial } from "./CheckboxCommercial"
-import { CheckboxResidential } from "./CheckboxResidential"
+import { CheckboxGroup } from "./CheckboxGroup"
 import { AnimalsQuestion } from "./AnimalsQuestion"
 import { TachesQuestion } from "./TachesQuestion"
 import { Options } from "./Options"
@@ -39,11 +38,7 @@ export const Service = ({
     <ServiceFieldset formStep={formStep}>
       <Legend>{t("serviceSectionLegend")}</Legend>
       <InputsContainer>
-        {formName === "commercial-estimation" ? (
-          <CheckboxCommercial toggleOption={toggleOption} />
-        ) : (
-          <CheckboxResidential toggleOption={toggleOption} />
-        )}
+        <CheckboxGroup toggleOption={toggleOption} formName={formName} />
 
         {formName === "residential-estimation" ? <AnimalsQuestion /> : <></>}
 
