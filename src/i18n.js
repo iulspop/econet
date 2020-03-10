@@ -36,8 +36,7 @@ i18n
     fallbackLng: "fr",
     whitelist: ["en", "fr"],
     debug: true,
-    ns: ["pageHeader"],
-    defaultNS: "pageHeader",
+    ns: ["Header", "Banner"],
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

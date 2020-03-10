@@ -1,16 +1,28 @@
 import React from "react"
 import styled from "styled-components"
 import { absCenterH, linkReset } from "../../mixins"
+import { useTranslation } from "react-i18next"
 
 export const Banner = () => {
+  const { t, i18n } = useTranslation("Banner")
+
   return (
     <StyledBanner>
       <Container>
-        <MainHeading>
-          relaxe<CorrectLastLetter>z</CorrectLastLetter>
-          <br></br>
-          <MainHeading2>on s'en occupe</MainHeading2>
-        </MainHeading>
+        {i18n.language === "fr" ? (
+          <MainHeading>
+            relaxe<CorrectLastLetter>z</CorrectLastLetter>
+            <br></br>
+            <MainHeading2>on s'en occupe</MainHeading2>
+          </MainHeading>
+        ) : (
+          <MainHeading>
+            Rela<CorrectLastLetter>x</CorrectLastLetter>
+            <br></br>
+            <MainHeading2>we'll take care of it</MainHeading2>
+          </MainHeading>
+        )}
+
         <DecorativeLine
           src={"/assets/decorative-horizontal-line.png"}
           alt={""}
@@ -18,20 +30,14 @@ export const Banner = () => {
       </Container>
 
       <Container>
-        <SecondaryHeading>
-          L’entreprise de nettoyage de tapis et de meubles
-          <br></br>
-          écologique & familiale
-          <br></br>
-          qui met leurs clients en avant
-        </SecondaryHeading>
+        <SecondaryHeading>{t("secondaryHeading")}</SecondaryHeading>
       </Container>
 
       <Container>
         <EstimationPageCTA href={"/estimation"}>
           <SideDecoration src={"/assets/side-decoration.png"} alt={""} />
           <HorizontalLineBorder />
-          Demandez votre estimation
+          {t("quoteRequest")}
           <HorizontalLineBorder2 />
           <SideDecoration2 src={"/assets/side-decoration.png"} alt={""} />
         </EstimationPageCTA>
@@ -69,7 +75,7 @@ const Container = styled.div`
 `
 
 const MainHeading = styled.h1`
-  width: 74rem;
+  width: 94rem;
   margin: 0 auto;
   margin-top: 3rem;
 
