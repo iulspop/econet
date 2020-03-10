@@ -3,6 +3,7 @@ import styled from "styled-components"
 import {
   Link,
   LinkHome,
+  LinkBigger,
   LinkEstimation,
   LinkNumber,
   LinkToggleLanguage,
@@ -18,8 +19,8 @@ export const Navbar = () => {
       <StyledNavbar>
         <LinkHome href={"/"}>{t("home")}</LinkHome>
         <Link href={"#"}>{t("about")}</Link>
-        <LongLink href={"#"}>{t("residential")}</LongLink>
-        <LongLink href={"#"}>{t("commercial")}</LongLink>
+        <LinkBigger href={"#"}>{t("residential")}</LinkBigger>
+        <LinkBigger href={"#"}>{t("commercial")}</LinkBigger>
         <LinkEstimation href={"/estimation"}>{t("contact")}</LinkEstimation>
         <LinkNumber href={"#"}>514-666-6601</LinkNumber>
         <LinkToggleLanguage
@@ -45,7 +46,7 @@ export const Navbar = () => {
 }
 
 const StyledNavbar = styled.nav`
-  flex-basis: 1000px;
+  flex-basis: 1070px;
 
   display: flex;
   justify-content: space-between;
@@ -53,9 +54,4 @@ const StyledNavbar = styled.nav`
   @media only screen and ${props => props.theme.media.tabLand} {
     display: none;
   }
-`
-
-const LongLink = styled(Link)`
-  width: 150px;
-  text-align: center;
 `

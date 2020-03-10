@@ -29,6 +29,14 @@ export const LinkHome = styled(Link)`
       : ""};
 `
 
+export const LinkBigger = styled(Link)`
+  height: 72px;
+  width: 150px;
+  text-align: center;
+
+  transform: translateY(9px);
+`
+
 export const LinkEstimation = styled(Link)`
   width: 140px;
 
@@ -55,6 +63,7 @@ export const LinkNumber = styled(Link)`
 
 export const LinkToggleLanguage = styled(Link)`
   width: 40px;
+  cursor: pointer;
 
   &:hover {
     border-bottom: 0px;

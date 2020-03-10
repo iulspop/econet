@@ -1,6 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, LinkHome, LinkEstimation, LinkNumber } from "../Links"
+import {
+  Link,
+  LinkHome,
+  LinkBigger,
+  LinkEstimation,
+  LinkNumber,
+} from "../Links"
 import { useTranslation } from "react-i18next"
 
 export const Sidebar = ({ showNav }) => {
@@ -11,12 +17,12 @@ export const Sidebar = ({ showNav }) => {
       <StyledSidebar showNav={showNav}>
         <MobileLinkHome href={"/"}>{t("home")}</MobileLinkHome>
         <MobileLink href={"#"}>{t("about")}</MobileLink>
-        <MobileLink href={"#"}>{t("residential")}</MobileLink>
-        <MobileLink href={"#"}>{t("commercial")}</MobileLink>
+        <MobileLinkBigger href={"#"}>{t("residential")}</MobileLinkBigger>
+        <MobileLinkBigger href={"#"}>{t("commercial")}</MobileLinkBigger>
         <MobileLinkEstimation href={"/estimation"}>
           {t("contact")}
         </MobileLinkEstimation>
-        <MobileLinkNumber href={"#"}>514-555-5555</MobileLinkNumber>
+        <MobileLinkNumber href={"#"}>514-666-6601</MobileLinkNumber>
       </StyledSidebar>
     </>
   )
@@ -46,6 +52,10 @@ const MobileLink = styled(Link)`
 `
 
 const MobileLinkHome = styled(LinkHome)`
+  margin: 1.5rem 0;
+`
+
+const MobileLinkBigger = styled(LinkBigger)`
   margin: 1.5rem 0;
 `
 
