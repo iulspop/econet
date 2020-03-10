@@ -9,7 +9,7 @@ import {
   RadioLegend,
 } from "../../common"
 
-export const TachesQuestion = ({ selectedOptions }) => {
+export const StainsQuestion = ({ selectedOptions }) => {
   const [showStainTypes, setShowStainTypes] = useState(false)
 
   function enableShowStainTypes() {

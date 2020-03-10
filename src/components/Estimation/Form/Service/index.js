@@ -10,8 +10,8 @@ import {
 } from "../common"
 import { CheckboxGroup } from "./CheckboxGroup"
 import { AnimalsQuestion } from "./AnimalsQuestion"
-import { TachesQuestion } from "./TachesQuestion"
-import { Options } from "./Options"
+import { StainsQuestion } from "./StainsQuestion"
+import { AreaQuestions } from "./AreaQuestions"
 
 export const Service = ({
   formStep,
@@ -42,9 +42,9 @@ export const Service = ({
 
         {formName === "residential-estimation" ? <AnimalsQuestion /> : <></>}
 
-        <TachesQuestion selectedOptions={selectedOptions} />
+        <StainsQuestion selectedOptions={selectedOptions} />
 
-        <Options selectedOptions={selectedOptions} />
+        <AreaQuestions selectedOptions={selectedOptions} />
 
         <BackButton type="button" onClick={backwardFormStep}>
           {t("return")}

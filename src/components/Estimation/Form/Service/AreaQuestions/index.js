@@ -12,7 +12,7 @@ import {
   Label,
 } from "../../common"
 
-export const Options = ({ selectedOptions }) => {
+export const AreaQuestions = ({ selectedOptions }) => {
   return (
     <OptionsFieldset selectedOptions={selectedOptions}>
       <Legend>
