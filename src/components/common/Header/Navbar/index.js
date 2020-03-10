@@ -11,33 +11,34 @@ import {
 import { useTranslation } from "react-i18next"
 
 export const Navbar = () => {
-  const { t, i18n } = useTranslation("pageHeader")
+  const { t, i18n } = useTranslation("Header")
+
   return (
     <React.Fragment>
       <StyledNavbar>
         <LinkHome href={"/"}>{t("home")}</LinkHome>
-        <Link href={"#"}>. À Propos .</Link>
-        <LongLink href={"#"}>Services Résidentiels</LongLink>
-        <LongLink href={"#"}>Services Commerciaux</LongLink>
-        <LinkEstimation href={"/estimation"}>. Contact .</LinkEstimation>
-        <LinkNumber href={"#"}>514-555-5555</LinkNumber>
+        <Link href={"#"}>{t("about")}</Link>
+        <LongLink href={"#"}>{t("residential")}</LongLink>
+        <LongLink href={"#"}>{t("commercial")}</LongLink>
+        <LinkEstimation href={"/estimation"}>{t("contact")}</LinkEstimation>
+        <LinkNumber href={"#"}>514-666-6601</LinkNumber>
         <LinkToggleLanguage
           href={"#"}
           onClick={e => {
             e.preventDefault()
-            i18n.changeLanguage(i18n.language == "fr" ? "en" : "fr")
+            i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr")
           }}
         >
-          {i18n.language == "fr" ? "EN" : "FR"}
+          {i18n.language === "fr" ? "EN" : "FR"}
         </LinkToggleLanguage>
       </StyledNavbar>
       <MobileLinkToggleLanguage
         onClick={e => {
           e.preventDefault()
-          i18n.changeLanguage("en")
+          i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr")
         }}
       >
-        EN
+        {i18n.language === "fr" ? "EN" : "FR"}
       </MobileLinkToggleLanguage>
     </React.Fragment>
   )

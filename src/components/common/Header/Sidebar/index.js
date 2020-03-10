@@ -1,18 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 import { Link, LinkHome, LinkEstimation, LinkNumber } from "../Links"
+import { useTranslation } from "react-i18next"
 
-export const Sidebar = props => {
-  const { showNav } = props
+export const Sidebar = ({ showNav }) => {
+  const { t } = useTranslation("Header")
 
   return (
     <>
       <StyledSidebar showNav={showNav}>
-        <MobileLinkHome href={"/"}>Accueil</MobileLinkHome>
-        <MobileLink href={"#"}>À Propos</MobileLink>
-        <MobileLink href={"#"}>Services Résidentiels</MobileLink>
+        <MobileLinkHome href={"/"}>{t("home")}</MobileLinkHome>
+        <MobileLink href={"#"}>{t("about")}</MobileLink>
+        <MobileLink href={"#"}>{t("residential")}</MobileLink>
+        <MobileLink href={"#"}>{t("commercial")}</MobileLink>
         <MobileLinkEstimation href={"/estimation"}>
-          Contact
+          {t("contact")}
         </MobileLinkEstimation>
         <MobileLinkNumber href={"#"}>514-555-5555</MobileLinkNumber>
       </StyledSidebar>
