@@ -9,6 +9,11 @@
   "english": "Anglais",
   "indifferent": "Indifferent",
   "serviceSectionLegend": "Maintenant, parlez-nous des services que vous désirez",
+  "animalsQuestion": "Y-a-t-il des animaux dans la maison?",
+  "areaQuestionsLegend": "Veuillez préciser quelques détails afin que nous puissions vous donner l'estimation la plus précise possible",
+  "areaQuestion": "Quelle sont les pieds carrés de l’aire à nettoyer/cirer?",
+  "yes": "Oui",
+  "no": "Non",
   "return": "Retourner",
   "continue": "Continuer"
 }

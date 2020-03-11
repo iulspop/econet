@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import {
   RadioLabel,
   RadioInput,
@@ -8,18 +9,19 @@ import {
 } from "../../common"
 
 export const AnimalsQuestion = () => {
+  const { t } = useTranslation("Form")
   return (
     <RadioGroup>
-      <RadioLegend>Y-a-t-il des animaux dans la maison? </RadioLegend>
+      <RadioLegend>{t("animalsQuestion")}</RadioLegend>
 
       <RadioLabel>
         <RadioInput type="radio" name="animals" value="oui" />
-        Oui
+        {t("yes")}
       </RadioLabel>
 
       <RadioLabel>
         <RadioInputMarginLeft type="radio" name="animals" value="non" />
-        Non
+        {t("no")}
       </RadioLabel>
     </RadioGroup>
   )

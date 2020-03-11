@@ -9,6 +9,10 @@
   "english": "English",
   "indifferent": "Indifferent",
   "serviceSectionLegend": "",
+  "animalsQuestion": "",
+  "areaQuestionsLegend": "",
+  "yes": "Oui",
+  "no": "Non",
   "return": "Return",
   "continue": "Continue"
 }
