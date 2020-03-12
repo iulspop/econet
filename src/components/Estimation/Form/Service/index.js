@@ -19,7 +19,7 @@ export const Service = ({
   backwardFormStep,
   formName,
 }) => {
-  const { t } = useTranslation("Form")
+  const { t } = useTranslation("Service")
 
   const [selectedOptions, setSelectedOptions] = useState({
     tapis: false,
