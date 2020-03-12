@@ -7,7 +7,7 @@ import { Form } from "./Form"
 export const Estimation = () => {
   const { t } = useTranslation("Estimation")
 
-  const [shownForm, setShownForm] = useState("")
+  const [shownForm, setShownForm] = useState("residential")
 
   function showResidentialForm() {
     setShownForm(() => "residential")
@@ -24,10 +24,11 @@ export const Estimation = () => {
           src={"/assets/decorative-horizontal-line.png"}
           alt={""}
         />
+
         <MainHeading>{t("mainHeading")}</MainHeading>
-        <SecondaryHeading shownForm={shownForm}>
-          {t("secondaryHeading")}
-        </SecondaryHeading>
+
+        <SecondaryHeading>{t("secondaryHeading")}</SecondaryHeading>
+
         <Container shownForm={shownForm}>
           <DecoratedButton
             clickAction={showResidentialForm}
@@ -112,7 +113,6 @@ const MainHeading = styled.h1`
 `
 
 const SecondaryHeading = styled.h2`
-  display: ${props => (props.shownForm === "" ? "block" : "none")};
   text-align: center;
 
   @media only screen and ${props => props.theme.media.tabPort} {
