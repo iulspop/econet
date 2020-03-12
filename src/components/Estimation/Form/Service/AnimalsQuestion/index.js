@@ -9,7 +9,7 @@ import {
 } from "../../common"
 
 export const AnimalsQuestion = () => {
-  const { t } = useTranslation("Form")
+  const { t } = useTranslation("Service")
   return (
     <RadioGroup>
       <RadioLegend>{t("animalsQuestion")}</RadioLegend>
