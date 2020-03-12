@@ -4,7 +4,7 @@ import { RadioGroup } from "../../common"
 import { Checkbox } from "../Checkbox"
 
 export const ServiceQuestion = ({ formName, toggleOption }) => {
-  const { t } = useTranslation("Checkbox")
+  const { t } = useTranslation("ServiceQuestion")
   return (
     <RadioGroup>
       <Checkbox toggleOption={toggleOption} inputName="tapis">
