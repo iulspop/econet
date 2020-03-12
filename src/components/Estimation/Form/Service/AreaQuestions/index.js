@@ -21,28 +21,26 @@ export const AreaQuestions = ({ selectedOptions }) => {
       <Label>
         {t("areaQuestion")}
         <SelectWide name="area">
-          <option value="<300">300 pieds carrés ou moins</option>
-          <option value="300-700">300 - 700 pieds carrés</option>
-          <option value="700-1000">700 - 1000 pieds carrés</option>
-          <option value="1000-2000">1000 - 2000 pieds carrés</option>
-          <option value="2000-3000">2000 - 3000 pieds carrés</option>
-          <option value="3000-4000">3000 - 4000 pieds carrés</option>
-          <option value="4000-5000">4000 - 5000 pieds carrés</option>
-          <option value="5000+">5000 + pieds carrés</option>
+          <option value="<300">{t("areaQuestion300")}</option>
+          <option value="300-700">{t("areaQuestion300700")}</option>
+          <option value="700-1000">{t("areaQuestion7001000")}</option>
+          <option value="1000-2000">{t("areaQuestion10002000")}</option>
+          <option value="2000-3000">{t("areaQuestion20003000")}</option>
+          <option value="3000-4000">{t("areaQuestion30004000")}</option>
+          <option value="4000-5000">{t("areaQuestion40005000")}</option>
+          <option value="5000+">{t("areaQuestion5000")}</option>
         </SelectWide>
       </Label>
 
       <RadioGroup>
-        <RadioLegend>
-          L’aire à nettoyer est-elle une zone de haut traffic?
-        </RadioLegend>
+        <RadioLegend>{t("highTrafficQuestion")}</RadioLegend>
         <RadioLabel>
           <RadioInput type="radio" name="traffic" value="true" />
-          Oui
+          {t("yes")}
         </RadioLabel>
         <RadioLabel>
           <RadioInputMarginLeft type="radio" name="traffic" value="false" />
-          Non
+          {t("no")}
         </RadioLabel>
       </RadioGroup>
     </OptionsFieldset>
