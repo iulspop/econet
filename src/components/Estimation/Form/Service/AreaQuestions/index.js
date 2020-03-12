@@ -14,7 +14,7 @@ import {
 } from "../../common"
 
 export const AreaQuestions = ({ selectedOptions }) => {
-  const { t } = useTranslation("Form")
+  const { t } = useTranslation("AreaQuestions")
   return (
     <OptionsFieldset selectedOptions={selectedOptions}>
       <Legend>{t("areaQuestionsLegend")}</Legend>

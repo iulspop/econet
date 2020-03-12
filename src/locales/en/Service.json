@@ -1,6 +1,8 @@
 {
   "serviceSectionLegend": "Please tell us about the services you need",
   "animalsQuestion": "Do you have any pets?",
+  "yes": "Yes",
+  "no": "No",
   "return": "Return",
   "continue": "Continue"
 }

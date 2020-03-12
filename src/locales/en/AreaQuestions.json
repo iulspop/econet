@@ -11,7 +11,5 @@
   "areaQuestion5000": "5000 + square feet",
   "highTrafficQuestion": "Is the area to clean a high traffic zone?",
   "yes": "Yes",
-  "no": "No",
-  "return": "Return",
-  "continue": "Continue"
+  "no": "No"
 }

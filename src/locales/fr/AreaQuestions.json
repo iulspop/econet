@@ -11,7 +11,5 @@
   "areaQuestion5000": "5000 + pieds carrés",
   "highTrafficQuestion": "L’aire à nettoyer est-elle une zone de haut traffic?",
   "yes": "Oui",
-  "no": "Non",
-  "return": "Retourner",
-  "continue": "Continuer"
+  "no": "Non"
 }
