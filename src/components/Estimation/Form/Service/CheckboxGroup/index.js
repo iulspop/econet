@@ -15,7 +15,7 @@ export const CheckboxGroup = ({ formName, toggleOption }) => {
         Cirage
       </Checkbox>
 
-      {formName === "residential-estimation" ? (
+      {formName === "residential" ? (
         <>
           <Checkbox toggleOption={toggleOption} inputName="detachage">
             Détachage
