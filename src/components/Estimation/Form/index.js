@@ -40,8 +40,6 @@ export const Form = ({ shownForm, formName }) => {
   )
 }
 
-// Merci, on votre demande d'estimation a été bien envoyé. On vous contactera sous peu. N'hésitez pas à nous joindre si vous avez des questions. On est ouvert de lundi à mardi de 9h à 17h
-
 const StyledForm = styled.form`
   display: ${props => {
     if (props.name === "commercial") {
@@ -60,7 +58,7 @@ const StyledForm = styled.form`
   }
 
   @media only screen and ${props => props.theme.media.phone} {
-    width: 90vw;
+    width: 95vw;
     margin: 1rem 0;
   }
 `
