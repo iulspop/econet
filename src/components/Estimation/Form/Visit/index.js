@@ -66,9 +66,9 @@ export const Visit = ({ formStep, backwardFormStep }) => {
           </RadioLabel>
         </RadioGroup>
         <BackButton type="button" onClick={backwardFormStep}>
-          {t("send")}
+          {t("return")}
         </BackButton>
-        <NextButton type="submit">Envoyer</NextButton>
+        <NextButton type="submit">{t("send")}</NextButton>
       </InputsContainer>
     </VisitFieldset>
   )
