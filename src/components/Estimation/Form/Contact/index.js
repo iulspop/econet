@@ -16,7 +16,7 @@ import {
 } from "../common"
 
 export const Contact = ({ formStep, forwardFormStep, formName }) => {
-  const { t } = useTranslation("Form")
+  const { t } = useTranslation("Contact")
   return (
     <ContactFieldset formStep={formStep}>
       <Legend>{t("contactSectionLegend")}</Legend>

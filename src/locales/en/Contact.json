@@ -1,0 +1,12 @@
+{
+  "contactSectionLegend": "Please share your information so we can send you the estimation and to stay in touch",
+  "name": "Name",
+  "company": "Company",
+  "email": "Email",
+  "phone": "Phone",
+  "language": "Preferred language",
+  "french": "French",
+  "english": "English",
+  "indifferent": "Indifferent",
+  "continue": "Continue"
+}

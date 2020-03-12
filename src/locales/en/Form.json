@@ -1,13 +1,4 @@
 {
-  "contactSectionLegend": "Please share your information so we can send you the estimation and to stay in touch",
-  "name": "Name",
-  "company": "Company",
-  "email": "Email",
-  "phone": "Phone",
-  "language": "Preferred language",
-  "french": "French",
-  "english": "English",
-  "indifferent": "Indifferent",
   "serviceSectionLegend": "Please tell us about the services you need",
   "animalsQuestion": "Do you have any pets?",
   "areaQuestionsLegend": "To give you the most accurate estimation possible, please provide us with additional details",
