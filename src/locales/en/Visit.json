@@ -1,0 +1,10 @@
+{
+  "visitLegend": "Perfect! Before finishing, when would you like your service?",
+  "date": "Date",
+  "time": "Preferred Time",
+  "parking": "Is there on-site parking available?",
+  "yes": "Yes",
+  "no": "No",
+  "return": "Return",
+  "send": "Send"
+}

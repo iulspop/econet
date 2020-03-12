@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useTranslation } from "react-i18next"
 import {
   Label,
   RadioLabel,
@@ -17,18 +18,17 @@ import {
 } from "../common"
 
 export const Visit = ({ formStep, backwardFormStep }) => {
+  const { t } = useTranslation("Visit")
   return (
     <VisitFieldset formStep={formStep}>
-      <Legend>
-        Parfait! Avant de finir, quand voudriez vous qu'on vous prête service?
-      </Legend>
+      <Legend>{t("visitLegend")}</Legend>
       <InputsContainer>
         <Label>
-          Date
+          {t("date")}
           <Input type="date" name="date" />
         </Label>
         <Label>
-          Heure Préférée
+          {t("time")}
           <Select name="time">
             <option value="8 AM">8 AM</option>
             <option value="8:30 AM">8:30 AM</option>
@@ -55,18 +55,18 @@ export const Visit = ({ formStep, backwardFormStep }) => {
           </Select>
         </Label>
         <RadioGroup>
-          <RadioLegend>Y-a-t-il du stationnement sur place?</RadioLegend>
+          <RadioLegend>{t("parking")}</RadioLegend>
           <RadioLabel>
             <RadioInput type="radio" name="parking" value="true" />
-            Oui
+            {t("yes")}
           </RadioLabel>
           <RadioLabel>
             <RadioInputMarginLeft type="radio" name="parking" value="false" />
-            Non
+            {t("no")}
           </RadioLabel>
         </RadioGroup>
         <BackButton type="button" onClick={backwardFormStep}>
-          Retourner
+          {t("send")}
         </BackButton>
         <NextButton type="submit">Envoyer</NextButton>
       </InputsContainer>
