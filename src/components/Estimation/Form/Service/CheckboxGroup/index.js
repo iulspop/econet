@@ -1,33 +1,35 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import { RadioGroup } from "../../common"
 import { Checkbox } from "./Checkbox"
 
 export const CheckboxGroup = ({ formName, toggleOption }) => {
+  const { t } = useTranslation("Checkbox")
   return (
     <RadioGroup>
       <Checkbox toggleOption={toggleOption} inputName="tapis">
-        Nettoyage de tapis
+        {t("tapis")}
       </Checkbox>
       <Checkbox toggleOption={toggleOption} inputName="meubles">
-        Nettoyage de meubles
+        {t("meubles")}
       </Checkbox>
       <Checkbox toggleOption={toggleOption} inputName="cirage">
-        Cirage
+        {t("cirage")}
       </Checkbox>
 
       {formName === "residential" ? (
         <>
           <Checkbox toggleOption={toggleOption} inputName="detachage">
-            Détachage
+            {t("detachage")}
           </Checkbox>
           <Checkbox toggleOption={toggleOption} inputName="controleOdeur">
-            Contrôle d’odeur
+            {t("controleOdeur")}
           </Checkbox>
           <Checkbox
             toggleOption={toggleOption}
             inputName="protectionTapisMeubles"
           >
-            Protection de tapis/meubles
+            {t("protectionTapisMeubles")}
           </Checkbox>
         </>
       ) : (
