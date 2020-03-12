@@ -1,0 +1,11 @@
+{
+  "stainsQuestion": "Are there difficult stains on the carpet(s) or upholstery to clean?",
+  "yes": "Yes",
+  "no": "No",
+  "preciser": "Please indicate what type of stain",
+  "vin": "Wine stain",
+  "graisse": "Grease stain",
+  "urine": "Urine stain",
+  "jus": "Juice stain",
+  "autres": "Other"
+}

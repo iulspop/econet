@@ -8,7 +8,7 @@ import {
   NextButton,
   BackButton,
 } from "../common"
-import { CheckboxGroup } from "./CheckboxGroup"
+import { ServiceQuestion } from "./ServiceQuestion"
 import { AnimalsQuestion } from "./AnimalsQuestion"
 import { StainsQuestion } from "./StainsQuestion"
 import { AreaQuestions } from "./AreaQuestions"
@@ -38,7 +38,7 @@ export const Service = ({
     <ServiceFieldset formStep={formStep}>
       <Legend>{t("serviceSectionLegend")}</Legend>
       <InputsContainer>
-        <CheckboxGroup toggleOption={toggleOption} formName={formName} />
+        <ServiceQuestion toggleOption={toggleOption} formName={formName} />
 
         {formName === "residential" ? <AnimalsQuestion /> : <></>}
 

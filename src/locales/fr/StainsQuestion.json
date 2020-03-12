@@ -1,0 +1,11 @@
+{
+  "stainsQuestion": "Y-a-t-il des tâches importantes sur le(s) tapis ou meuble(s) à nettoyer?",
+  "yes": "Oui",
+  "no": "Non",
+  "preciser": "Veuillez préciser",
+  "vin": "Tâche de vin",
+  "graisse": "Tâche de graisse",
+  "urine": "Tâche d’urine",
+  "jus": "Tâche de jus",
+  "autres": "Autres"
+}

@@ -1,9 +1,9 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
 import { RadioGroup } from "../../common"
-import { Checkbox } from "./Checkbox"
+import { Checkbox } from "../Checkbox"
 
-export const CheckboxGroup = ({ formName, toggleOption }) => {
+export const ServiceQuestion = ({ formName, toggleOption }) => {
   const { t } = useTranslation("Checkbox")
   return (
     <RadioGroup>

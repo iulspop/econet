@@ -1,32 +1,32 @@
 import React, { useState } from "react"
+import { useTranslation } from "react-i18next"
 import styled from "styled-components"
 import {
-  CheckboxLabel,
   RadioLabel,
   RadioInput,
   RadioInputMarginLeft,
   RadioGroup,
   RadioLegend,
 } from "../../common"
+import { Checkbox } from "../Checkbox"
 
 export const StainsQuestion = ({ selectedOptions }) => {
+  const { t } = useTranslation("StainsQuestion")
+
   const [showStainTypes, setShowStainTypes] = useState(false)
 
   function enableShowStainTypes() {
-    setShowStainTypes(prev => true)
+    setShowStainTypes(() => true)
   }
 
   function disableShowStainTypes() {
-    setShowStainTypes(prev => false)
+    setShowStainTypes(() => false)
   }
 
   return (
     <StyledQuestion selectedOptions={selectedOptions}>
       <RadioGroup>
-        <RadioLegend>
-          Y-a-t-il des tâches importantes sur le(s) tapis ou meuble(s) à
-          nettoyer?
-        </RadioLegend>
+        <RadioLegend>{t("stainsQuestion")}</RadioLegend>
         <RadioLabel>
           <RadioInput
             type="radio"
@@ -34,7 +34,7 @@ export const StainsQuestion = ({ selectedOptions }) => {
             value="true"
             onClick={enableShowStainTypes}
           />
-          Oui
+          {t("yes")}
         </RadioLabel>
         <RadioLabel>
           <RadioInputMarginLeft
@@ -43,42 +43,27 @@ export const StainsQuestion = ({ selectedOptions }) => {
             value="false"
             onClick={disableShowStainTypes}
           />
-          Non
+          {t("no")}
         </RadioLabel>
       </RadioGroup>
 
       <StainTypesGroup showStainTypes={showStainTypes}>
-        <RadioLegend>Veuillez préciser</RadioLegend>
-        <div>
-          <CheckboxLabel>
-            <RadioInput type="checkbox" name="tacheVin" />
-            Tâche de vin
-          </CheckboxLabel>
-        </div>
-        <div>
-          <CheckboxLabel>
-            <RadioInput type="checkbox" name="tacheGraisse" />
-            Tâche de graisse
-          </CheckboxLabel>
-        </div>
-        <div>
-          <CheckboxLabel>
-            <RadioInput type="checkbox" name="tacheUrine" />
-            Tâche d’urine
-          </CheckboxLabel>
-        </div>
-        <div>
-          <CheckboxLabel>
-            <RadioInput type="checkbox" name="tacheJus" />
-            Tâche de jus
-          </CheckboxLabel>
-        </div>
-        <div>
-          <CheckboxLabel>
-            <RadioInput type="checkbox" name="tacheAutres" />
-            Autres
-          </CheckboxLabel>
-        </div>
+        <RadioLegend>{t("preciser")}</RadioLegend>
+        <Checkbox inputName="tacheVin" toggleOption={() => null}>
+          {t("vin")}
+        </Checkbox>
+        <Checkbox inputName="tacheGraisse" toggleOption={() => null}>
+          {t("graisse")}
+        </Checkbox>
+        <Checkbox inputName="tacheUrine" toggleOption={() => null}>
+          {t("urine")}
+        </Checkbox>
+        <Checkbox inputName="tacheJus" toggleOption={() => null}>
+          {t("jus")}
+        </Checkbox>
+        <Checkbox inputName="tacheAutres" toggleOption={() => null}>
+          {t("autres")}
+        </Checkbox>
       </StainTypesGroup>
     </StyledQuestion>
   )
