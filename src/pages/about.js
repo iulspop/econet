@@ -1,6 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { Layout, Header } from "../components/common"
+import { Story } from "../components/Story"
 import { theme } from "../theme"
 
 import { I18nextProvider } from "react-i18next"
@@ -12,6 +13,7 @@ export default function aboutPage() {
       <ThemeProvider theme={{ ...theme, page: "about" }}>
         <Layout>
           <Header />
+          <Story />
         </Layout>
       </ThemeProvider>
     </I18nextProvider>
