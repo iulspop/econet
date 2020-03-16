@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { DecoratedButton } from "../common"
 import { Form } from "./Form"
-import { Contact } from "./Form/Contact"
 
 export const Estimation = () => {
   const { t } = useTranslation("Estimation")
