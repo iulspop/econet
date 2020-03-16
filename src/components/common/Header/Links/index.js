@@ -19,6 +19,14 @@ export const Link = styled.a`
   }
 `
 
+export const LinkBigger = styled(Link)`
+  height: 72px;
+  width: 150px;
+  text-align: center;
+
+  transform: translateY(9px);
+`
+
 export const LinkHome = styled(Link)`
   font-weight: ${props => (props.theme.page === "home" ? "700" : "400")};
   color: ${props =>
@@ -29,12 +37,14 @@ export const LinkHome = styled(Link)`
       : ""};
 `
 
-export const LinkBigger = styled(Link)`
-  height: 72px;
-  width: 150px;
-  text-align: center;
-
-  transform: translateY(9px);
+export const LinkAbout = styled(Link)`
+  font-weight: ${props => (props.theme.page === "about" ? "700" : "400")};
+  color: ${props =>
+    props.theme.page === "about" ? props.theme.colors.primary : "black"};
+  border-bottom: ${props =>
+    props.theme.page === "about"
+      ? `8px dotted ${props.theme.colors.primary}`
+      : ""};
 `
 
 export const LinkEstimation = styled(Link)`

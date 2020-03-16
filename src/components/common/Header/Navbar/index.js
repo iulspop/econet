@@ -2,8 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import {
   Link,
-  LinkHome,
   LinkBigger,
+  LinkHome,
+  LinkAbout,
   LinkEstimation,
   LinkNumber,
   LinkToggleLanguage,
@@ -18,7 +19,7 @@ export const Navbar = () => {
     <React.Fragment>
       <StyledNavbar>
         <LinkHome href={"/"}>{t("home")}</LinkHome>
-        <Link href={"#"}>{t("about")}</Link>
+        <LinkAbout href={"/about"}>{t("about")}</LinkAbout>
         <LinkBigger href={"#"}>{t("residential")}</LinkBigger>
         <LinkBigger href={"#"}>{t("commercial")}</LinkBigger>
         <LinkEstimation href={"/estimation"}>{t("contact")}</LinkEstimation>

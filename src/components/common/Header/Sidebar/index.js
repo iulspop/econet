@@ -2,8 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import {
   Link,
-  LinkHome,
   LinkBigger,
+  LinkHome,
+  LinkAbout,
   LinkEstimation,
   LinkNumber,
 } from "../Links"
@@ -16,7 +17,7 @@ export const Sidebar = ({ showNav }) => {
     <>
       <StyledSidebar showNav={showNav}>
         <MobileLinkHome href={"/"}>{t("home")}</MobileLinkHome>
-        <MobileLink href={"#"}>{t("about")}</MobileLink>
+        <MobileLinkAbout href={"/about"}>{t("about")}</MobileLinkAbout>
         <MobileLinkBigger href={"#"}>{t("residential")}</MobileLinkBigger>
         <MobileLinkBigger href={"#"}>{t("commercial")}</MobileLinkBigger>
         <MobileLinkEstimation href={"/estimation"}>
@@ -51,11 +52,15 @@ const MobileLink = styled(Link)`
   margin: 1.5rem 0;
 `
 
+const MobileLinkBigger = styled(LinkBigger)`
+  margin: 1.5rem 0;
+`
+
 const MobileLinkHome = styled(LinkHome)`
   margin: 1.5rem 0;
 `
 
-const MobileLinkBigger = styled(LinkBigger)`
+const MobileLinkAbout = styled(LinkAbout)`
   margin: 1.5rem 0;
 `
 
