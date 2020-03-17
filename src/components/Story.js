@@ -47,11 +47,13 @@ export const Story = () => {
           </Paragraph>
         </TextContainer>
         <ImageContainer>
-          <img
-            src="/assets/biopic.png"
-            alt="Javier Romero, the owner of nettoyage econet."
-          />
-          <figcaption>Javier Romero, Propriétaire</figcaption>
+          <div>
+            <img
+              src="/assets/biopic.png"
+              alt="Javier Romero, the owner of nettoyage econet."
+            />
+            <figcaption>Javier Romero, Propriétaire</figcaption>
+          </div>
         </ImageContainer>
       </Flex>
     </FlexColumn>
@@ -61,6 +63,18 @@ export const Story = () => {
 const DecorativeLine = styled.img`
   width: 56vw;
   margin: 2rem 0;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 70vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 80vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
+  }
 `
 
 const FlexColumn = styled.div`
@@ -70,21 +84,49 @@ const FlexColumn = styled.div`
 `
 
 const Flex = styled.div`
-  display: flex;
   width: 56vw;
+  display: flex;
   justify-content: space-between;
   font-size: 1.9rem;
   margin-bottom: 5rem;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 70vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 80vw;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
+  }
 `
 
 const TextContainer = styled.main`
   flex-basis: 38vw;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    flex-basis: 80vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    flex-basis: 90vw;
+  }
 `
 
 const ImageContainer = styled.figure`
-  flex-basis: 15vw;
-  margin: 12rem 0rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
   margin-left: 4rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    flex-grow: 1;
+    margin-left: 0rem;
+    margin-top: 4rem;
+  }
 `
 
 const MainHeading = styled.h1`
