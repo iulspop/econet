@@ -14,12 +14,12 @@ export const Story = () => {
           <Paragraph>{t("paragraph2")}</Paragraph>
           <List>
             <strong>{t("listHeading")}</strong>
-            <li>{t("listItem1")}</li>
-            <li>{t("listItem2")}</li>
-            <li>{t("listItem3")}</li>
-            <li>{t("listItem4")}</li>
-            <li>{t("listItem5")}</li>
-            <li>{t("listItem6")}</li>
+            <ListItemGreen>{t("listItem1")}</ListItemGreen>
+            <ListItemBrown>{t("listItem2")}</ListItemBrown>
+            <ListItemGreen>{t("listItem3")}</ListItemGreen>
+            <ListItemBrown>{t("listItem4")}</ListItemBrown>
+            <ListItemGreen>{t("listItem5")}</ListItemGreen>
+            <ListItemBrown>{t("listItem6")}</ListItemBrown>
           </List>
           <Paragraph>
             <strong>{t("conclusion")}</strong>
@@ -37,7 +37,7 @@ export const Story = () => {
 }
 
 const DecorativeLine = styled.img`
-  width: 60vw;
+  width: 70vw;
   margin: 2rem 0;
 
   @media only screen and ${props => props.theme.media.tabLand} {
@@ -60,7 +60,7 @@ const FlexColumn = styled.div`
 `
 
 const Flex = styled.div`
-  width: 60vw;
+  width: 70vw;
   display: flex;
   justify-content: space-between;
   font-size: 1.9rem;
@@ -81,7 +81,7 @@ const Flex = styled.div`
 `
 
 const TextContainer = styled.main`
-  flex-basis: 38vw;
+  flex-basis: 50vw;
 
   @media only screen and ${props => props.theme.media.tabLand} {
     flex-basis: 70vw;
@@ -98,9 +98,9 @@ const TextContainer = styled.main`
 
 const ImageContainer = styled.figure`
   display: flex;
-  align-self: center;
   justify-content: center;
   margin-left: 4rem;
+  margin-top: 11rem;
 
   @media only screen and ${props => props.theme.media.tabLand} {
     flex-grow: 1;
@@ -122,8 +122,15 @@ const List = styled.ul`
   margin-bottom: 2rem;
 `
 
-const ListItem = styled.li`
+const ListItemGreen = styled.li`
   &::marker {
+    color: ${props => props.theme.colors.primary};
+  }
+`
+
+const ListItemBrown = styled.li`
+  &::marker {
+    color: ${props => props.theme.colors.secondary};
   }
 `
 
