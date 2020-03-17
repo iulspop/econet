@@ -13,7 +13,7 @@ export const Story = () => {
           <Paragraph>{t("paragraph1")}</Paragraph>
           <Paragraph>{t("paragraph2")}</Paragraph>
           <List>
-            {t("listHeading")}
+            <strong>{t("listHeading")}</strong>
             <li>{t("listItem1")}</li>
             <li>{t("listItem2")}</li>
             <li>{t("listItem3")}</li>
@@ -37,7 +37,7 @@ export const Story = () => {
 }
 
 const DecorativeLine = styled.img`
-  width: 56vw;
+  width: 60vw;
   margin: 2rem 0;
 
   @media only screen and ${props => props.theme.media.tabLand} {
@@ -60,7 +60,7 @@ const FlexColumn = styled.div`
 `
 
 const Flex = styled.div`
-  width: 56vw;
+  width: 60vw;
   display: flex;
   justify-content: space-between;
   font-size: 1.9rem;
@@ -68,11 +68,11 @@ const Flex = styled.div`
 
   @media only screen and ${props => props.theme.media.tabLand} {
     width: 70vw;
+    flex-wrap: wrap;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 80vw;
-    flex-wrap: wrap;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
@@ -82,6 +82,10 @@ const Flex = styled.div`
 
 const TextContainer = styled.main`
   flex-basis: 38vw;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    flex-basis: 70vw;
+  }
 
   @media only screen and ${props => props.theme.media.tabPort} {
     flex-basis: 80vw;
@@ -98,7 +102,7 @@ const ImageContainer = styled.figure`
   justify-content: center;
   margin-left: 4rem;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
+  @media only screen and ${props => props.theme.media.tabLand} {
     flex-grow: 1;
     margin-left: 0rem;
     margin-top: 4rem;
@@ -116,6 +120,11 @@ const Paragraph = styled.p`
 const List = styled.ul`
   list-style-position: inside;
   margin-bottom: 2rem;
+`
+
+const ListItem = styled.li`
+  &::marker {
+  }
 `
 
 const FigCaption = styled.figcaption`
