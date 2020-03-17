@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import {
-  Link,
-  LinkBigger,
   LinkHome,
   LinkAbout,
+  LinkBigger,
   LinkEstimation,
   LinkNumber,
 } from "../Links"
@@ -46,10 +45,6 @@ const StyledSidebar = styled.nav`
 
   transform: ${props => (props.showNav ? "" : "translateX(-300px)")};
   visibility: ${props => (props.showNav ? "" : "hidden")};
-`
-
-const MobileLink = styled(Link)`
-  margin: 1.5rem 0;
 `
 
 const MobileLinkBigger = styled(LinkBigger)`

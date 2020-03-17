@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import {
-  Link,
-  LinkBigger,
   LinkHome,
   LinkAbout,
+  LinkBigger,
   LinkEstimation,
   LinkNumber,
   LinkToggleLanguage,
