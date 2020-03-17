@@ -3,56 +3,32 @@ import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 
 export const Story = () => {
+  const { t } = useTranslation("Story")
   return (
     <FlexColumn>
       <DecorativeLine src={"/assets/decorative-horizontal-line.png"} alt={""} />
       <Flex>
         <TextContainer>
-          <MainHeading>Notre Histoire</MainHeading>
-          <Paragraph>
-            La mission d’Éconet est de fournir des solutions écologiques
-            exceptionnelles de nettoyage de tapis et de meubles et un service à
-            la clientèle extraordinaire. L’entreprise a vu le jour il y a 32 ans
-            avec M. Marc Lemonnier qui a créé une entreprise fondée sur
-            l’excellence, le professionnalisme et la fiabilité. Après trois
-            décennies sur le terrain, il s’est associé à la famille Romero en
-            2019 pour poursuivre la mission qu’il avait commencée. La famille
-            Romero apporte sa passion pour le nettoyage à Montréal, ainsi que 12
-            ans d’expertise en nettoyage dans 3 pays différents.
-          </Paragraph>
-          <Paragraph>
-            En tant qu’entreprise familiale, nos clients sont au cœur de nos
-            activités. Nous visons à chaque fois à dépasser les attentes de nos
-            clients et à leur fournir une solution adaptée à leurs besoins. Nos
-            techniciens formés utiliseront les dernières techniques écologiques
-            et les meilleurs outils sur le terrain pour vous fournir un espace
-            frais et propre.
-          </Paragraph>
+          <MainHeading>{t("mainHeading")}</MainHeading>
+          <Paragraph>{t("paragraph1")}</Paragraph>
+          <Paragraph>{t("paragraph2")}</Paragraph>
           <List>
-            Notre promesse à nos clients:
-            <li>Un service fiable</li>
-            <li>Un prix initial honnête</li>
-            <li>Des techniciens amicaux et bien formés</li>
-            <li>Un service à la clientèle imbattable</li>
-            <li>Des produits 100% écologiques</li>
-            <li>
-              Des solutions exhaustives de nettoyage de tapis et de meubles
-            </li>
+            {t("listHeading")}
+            <li>{t("listItem1")}</li>
+            <li>{t("listItem2")}</li>
+            <li>{t("listItem3")}</li>
+            <li>{t("listItem4")}</li>
+            <li>{t("listItem5")}</li>
+            <li>{t("listItem6")}</li>
           </List>
           <Paragraph>
-            <strong>
-              C'est toujours un honneur de servir nos clients, contact-nous et
-              demander votre estimation dès maintenant!
-            </strong>
+            <strong>{t("conclusion")}</strong>
           </Paragraph>
         </TextContainer>
         <ImageContainer>
           <div>
-            <img
-              src="/assets/biopic.png"
-              alt="Javier Romero, the owner of nettoyage econet."
-            />
-            <figcaption>Javier Romero, Propriétaire</figcaption>
+            <img src="/assets/biopic.png" alt="{t('figcaption')}" />
+            <FigCaption>{t("figCaption")}</FigCaption>
           </div>
         </ImageContainer>
       </Flex>
@@ -140,4 +116,8 @@ const Paragraph = styled.p`
 const List = styled.ul`
   list-style-position: inside;
   margin-bottom: 2rem;
+`
+
+const FigCaption = styled.figcaption`
+  text-align: center;
 `
