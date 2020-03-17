@@ -4,23 +4,31 @@ import { useTranslation } from "react-i18next"
 
 export const Story = () => {
   return (
-    <Container>
+    <FlexColumn>
       <DecorativeLine src={"/assets/decorative-horizontal-line.png"} alt={""} />
-      <Container2>
+      <Flex>
         <TextContainer>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
-            possimus, laudantium harum, debitis laboriosam, vel alias tenetur
-            temporibus illo id laborum? Fuga tenetur nisi temporibus omnis,
-            maiores laboriosam voluptatum eveniet!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-            animi quo asperiores eligendi sit obcaecati nulla vel quam facilis
-            minima rem odit dignissimos vitae eius, voluptatem, natus quod
-            expedita exercitationem!
-          </p>
-          <p>
+          <MainHeading>Notre Histoire</MainHeading>
+          <Paragraph>
+            La mission d’Éconet est de fournir des solutions écologiques
+            exceptionnelles de nettoyage de tapis et de meubles et un service à
+            la clientèle extraordinaire. L’entreprise a vu le jour il y a 32 ans
+            avec M. Marc Lemonnier qui a créé une entreprise fondée sur
+            l’excellence, le professionnalisme et la fiabilité. Après trois
+            décennies sur le terrain, il s’est associé à la famille Romero en
+            2019 pour poursuivre la mission qu’il avait commencée. La famille
+            Romero apporte sa passion pour le nettoyage à Montréal, ainsi que 12
+            ans d’expertise en nettoyage dans 3 pays différents.
+          </Paragraph>
+          <Paragraph>
+            En tant qu’entreprise familiale, nos clients sont au cœur de nos
+            activités. Nous visons à chaque fois à dépasser les attentes de nos
+            clients et à leur fournir une solution adaptée à leurs besoins. Nos
+            techniciens formés utiliseront les dernières techniques écologiques
+            et les meilleurs outils sur le terrain pour vous fournir un espace
+            frais et propre.
+          </Paragraph>
+          <List>
             Notre promesse à nos clients:
             <li>Un service fiable</li>
             <li>Un prix initial honnête</li>
@@ -30,42 +38,64 @@ export const Story = () => {
             <li>
               Des solutions exhaustives de nettoyage de tapis et de meubles
             </li>
-          </p>
-          <p>
+          </List>
+          <Paragraph>
             <strong>
               C'est toujours un honneur de servir nos clients, contact-nous et
-              demander votre estimation dès maintenant
+              demander votre estimation dès maintenant!
             </strong>
-          </p>
+          </Paragraph>
         </TextContainer>
         <ImageContainer>
-          <img src="/assets/biopic.png" />
+          <img
+            src="/assets/biopic.png"
+            alt="Javier Romero, the owner of nettoyage econet."
+          />
+          <figcaption>Javier Romero, Propriétaire</figcaption>
         </ImageContainer>
-      </Container2>
-    </Container>
+      </Flex>
+    </FlexColumn>
   )
 }
 
 const DecorativeLine = styled.img`
-  width: 700px;
+  width: 56vw;
+  margin: 2rem 0;
 `
 
-const Container = styled.div`
+const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-const Container2 = styled.div`
+const Flex = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 56vw;
+  justify-content: space-between;
+  font-size: 1.9rem;
+  margin-bottom: 5rem;
 `
 
 const TextContainer = styled.main`
-  flex-basis: 500px;
+  flex-basis: 38vw;
 `
 
-const ImageContainer = styled.div`
-  flex-basis: 100px;
+const ImageContainer = styled.figure`
+  flex-basis: 15vw;
+  margin: 12rem 0rem;
+  margin-left: 4rem;
+`
+
+const MainHeading = styled.h1`
+  margin: 2rem 0;
+`
+
+const Paragraph = styled.p`
+  margin-bottom: 2rem;
+`
+
+const List = styled.ul`
+  list-style-position: inside;
+  margin-bottom: 2rem;
 `
