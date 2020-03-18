@@ -13,13 +13,13 @@ export const ServiceList = () => {
         <Flex>
           <div>
             <Flex>
-              <List>
+              <LeftList>
                 <ListItemGreen>{t("listItem1")}</ListItemGreen>
                 <ListItemBrown>{t("listItem2")}</ListItemBrown>
                 <ListItemGreen>{t("listItem3")}</ListItemGreen>
                 <ListItemBrown>{t("listItem4")}</ListItemBrown>
                 <ListItemGreen>{t("listItem5")}</ListItemGreen>
-              </List>
+              </LeftList>
               <List>
                 <ListItemGreen>{t("listItem6")}</ListItemGreen>
                 <ListItemBrown>{t("listItem7")}</ListItemBrown>
@@ -81,6 +81,10 @@ const ButtonContainer = styled.div`
 const List = styled.ul`
   list-style-position: inside;
   margin: 4rem 3rem;
+`
+
+const LeftList = styled(List)`
+  margin-left: 0rem;
 `
 
 const ListItemGreen = styled.li`
