@@ -47,8 +47,8 @@ export const ServiceList = () => {
 }
 
 const FlexColumn = styled.div`
-  margin: 7rem 0;
-  height: 80vh;
+  padding: 7rem 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,12 +75,12 @@ const Flex = styled.div`
 
 const ButtonContainer = styled.div`
   width: 500px;
-  margin 4rem auto;
+  margin: 8rem auto;
 `
 
 const List = styled.ul`
   list-style-position: inside;
-  margin: 4rem 3rem;
+  margin: 6rem 3rem;
 `
 
 const LeftList = styled(List)`
