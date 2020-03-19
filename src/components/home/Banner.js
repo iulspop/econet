@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 
-import { absCenterH } from "../mixins"
-import { DecoratedButton } from "./common"
+import { absCenterH } from "../../mixins"
+import { DecoratedButton } from "../common"
 
 export const Banner = () => {
   const { t, i18n } = useTranslation("Banner")

@@ -6,7 +6,7 @@ import {
   DecorativeLine,
   FlexColumn,
   SectionHeading,
-} from "./common"
+} from "../common"
 
 export const ChooseUs = () => {
   const { t } = useTranslation("ChooseUs")
@@ -14,9 +14,6 @@ export const ChooseUs = () => {
     <StyledFlexColumn>
       <DecorativeLine />
       <Flex>
-        <ImageContainer>
-          <TechnicianImage src="/assets/carpet-cleaning.jpg" />
-        </ImageContainer>
         <ListContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
           <OrderedList>
@@ -55,6 +52,9 @@ export const ChooseUs = () => {
             </DecoratedButton>
           </ButtonContainer>
         </ListContainer>
+        <ImageContainer>
+          <TechnicianImage src="/assets/carpet-cleaning.jpg" />
+        </ImageContainer>
       </Flex>
     </StyledFlexColumn>
   )

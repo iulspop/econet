@@ -1,10 +1,8 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import { Layout, Header } from "../components/common"
-import { Banner } from "../components/Banner"
-import { ServiceList } from "../components/ServiceList"
-import { ChooseUs } from "../components/ChooseUs"
 import { theme } from "../theme"
+import { Layout, Header } from "../components/common"
+import { Banner, ServiceList, ChooseUs } from "../components/home"
 
 import { I18nextProvider } from "react-i18next"
 import i18n from "../i18n"

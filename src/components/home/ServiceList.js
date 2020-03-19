@@ -6,7 +6,7 @@ import {
   DecorativeLine,
   FlexColumn,
   SectionHeading,
-} from "./common"
+} from "../common"
 
 export const ServiceList = () => {
   const { t } = useTranslation("ServiceList")
