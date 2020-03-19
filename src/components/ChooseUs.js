@@ -8,39 +8,44 @@ export const ChooseUs = () => {
   return (
     <StyledFlexColumn>
       <DecorativeLine />
-      <Container>
-        <SectionHeading>{t("sectionHeading")}</SectionHeading>
-        <OrderedList>
-          <div>
-            <ListItem>
-              <ListItemHeading>{t("listItemHeading1")}</ListItemHeading>
-              <ListItemParagraph>{t("listItemParagraph1")}</ListItemParagraph>
-            </ListItem>
-            <ListItem>
-              <ListItemHeading>{t("listItemHeading2")}</ListItemHeading>
-              <ListItemParagraph>{t("listItemParagraph2")}</ListItemParagraph>
-            </ListItem>
-            <ListItem>
-              <ListItemHeading>{t("listItemHeading3")}</ListItemHeading>
-              <ListItemParagraph>{t("listItemParagraph3")}</ListItemParagraph>
-            </ListItem>
-          </div>
-          <RightListContainer>
-            <ListItem>
-              <ListItemHeading>{t("listItemHeading4")}</ListItemHeading>
-              <ListItemParagraph>{t("listItemParagraph4")}</ListItemParagraph>
-            </ListItem>
-            <ListItem>
-              <ListItemHeading>{t("listItemHeading5")}</ListItemHeading>
-              <ListItemParagraph>{t("listItemParagraph5")}</ListItemParagraph>
-            </ListItem>
-            <ListItem>
-              <ListItemHeading>{t("listItemHeading6")}</ListItemHeading>
-              <ListItemParagraph>{t("listItemParagraph6")}</ListItemParagraph>
-            </ListItem>
-          </RightListContainer>
-        </OrderedList>
-      </Container>
+      <Flex>
+        <ImageContainer>
+          <TechnicianImage src="/assets/carpet-cleaning.jpg" />
+        </ImageContainer>
+        <ListContainer>
+          <SectionHeading>{t("sectionHeading")}</SectionHeading>
+          <OrderedList>
+            <div>
+              <ListItem>
+                <ListItemHeading>{t("listItemHeading1")}</ListItemHeading>
+                <ListItemParagraph>{t("listItemParagraph1")}</ListItemParagraph>
+              </ListItem>
+              <ListItem>
+                <ListItemHeading>{t("listItemHeading2")}</ListItemHeading>
+                <ListItemParagraph>{t("listItemParagraph2")}</ListItemParagraph>
+              </ListItem>
+              <ListItem>
+                <ListItemHeading>{t("listItemHeading3")}</ListItemHeading>
+                <ListItemParagraph>{t("listItemParagraph3")}</ListItemParagraph>
+              </ListItem>
+            </div>
+            <RightListContainer>
+              <ListItem>
+                <ListItemHeading>{t("listItemHeading4")}</ListItemHeading>
+                <ListItemParagraph>{t("listItemParagraph4")}</ListItemParagraph>
+              </ListItem>
+              <ListItem>
+                <ListItemHeading>{t("listItemHeading5")}</ListItemHeading>
+                <ListItemParagraph>{t("listItemParagraph5")}</ListItemParagraph>
+              </ListItem>
+              <ListItem>
+                <ListItemHeading>{t("listItemHeading6")}</ListItemHeading>
+                <ListItemParagraph>{t("listItemParagraph6")}</ListItemParagraph>
+              </ListItem>
+            </RightListContainer>
+          </OrderedList>
+        </ListContainer>
+      </Flex>
     </StyledFlexColumn>
   )
 }
@@ -53,12 +58,31 @@ const StyledFlexColumn = styled(FlexColumn)`
   );
 `
 
-const Container = styled.div`
+const Flex = styled.div`
+  display: flex;
+  justify-content: space-between;
   width: 80vw;
+`
+
+const ListContainer = styled.div`
+  width: 50vw;
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
   }
+`
+
+const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 20vw;
+  }
+`
+
+const TechnicianImage = styled.img`
+  width: 25vw;
 `
 
 const OrderedList = styled.ol`
@@ -83,6 +107,6 @@ const ListItemHeading = styled.h4`
 `
 
 const ListItemParagraph = styled.p`
-  width: 25vw;
+  width: 23vw;
   font-size: 2.3rem;
 `
