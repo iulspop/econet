@@ -6,7 +6,7 @@ export const FlexColumn = ({ className, children }) => {
 }
 
 const StyledFlexColumn = styled.div`
-  padding: 7rem 0;
+  padding: 2rem 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

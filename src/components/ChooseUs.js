@@ -1,7 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { DecorativeLine, FlexColumn, SectionHeading } from "./common"
+import {
+  DecoratedButton,
+  DecorativeLine,
+  FlexColumn,
+  SectionHeading,
+} from "./common"
 
 export const ChooseUs = () => {
   const { t } = useTranslation("ChooseUs")
@@ -44,6 +49,11 @@ export const ChooseUs = () => {
               </ListItem>
             </RightListContainer>
           </OrderedList>
+          <ButtonContainer>
+            <DecoratedButton left right link href="/estimation">
+              {t("button")}
+            </DecoratedButton>
+          </ButtonContainer>
         </ListContainer>
       </Flex>
     </StyledFlexColumn>
@@ -73,12 +83,8 @@ const ListContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
-  display: flex;
-  align-items: center;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 20vw;
-  }
+  margin-top: 10rem;
+  margin-right: 2rem;
 `
 
 const TechnicianImage = styled.img`
@@ -109,4 +115,10 @@ const ListItemHeading = styled.h4`
 const ListItemParagraph = styled.p`
   width: 23vw;
   font-size: 2.3rem;
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 `
