@@ -4,14 +4,15 @@ import { useTranslation } from "react-i18next"
 import {
   DecoratedButton,
   DecorativeLine,
+  FlexColumn,
   SectionHeading,
-} from "../components/common"
+} from "./common"
 
 export const ServiceList = () => {
   const { t } = useTranslation("ServiceList")
   return (
     <FlexColumn>
-      <DecorativeLine src={"/assets/decorative-horizontal-line.png"} alt={""} />
+      <DecorativeLine />
       <Container>
         <SectionHeading>{t("h3")}</SectionHeading>
         <Flex>
@@ -49,14 +50,6 @@ export const ServiceList = () => {
     </FlexColumn>
   )
 }
-
-const FlexColumn = styled.div`
-  padding: 7rem 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
 
 const Container = styled.div`
   width: 80vw;

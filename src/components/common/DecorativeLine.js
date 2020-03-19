@@ -2,7 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 export const DecorativeLine = () => {
-  return <StyledDecorativeLine />
+  return (
+    <StyledDecorativeLine
+      src={"/assets/decorative-horizontal-line.png"}
+      alt={""}
+    />
+  )
 }
 
 const StyledDecorativeLine = styled.img`
