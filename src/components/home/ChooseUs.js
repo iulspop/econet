@@ -73,11 +73,11 @@ const StyledFlexColumn = styled(FlexColumn)`
 const Flex = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 90vw;
 `
 
 const ListContainer = styled.div`
-  width: 50vw;
+  width: 55vw;
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
@@ -87,7 +87,7 @@ const ListContainer = styled.div`
 const TechnicianImage = styled.div`
   margin-top: 10rem;
   margin-right: 2rem;
-  width: 25vw;
+  width: 30vw;
   align-item: strech;
   background-image: url("/assets/carpet-cleaning.jpg");
   background-size: cover;
