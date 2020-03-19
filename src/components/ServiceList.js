@@ -107,13 +107,13 @@ const ListItemBrown = styled.li`
   }
 `
 
-const ImageContainer = styled.figure`
-  margin: 4rem 0;
-  display: flex;
-  justify-content: center;
-`
+// const ImageContainer = styled.figure`
+//   margin: 4rem 0;
+//   display: flex;
+//   justify-content: center;
+// `
 
-const FigCaption = styled.figcaption`
-  text-align: center;
-  font-size: 1.9rem;
-`
+// const FigCaption = styled.figcaption`
+//   text-align: center;
+//   font-size: 1.9rem;
+// `
