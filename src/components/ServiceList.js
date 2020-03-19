@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { DecoratedButton } from "../components/common/DecoratedButton"
+import {
+  DecoratedButton,
+  DecorativeLine,
+  SectionHeading,
+} from "../components/common"
 
 export const ServiceList = () => {
   const { t } = useTranslation("ServiceList")
@@ -9,7 +13,7 @@ export const ServiceList = () => {
     <FlexColumn>
       <DecorativeLine src={"/assets/decorative-horizontal-line.png"} alt={""} />
       <Container>
-        <H3>{t("h3")}</H3>
+        <SectionHeading>{t("h3")}</SectionHeading>
         <Flex>
           <div>
             <Flex>
@@ -54,27 +58,11 @@ const FlexColumn = styled.div`
   align-items: center;
 `
 
-const DecorativeLine = styled.img`
-  width: 80vw;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 90vw;
-  }
-`
-
 const Container = styled.div`
   width: 80vw;
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
-  }
-`
-
-const H3 = styled.h3`
-  font-size: 5rem;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    font-size: calc(0.045 * 100vw + 0.95rem);
   }
 `
 
