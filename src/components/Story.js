@@ -81,11 +81,7 @@ const Flex = styled.div`
 `
 
 const TextContainer = styled.main`
-  flex-basis: 50vw;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    flex-basis: 70vw;
-  }
+  flex-basis: 700px;
 
   @media only screen and ${props => props.theme.media.tabPort} {
     flex-basis: 80vw;
