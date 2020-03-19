@@ -14,7 +14,7 @@ export const ServiceList = () => {
     <FlexColumn>
       <DecorativeLine />
       <Container>
-        <SectionHeading>{t("h3")}</SectionHeading>
+        <SectionHeading>{t("sectionHeading")}</SectionHeading>
         <Flex>
           <div>
             <Flex>
