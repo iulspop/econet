@@ -56,11 +56,18 @@ const FlexColumn = styled.div`
 
 const DecorativeLine = styled.img`
   width: 80vw;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 90vw;
+  }
 `
 
 const Container = styled.div`
   width: 80vw;
-  font-size: 3rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 90vw;
+  }
 `
 
 const H3 = styled.h3`
@@ -78,13 +85,20 @@ const Flex = styled.div`
 `
 
 const ButtonContainer = styled.div`
-  margin: 8rem 0;
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    margin: 2rem 0;
+  }
 `
 
 const List = styled.ul`
   list-style-position: inside;
-  margin: 6rem 0;
+  margin-top: 6rem;
   margin-left: 3rem;
+  font-size: calc(0.00932203 * 100vw + 1.60169rem); // (3rem to 1.9rem)
 
   @media only screen and ${props => props.theme.media.tabLand} {
     flex-basis: 100vw;
