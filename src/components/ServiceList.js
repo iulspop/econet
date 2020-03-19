@@ -34,12 +34,12 @@ export const ServiceList = () => {
               </DecoratedButton>
             </ButtonContainer>
           </div>
-          <ImageContainer>
+          {/* <ImageContainer>
             <div>
               <img src="/assets/biopic.png" alt="{t('figcaption')}" />
               <FigCaption>{t("figCaption")}</FigCaption>
             </div>
-          </ImageContainer>
+          </ImageContainer> */}
         </Flex>
       </Container>
     </FlexColumn>
@@ -60,11 +60,15 @@ const DecorativeLine = styled.img`
 
 const Container = styled.div`
   width: 80vw;
-  font-size: 3.4rem;
+  font-size: 3rem;
 `
 
 const H3 = styled.h3`
-  font-size: 6rem;
+  font-size: 5rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: calc(0.045 * 100vw + 0.95rem);
+  }
 `
 
 const Flex = styled.div`
@@ -74,17 +78,26 @@ const Flex = styled.div`
 `
 
 const ButtonContainer = styled.div`
-  width: 500px;
-  margin: 8rem auto;
+  margin: 8rem 0;
 `
 
 const List = styled.ul`
   list-style-position: inside;
-  margin: 6rem 3rem;
+  margin: 6rem 0;
+  margin-left: 3rem;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    flex-basis: 100vw;
+    margin: 0;
+  }
 `
 
 const LeftList = styled(List)`
-  margin-left: 0rem;
+  margin-left: 0;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    margin-top: 2rem;
+  }
 `
 
 const ListItemGreen = styled.li`
@@ -100,7 +113,7 @@ const ListItemBrown = styled.li`
 `
 
 const ImageContainer = styled.figure`
-  margin: 4rem 3rem;
+  margin: 4rem 0;
   display: flex;
   justify-content: center;
 `
