@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components"
 import { Layout, Header } from "../components/common"
 import { Banner } from "../components/Banner"
 import { ServiceList } from "../components/ServiceList"
+import { ChooseUs } from "../components/ChooseUs"
 import { theme } from "../theme"
 
 import { I18nextProvider } from "react-i18next"
@@ -16,6 +17,7 @@ export default function homePage() {
           <Header />
           <Banner />
           <ServiceList />
+          <ChooseUs />
         </Layout>
       </ThemeProvider>
     </I18nextProvider>
