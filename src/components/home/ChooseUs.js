@@ -56,7 +56,7 @@ export const ChooseUs = () => {
           </ButtonContainer>
         </ListContainer>
 
-        <TechnicianImage />
+        <TechnicianImage aria-label="carpet cleaning technician handling cleaning machine" />
       </Flex>
     </StyledFlexColumn>
   )
