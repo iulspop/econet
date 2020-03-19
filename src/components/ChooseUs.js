@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { DecorativeLine, FlexColumn, SectionHeading } from "./common"
 
 export const ChooseUs = () => {
-  const { t } = useTranslation("ServiceList")
+  const { t } = useTranslation("ChooseUs")
   return (
     <StyledFlexColumn>
       <DecorativeLine />
