@@ -16,6 +16,7 @@ export const ChooseUs = () => {
       <Flex>
         <ListContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
+
           <OrderedList>
             <div>
               <ListItem>
@@ -31,6 +32,7 @@ export const ChooseUs = () => {
                 <ListItemParagraph>{t("listItemParagraph3")}</ListItemParagraph>
               </ListItem>
             </div>
+
             <RightListContainer>
               <ListItem>
                 <ListItemHeading>{t("listItemHeading4")}</ListItemHeading>
@@ -46,15 +48,15 @@ export const ChooseUs = () => {
               </ListItem>
             </RightListContainer>
           </OrderedList>
+
           <ButtonContainer>
             <DecoratedButton left right link href="/estimation">
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>
         </ListContainer>
-        <ImageContainer>
-          <TechnicianImage src="/assets/carpet-cleaning.jpg" />
-        </ImageContainer>
+
+        <TechnicianImage />
       </Flex>
     </StyledFlexColumn>
   )
@@ -82,13 +84,14 @@ const ListContainer = styled.div`
   }
 `
 
-const ImageContainer = styled.div`
+const TechnicianImage = styled.div`
   margin-top: 10rem;
   margin-right: 2rem;
-`
-
-const TechnicianImage = styled.img`
   width: 25vw;
+  align-item: strech;
+  background-image: url("/assets/carpet-cleaning.jpg");
+  background-size: cover;
+  background-position: center;
 `
 
 const OrderedList = styled.ol`
