@@ -96,10 +96,6 @@ const TechnicianImage = styled.div`
   background-image: url("/assets/carpet-cleaning.jpg");
   background-size: cover;
   background-position: center;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    width: 30vw;
-  }
 `
 
 const OrderedList = styled.ol`
