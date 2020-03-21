@@ -9,6 +9,7 @@ export const Button = ({
   children,
   ariaLabel,
   inactive,
+  slim,
 }) => {
   return (
     <React.Fragment>
@@ -18,6 +19,7 @@ export const Button = ({
           aria-label={ariaLabel}
           inactive={inactive}
           href={href}
+          slim={slim}
         >
           {children}
         </StyledLink>
@@ -26,6 +28,7 @@ export const Button = ({
           onClick={clickAction}
           aria-label={ariaLabel}
           inactive={inactive}
+          slim={slim}
         >
           {children}
         </StyledButton>
@@ -39,8 +42,9 @@ const buttonStyle = css`
   margin: 0 5rem;
   position: relative;
 
-  font-size: 3.5rem;
+  font-size: ${props => (props.slim ? "2.5rem" : "3.5rem")};
   font-weight: 700;
+  line-height: ${props => (props.slim ? "1.3" : "1.7")};
   color: ${props => (props.inactive ? "gray" : props.theme.colors.primary)};
   text-transform: uppercase;
   text-align: center;

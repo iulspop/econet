@@ -50,7 +50,7 @@ export const ChooseUs = () => {
           </OrderedList>
 
           <ButtonContainer>
-            <DecoratedButton left right link href="/estimation">
+            <DecoratedButton left right link slim href="/estimation">
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>

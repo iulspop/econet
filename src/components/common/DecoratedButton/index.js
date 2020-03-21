@@ -11,6 +11,7 @@ export const DecoratedButton = ({
   children,
   ariaLabel,
   inactive,
+  slim,
 }) => {
   return (
     <Button
@@ -19,6 +20,7 @@ export const DecoratedButton = ({
       inactive={inactive}
       href={href}
       link={link}
+      slim={slim}
     >
       <SideDecorationLeft
         src={"/assets/side-decoration.png"}
