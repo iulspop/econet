@@ -13,7 +13,7 @@ export const DecorativeLine = () => {
 const StyledDecorativeLine = styled.img`
   width: 90vw;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 90vw;
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 95vw;
   }
 `

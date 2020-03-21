@@ -73,25 +73,33 @@ const StyledFlexColumn = styled(FlexColumn)`
 const Flex = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 90vw;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 95vw;
+  }
 `
 
 const ListContainer = styled.div`
   width: 55vw;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 90vw;
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 60vw;
   }
 `
 
 const TechnicianImage = styled.div`
   margin-top: 10rem;
-  margin-right: 2rem;
   width: 30vw;
   align-item: strech;
   background-image: url("/assets/carpet-cleaning.jpg");
   background-size: cover;
   background-position: center;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 30vw;
+  }
 `
 
 const OrderedList = styled.ol`
@@ -113,11 +121,19 @@ const ListItem = styled.li`
 
 const ListItemHeading = styled.h4`
   display: inline-block;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    font-size: 2.8rem;
+  }
 `
 
 const ListItemParagraph = styled.p`
   width: 23vw;
   font-size: 2.3rem;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 28vw;
+  }
 `
 
 const ButtonContainer = styled.div`
