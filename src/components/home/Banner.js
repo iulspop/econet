@@ -70,7 +70,7 @@ const Container = styled.div`
 `
 
 const MainHeading = styled.h1`
-  width: 94rem;
+  width: 91rem;
   margin: 0 auto;
   margin-top: 3rem;
 
