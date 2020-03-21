@@ -27,6 +27,7 @@ export const DecoratedButton = ({
         alt={""}
         left={left}
         inactive={inactive}
+        slim={slim}
       />
       {children}
       <SideDecorationRight
@@ -34,14 +35,15 @@ export const DecoratedButton = ({
         alt={""}
         right={right}
         inactive={inactive}
+        slim={slim}
       />
     </Button>
   )
 }
 
 const SideDecorationLeft = styled.img`
-  --decorationWidth: 80px;
-  width: var(--decorationWidth);
+  --decorationHeight: 80px;
+  height: var(--decorationHeight);
   filter: ${props => (props.inactive ? "grayscale(100%)" : "none")};
 
   position: absolute;
@@ -51,7 +53,7 @@ const SideDecorationLeft = styled.img`
   transform: translateY(-50%);
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    --decorationWidth: 55px;
+    --decorationHeight: 55px;
   }
 `
 
