@@ -42,7 +42,7 @@ export const DecoratedButton = ({
 }
 
 const SideDecorationLeft = styled.img`
-  --decorationHeight: 80px;
+  --decorationHeight: ${props => (props.slim ? "60px" : "80px")};
   height: var(--decorationHeight);
   filter: ${props => (props.inactive ? "grayscale(100%)" : "none")};
 
