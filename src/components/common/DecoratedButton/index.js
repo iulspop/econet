@@ -49,7 +49,7 @@ const SideDecorationLeft = styled.img`
   position: absolute;
   top: 50%;
   display: ${props => (props.left ? "block" : "none")};
-  left: calc(0px - var(--decorationWidth));
+  left: calc(0px - var(--decorationHeight));
   transform: translateY(-50%);
 
   @media only screen and ${props => props.theme.media.tabPort} {
