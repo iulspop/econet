@@ -79,6 +79,10 @@ const Flex = styled.div`
   @media only screen and ${props => props.theme.media.tabLand} {
     width: 95vw;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
+  }
 `
 
 const ListContainer = styled.div`
@@ -121,6 +125,10 @@ const OrderedList = styled.ol`
   @media only screen and ${props => props.theme.media.tabPort} {
     font-size: 2.2rem;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    flex-wrap: wrap;
+  }
 `
 
 const RightListContainer = styled.div`
@@ -128,6 +136,10 @@ const RightListContainer = styled.div`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     margin-left: 2rem;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin-left: 0rem;
   }
 `
 
@@ -154,10 +166,13 @@ const ListItemParagraph = styled.p`
     width: 45vw;
     font-size: 2rem;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
+  }
 `
 
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
 `
