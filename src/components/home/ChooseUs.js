@@ -87,6 +87,10 @@ const ListContainer = styled.div`
   @media only screen and ${props => props.theme.media.tabLand} {
     width: 60vw;
   }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 95vw;
+  }
 `
 
 const TechnicianImage = styled.div`
@@ -96,6 +100,13 @@ const TechnicianImage = styled.div`
   background-image: url("/assets/carpet-cleaning.jpg");
   background-size: cover;
   background-position: center;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    margin-top: 4rem;
+    width: 95vw;
+    height: 300px;
+    background-position: top;
+  }
 `
 
 const OrderedList = styled.ol`
@@ -129,6 +140,10 @@ const ListItemParagraph = styled.p`
 
   @media only screen and ${props => props.theme.media.tabLand} {
     width: 28vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 45vw;
   }
 `
 
