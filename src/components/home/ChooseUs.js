@@ -113,10 +113,22 @@ const OrderedList = styled.ol`
   display: flex;
   list-style-position: inside;
   font-size: 3rem;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    font-size: 2.8rem;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: 2.2rem;
+  }
 `
 
 const RightListContainer = styled.div`
   margin-left: 5rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    margin-left: 2rem;
+  }
 `
 
 const ListItem = styled.li`
@@ -128,10 +140,6 @@ const ListItem = styled.li`
 
 const ListItemHeading = styled.h4`
   display: inline-block;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    font-size: 2.8rem;
-  }
 `
 
 const ListItemParagraph = styled.p`
@@ -144,6 +152,7 @@ const ListItemParagraph = styled.p`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 45vw;
+    font-size: 2rem;
   }
 `
 
