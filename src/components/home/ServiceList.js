@@ -74,12 +74,13 @@ const ButtonContainer = styled.div`
 const List = styled.ul`
   list-style: none;
   margin-top: 6rem;
-  margin-left: 3rem;
+  margin-left: 5rem;
   font-size: calc(0.00932203 * 100vw + 1.60169rem); // (3rem to 1.9rem)
 
   @media only screen and ${props => props.theme.media.tabLand} {
     flex-basis: 100vw;
-    margin: 0;
+    margin-top: 0rem;
+    margin-left: 2rem;
   }
 `
 
@@ -92,6 +93,8 @@ const LeftList = styled(List)`
 `
 
 const ListItemGreen = styled.li`
+  position: relative;
+
   &::before {
     content: " ";
     display: inline-block;
@@ -99,6 +102,11 @@ const ListItemGreen = styled.li`
     height: 1.5rem;
     border-radius: 50%;
     margin-right: 1rem;
+
+    position: absolute;
+    top: 50%;
+    left: -2.4rem;
+    transform: translateY(-40%);
 
     background-color: ${props => props.theme.colors.primary};
   }
