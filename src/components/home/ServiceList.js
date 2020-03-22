@@ -30,7 +30,7 @@ export const ServiceList = () => {
               </List>
             </Flex>
             <ButtonContainer>
-              <DecoratedButton left right link href="/services">
+              <DecoratedButton left right link slim href="/services">
                 {t("button")}
               </DecoratedButton>
             </ButtonContainer>
