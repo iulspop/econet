@@ -1,12 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import {
-  DecoratedButton,
-  DecorativeLine,
-  FlexColumn,
-  SectionHeading,
-} from "../common"
+import { DecoratedButton } from "../common"
+import { DecorativeLine, FlexColumn, SectionHeading } from "./common"
 
 export const ServiceList = () => {
   const { t } = useTranslation("ServiceList")
