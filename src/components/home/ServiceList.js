@@ -2,76 +2,60 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { DecoratedButton } from "../common"
-import { DecorativeLine, FlexColumn, SectionHeading } from "./common"
+import {
+  DecorativeLine,
+  FlexColumn,
+  List,
+  ListAndImageFlex,
+  ListContainer,
+  SectionHeading,
+  SideImage,
+} from "./common"
 
 export const ServiceList = () => {
   const { t } = useTranslation("ServiceList")
   return (
     <FlexColumn>
       <DecorativeLine />
-      <Container>
-        <SectionHeading>{t("sectionHeading")}</SectionHeading>
-        <Flex>
-          <div>
-            <Flex>
-              <LeftList>
-                <ListItemGreen>{t("listItem1")}</ListItemGreen>
-                <ListItemBrown>{t("listItem2")}</ListItemBrown>
-                <ListItemGreen>{t("listItem3")}</ListItemGreen>
-                <ListItemBrown>{t("listItem4")}</ListItemBrown>
-                <ListItemGreen>{t("listItem5")}</ListItemGreen>
-              </LeftList>
-              <List>
-                <ListItemGreen>{t("listItem6")}</ListItemGreen>
-                <ListItemBrown>{t("listItem7")}</ListItemBrown>
-                <ListItemGreen>{t("listItem8")}</ListItemGreen>
-                <ListItemBrown>{t("listItem9")}</ListItemBrown>
-                <ListItemGreen>{t("listItem10")}</ListItemGreen>
-              </List>
-            </Flex>
-            <ButtonContainer>
-              <DecoratedButton left right link slim href="/services">
-                {t("button")}
-              </DecoratedButton>
-            </ButtonContainer>
-          </div>
-          {/* <ImageContainer>
-            <div>
-              <img src="/assets/biopic.png" alt="{t('figcaption')}" />
-              <FigCaption>{t("figCaption")}</FigCaption>
-            </div>
-          </ImageContainer> */}
-        </Flex>
-      </Container>
+
+      <ListAndImageFlex>
+        <SideImage
+          aria-label="Javier, nettoyage econet owner"
+          url="/assets/biopic.png"
+        />
+
+        <ListContainer>
+          <SectionHeading>{t("sectionHeading")}</SectionHeading>
+
+          <List>
+            <LeftList>
+              <ListItemGreen>{t("listItem1")}</ListItemGreen>
+              <ListItemBrown>{t("listItem2")}</ListItemBrown>
+              <ListItemGreen>{t("listItem3")}</ListItemGreen>
+              <ListItemBrown>{t("listItem4")}</ListItemBrown>
+              <ListItemGreen>{t("listItem5")}</ListItemGreen>
+            </LeftList>
+            <OldList>
+              <ListItemGreen>{t("listItem6")}</ListItemGreen>
+              <ListItemBrown>{t("listItem7")}</ListItemBrown>
+              <ListItemGreen>{t("listItem8")}</ListItemGreen>
+              <ListItemBrown>{t("listItem9")}</ListItemBrown>
+              <ListItemGreen>{t("listItem10")}</ListItemGreen>
+            </OldList>
+          </List>
+
+          <ButtonContainer>
+            <DecoratedButton left right link slim href="/services">
+              {t("button")}
+            </DecoratedButton>
+          </ButtonContainer>
+        </ListContainer>
+      </ListAndImageFlex>
     </FlexColumn>
   )
 }
 
-const Container = styled.div`
-  width: 80vw;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 90vw;
-  }
-`
-
-const Flex = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 10rem 0;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    margin: 2rem 0;
-  }
-`
-
-const List = styled.ul`
+const OldList = styled.ul`
   list-style: none;
   margin-top: 6rem;
   margin-left: 5rem;
@@ -84,7 +68,7 @@ const List = styled.ul`
   }
 `
 
-const LeftList = styled(List)`
+const LeftList = styled(OldList)`
   margin-left: 0;
 
   @media only screen and ${props => props.theme.media.tabLand} {
@@ -118,13 +102,12 @@ const ListItemBrown = styled(ListItemGreen)`
   }
 `
 
-// const ImageContainer = styled.figure`
-//   margin: 4rem 0;
-//   display: flex;
-//   justify-content: center;
-// `
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0;
 
-// const FigCaption = styled.figcaption`
-//   text-align: center;
-//   font-size: 1.9rem;
-// `
+  @media only screen and ${props => props.theme.media.tabLand} {
+    margin: 2rem 0;
+  }
+`

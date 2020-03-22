@@ -2,18 +2,27 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { DecoratedButton } from "../common"
-import { DecorativeLine, FlexColumn, SectionHeading } from "./common"
+import {
+  DecorativeLine,
+  FlexColumn,
+  List,
+  ListAndImageFlex,
+  ListContainer,
+  SectionHeading,
+  SideImage,
+} from "./common"
 
 export const ChooseUs = () => {
   const { t } = useTranslation("ChooseUs")
   return (
     <StyledFlexColumn>
       <DecorativeLine />
-      <Flex>
+
+      <ListAndImageFlex>
         <ListContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
 
-          <OrderedList>
+          <List>
             <div>
               <ListItem>
                 <ListItemHeading>{t("listItemHeading1")}</ListItemHeading>
@@ -43,7 +52,7 @@ export const ChooseUs = () => {
                 <ListItemParagraph>{t("listItemParagraph6")}</ListItemParagraph>
               </ListItem>
             </RightListContainer>
-          </OrderedList>
+          </List>
 
           <ButtonContainer>
             <DecoratedButton left right link slim href="/estimation">
@@ -52,8 +61,11 @@ export const ChooseUs = () => {
           </ButtonContainer>
         </ListContainer>
 
-        <TechnicianImage aria-label="carpet cleaning technician handling cleaning machine" />
-      </Flex>
+        <SideImage
+          ariaLabel="carpet cleaning technician handling cleaning machine"
+          url="/assets/carpet-cleaning.jpg"
+        />
+      </ListAndImageFlex>
     </StyledFlexColumn>
   )
 }
@@ -64,69 +76,6 @@ const StyledFlexColumn = styled(FlexColumn)`
     rgba(204, 228, 247, 1) 11.2%,
     rgba(237, 246, 250, 1) 100.2%
   );
-`
-
-const Flex = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 90vw;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    width: 95vw;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    width: 90vw;
-  }
-`
-
-const ListContainer = styled.div`
-  width: 55vw;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    width: 60vw;
-  }
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 95vw;
-  }
-`
-
-const TechnicianImage = styled.div`
-  margin-top: 10rem;
-  width: 30vw;
-  align-item: strech;
-  background-image: url("/assets/carpet-cleaning.jpg");
-  background-size: cover;
-  background-position: center;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    margin-top: 4rem;
-    width: 95vw;
-    height: 300px;
-    background-position: top;
-  }
-`
-
-const OrderedList = styled.ol`
-  display: flex;
-  list-style: none;
-  counter-reset: my-awesome-counter;
-
-  font-size: 3rem;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    font-size: 2.8rem;
-  }
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    font-size: 2.2rem;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    flex-wrap: wrap;
-  }
 `
 
 const RightListContainer = styled.div`
