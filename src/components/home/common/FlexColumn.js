@@ -11,4 +11,8 @@ const StyledFlexColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    padding: 2rem 0;
+  }
 `
