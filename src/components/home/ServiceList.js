@@ -18,7 +18,7 @@ export const ServiceList = () => {
     <FlexColumn>
       <DecorativeLine />
 
-      <ListAndImageFlex>
+      <ListAndImageFlex reverseWrap={true}>
         <SideImage
           aria-label="Javier, nettoyage econet owner"
           url="/assets/biopic.png"
@@ -114,5 +114,10 @@ const ButtonContainer = styled.div`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     margin: 2rem 0;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin: 0;
+    margin-top: 1rem;
   }
 `
