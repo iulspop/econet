@@ -111,7 +111,9 @@ const TechnicianImage = styled.div`
 
 const OrderedList = styled.ol`
   display: flex;
-  list-style-position: inside;
+  list-style: none;
+  counter-reset: my-awesome-counter;
+
   font-size: 3rem;
 
   @media only screen and ${props => props.theme.media.tabLand} {
@@ -141,7 +143,9 @@ const RightListContainer = styled.div`
 
 const ListItem = styled.li`
   margin-bottom: 3rem;
-  & ::marker {
+  counter-increment: my-awesome-counter;
+  & :before {
+    content: counter(my-awesome-counter) ". ";
     font-weight: 700;
   }
 `
