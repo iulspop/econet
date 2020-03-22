@@ -22,26 +22,27 @@ export const ServiceList = () => {
         <SideImage
           aria-label="Javier, nettoyage econet owner"
           url="/assets/biopic.png"
+          serviceList={true}
         />
 
-        <ListContainer>
+        <ListContainer serviceList={true}>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
 
           <List>
-            <LeftList>
+            <LeftListContainer>
               <ListItemGreen>{t("listItem1")}</ListItemGreen>
               <ListItemBrown>{t("listItem2")}</ListItemBrown>
               <ListItemGreen>{t("listItem3")}</ListItemGreen>
               <ListItemBrown>{t("listItem4")}</ListItemBrown>
               <ListItemGreen>{t("listItem5")}</ListItemGreen>
-            </LeftList>
-            <OldList>
+            </LeftListContainer>
+            <RightListContainer>
               <ListItemGreen>{t("listItem6")}</ListItemGreen>
               <ListItemBrown>{t("listItem7")}</ListItemBrown>
               <ListItemGreen>{t("listItem8")}</ListItemGreen>
               <ListItemBrown>{t("listItem9")}</ListItemBrown>
               <ListItemGreen>{t("listItem10")}</ListItemGreen>
-            </OldList>
+            </RightListContainer>
           </List>
 
           <ButtonContainer>
@@ -55,24 +56,23 @@ export const ServiceList = () => {
   )
 }
 
-const OldList = styled.ul`
+const RightListContainer = styled.div`
   list-style: none;
-  margin-top: 6rem;
-  margin-left: 5rem;
+  margin-left: 6rem;
   font-size: calc(0.00932203 * 100vw + 1.60169rem); // (3rem to 1.9rem)
 
   @media only screen and ${props => props.theme.media.tabLand} {
     flex-basis: 100vw;
+    margin-left: 3rem;
     margin-top: 0rem;
-    margin-left: 2rem;
   }
 `
 
-const LeftList = styled(OldList)`
-  margin-left: 0;
+const LeftListContainer = styled(RightListContainer)`
+  margin-left: 3rem;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    margin-top: 2rem;
+    margin-left: 3rem;
   }
 `
 
@@ -105,9 +105,14 @@ const ListItemBrown = styled(ListItemGreen)`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 10rem 0;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 
   @media only screen and ${props => props.theme.media.tabLand} {
+    margin: 4rem 0;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
     margin: 2rem 0;
   }
 `
