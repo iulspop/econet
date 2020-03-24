@@ -114,6 +114,7 @@ const ButtonContainer = styled.div`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     margin: 2rem 0;
+    margin-top: 4rem;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
