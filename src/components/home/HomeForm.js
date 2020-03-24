@@ -1,14 +1,24 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { DecorativeLine, FlexColumn } from "./common"
+import {
+  FlexColumn,
+  DecorativeLine,
+  ListAndImageFlex,
+  ListContainer,
+  SectionHeading,
+} from "./common"
 
 export const HomeForm = () => {
-  const { t } = useTranslation("ChooseUs")
+  const { t } = useTranslation("HomeForm")
   return (
     <FlexColumn>
       <DecorativeLine />
-      <h1>hello</h1>
+      <ListAndImageFlex>
+        <ListContainer>
+          <SectionHeading>{t("sectionHeading")}</SectionHeading>
+        </ListContainer>
+      </ListAndImageFlex>
     </FlexColumn>
   )
 }
