@@ -2,7 +2,7 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../theme"
 import { Layout, Header } from "../components/common"
-import { Banner, ServiceList, ChooseUs } from "../components/home"
+import { Banner, ServiceList, ChooseUs, HomeForm } from "../components/home"
 
 import { I18nextProvider } from "react-i18next"
 import i18n from "../i18n"
@@ -16,6 +16,7 @@ export default function homePage() {
           <Banner />
           <ServiceList />
           <ChooseUs />
+          <HomeForm />
         </Layout>
       </ThemeProvider>
     </I18nextProvider>
