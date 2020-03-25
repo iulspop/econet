@@ -19,7 +19,6 @@ export const HomeForm = () => {
     } else {
       e.target.classList.remove("filled")
     }
-    console.log(e.target.classList)
   }
 
   return (
