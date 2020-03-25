@@ -20,22 +20,21 @@ export const HomeForm = () => {
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
           <Form action="">
             <InputContainerMarginRight>
+              <Input type="text" id="firstName" placeholder="" />
               <Label for="firstName">First Name</Label>
-              <Input type="text" id="firstName" />
             </InputContainerMarginRight>
 
             <InputContainer>
+              <Input type="email" id="email" placeholder="" />
               <Label for="email">Email</Label>
-              <Input type="email" id="email" />
             </InputContainer>
 
             <InputContainerMarginRight>
+              <DateInput type="date" id="date" placeholder="" />
               <Label for="date">Preferred Date</Label>
-              <DateInput type="date" id="date" />
             </InputContainerMarginRight>
 
             <InputContainer>
-              <Label for="time">Preferred Time</Label>
               <Select name="time" id="time">
                 <option value="8 AM">8 AM</option>
                 <option value="8:30 AM">8:30 AM</option>
@@ -60,25 +59,26 @@ export const HomeForm = () => {
                 <option value="6 PM">6 PM</option>
                 <option value="6:30 PM">6:30 PM</option>
               </Select>
+              <Label for="time">Preferred Time</Label>
             </InputContainer>
 
             <InputContainerMarginRight>
-              <Label for="phone">Phone</Label>
               <Input type="phone" id="phone" />
+              <Label for="phone">Phone</Label>
             </InputContainerMarginRight>
 
             <InputContainer>
-              <Label for="newCustomer">Are you a new customer?</Label>
               <Select name="newCustomer" id="newCustomer">
                 <option value="yes">Yes, I am a potential new customer</option>
                 <option value="no">No, I'm a current existing customer</option>
                 <option value="neither">I'm neither.</option>
               </Select>
+              <Label for="newCustomer">Are you a new customer?</Label>
             </InputContainer>
 
             <InputContainer>
-              <Label for="message">Message</Label>
               <TextArea name="message" id="message" rows="5" cols="33" />
+              <Label for="message">Message</Label>
             </InputContainer>
 
             <ButtonContainer>
@@ -103,6 +103,10 @@ const InputContainer = styled.div`
   display: inline-block;
   position: relative;
   margin: 2rem 0;
+
+  &:focus-within > label {
+    transform: translateY(-4rem);
+  }
 `
 
 const InputContainerMarginRight = styled(InputContainer)`
@@ -114,6 +118,8 @@ const Label = styled.label`
   padding: 0.8rem 1rem;
   width: 18.5vw;
   height: 80%;
+  left: 0;
+  transition: 0.3s ease;
 
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -131,6 +137,11 @@ const Input = styled.input`
 
 const DateInput = styled(Input)`
   color: transparent;
+  transition: 0.3s ease;
+
+  &:focus {
+    color: black;
+  }
 `
 
 const TextArea = styled.textarea`
@@ -160,6 +171,10 @@ const Select = styled.select`
   background-repeat: no-repeat;
   background-position: right 0 top 50%;
   background-size: 4rem;
+
+  &:focus {
+    color: black;
+  }
 `
 
 const ButtonContainer = styled.div`
