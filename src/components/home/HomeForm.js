@@ -31,7 +31,7 @@ export const HomeForm = () => {
 
             <InputContainerMarginRight>
               <Label for="date">Preferred Date</Label>
-              <Input type="date" id="date" />
+              <DateInput type="date" id="date" />
             </InputContainerMarginRight>
 
             <InputContainer>
@@ -116,7 +116,6 @@ const Label = styled.label`
   height: 80%;
   text-transform: uppercase;
   font-size: 1.8rem;
-  background-color: white;
 `
 
 const Input = styled.input`
@@ -125,10 +124,10 @@ const Input = styled.input`
   border-radius: 3px;
   height: 50px;
   width: 21vw;
+`
 
-  &:focus ~ label {
-    color: purple;
-  }
+const DateInput = styled(Input)`
+  color: transparent;
 `
 
 const TextArea = styled.textarea`
@@ -146,7 +145,7 @@ const Select = styled.select`
   border-radius: 3px;
   height: 50px;
   width: 21vw;
-  placeholder: none;
+  color: transparent;
   appearance: none;
   background-image: url("/assets/arrows_down.svg");
   background-repeat: no-repeat;
