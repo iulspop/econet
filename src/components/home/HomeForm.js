@@ -114,17 +114,19 @@ const Label = styled.label`
   padding: 0.8rem 1rem;
   width: 18.5vw;
   height: 80%;
+
   text-transform: uppercase;
   font-size: 1.8rem;
 `
 
 const Input = styled.input`
   padding: 1rem 1rem;
+  width: 21vw;
+  height: 50px;
+
   border: none;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
-  height: 50px;
-  width: 21vw;
 `
 
 const DateInput = styled(Input)`
@@ -133,22 +135,26 @@ const DateInput = styled(Input)`
 
 const TextArea = styled.textarea`
   padding: 1rem 1rem;
+  width: 45vw;
+
   border: none;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
-  width: 45vw;
 `
 
 const Select = styled.select`
   padding: 1rem 1rem;
+  padding-right: 4rem;
+  width: 21vw;
+  height: 50px;
+
   border: none;
   background-color: #fff;
-  padding-right: 4rem;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
-  height: 50px;
-  width: 21vw;
+
   color: transparent;
+
   appearance: none;
   background-image: url("/assets/arrows_down.svg");
   background-repeat: no-repeat;
