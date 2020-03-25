@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { DecoratedButton } from "../common"
 import {
   FlexColumn,
   DecorativeLine,
@@ -18,20 +19,20 @@ export const HomeForm = () => {
         <ListContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
           <Form action="">
-            <InputContainer>
+            <InputContainerMarginRight>
               <Label for="firstName">First Name</Label>
               <Input type="text" id="firstName" />
-            </InputContainer>
+            </InputContainerMarginRight>
 
             <InputContainer>
               <Label for="email">Email</Label>
               <Input type="email" id="email" />
             </InputContainer>
 
-            <InputContainer>
+            <InputContainerMarginRight>
               <Label for="date">Preferred Date</Label>
               <Input type="date" id="date" />
-            </InputContainer>
+            </InputContainerMarginRight>
 
             <InputContainer>
               <Label for="time">Preferred Time</Label>
@@ -61,10 +62,10 @@ export const HomeForm = () => {
               </Select>
             </InputContainer>
 
-            <InputContainer>
+            <InputContainerMarginRight>
               <Label for="phone">Phone</Label>
               <Input type="phone" id="phone" />
-            </InputContainer>
+            </InputContainerMarginRight>
 
             <InputContainer>
               <Label for="newCustomer">Are you a new customer?</Label>
@@ -80,7 +81,11 @@ export const HomeForm = () => {
               <TextArea name="message" id="message" rows="5" cols="33" />
             </InputContainer>
 
-            <button type="submit">Submit</button>
+            <ButtonContainer>
+              <DecoratedButton left right slim>
+                Submit
+              </DecoratedButton>
+            </ButtonContainer>
           </Form>
         </ListContainer>
       </ListAndImageFlex>
@@ -97,7 +102,11 @@ const Form = styled.form`
 const InputContainer = styled.div`
   display: inline-block;
   position: relative;
-  margin: 2rem 2rem;
+  margin: 2rem 0;
+`
+
+const InputContainerMarginRight = styled(InputContainer)`
+  margin-right: 3vw;
 `
 
 const Label = styled.label`
@@ -122,7 +131,7 @@ const TextArea = styled.textarea`
   border: none;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
-  width: 45vw;
+  width: 43vw;
 `
 
 const Select = styled.select`
@@ -139,4 +148,10 @@ const Select = styled.select`
   background-repeat: no-repeat;
   background-position: right 0 top 50%;
   background-size: 4rem;
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 43vw;
 `
