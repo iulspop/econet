@@ -102,7 +102,7 @@ const Form = styled.form`
 const InputContainer = styled.div`
   display: inline-block;
   position: relative;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 
   &:focus-within > label {
     transform: translateY(-4rem);
@@ -181,5 +181,5 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 45vw;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 `
