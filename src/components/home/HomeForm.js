@@ -155,7 +155,6 @@ const InputContainerMarginRight = styled(InputContainer)`
 const Label = styled.label`
   position: absolute;
   padding: 0.8rem 1rem;
-  width: 18.5vw;
   height: 80%;
   left: 0;
   transition: 0.3s ease;
