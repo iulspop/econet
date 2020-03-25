@@ -160,6 +160,7 @@ const Label = styled.label`
 
   text-transform: uppercase;
   font-size: 1.8rem;
+  cursor: text;
 `
 
 const Input = styled.input`
@@ -170,6 +171,8 @@ const Input = styled.input`
   border: none;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
+
+  cursor: text;
 `
 
 const DateInput = styled(Input)`
@@ -218,6 +221,8 @@ const Select = styled.select`
   &.filled {
     color: black;
   }
+
+  cursor: text;
 `
 
 const ButtonContainer = styled.div`
