@@ -12,6 +12,16 @@ import {
 
 export const HomeForm = () => {
   const { t } = useTranslation("HomeForm")
+
+  function handleChange(e) {
+    if (e.target.value) {
+      e.target.classList.add("filled")
+    } else {
+      e.target.classList.remove("filled")
+    }
+    console.log(e.target.classList)
+  }
+
   return (
     <FlexColumn>
       <DecorativeLine />
@@ -20,22 +30,37 @@ export const HomeForm = () => {
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
           <Form action="">
             <InputContainerMarginRight>
-              <Input type="text" id="firstName" placeholder="" />
+              <Input
+                type="text"
+                id="firstName"
+                placeholder=""
+                onChange={handleChange}
+              />
               <Label for="firstName">First Name</Label>
             </InputContainerMarginRight>
 
             <InputContainer>
-              <Input type="email" id="email" placeholder="" />
+              <Input
+                type="email"
+                id="email"
+                placeholder=""
+                onChange={handleChange}
+              />
               <Label for="email">Email</Label>
             </InputContainer>
 
             <InputContainerMarginRight>
-              <DateInput type="date" id="date" placeholder="" />
+              <DateInput
+                type="date"
+                id="date"
+                placeholder=""
+                onChange={handleChange}
+              />
               <Label for="date">Preferred Date</Label>
             </InputContainerMarginRight>
 
             <InputContainer>
-              <Select name="time" id="time">
+              <Select name="time" id="time" onChange={handleChange}>
                 <option value="8 AM">8 AM</option>
                 <option value="8:30 AM">8:30 AM</option>
                 <option value="9 AM">9 AM</option>
@@ -63,12 +88,16 @@ export const HomeForm = () => {
             </InputContainer>
 
             <InputContainerMarginRight>
-              <Input type="phone" id="phone" />
+              <Input type="phone" id="phone" onChange={handleChange} />
               <Label for="phone">Phone</Label>
             </InputContainerMarginRight>
 
             <InputContainer>
-              <Select name="newCustomer" id="newCustomer">
+              <Select
+                name="newCustomer"
+                id="newCustomer"
+                onChange={handleChange}
+              >
                 <option value="yes">Yes, I am a potential new customer</option>
                 <option value="no">No, I'm a current existing customer</option>
                 <option value="neither">I'm neither.</option>
@@ -77,7 +106,13 @@ export const HomeForm = () => {
             </InputContainer>
 
             <InputContainer>
-              <TextArea name="message" id="message" rows="5" cols="33" />
+              <TextArea
+                name="message"
+                id="message"
+                rows="5"
+                cols="33"
+                onChange={handleChange}
+              />
               <Label for="message">Message</Label>
             </InputContainer>
 
@@ -105,6 +140,10 @@ const InputContainer = styled.div`
   margin: 2.5rem 0;
 
   &:focus-within > label {
+    transform: translateY(-4rem);
+  }
+
+  & .filled + label {
     transform: translateY(-4rem);
   }
 `
@@ -142,6 +181,9 @@ const DateInput = styled(Input)`
   &:focus {
     color: black;
   }
+  &.filled {
+    color: black;
+  }
 `
 
 const TextArea = styled.textarea`
@@ -173,6 +215,9 @@ const Select = styled.select`
   color: transparent;
   transition: 0.3s ease;
   &:focus {
+    color: black;
+  }
+  &.filled {
     color: black;
   }
 `
