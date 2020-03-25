@@ -119,6 +119,7 @@ const Label = styled.label`
 `
 
 const Input = styled.input`
+  padding: 1rem 1rem;
   border: none;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
@@ -131,6 +132,7 @@ const DateInput = styled(Input)`
 `
 
 const TextArea = styled.textarea`
+  padding: 1rem 1rem;
   border: none;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
@@ -138,6 +140,7 @@ const TextArea = styled.textarea`
 `
 
 const Select = styled.select`
+  padding: 1rem 1rem;
   border: none;
   background-color: #fff;
   padding-right: 4rem;
