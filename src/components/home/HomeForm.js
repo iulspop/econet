@@ -164,14 +164,14 @@ const Select = styled.select`
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
 
-  color: transparent;
-
   appearance: none;
   background-image: url("/assets/arrows_down.svg");
   background-repeat: no-repeat;
   background-position: right 0 top 50%;
   background-size: 4rem;
 
+  color: transparent;
+  transition: 0.3s ease;
   &:focus {
     color: black;
   }
