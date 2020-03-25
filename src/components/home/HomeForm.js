@@ -18,22 +18,24 @@ export const HomeForm = () => {
         <ListContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
           <form action="">
-            <Label for="name">First Name</Label>
-            <Input type="text" id="name" />
+            <InputContainer>
+              <Label for="firstName">First Name</Label>
+              <Input type="text" id="firstName" />
+            </InputContainer>
 
-            <label>
-              Email
-              <input type="email" />
-            </label>
+            <InputContainer>
+              <Label for="email">Email</Label>
+              <Input type="email" id="email" />
+            </InputContainer>
 
-            <label>
-              Preferred Date
-              <input type="date" />
-            </label>
+            <InputContainer>
+              <Label for="date">Preferred Date</Label>
+              <DateInput type="date" id="date" />
+            </InputContainer>
 
-            <label>
-              Preferred Time
-              <select name="time">
+            <InputContainer>
+              <Label for="time">Preferred Time</Label>
+              <Select name="time" id="time">
                 <option value="8 AM">8 AM</option>
                 <option value="8:30 AM">8:30 AM</option>
                 <option value="9 AM">9 AM</option>
@@ -56,27 +58,27 @@ export const HomeForm = () => {
                 <option value="5:30 PM">5:30 PM</option>
                 <option value="6 PM">6 PM</option>
                 <option value="6:30 PM">6:30 PM</option>
-              </select>
-            </label>
+              </Select>
+            </InputContainer>
 
-            <label>
-              Phone
-              <input type="phone" />
-            </label>
+            <InputContainer>
+              <Label for="phone">Phone</Label>
+              <Input type="phone" id="phone" />
+            </InputContainer>
 
-            <label>
-              Are you a new customer?
-              <select name="newCustomer">
+            <InputContainer>
+              <Label for="newCustomer">Are you a new customer?</Label>
+              <Select name="newCustomer" id="newCustomer">
                 <option value="yes">Yes, I am a potential new customer</option>
                 <option value="no">No, I'm a current existing customer</option>
                 <option value="neither">I'm neither.</option>
-              </select>
-            </label>
+              </Select>
+            </InputContainer>
 
-            <label>
-              Message
-              <input type="textbox" />
-            </label>
+            <InputContainer>
+              <Label for="message">Message</Label>
+              <Input type="textbox" id="message" />
+            </InputContainer>
 
             <button type="submit">Submit</button>
           </form>
@@ -86,11 +88,40 @@ export const HomeForm = () => {
   )
 }
 
+const InputContainer = styled.div`
+  position: relative;
+`
+
 const Label = styled.label`
   position: absolute;
-  left: 0.5rem;
+  padding: 0 1rem;
+  width: 18vw;
+  height: 100%;
+  background-color: white;
 `
 
 const Input = styled.input`
-  position: relative;
+  border: none;
+  box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
+  border-radius: 3px;
+  height: 50px;
+  width: 20vw;
+`
+
+const DateInput = styled(Input)``
+
+const Select = styled.select`
+  border: none;
+  background-color: #fff;
+  padding-right: 4rem;
+  box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
+  border-radius: 3px;
+  height: 50px;
+  width: 20vw;
+  placeholder: none;
+  appearance: none;
+  background-image: url("/assets/arrows_down.svg");
+  background-repeat: no-repeat;
+  background-position: right 0 top 50%;
+  background-size: 4rem;
 `
