@@ -17,7 +17,7 @@ export const HomeForm = () => {
       <ListAndImageFlex>
         <ListContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
-          <form action="">
+          <Form action="">
             <InputContainer>
               <Label for="firstName">First Name</Label>
               <Input type="text" id="firstName" />
@@ -30,7 +30,7 @@ export const HomeForm = () => {
 
             <InputContainer>
               <Label for="date">Preferred Date</Label>
-              <DateInput type="date" id="date" />
+              <Input type="date" id="date" />
             </InputContainer>
 
             <InputContainer>
@@ -77,26 +77,36 @@ export const HomeForm = () => {
 
             <InputContainer>
               <Label for="message">Message</Label>
-              <Input type="textbox" id="message" />
+              <TextArea name="message" id="message" rows="5" cols="33" />
             </InputContainer>
 
             <button type="submit">Submit</button>
-          </form>
+          </Form>
         </ListContainer>
       </ListAndImageFlex>
     </FlexColumn>
   )
 }
 
+const Form = styled.form`
+  display: flex;
+  width: 45vw;
+  flex-wrap: wrap;
+`
+
 const InputContainer = styled.div`
+  display: inline-block;
   position: relative;
+  margin: 2rem 2rem;
 `
 
 const Label = styled.label`
   position: absolute;
-  padding: 0 1rem;
+  padding: 0.8rem 1rem;
   width: 18vw;
-  height: 100%;
+  height: 80%;
+  text-transform: uppercase;
+  font-size: 1.8rem;
   background-color: white;
 `
 
@@ -108,7 +118,12 @@ const Input = styled.input`
   width: 20vw;
 `
 
-const DateInput = styled(Input)``
+const TextArea = styled.textarea`
+  border: none;
+  box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
+  border-radius: 3px;
+  width: 45vw;
+`
 
 const Select = styled.select`
   border: none;
