@@ -83,7 +83,7 @@ export const HomeForm = () => {
 
             <ButtonContainer>
               <DecoratedButton left right slim>
-                Submit
+                Send your request
               </DecoratedButton>
             </ButtonContainer>
           </Form>
@@ -112,7 +112,7 @@ const InputContainerMarginRight = styled(InputContainer)`
 const Label = styled.label`
   position: absolute;
   padding: 0.8rem 1rem;
-  width: 18vw;
+  width: 18.5vw;
   height: 80%;
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -124,14 +124,18 @@ const Input = styled.input`
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
   height: 50px;
-  width: 20vw;
+  width: 21vw;
+
+  &:focus ~ label {
+    color: purple;
+  }
 `
 
 const TextArea = styled.textarea`
   border: none;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
-  width: 43vw;
+  width: 45vw;
 `
 
 const Select = styled.select`
@@ -141,7 +145,7 @@ const Select = styled.select`
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
   height: 50px;
-  width: 20vw;
+  width: 21vw;
   placeholder: none;
   appearance: none;
   background-image: url("/assets/arrows_down.svg");
@@ -153,5 +157,6 @@ const Select = styled.select`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  width: 43vw;
+  width: 45vw;
+  margin: 2rem 0;
 `
