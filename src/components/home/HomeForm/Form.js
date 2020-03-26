@@ -39,7 +39,7 @@ export const Form = () => {
       </InputContainerMarginRight>
 
       <InputContainer>
-        <Select name="time" id="time" onChange={handleChange}>
+        <Select name="time" id="time" onClick={handleChange}>
           <option value="8 AM">8 AM</option>
           <option value="8:30 AM">8:30 AM</option>
           <option value="9 AM">9 AM</option>
@@ -72,7 +72,7 @@ export const Form = () => {
       </InputContainerMarginRight>
 
       <InputContainer>
-        <Select name="newCustomer" id="newCustomer" onChange={handleChange}>
+        <Select name="newCustomer" id="newCustomer" onClick={handleChange}>
           <option value="yes">Yes, I am a potential new customer</option>
           <option value="no">No, I'm a current existing customer</option>
           <option value="neither">I'm neither.</option>
