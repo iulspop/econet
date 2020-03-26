@@ -20,12 +20,12 @@ export const Form = () => {
           placeholder=""
           onChange={handleChange}
         />
-        <Label for="firstName">First Name</Label>
+        <Label htmlFor="firstName">First Name</Label>
       </InputContainerMarginRight>
 
       <InputContainer>
         <Input type="email" id="email" placeholder="" onChange={handleChange} />
-        <Label for="email">Email</Label>
+        <Label htmlFor="email">Email</Label>
       </InputContainer>
 
       <InputContainerMarginRight>
@@ -35,7 +35,7 @@ export const Form = () => {
           placeholder=""
           onChange={handleChange}
         />
-        <Label for="date">Preferred Date</Label>
+        <Label htmlFor="date">Preferred Date</Label>
       </InputContainerMarginRight>
 
       <InputContainer>
@@ -63,12 +63,12 @@ export const Form = () => {
           <option value="6 PM">6 PM</option>
           <option value="6:30 PM">6:30 PM</option>
         </Select>
-        <Label for="time">Preferred Time</Label>
+        <Label htmlFor="time">Preferred Time</Label>
       </InputContainer>
 
       <InputContainerMarginRight>
         <Input type="phone" id="phone" onChange={handleChange} />
-        <Label for="phone">Phone</Label>
+        <Label htmlFor="phone">Phone</Label>
       </InputContainerMarginRight>
 
       <InputContainer>
@@ -77,7 +77,7 @@ export const Form = () => {
           <option value="no">No, I'm a current existing customer</option>
           <option value="neither">I'm neither.</option>
         </Select>
-        <Label for="newCustomer">Are you a new customer?</Label>
+        <Label htmlFor="newCustomer">Are you a new customer?</Label>
       </InputContainer>
 
       <InputContainer>
@@ -88,7 +88,7 @@ export const Form = () => {
           cols="33"
           onChange={handleChange}
         />
-        <Label for="message">Message</Label>
+        <Label htmlFor="message">Message</Label>
       </InputContainer>
 
       <ButtonContainer>
