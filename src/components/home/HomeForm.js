@@ -145,6 +145,10 @@ const InputContainer = styled.div`
   & .filled + label {
     transform: translateY(-4rem);
   }
+
+  &:focus-within {
+    outline: 1px dotted ${props => props.theme.colors.tertiary};
+  }
 `
 
 const InputContainerMarginRight = styled(InputContainer)`
@@ -222,6 +226,10 @@ const Select = styled.select`
     color: black;
   }
 
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
   cursor: text;
 `
 
