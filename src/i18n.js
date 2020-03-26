@@ -35,7 +35,7 @@ i18n
     lng: "fr",
     fallbackLng: "fr",
     whitelist: ["en", "fr"],
-    debug: true,
+    debug: false,
     ns: ["Header", "Banner"],
 
     interpolation: {
