@@ -86,9 +86,9 @@ const SideImage = styled.img`
   background-color: grey;
   align-self: center;
 
-  @media only screen and (max-width: 1390px) {
-    width: 7vw;
-    height: 7vw;
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 8vw;
+    height: 8vw;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {
@@ -123,7 +123,7 @@ const H4 = styled.h4`
   font-size: 3rem;
 
   @media only screen and (max-width: 1390px) {
-    font-size: 2.7rem;
+    font-size: 2.8rem;
   }
 
   @media only screen and ${props => props.theme.media.tabLand} {
@@ -139,10 +139,6 @@ const Paragraph = styled.p`
   font-size: 2.3rem;
 
   @media only screen and (max-width: 1390px) {
-    font-size: 1.65rem;
-  }
-
-  @media only screen and ${props => props.theme.media.tabPort} {
     font-size: 2rem;
   }
 `
