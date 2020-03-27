@@ -50,11 +50,16 @@ const StyledSidebox = styled.aside`
     width: 35vw;
     padding: 3rem 2rem;
   }
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95vw;
+  }
 `
 
 const FlexContainer = styled.div`
   display: flex;
-  align-items: center;
 `
 
 const SideImage = styled.img`
@@ -63,6 +68,7 @@ const SideImage = styled.img`
   margin-top: 1.1rem;
   margin-right: 2rem;
   background-color: grey;
+  align-self: center;
 
   @media only screen and (max-width: 1390px) {
     width: 7vw;
@@ -85,7 +91,7 @@ const H4 = styled.h4`
   }
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {
@@ -97,7 +103,7 @@ const Paragraph = styled.p`
   font-size: 2.3rem;
 
   @media only screen and (max-width: 1390px) {
-    font-size: 2rem;
+    font-size: 1.65rem;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {

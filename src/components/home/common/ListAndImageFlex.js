@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-export const ListAndImageFlex = ({ children, reverseWrap }) => {
+export const ListAndImageFlex = ({ children, className, reverseWrap }) => {
   return (
-    <StyledListAndImageFlex reverseWrap={reverseWrap}>
+    <StyledListAndImageFlex className={className} reverseWrap={reverseWrap}>
       {children}
     </StyledListAndImageFlex>
   )

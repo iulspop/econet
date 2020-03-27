@@ -16,14 +16,20 @@ export const HomeForm = () => {
   return (
     <FlexColumn>
       <DecorativeLine />
-      <ListAndImageFlex>
+      <StyledFlex reverseWrap={true} justifyCenter={true}>
         <Sidebox />
 
         <div>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
           <Form />
         </div>
-      </ListAndImageFlex>
+      </StyledFlex>
     </FlexColumn>
   )
 }
+
+const StyledFlex = styled(ListAndImageFlex)`
+  @media only screen and ${props => props.theme.media.tabLand} {
+    justify-content: center;
+  }
+`

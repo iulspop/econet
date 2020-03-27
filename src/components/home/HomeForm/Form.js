@@ -108,6 +108,10 @@ const StyledForm = styled.form`
   @media only screen and (max-width: 1390px) {
     width: 51vw;
   }
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 70vw;
+  }
 `
 
 const InputContainer = styled.div`
@@ -158,6 +162,10 @@ const Input = styled.input`
   @media only screen and (max-width: 1390px) {
     width: 24vw;
   }
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 33.5vw;
+  }
 `
 
 const DateInput = styled(Input)`
@@ -182,6 +190,10 @@ const TextArea = styled.textarea`
 
   @media only screen and (max-width: 1390px) {
     width: 51vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 70vw;
   }
 `
 
@@ -220,6 +232,10 @@ const Select = styled.select`
   @media only screen and (max-width: 1390px) {
     width: 24vw;
   }
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 33.5vw;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -230,5 +246,11 @@ const ButtonContainer = styled.div`
 
   @media only screen and (max-width: 1390px) {
     width: 51vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 70vw;
+    margin-top: 2rem;
+    margin-bottom: 5.5rem;
   }
 `
