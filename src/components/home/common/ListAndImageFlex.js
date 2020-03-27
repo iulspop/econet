@@ -10,6 +10,7 @@ export const ListAndImageFlex = ({ children, reverseWrap }) => {
 }
 
 const StyledListAndImageFlex = styled.div`
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: ${props => (props.reverseWrap ? "wrap-reverse" : "wrap")};
