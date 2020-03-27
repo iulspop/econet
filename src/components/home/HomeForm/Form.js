@@ -129,14 +129,26 @@ const InputContainer = styled.div`
 
   &:focus-within > label {
     transform: translateY(-4rem);
+
+    @media only screen and ${props => props.theme.media.phone} {
+      transform: translateY(-3.8rem);
+    }
   }
 
   & .filled + label {
     transform: translateY(-4rem);
+
+    @media only screen and ${props => props.theme.media.phone} {
+      transform: translateY(-3.8rem);
+    }
   }
 
   &:focus-within {
     outline: 1px dotted ${props => props.theme.colors.tertiary};
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin: 2rem 0;
   }
 `
 
@@ -290,5 +302,10 @@ const ButtonContainer = styled.div`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
 `

@@ -71,6 +71,11 @@ const FlexContainer = styled.div`
   @media only screen and ${props => props.theme.media.tabPort} {
     margin: 3rem 0;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    flex-direction: column;
+    margin: 1.5rem 0;
+  }
 `
 
 const SideImage = styled.img`
@@ -90,6 +95,13 @@ const SideImage = styled.img`
     width: 15vw;
     height: 15vw;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 25vw;
+    height: 25vw;
+  }
 `
 
 const TextSnippet = styled.div`
@@ -101,6 +113,10 @@ const TextSnippet = styled.div`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 55vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 72vw;
   }
 `
 const H4 = styled.h4`
