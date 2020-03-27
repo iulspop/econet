@@ -19,15 +19,11 @@ export const HomeForm = () => {
       <ListAndImageFlex>
         <Sidebox />
 
-        <FormContainer>
+        <div>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
           <Form />
-        </FormContainer>
+        </div>
       </ListAndImageFlex>
     </FlexColumn>
   )
 }
-
-const FormContainer = styled.div`
-  width: 47vw;
-`
