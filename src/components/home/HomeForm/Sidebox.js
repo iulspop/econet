@@ -10,22 +10,24 @@ export const Sidebox = () => {
       <FlexContainer>
         <SideImage aria-label="" />
         <TextSnippet>
-          <h4>{t("sideboxHeading1")}</h4>
-          <p>{t("sideboxParagraph1")}</p>
+          <H4>{t("sideboxHeading1")}</H4>
+          <Paragraph>{t("sideboxParagraph1")}</Paragraph>
         </TextSnippet>
       </FlexContainer>
+
       <FlexContainer>
         <SideImage aria-label="" />
         <TextSnippet>
-          <h4>{t("sideboxHeading2")}</h4>
-          <p>{t("sideboxParagraph2")}</p>
+          <H4>{t("sideboxHeading2")}</H4>
+          <Paragraph>{t("sideboxParagraph2")}</Paragraph>
         </TextSnippet>
       </FlexContainer>
+
       <FlexContainer>
         <SideImage aria-label="" />
         <TextSnippet>
-          <h4>{t("sideboxHeading3")}</h4>
-          <p>{t("sideboxParagraph3")}</p>
+          <H4>{t("sideboxHeading3")}</H4>
+          <Paragraph>{t("sideboxParagraph3")}</Paragraph>
         </TextSnippet>
       </FlexContainer>
     </StyledSidebox>
@@ -51,10 +53,30 @@ const FlexContainer = styled.div`
 const SideImage = styled.img`
   width: 10vw;
   height: 10vw;
+  margin-top: 1.1rem;
   margin-right: 2rem;
   background-color: grey;
 `
 
 const TextSnippet = styled.div`
   width: 20vw;
+`
+const H4 = styled.h4`
+  font-size: 3rem;
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    font-size: 2.8rem;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: 2.2rem;
+  }
+`
+
+const Paragraph = styled.p`
+  font-size: 2.3rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: 2rem;
+  }
 `
