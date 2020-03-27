@@ -35,7 +35,7 @@ export const Sidebox = () => {
 }
 
 const StyledSidebox = styled.aside`
-  width: 35vw;
+  width: 37vw;
   padding: 4.5rem 3rem;
   border-radius: 3px;
   background-color: ${props => props.theme.colors.primary};
@@ -48,6 +48,7 @@ const StyledSidebox = styled.aside`
 
 const FlexContainer = styled.div`
   display: flex;
+  align-items: center;
 `
 
 const SideImage = styled.img`
@@ -59,7 +60,7 @@ const SideImage = styled.img`
 `
 
 const TextSnippet = styled.div`
-  width: 20vw;
+  width: 23vw;
 `
 const H4 = styled.h4`
   font-size: 3rem;
