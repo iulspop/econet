@@ -17,7 +17,7 @@ const StyledListAndImageFlex = styled.div`
   width: 90vw;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    width: 95vw;
+    width: 92vw;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
