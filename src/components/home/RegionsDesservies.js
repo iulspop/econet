@@ -101,6 +101,7 @@ const ImageOfMap = styled.img`
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
     height: 60vw;
+    max-height: 40rem;
     min-height: 30rem;
   }
 `
