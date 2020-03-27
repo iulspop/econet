@@ -56,10 +56,21 @@ const StyledSidebox = styled.aside`
     justify-content: space-around;
     width: 95vw;
   }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 95vw;
+  }
 `
 
 const FlexContainer = styled.div`
   display: flex;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    margin: 3rem 0;
+  }
 `
 
 const SideImage = styled.img`
@@ -74,6 +85,11 @@ const SideImage = styled.img`
     width: 7vw;
     height: 7vw;
   }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 15vw;
+    height: 15vw;
+  }
 `
 
 const TextSnippet = styled.div`
@@ -81,6 +97,10 @@ const TextSnippet = styled.div`
 
   @media only screen and (max-width: 1390px) {
     width: 19vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 55vw;
   }
 `
 const H4 = styled.h4`
