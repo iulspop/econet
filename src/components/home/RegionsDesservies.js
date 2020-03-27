@@ -37,28 +37,24 @@ const StyledFlexColumn = styled(FlexColumn)`
 const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 4rem 0;
 `
 
 const TextContainer = styled.div`
-  align-item: stretch;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 40vw;
-  margin: 0 4rem;
+  width: 42vw;
+  margin-right: 5vw;
 `
 
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  width: 40vw;
+  width: 42vw;
   margin: 4rem 0;
 `
 
 const ImageOfMap = styled.img`
-  width: 40vw;
+  width: 43vw;
   height: 35vw;
   background-color: grey;
 `
