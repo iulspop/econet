@@ -1,8 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 
-export const SectionHeading = ({ children }) => {
-  return <StyledSectionHeading>{children}</StyledSectionHeading>
+export const SectionHeading = ({ children, className }) => {
+  return (
+    <StyledSectionHeading className={className}>
+      {children}
+    </StyledSectionHeading>
+  )
 }
 
 const StyledSectionHeading = styled.h3`
