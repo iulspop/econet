@@ -72,11 +72,15 @@ export const Form = () => {
       </InputContainerMarginRight>
 
       <InputContainer>
-        <Select name="newCustomer" id="newCustomer" onClick={handleChange}>
+        <CustomerQuestionSelect
+          name="newCustomer"
+          id="newCustomer"
+          onClick={handleChange}
+        >
           <option value="yes">Yes, I am a potential new customer</option>
           <option value="no">No, I'm a current existing customer</option>
           <option value="neither">I'm neither.</option>
-        </Select>
+        </CustomerQuestionSelect>
         <Label htmlFor="newCustomer">Are you a new customer?</Label>
       </InputContainer>
 
@@ -111,6 +115,10 @@ const StyledForm = styled.form`
 
   @media only screen and ${props => props.theme.media.tabLand} {
     width: 70vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 90vw;
   }
 `
 
@@ -166,6 +174,10 @@ const Input = styled.input`
   @media only screen and ${props => props.theme.media.tabLand} {
     width: 33.5vw;
   }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 43.5vw;
+  }
 `
 
 const DateInput = styled(Input)`
@@ -194,6 +206,10 @@ const TextArea = styled.textarea`
 
   @media only screen and ${props => props.theme.media.tabLand} {
     width: 70vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 90vw;
   }
 `
 
@@ -236,6 +252,16 @@ const Select = styled.select`
   @media only screen and ${props => props.theme.media.tabLand} {
     width: 33.5vw;
   }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 43.5vw;
+  }
+`
+
+const CustomerQuestionSelect = styled(Select)`
+  @media only screen and (max-width: 660px) {
+    width: 90vw;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -252,5 +278,9 @@ const ButtonContainer = styled.div`
     width: 70vw;
     margin-top: 2rem;
     margin-bottom: 5.5rem;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 90vw;
   }
 `
