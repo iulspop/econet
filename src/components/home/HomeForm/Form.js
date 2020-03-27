@@ -104,6 +104,10 @@ const StyledForm = styled.form`
   display: flex;
   width: 45vw;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 1390px) {
+    width: 51vw;
+  }
 `
 
 const InputContainer = styled.div`
@@ -150,6 +154,10 @@ const Input = styled.input`
   border-radius: 3px;
 
   cursor: text;
+
+  @media only screen and (max-width: 1390px) {
+    width: 24vw;
+  }
 `
 
 const DateInput = styled(Input)`
@@ -171,6 +179,10 @@ const TextArea = styled.textarea`
   border: none;
   box-shadow: -1px -1px 2px #ededed, 1px 1px 2px #ededed;
   border-radius: 3px;
+
+  @media only screen and (max-width: 1390px) {
+    width: 51vw;
+  }
 `
 
 const Select = styled.select`
@@ -204,6 +216,10 @@ const Select = styled.select`
     text-shadow: 0 0 0 #000;
   }
   cursor: text;
+
+  @media only screen and (max-width: 1390px) {
+    width: 24vw;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -211,4 +227,8 @@ const ButtonContainer = styled.div`
   justify-content: center;
   width: 45vw;
   margin: 2.5rem 0;
+
+  @media only screen and (max-width: 1390px) {
+    width: 51vw;
+  }
 `

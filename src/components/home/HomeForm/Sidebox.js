@@ -44,6 +44,12 @@ const StyledSidebox = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1390px) {
+    justify-content: space-around;
+    width: 35vw;
+    padding: 3rem 2rem;
+  }
 `
 
 const FlexContainer = styled.div`
@@ -57,13 +63,26 @@ const SideImage = styled.img`
   margin-top: 1.1rem;
   margin-right: 2rem;
   background-color: grey;
+
+  @media only screen and (max-width: 1390px) {
+    width: 7vw;
+    height: 7vw;
+  }
 `
 
 const TextSnippet = styled.div`
   width: 23vw;
+
+  @media only screen and (max-width: 1390px) {
+    width: 19vw;
+  }
 `
 const H4 = styled.h4`
   font-size: 3rem;
+
+  @media only screen and (max-width: 1390px) {
+    font-size: 2.7rem;
+  }
 
   @media only screen and ${props => props.theme.media.tabLand} {
     font-size: 2.8rem;
@@ -76,6 +95,10 @@ const H4 = styled.h4`
 
 const Paragraph = styled.p`
   font-size: 2.3rem;
+
+  @media only screen and (max-width: 1390px) {
+    font-size: 2rem;
+  }
 
   @media only screen and ${props => props.theme.media.tabPort} {
     font-size: 2rem;
