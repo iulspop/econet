@@ -1,8 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { useTranslation } from "react-i18next"
 import { DecoratedButton } from "../../common"
 
 export const Form = () => {
+  const { t } = useTranslation("HomeForm")
+
   function handleChange(e) {
     if (e.target.value) {
       e.target.classList.add("filled")
@@ -20,12 +23,12 @@ export const Form = () => {
           placeholder=""
           onChange={handleChange}
         />
-        <Label htmlFor="firstName">First Name</Label>
+        <Label htmlFor="firstName">{t("firstName")}</Label>
       </InputContainerMarginRight>
 
       <InputContainer>
         <Input type="email" id="email" placeholder="" onChange={handleChange} />
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email">{t("email")}</Label>
       </InputContainer>
 
       <InputContainerMarginRight>
@@ -35,7 +38,7 @@ export const Form = () => {
           placeholder=""
           onChange={handleChange}
         />
-        <Label htmlFor="date">Preferred Date</Label>
+        <Label htmlFor="date">{t("date")}</Label>
       </InputContainerMarginRight>
 
       <InputContainer>
@@ -63,12 +66,12 @@ export const Form = () => {
           <option value="6 PM">6 PM</option>
           <option value="6:30 PM">6:30 PM</option>
         </Select>
-        <Label htmlFor="time">Preferred Time</Label>
+        <Label htmlFor="time">{t("time")}</Label>
       </InputContainer>
 
       <InputContainerMarginRight>
         <Input type="phone" id="phone" onChange={handleChange} />
-        <Label htmlFor="phone">Phone</Label>
+        <Label htmlFor="phone">{t("phone")}</Label>
       </InputContainerMarginRight>
 
       <InputContainer>
@@ -77,11 +80,11 @@ export const Form = () => {
           id="newCustomer"
           onClick={handleChange}
         >
-          <option value="yes">Yes, I am a potential new customer</option>
-          <option value="no">No, I'm a current existing customer</option>
-          <option value="neither">I'm neither.</option>
+          <option value="yes">{t("yesNewCustomer")}</option>
+          <option value="no">{t("noNewCustomer")}</option>
+          <option value="neither">{t("neitherNewCustomer")}</option>
         </CustomerQuestionSelect>
-        <Label htmlFor="newCustomer">Are you a new customer?</Label>
+        <Label htmlFor="newCustomer">{t("newCustomer")}</Label>
       </InputContainer>
 
       <InputContainer>
@@ -92,12 +95,12 @@ export const Form = () => {
           cols="33"
           onChange={handleChange}
         />
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">{t("message")}</Label>
       </InputContainer>
 
       <ButtonContainer>
         <DecoratedButton left right slim>
-          Send your request
+          {t("send")}
         </DecoratedButton>
       </ButtonContainer>
     </StyledForm>

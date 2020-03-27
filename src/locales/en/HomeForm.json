@@ -6,15 +6,15 @@
   "sideboxParagraph1": "Nettoyage de tapis et de meubles qui ne nuit pas ni à la planète ni à votre santé.",
   "sideboxParagraph2": "Les surprises c'est pour les fêtes. Sachez les prix, sans des frais cachés.",
   "sideboxParagraph3": "Si vous n'êtes pas satisfait du nettoyage de tapis on vous rembourse à 100%",
-  "firstName": "Prénom",
-  "email": "Courriel",
+  "firstName": "First Name",
+  "email": "Email",
   "date": "Preferred Date",
   "time": "Preferred Time",
-  "phone": "Téléphone",
-  "yesNewCustomer": "Oui, je suis un nouveau client potentiel",
-  "noNewCustomer": "Non, je suis un client actuel",
-  "neitherNewCustomer": "Je ne suis ni l'un ni l'autre.",
-  "newCustomer": "Êtes-vous un nouveau client?",
+  "phone": "Phone",
+  "yesNewCustomer": "Yes, I am a potential new customer",
+  "noNewCustomer": "No, I'm a current existing customer",
+  "neitherNewCustomer": "I'm neither.",
+  "newCustomer": "Are you a new customer?",
   "message": "Message",
-  "send": "Envoyez votre demande"
+  "send": "Send your request"
 }
