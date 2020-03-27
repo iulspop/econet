@@ -178,6 +178,10 @@ const Input = styled.input`
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 43.5vw;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
+  }
 `
 
 const DateInput = styled(Input)`
@@ -255,6 +259,10 @@ const Select = styled.select`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 43.5vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
   }
 `
 
