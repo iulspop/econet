@@ -7,6 +7,7 @@ import {
   ServiceList,
   ChooseUs,
   HomeForm,
+  Testimonial,
   RegionsDesservies,
 } from "../components/home"
 
@@ -23,6 +24,7 @@ export default function homePage() {
           <ServiceList />
           <ChooseUs />
           <HomeForm />
+          <Testimonial />
           <RegionsDesservies />
         </Layout>
       </ThemeProvider>
