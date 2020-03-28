@@ -56,6 +56,7 @@ const DecorativeLine = styled.img`
 
   @media only screen and ${props => props.theme.media.phone} {
     width: 90vw;
+    margin-bottom: 0;
   }
 `
 
@@ -108,6 +109,10 @@ const ImageContainer = styled.figure`
     flex-grow: 1;
     margin-left: 0rem;
     margin-top: 4rem;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin-top: 2rem;
   }
 `
 
