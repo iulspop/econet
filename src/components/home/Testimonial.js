@@ -72,5 +72,10 @@ const QuotationMark = styled.span`
 `
 
 const CustomerName = styled.strong`
+  margin-top: 0.2rem;
   font-size: 4rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: calc(0.03064516 * 100vw + 1.119354839rem);
+  }
 `
