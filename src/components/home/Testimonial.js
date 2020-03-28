@@ -52,6 +52,19 @@ const CustomerQuote = styled.p`
   font-size: 5rem;
   width: 66vw;
   text-align: center;
+
+  @media only screen and (max-width: 1580px) {
+    font-size: calc(0.01315789 * 100vw + 2.921052632rem);
+  }
+
+  @media only screen and ${props => props.theme.media.tabLand} {
+    font-size: 4.5rem;
+    width: 80vw;
+  }
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: calc(0.03676471 * 100vw + 0.823529412rem);
+  }
 `
 
 const QuotationMark = styled.span`
