@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { DecoratedButton } from "./common"
 
 export const Story = () => {
   const { t } = useTranslation("Story")
@@ -24,6 +25,9 @@ export const Story = () => {
           <Paragraph>
             <strong>{t("conclusion")}</strong>
           </Paragraph>
+          <DecoratedButton left right slim>
+            {t("button")}
+          </DecoratedButton>
         </TextContainer>
         <ImageContainer>
           <div>
