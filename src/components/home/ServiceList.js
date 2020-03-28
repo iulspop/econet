@@ -37,11 +37,21 @@ export const ServiceList = () => {
               <ListItemGreen>{t("listItem5")}</ListItemGreen>
             </LeftListContainer>
             <RightListContainer>
-              <ListItemGreen>{t("listItem6")}</ListItemGreen>
-              <ListItemBrown>{t("listItem7")}</ListItemBrown>
-              <ListItemGreen>{t("listItem8")}</ListItemGreen>
-              <ListItemBrown>{t("listItem9")}</ListItemBrown>
-              <ListItemGreen>{t("listItem10")}</ListItemGreen>
+              <ListItemGreen switchWhenOneColumn={true}>
+                {t("listItem6")}
+              </ListItemGreen>
+              <ListItemBrown switchWhenOneColumn={true}>
+                {t("listItem7")}
+              </ListItemBrown>
+              <ListItemGreen switchWhenOneColumn={true}>
+                {t("listItem8")}
+              </ListItemGreen>
+              <ListItemBrown switchWhenOneColumn={true}>
+                {t("listItem9")}
+              </ListItemBrown>
+              <ListItemGreen switchWhenOneColumn={true}>
+                {t("listItem10")}
+              </ListItemGreen>
             </RightListContainer>
           </List>
 
@@ -93,12 +103,26 @@ const ListItemGreen = styled.li`
     transform: translateY(-40%);
 
     background-color: ${props => props.theme.colors.primary};
+
+    @media only screen and ${props => props.theme.media.phone} {
+      background-color: ${props =>
+        props.switchWhenOneColumn
+          ? props.theme.colors.secondary
+          : props.theme.colors.primary};
+    }
   }
 `
 
 const ListItemBrown = styled(ListItemGreen)`
   &::before {
     background-color: ${props => props.theme.colors.secondary};
+
+    @media only screen and ${props => props.theme.media.phone} {
+      background-color: ${props =>
+        props.switchWhenOneColumn
+          ? props.theme.colors.primary
+          : props.theme.colors.secondary};
+    }
   }
 `
 
