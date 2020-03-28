@@ -1,15 +1,21 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { DecorativeLine, FlexColumn, SectionHeading } from "./common"
+import { DecorativeLine, FlexColumn } from "./common"
 
 export const Testimonial = () => {
   const { t } = useTranslation("Testimonial")
   return (
     <StyledFlexColumn>
       <DecorativeLine />
-      <SectionHeading>{t("sectionHeading")}</SectionHeading>
-      <H4>{t("h4")}</H4>
+      <SectionHeadingH3>{t("sectionHeadingH3")}</SectionHeadingH3>
+      {/* <SubHeadingH4>{t("subHeadingH4")}</SubHeadingH4> */}
+      <CustomerQuote>
+        <QuotationMark>“</QuotationMark>
+        {t("testimonial1")}
+        <QuotationMark>”</QuotationMark>
+      </CustomerQuote>
+      <CustomerName>- {t("customer1")}</CustomerName>
     </StyledFlexColumn>
   )
 }
@@ -22,4 +28,30 @@ const StyledFlexColumn = styled(FlexColumn)`
   );
 `
 
-const H4 = styled.h4``
+const SectionHeadingH3 = styled.h3`
+  font-size: 5rem;
+  margin: 1rem 0;
+  margin-bottom: 5rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: calc(0.045 * 100vw + 0.95rem);
+  }
+`
+
+const SubHeadingH4 = styled.h4`
+  font-size: 4rem;
+`
+
+const CustomerQuote = styled.p`
+  font-size: 5rem;
+  width: 66vw;
+  text-align: center;
+`
+
+const QuotationMark = styled.span`
+  color: ${props => props.theme.colors.primary};
+`
+
+const CustomerName = styled.strong`
+  font-size: 4rem;
+`
