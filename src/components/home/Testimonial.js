@@ -30,10 +30,16 @@ const StyledFlexColumn = styled(FlexColumn)`
 
 const SectionHeadingH3 = styled.h3`
   font-size: 5rem;
-  margin: 1rem 0;
+  margin-top: 1rem;
   margin-bottom: 5rem;
+  width: 95vw;
+  text-align: center;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
+  @media only screen and ${props => props.theme.media.tabLand} {
+    font-size: calc(0.034 * 100vw + 0.95rem);
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
     font-size: calc(0.045 * 100vw + 0.95rem);
   }
 `
