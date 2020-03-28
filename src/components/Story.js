@@ -25,9 +25,11 @@ export const Story = () => {
           <Paragraph>
             <strong>{t("conclusion")}</strong>
           </Paragraph>
-          <DecoratedButton left right slim>
-            {t("button")}
-          </DecoratedButton>
+          <ButtonContainer>
+            <DecoratedButton left right slim>
+              {t("button")}
+            </DecoratedButton>
+          </ButtonContainer>
         </TextContainer>
         <ImageContainer>
           <div>
@@ -136,4 +138,9 @@ const ListItemBrown = styled.li`
 
 const FigCaption = styled.figcaption`
   text-align: center;
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `
