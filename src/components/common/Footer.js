@@ -7,12 +7,16 @@ export const Footer = () => {
   const { t } = useTranslation("Footer")
   return (
     <StyledFooter>
-      <LogoImg
-        src={"/assets/logo.png"}
-        alt={
-          "Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
-        }
-      />
+      <FlexColumn>
+        <LogoImg
+          src={"/assets/logo.png"}
+          alt={
+            "Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
+          }
+        />
+        <CTA>Schedule your service</CTA>
+        <NumberLink href="tel:514-666-6601">514-666-6601</NumberLink>
+      </FlexColumn>
 
       <Nav>
         <LinkColumn>
@@ -96,8 +100,33 @@ const StyledFooter = styled.div`
   align-items: center;
 `
 
+const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const LogoImg = styled.img`
   height: 10vw;
+`
+
+const CTA = styled.p`
+  margin-top: 1rem;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+`
+
+const NumberLink = styled.a`
+  ${linkReset}
+  line-height: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: ${props => props.theme.colors.primary};
+  }
 `
 
 const Nav = styled.nav`
@@ -218,8 +247,8 @@ const ListItemVerticalCenterRight = styled(ListItemVerticalCenterLeft)`
 `
 
 const SVGIcon = styled.svg`
-  fill: blue;
   transition: 0.3s ease;
+  fill: ${props => props.theme.colors.secondary};
 
   &:hover {
     fill: ${props => props.theme.colors.primary};
