@@ -48,6 +48,10 @@ export const AreaQuestions = ({ selectedOptions }) => {
 }
 
 const OptionsFieldset = styled(Fieldset)`
+  min-height: unset;
+  margin-bottom: 4rem;
+  padding-bottom: 0.5rem;
+
   display: ${props =>
     props.selectedOptions.tapis || props.selectedOptions.cirage
       ? "block"

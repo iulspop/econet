@@ -29,12 +29,17 @@ export const RadioInputMarginLeft = styled(RadioInput)`
 `
 
 export const Fieldset = styled.fieldset`
-  margin: 2rem 0;
+  min-height: 587.56px;
+  padding: 1rem 1.5rem;
+  padding-bottom: 6.2rem;
+
   border: none;
   background-color: white;
-  border-radius: 1px;
+  border-radius: 3px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   display: ${params => (params.hidden ? "none" : "block")};
+
+  position: relative;
 `
 
 export const RadioGroup = styled.fieldset`
@@ -69,7 +74,7 @@ export const Select = styled.select`
 `
 
 export const SelectWide = styled(Select)`
-  width: 20rem;
+  width: 28rem;
   margin-top: 0.5rem;
 `
 
@@ -85,13 +90,15 @@ export const NextButton = styled.button`
   ${buttonReset}
   width: 15rem;
   height: 4.2rem;
-  margin-bottom: 1rem;
-  border-radius: 2px;
+  border-radius: 3px;
   background-color: ${props => props.theme.colors.primary};
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   color: white;
-  float: right;
+
+  position: absolute;
+  right: 4.5rem;
+  bottom: 2rem;
 
   @media only screen and ${props => props.theme.media.phone} {
     width: 12rem;
@@ -101,9 +108,11 @@ export const NextButton = styled.button`
 
 export const BackButton = styled(NextButton)`
   width: 12rem;
-  border-radius: 2px;
+  border-radius: 3px;
   background-color: #bdbdbd;
-  float: left;
+
+  right: unset;
+  left: 4.5rem;
 
   @media only screen and ${props => props.theme.media.phone} {
     width: 10rem;
