@@ -9,7 +9,6 @@ export const Testimonial = () => {
     <StyledFlexColumn>
       <DecorativeLine />
       <SectionHeadingH3>{t("sectionHeadingH3")}</SectionHeadingH3>
-      {/* <SubHeadingH4>{t("subHeadingH4")}</SubHeadingH4> */}
       <CustomerQuote>
         <QuotationMark>“</QuotationMark>
         {t("testimonial1")}
@@ -42,10 +41,6 @@ const SectionHeadingH3 = styled.h3`
   @media only screen and ${props => props.theme.media.phone} {
     font-size: calc(0.045 * 100vw + 0.95rem);
   }
-`
-
-const SubHeadingH4 = styled.h4`
-  font-size: 4rem;
 `
 
 const CustomerQuote = styled.p`
