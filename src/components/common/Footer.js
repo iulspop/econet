@@ -219,4 +219,9 @@ const ListItemVerticalCenterRight = styled(ListItemVerticalCenterLeft)`
 
 const SVGIcon = styled.svg`
   fill: blue;
+  transition: 0.3s ease;
+
+  &:hover {
+    fill: ${props => props.theme.colors.primary};
+  }
 `
