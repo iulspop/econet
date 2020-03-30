@@ -15,7 +15,13 @@ export const Form = () => {
   }
 
   return (
-    <StyledForm action="">
+    <StyledForm
+      method="POST"
+      action="/confirmation"
+      data-netlify="true"
+      name="homeForm"
+    >
+      <input type="hidden" name="form-name" value="homeForm" />
       <InputContainerMarginRight>
         <Input
           type="text"
