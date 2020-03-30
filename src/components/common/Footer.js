@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { linkReset } from "../../mixins"
 
 export const Footer = () => {
   const { t } = useTranslation("Footer")
@@ -14,18 +15,18 @@ export const Footer = () => {
       />
 
       <Nav>
-        <Column>
-          <a>Accueil</a>
-          <a>À Propos</a>
-          <a>Nous Joindre</a>
-        </Column>
-        <Column>
-          <a>Services Résidentiels</a>
-          <a>Services Commerciaux</a>
-        </Column>
+        <LinkColumn>
+          <WebsiteLinks href="#">Accueil</WebsiteLinks>
+          <WebsiteLinks href="#">À Propos</WebsiteLinks>
+          <WebsiteLinks href="#">Nous Joindre</WebsiteLinks>
+        </LinkColumn>
+        <LinkColumn>
+          <LongWebsiteLinks href="#">Services Résidentiels</LongWebsiteLinks>
+          <LongWebsiteLinks href="#">Services Commerciaux</LongWebsiteLinks>
+        </LinkColumn>
       </Nav>
 
-      <ListOfLinks>
+      <ListOfSocialMediaLinks>
         <ListItemHorizonalCenterUp>
           <a href="#">
             <SVGIcon
@@ -75,7 +76,7 @@ export const Footer = () => {
             </SVGIcon>
           </a>
         </ListItemVerticalCenterRight>
-      </ListOfLinks>
+      </ListOfSocialMediaLinks>
     </StyledFooter>
   )
 }
@@ -102,17 +103,36 @@ const LogoImg = styled.img`
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  width: 30vw;
+  width: 34vw;
 `
 
-const Column = styled.nav`
+const LinkColumn = styled.nav`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 14vw;
+  justify-content: start;
+  width: 17vw;
 `
 
-const ListOfLinks = styled.ul`
+const WebsiteLinks = styled.a`
+  ${linkReset}
+  width: 10vw;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2.6rem;
+  border-bottom: 1px solid ${props => props.theme.colors.primary};
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: ${props => props.theme.colors.primary};
+  }
+`
+
+const LongWebsiteLinks = styled(WebsiteLinks)`
+  width: 17vw;
+`
+
+const ListOfSocialMediaLinks = styled.ul`
   margin: 0 4rem;
   margin-top: 3rem;
   position: relative;
