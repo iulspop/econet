@@ -11,6 +11,7 @@ export const Link = styled.a`
   text-align: center;
   text-transform: uppercase;
   transform: translateY(6px); // to center after adding border on hover
+  transition: 0.08s ease;
 
   &:hover {
     font-weight: 700;
