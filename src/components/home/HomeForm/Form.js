@@ -25,6 +25,7 @@ export const Form = () => {
       <InputContainerMarginRight>
         <Input
           type="text"
+          name="firstName"
           id="firstName"
           placeholder=""
           onChange={handleChange}
@@ -33,13 +34,20 @@ export const Form = () => {
       </InputContainerMarginRight>
 
       <InputContainer>
-        <Input type="email" id="email" placeholder="" onChange={handleChange} />
+        <Input
+          type="email"
+          name="email"
+          id="email"
+          placeholder=""
+          onChange={handleChange}
+        />
         <Label htmlFor="email">{t("email")}</Label>
       </InputContainer>
 
       <InputContainerMarginRight>
         <DateInput
           type="date"
+          name="date"
           id="date"
           placeholder=""
           onChange={handleChange}
@@ -76,7 +84,7 @@ export const Form = () => {
       </InputContainer>
 
       <InputContainerMarginRight>
-        <Input type="phone" id="phone" onChange={handleChange} />
+        <Input type="phone" name="phone" id="phone" onChange={handleChange} />
         <Label htmlFor="phone">{t("phone")}</Label>
       </InputContainerMarginRight>
 
