@@ -19,7 +19,7 @@ export const Form = ({ shownForm, formName }) => {
     <StyledForm
       shownForm={shownForm}
       method="post"
-      action="#"
+      action="/confirmation"
       data-netlify="true"
       name={formName}
     >
