@@ -86,7 +86,7 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.div`
-  height: 30rem;
+  height: 32rem;
   padding: 3rem 5rem;
   background-image: linear-gradient(
     109.6deg,
@@ -107,7 +107,7 @@ const FlexColumn = styled.div`
 `
 
 const LogoImg = styled.img`
-  height: 10vw;
+  height: 9.5vw;
 `
 
 const CTA = styled.p`
@@ -147,7 +147,7 @@ const WebsiteLinks = styled.a`
   width: 10vw;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   border-bottom: 1px solid ${props => props.theme.colors.primary};
   cursor: pointer;
   transition: 0.3s ease;
@@ -163,7 +163,6 @@ const LongWebsiteLinks = styled(WebsiteLinks)`
 
 const ListOfSocialMediaLinks = styled.ul`
   margin: 0 4rem;
-  margin-top: 3rem;
   position: relative;
   list-style: none;
   width: 10vw;
