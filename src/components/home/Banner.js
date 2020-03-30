@@ -87,7 +87,7 @@ const MainHeading = styled.h1`
   }
 
   @media only screen and ${props => props.theme.media.phone} {
-    width: 32rem;
+    width: 30rem;
     font-size: 3.7rem;
     margin-top: 3rem;
   }
