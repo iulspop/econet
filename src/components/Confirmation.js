@@ -30,7 +30,7 @@ const Container = styled.div`
 `
 
 const Box = styled.div`
-  width: 90vw;
+  width: 91vw;
   max-width: 40rem;
   padding: 4rem 2rem;
   background-color: white;
@@ -40,6 +40,10 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    padding: 4rem 1.5rem;
+  }
 `
 
 const H1 = styled.h1`
@@ -53,6 +57,10 @@ const Paragraph = styled.p`
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.2rem;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    font-size: calc(0.0195 * 100vw + 1.23rem);
+  }
 `
 
 const LineBreak = styled.span`
