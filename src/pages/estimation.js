@@ -1,6 +1,6 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import { Layout, Header } from "../components/common"
+import { Layout, Header, Footer } from "../components/common"
 import { Estimation } from "../components/Estimation"
 import { theme } from "../theme"
 
@@ -14,6 +14,7 @@ export default function estimationPage() {
         <Layout>
           <Header />
           <Estimation />
+          <Footer />
         </Layout>
       </ThemeProvider>
     </I18nextProvider>

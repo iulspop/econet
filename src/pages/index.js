@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../theme"
-import { Layout, Header } from "../components/common"
+import { Layout, Header, Footer } from "../components/common"
 import {
   Banner,
   ServiceList,
@@ -26,6 +26,7 @@ export default function homePage() {
           <HomeForm />
           <Testimonial />
           <RegionsDesservies />
+          <Footer />
         </Layout>
       </ThemeProvider>
     </I18nextProvider>
