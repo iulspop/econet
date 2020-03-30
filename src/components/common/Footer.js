@@ -195,7 +195,7 @@ const WebsiteLink = styled.a`
 
   @media screen and (max-width: 660px) {
     width: 35vw;
-    font-size: calc(0.01176471 * 100vw + 1.623529412rem);
+    font-size: calc(0.0105 * 100vw + 1.623529412rem);
   }
 `
 
