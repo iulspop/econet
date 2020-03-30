@@ -113,7 +113,8 @@ const Column = styled.nav`
 `
 
 const ListOfLinks = styled.ul`
-  margin-top: 4rem;
+  margin: 0 4rem;
+  margin-top: 3rem;
   position: relative;
   list-style: none;
   width: 10vw;
