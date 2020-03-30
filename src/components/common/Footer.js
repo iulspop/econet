@@ -107,7 +107,7 @@ const FlexColumn = styled.div`
 `
 
 const LogoImg = styled.img`
-  height: 9.5vw;
+  height: 15rem;
 `
 
 const CTA = styled.p`
@@ -135,7 +135,7 @@ const Nav = styled.nav`
   width: 34vw;
 `
 
-const LinkColumn = styled.nav`
+const LinkColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -144,7 +144,7 @@ const LinkColumn = styled.nav`
 
 const WebsiteLinks = styled.a`
   ${linkReset}
-  width: 10vw;
+  width: 15rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   font-size: 2.4rem;
@@ -158,14 +158,14 @@ const WebsiteLinks = styled.a`
 `
 
 const LongWebsiteLinks = styled(WebsiteLinks)`
-  width: 17vw;
+  width: 25rem;
 `
 
 const ListOfSocialMediaLinks = styled.ul`
   margin: 0 4rem;
   position: relative;
   list-style: none;
-  width: 10vw;
+  width: 15rem;
   height: 15rem;
 
   &::before {
