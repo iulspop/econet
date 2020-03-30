@@ -1,19 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 import { linkReset } from "../mixins"
 
 export const Confirmation = () => {
-  // const { t } = useTranslation("Story")
+  const { t } = useTranslation("Confirmation")
   return (
     <Container>
       <Box>
-        <H1>Merci!</H1>
+        <H1>{t("merci")}</H1>
         <Paragraph>
-          Votre estimation à été soumise.
-          <LineBreak /> Nous vous contacterons dès que possible.
+          {t("paragraphLine1")}
+          <LineBreak />
+          {t("paragraphLine2")}
         </Paragraph>
-        <ReturnLink href="/">Retourner</ReturnLink>
+        <ReturnLink href="/">{t("return")}</ReturnLink>
       </Box>
     </Container>
   )
