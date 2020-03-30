@@ -35,6 +35,7 @@ const Box = styled.div`
   padding: 4rem 2rem;
   background-color: white;
   border-radius: 3px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 
   display: flex;
   flex-direction: column;
