@@ -1,18 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-import { useTranslation } from "react-i18next"
+// import { useTranslation } from "react-i18next"
 import { linkReset } from "../../mixins"
 
 export const Footer = () => {
-  const { t } = useTranslation("Footer")
+  // const { t } = useTranslation("Footer")
   return (
     <StyledFooter>
       <FlexColumn>
         <LogoImg
-          src={"/assets/logo.png"}
-          alt={
-            "Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
-          }
+          src="/assets/logo.png"
+          alt="Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
         />
         <CTA>Schedule your service</CTA>
         <NumberLink href="tel:514-666-6601">514-666-6601</NumberLink>
@@ -20,20 +18,20 @@ export const Footer = () => {
 
       <Nav>
         <LinkColumnLeft>
-          <WebsiteLinks href="#">Accueil</WebsiteLinks>
-          <WebsiteLinks href="#">À Propos</WebsiteLinks>
-          <WebsiteLinks href="#">Nous Joindre</WebsiteLinks>
+          <WebsiteLink href="/">Accueil</WebsiteLink>
+          <WebsiteLink href="/">À Propos</WebsiteLink>
+          <WebsiteLink href="/">Nous Joindre</WebsiteLink>
         </LinkColumnLeft>
         <LinkColumn>
-          <LongWebsiteLinks href="#">Services Résidentiels</LongWebsiteLinks>
-          <LongWebsiteLinks href="#">Services Commerciaux</LongWebsiteLinks>
+          <LongWebsiteLink href="/">Services Résidentiels</LongWebsiteLink>
+          <LongWebsiteLink href="/">Services Commerciaux</LongWebsiteLink>
         </LinkColumn>
       </Nav>
 
       <FlexContainer>
         <ListOfSocialMediaLinks>
           <ListItemHorizonalCenterUp>
-            <a href="#">
+            <a href="/">
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -45,7 +43,7 @@ export const Footer = () => {
             </a>
           </ListItemHorizonalCenterUp>
           <ListItemVerticalCenterLeft>
-            <a href="#">
+            <a href="/">
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -57,7 +55,7 @@ export const Footer = () => {
             </a>
           </ListItemVerticalCenterLeft>
           <ListItemHorizonalCenterDown>
-            <a href="#">
+            <a href="/">
               <SVGIcon
                 width="24"
                 height="24"
@@ -70,7 +68,7 @@ export const Footer = () => {
             </a>
           </ListItemHorizonalCenterDown>
           <ListItemVerticalCenterRight>
-            <a href="#">
+            <a href="/">
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -103,6 +101,16 @@ const StyledFooter = styled.div`
   @media screen and ${props => props.theme.media.tabLand} {
     flex-wrap: wrap;
   }
+
+  @media screen and ${props => props.theme.media.tabPort} {
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 2rem;
+  }
+
+  @media screen and ${props => props.theme.media.phone} {
+    padding: 2rem 1rem;
+  }
 `
 
 const FlexColumn = styled.div`
@@ -112,7 +120,15 @@ const FlexColumn = styled.div`
 `
 
 const LogoImg = styled.img`
-  height: 15rem;
+  width: 25rem;
+
+  @media screen and ${props => props.theme.media.tabPort} {
+    width: 38rem;
+  }
+
+  @media screen and ${props => props.theme.media.phone} {
+    width: 80vw;
+  }
 `
 
 const CTA = styled.p`
@@ -142,6 +158,11 @@ const Nav = styled.nav`
   @media screen and ${props => props.theme.media.tabLand} {
     width: 45rem;
   }
+
+  @media screen and ${props => props.theme.media.tabPort} {
+    margin-top: 5rem;
+    width: 90vw;
+  }
 `
 
 const LinkColumn = styled.div`
@@ -151,10 +172,10 @@ const LinkColumn = styled.div`
 `
 
 const LinkColumnLeft = styled(LinkColumn)`
-  margin-right: 4rem;
+  margin-right: 4vw;
 `
 
-const WebsiteLinks = styled.a`
+const WebsiteLink = styled.a`
   ${linkReset}
   width: 15rem;
   padding-bottom: 1rem;
@@ -167,10 +188,23 @@ const WebsiteLinks = styled.a`
   &:hover {
     color: ${props => props.theme.colors.primary};
   }
+
+  @media screen and ${props => props.theme.media.tabPort} {
+    width: 42vw;
+  }
+
+  @media screen and (max-width: 660px) {
+    width: 35vw;
+    font-size: calc(0.01176471 * 100vw + 1.623529412rem);
+  }
 `
 
-const LongWebsiteLinks = styled(WebsiteLinks)`
+const LongWebsiteLink = styled(WebsiteLink)`
   width: 25rem;
+
+  @media screen and (max-width: 660px) {
+    width: 47vw;
+  }
 `
 
 const FlexContainer = styled.div`
@@ -181,6 +215,10 @@ const FlexContainer = styled.div`
   @media screen and ${props => props.theme.media.tabLand} {
     margin-top: 10rem;
     flex-basis: 100%;
+  }
+
+  @media screen and ${props => props.theme.media.tabPort} {
+    margin-top: 5rem;
   }
 `
 
