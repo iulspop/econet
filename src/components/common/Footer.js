@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 import { linkReset } from "../../mixins"
 
 export const Footer = () => {
-  // const { t } = useTranslation("Footer")
+  const { t } = useTranslation(["Footer", "Header"])
   return (
     <StyledFooter>
       <FlexColumn>
@@ -12,19 +12,19 @@ export const Footer = () => {
           src="/assets/logo.png"
           alt="Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
         />
-        <CTA>Schedule your service</CTA>
+        <CTA>{t("cta")}</CTA>
         <NumberLink href="tel:514-666-6601">514-666-6601</NumberLink>
       </FlexColumn>
 
       <Nav>
         <LinkColumnLeft>
-          <WebsiteLink href="/">Accueil</WebsiteLink>
-          <WebsiteLink href="/">À Propos</WebsiteLink>
-          <WebsiteLink href="/">Nous Joindre</WebsiteLink>
+          <WebsiteLink href="/">{t("Header:home")}</WebsiteLink>
+          <WebsiteLink href="/">{t("Header:about")}</WebsiteLink>
+          <WebsiteLink href="/">{t("Header:contact")}</WebsiteLink>
         </LinkColumnLeft>
         <LinkColumn>
-          <LongWebsiteLink href="/">Services Résidentiels</LongWebsiteLink>
-          <LongWebsiteLink href="/">Services Commerciaux</LongWebsiteLink>
+          <LongWebsiteLink href="/">{t("Header:residential")}</LongWebsiteLink>
+          <LongWebsiteLink href="/">{t("Header:commercial")}</LongWebsiteLink>
         </LinkColumn>
       </Nav>
 
