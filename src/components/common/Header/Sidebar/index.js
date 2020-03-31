@@ -17,7 +17,9 @@ export const Sidebar = ({ showNav }) => {
       <StyledSidebar showNav={showNav}>
         <MobileLinkHome href={"/"}>{t("home")}</MobileLinkHome>
         <MobileLinkAbout href={"/about"}>{t("about")}</MobileLinkAbout>
-        <MobileLinkBigger href={"#"}>{t("residential")}</MobileLinkBigger>
+        <MobileLinkBigger href={"/residential"}>
+          {t("residential")}
+        </MobileLinkBigger>
         <MobileLinkBigger href={"#"}>{t("commercial")}</MobileLinkBigger>
         <MobileLinkEstimation href={"/estimation"}>
           {t("contact")}

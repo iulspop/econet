@@ -19,7 +19,7 @@ export const Navbar = () => {
       <StyledNavbar>
         <LinkHome href={"/"}>{t("home")}</LinkHome>
         <LinkAbout href={"/about"}>{t("about")}</LinkAbout>
-        <LinkBigger href={"#"}>{t("residential")}</LinkBigger>
+        <LinkBigger href={"/residential"}>{t("residential")}</LinkBigger>
         <LinkBigger href={"#"}>{t("commercial")}</LinkBigger>
         <LinkEstimation href={"/estimation"}>{t("contact")}</LinkEstimation>
         <LinkNumber href={"#"}>514-666-6601</LinkNumber>
