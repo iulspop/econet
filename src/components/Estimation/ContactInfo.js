@@ -1,42 +1,40 @@
 import React from "react"
 import styled from "styled-components"
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 import { linkReset } from "../../mixins"
 
 export const ContactInfo = () => {
-  // const { t } = useTranslation("Confirmation")
+  const { t } = useTranslation("ContactInfo")
   return (
     <ContactInfoBox>
-      <H3>Coordonnées</H3>
+      <H3>{t("contact")}</H3>
 
       <Container>
-        <H4>Téléphone:</H4>
+        <H4>{t("phone")}</H4>
         <p>
           <Link href="tel:514-666-6601">514-666-6601</Link>
         </p>
       </Container>
 
       <Container>
-        <H4>Heures de Travail</H4>
+        <H4>{t("hours")}</H4>
         <p>
-          Lundi - Vendredi<br></br>
+          {t("days")}
+          <br></br>
           9AM - 6PM
         </p>
       </Container>
 
       <Container>
-        <H4>Notre Desserte</H4>
-        <p>
-          Montréal, Laval, Longueuil<br></br>& les régions avoisinantes.
-        </p>
+        <H4>{t("area")}</H4>
+        <p>{t("cities")}</p>
       </Container>
 
       <Container>
-        <H4>Adresse</H4>
+        <H4>{t("addressTitle")}</H4>
         <address>
           <Link href="https://goo.gl/maps/fTYwJTmaLoEuuYny9">
-            2763 Rue French, local 300<br></br>
-            Montréal, QC H1L 4S2
+            {t("address")}
           </Link>
         </address>
       </Container>
