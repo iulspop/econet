@@ -48,6 +48,7 @@ export const AreaQuestions = ({ selectedOptions }) => {
 }
 
 const OptionsFieldset = styled(Fieldset)`
+  width: unset !important;
   min-height: unset;
   margin-bottom: 4rem;
   padding-bottom: 0.5rem;

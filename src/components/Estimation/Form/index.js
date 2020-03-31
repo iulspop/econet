@@ -50,14 +50,4 @@ const StyledForm = styled.form`
       throw Error("invalid form name")
     }
   }};
-  width: 680px;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 450px;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    width: 95vw;
-    margin: 1rem 0;
-  }
 `

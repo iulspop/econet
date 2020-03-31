@@ -29,6 +29,7 @@ export const RadioInputMarginLeft = styled(RadioInput)`
 `
 
 export const Fieldset = styled.fieldset`
+  width: 43vw;
   min-height: 587.56px;
   padding: 1rem 1.5rem;
   padding-bottom: 6.2rem;
@@ -38,8 +39,16 @@ export const Fieldset = styled.fieldset`
   border-radius: 3px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   display: ${params => (params.hidden ? "none" : "block")};
-
   position: relative;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 90vw;
+    max-width: 531px;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
+  }
 `
 
 export const RadioGroup = styled.fieldset`
@@ -76,6 +85,10 @@ export const Select = styled.select`
 export const SelectWide = styled(Select)`
   width: 28rem;
   margin-top: 0.5rem;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 21rem;
+  }
 `
 
 export const InputsContainer = styled.div`
@@ -104,6 +117,10 @@ export const NextButton = styled.button`
     width: 12rem;
     height: 4rem;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    right: 2.5rem;
+  }
 `
 
 export const BackButton = styled(NextButton)`
@@ -116,5 +133,9 @@ export const BackButton = styled(NextButton)`
 
   @media only screen and ${props => props.theme.media.phone} {
     width: 10rem;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    left: 2.5rem;
   }
 `
