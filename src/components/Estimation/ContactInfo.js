@@ -50,7 +50,6 @@ const ContactInfoBox = styled.aside`
   padding: 2rem 1.5rem;
   border-radius: 3px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  // background-color: white;
   background-color: ${props => props.theme.colors.primary};
   color: white;
 
