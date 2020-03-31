@@ -50,8 +50,9 @@ const ContactInfoBox = styled.aside`
   padding: 2rem 1.5rem;
   border-radius: 3px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  // background-color: ${props => props.theme.colors.secondary};
+  // background-color: white;
+  background-color: ${props => props.theme.colors.primary};
+  color: white;
 
   line-height: 1.5;
 
@@ -86,8 +87,9 @@ const H4 = styled.h4`
 const Link = styled.a`
   ${linkReset};
   transition: 0.3s ease;
+  color: white;
 
   &:hover {
-    color: ${props => props.theme.colors.primary};
+    font-weight: 700;
   }
 `
