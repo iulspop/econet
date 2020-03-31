@@ -49,6 +49,9 @@ const buttonStyle = css`
   text-transform: uppercase;
   text-align: center;
 
+  &:focus {
+    outline: 2px dotted grey;
+  }
   cursor: pointer;
 
   @media only screen and ${props => props.theme.media.tabPort} {
