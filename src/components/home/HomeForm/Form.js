@@ -98,7 +98,9 @@ export const Form = () => {
           <option value="no">{t("noNewCustomer")}</option>
           <option value="neither">{t("neitherNewCustomer")}</option>
         </CustomerQuestionSelect>
-        <Label htmlFor="newCustomer">{t("newCustomer")}</Label>
+        <CustomerQuestionLabel htmlFor="newCustomer">
+          {t("newCustomer")}
+        </CustomerQuestionLabel>
       </InputContainer>
 
       <InputContainer>
@@ -183,6 +185,11 @@ const Label = styled.label`
   text-transform: uppercase;
   font-size: 1.8rem;
   cursor: text;
+  white-space: nowrap;
+`
+
+const CustomerQuestionLabel = styled(Label)`
+  font-size: 1.7rem;
 `
 
 const Input = styled.input`
