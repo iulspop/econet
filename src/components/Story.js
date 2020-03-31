@@ -43,16 +43,8 @@ export const Story = () => {
 }
 
 const DecorativeLine = styled.img`
-  width: 70vw;
+  width: 80vw;
   margin: 2rem 0;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    width: 70vw;
-  }
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 80vw;
-  }
 
   @media only screen and ${props => props.theme.media.phone} {
     width: 90vw;
@@ -88,14 +80,14 @@ const Flex = styled.div`
 `
 
 const TextContainer = styled.main`
-  flex-basis: 700px;
+  width: 700px;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
-    flex-basis: 80vw;
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 80vw;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
-    flex-basis: 90vw;
+    width: 90vw;
   }
 `
 
@@ -106,12 +98,13 @@ const ImageContainer = styled.figure`
   margin-top: 11rem;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    flex-grow: 1;
+    width: 80vw;
     margin-left: 0rem;
     margin-top: 4rem;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
     margin-top: 2rem;
   }
 `
