@@ -89,12 +89,12 @@ const GridContainer = styled.div`
   margin-top: 10rem;
   margin-bottom: 5rem;
   display: grid;
-  grid-template-columns: repeat(5, 145px);
-  grid-template-rows: repeat(2, 145px);
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(2, 155px);
 `
 
 const IconContainer1 = styled.div`
-  width: 110px;
+  width: 120px;
 
   grid-column-start: 1;
   grid-column-end: 2;
@@ -144,8 +144,8 @@ const IconLabel = styled.label`
 `
 
 const Icon = styled.img`
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background-color: grey;
 `
