@@ -88,6 +88,8 @@ const LeftListContainer = styled(RightListContainer)`
 
 const ListItemGreen = styled.li`
   position: relative;
+  line-height: 1.3;
+  margin-bottom: 1rem;
 
   &::before {
     content: " ";
@@ -96,15 +98,22 @@ const ListItemGreen = styled.li`
     height: 1.5rem;
     border-radius: 50%;
     margin-right: 1rem;
-
-    position: absolute;
-    top: 50%;
-    left: -2.4rem;
-    transform: translateY(-40%);
-
     background-color: ${props => props.theme.colors.primary};
 
+    position: absolute;
+    top: 14px;
+    left: -2.4rem;
+
+    @media only screen and ${props => props.theme.media.tabLand} {
+      top: 11px;
+    }
+
+    @media only screen and ${props => props.theme.media.tabPort} {
+      top: 10px;
+    }
+
     @media only screen and ${props => props.theme.media.phone} {
+      top: 6px;
       background-color: ${props =>
         props.switchWhenOneColumn
           ? props.theme.colors.secondary
