@@ -3,6 +3,7 @@ import styled from "styled-components"
 import {
   LinkHome,
   LinkAbout,
+  LinkResidential,
   LinkBigger,
   LinkEstimation,
   LinkNumber,
@@ -17,9 +18,9 @@ export const Sidebar = ({ showNav }) => {
       <StyledSidebar showNav={showNav}>
         <MobileLinkHome href={"/"}>{t("home")}</MobileLinkHome>
         <MobileLinkAbout href={"/about"}>{t("about")}</MobileLinkAbout>
-        <MobileLinkBigger href={"/residential"}>
+        <MobileLinkResidential href={"/residential"}>
           {t("residential")}
-        </MobileLinkBigger>
+        </MobileLinkResidential>
         <MobileLinkBigger href={"#"}>{t("commercial")}</MobileLinkBigger>
         <MobileLinkEstimation href={"/estimation"}>
           {t("contact")}
@@ -58,6 +59,10 @@ const MobileLinkHome = styled(LinkHome)`
 `
 
 const MobileLinkAbout = styled(LinkAbout)`
+  margin: 1.5rem 0;
+`
+
+const MobileLinkResidential = styled(LinkResidential)`
   margin: 1.5rem 0;
 `
 

@@ -48,6 +48,16 @@ export const LinkAbout = styled(Link)`
       : ""};
 `
 
+export const LinkResidential = styled(LinkBigger)`
+  font-weight: ${props => (props.theme.page === "residential" ? "700" : "400")};
+  color: ${props =>
+    props.theme.page === "residential" ? props.theme.colors.primary : "black"};
+  border-bottom: ${props =>
+    props.theme.page === "residential"
+      ? `8px dotted ${props.theme.colors.primary}`
+      : ""};
+`
+
 export const LinkEstimation = styled(Link)`
   width: 140px;
 

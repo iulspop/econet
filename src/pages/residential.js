@@ -10,7 +10,7 @@ import i18n from "../i18n"
 export default function residentialPage() {
   return (
     <I18nextProvider i18n={i18n}>
-      <ThemeProvider theme={{ ...theme, page: "about" }}>
+      <ThemeProvider theme={{ ...theme, page: "residential" }}>
         <Layout>
           <Header />
           <ResidentialBanner />
