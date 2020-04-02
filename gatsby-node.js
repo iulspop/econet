@@ -1,7 +1,7 @@
 const fs = require("fs-extra")
 const path = require("path")
 const i18next = require("i18next")
-const nodeFsBackend = require("i18next-node-fs-backend")
+const nodeFsBackend = require("i18next-sync-fs-backend")
 
 const appDirectory = fs.realpathSync(process.cwd())
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
@@ -19,10 +19,11 @@ exports.onCreatePage = ({ page, actions }) => {
   // So everything in src/pages/
   deletePage(page)
 
-  allLanguages.map(async language => {
-    const localizedPath = `${language}${page.path}`
+  allLanguages.map(language => {
+    const localizedPath =
+      language === "fr" ? page.path : `${language}${page.path}`
 
-    const i18n = await createI18nextInstance(language)
+    const i18n = createI18nextInstance(language)
 
     return createPage({
       // Pass on everything from the original page
@@ -42,20 +43,35 @@ exports.onCreatePage = ({ page, actions }) => {
   })
 }
 
-const createI18nextInstance = async language => {
+const createI18nextInstance = language => {
   const i18n = i18next.createInstance()
-  i18n.use(nodeFsBackend)
-  await new Promise(resolve =>
-    i18n.init(
-      {
-        lng: language,
-        fallbackLng: language,
-        interpolation: { escapeValue: false },
-        backend: { loadPath: `${srcPath}/locales/{{lng}}/{{ns}}.json` },
-      },
-      resolve
-    )
-  )
+  i18n.use(nodeFsBackend).init({
+    lng: language,
+    ns: [
+      "AreaQuestions",
+      "Banner",
+      "ChooseUs",
+      "Confirmation",
+      "Contact",
+      "ContactInfo",
+      "Estimation",
+      "Footer",
+      "Header",
+      "HomeForm",
+      "RegionsDesservies",
+      "Service",
+      "ServiceList",
+      "ServiceQuestion",
+      "StainsQuestion",
+      "Story",
+      "Testimonial",
+      "Visit",
+    ],
+    fallbackLng: "fr",
+    initImmediate: false,
+    interpolation: { escapeValue: false },
+    backend: { loadPath: `${srcPath}/locales/{{lng}}/{{ns}}.json` },
+  })
   return i18n
 }
 
