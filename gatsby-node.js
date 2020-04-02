@@ -1,20 +1,16 @@
 const fs = require("fs-extra")
 const path = require("path")
+const i18next = require("i18next")
+const nodeFsBackend = require("i18next-node-fs-backend")
+
+const appDirectory = fs.realpathSync(process.cwd())
+const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
+const srcPath = resolveApp("src")
 
 const removeTrailingSlash = path =>
   path === `/` ? path : path.replace(/\/$/, ``)
 
-const locales = {
-  fr: {
-    default: true,
-    path: `fr`,
-    locale: `fr-CA`,
-  },
-  en: {
-    path: `en`,
-    locale: `en-US`,
-  },
-}
+const allLanguages = ["fr", "en"]
 
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
@@ -23,12 +19,10 @@ exports.onCreatePage = ({ page, actions }) => {
   // So everything in src/pages/
   deletePage(page)
 
-  // Grab the keys ('fr' & 'en') of locales and map over them
-  Object.keys(locales).map(lang => {
-    // Use the values defined in "locales" to construct the path
-    const localizedPath = locales[lang].default
-      ? page.path
-      : `${locales[lang].path}${page.path}`
+  allLanguages.map(async language => {
+    const localizedPath = `${language}${page.path}`
+
+    const i18n = await createI18nextInstance(language)
 
     return createPage({
       // Pass on everything from the original page
@@ -41,17 +35,34 @@ exports.onCreatePage = ({ page, actions }) => {
       // This should ensure that the locale is available on every page
       context: {
         ...page.context,
-        locale: lang,
-        dateFormat: locales[lang].dateFormat,
+        language: language,
+        i18nResources: i18n.services.resourceStore.data,
       },
     })
   })
 }
 
-exports.onPostBootstrap = () => {
-  console.log("Copying locales")
-  fs.copySync(
-    path.join(__dirname, "/src/locales"),
-    path.join(__dirname, "/public/locales")
+const createI18nextInstance = async language => {
+  const i18n = i18next.createInstance()
+  i18n.use(nodeFsBackend)
+  await new Promise(resolve =>
+    i18n.init(
+      {
+        lng: language,
+        fallbackLng: language,
+        interpolation: { escapeValue: false },
+        backend: { loadPath: `${srcPath}/locales/{{lng}}/{{ns}}.json` },
+      },
+      resolve
+    )
   )
+  return i18n
 }
+
+// exports.onPostBootstrap = () => {
+//   console.log("Copying locales")
+//   fs.copySync(
+//     path.join(__dirname, "/src/locales"),
+//     path.join(__dirname, "/public/locales")
+//   )
+// }
