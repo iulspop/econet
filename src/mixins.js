@@ -1,7 +1,5 @@
 import { css } from "styled-components"
 
-// Mixin-like utils, can add animations and other globally reusable styles
-
 export const buttonReset = css`
   padding: 0;
   border: none;
