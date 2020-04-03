@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 // import { useTranslation } from "react-i18next"
-import { DecorativeLine } from "./common"
+import { FlexColumn, DecorativeLine } from "./common"
 
 export const ResidentialBanner = () => {
   // const { t } = useTranslation("Confirmation")
   return (
-    <FlexColumn>
+    <StyledFlexColumn>
       <DecorativeLine />
       <H1>Nos Services Résidentiels</H1>
       <H2>
@@ -38,11 +38,11 @@ export const ResidentialBanner = () => {
           <IconImg src="/assets/smell-icon.png" aria-label="" id="icon5" />
         </IconContainer5>
       </GridContainer>
-    </FlexColumn>
+    </StyledFlexColumn>
   )
 }
 
-const FlexColumn = styled.div`
+const StyledFlexColumn = styled(FlexColumn)`
   --nav-height: 130px;
 
   @media only screen and ${props => props.theme.media.tabLand} {
@@ -54,12 +54,6 @@ const FlexColumn = styled.div`
   }
 
   min-height: calc(100vh - var(--nav-height));
-  padding-bottom: 7rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 `
 
 const H1 = styled.h1`
