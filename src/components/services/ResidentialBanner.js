@@ -96,8 +96,9 @@ const GridContainer = styled.div`
   margin-top: 6rem;
   margin-bottom: 6rem;
   display: grid;
-  grid-template-columns: repeat(5, 135px);
+  grid-template-columns: repeat(5, 120px);
   grid-template-rows: repeat(2, 170px);
+  grid-gap: 0 15px;
 
   @media only screen and (max-width: 850px) {
     margin-top: 3rem;
@@ -216,6 +217,7 @@ const IconLabel = styled.label`
   font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
+  color: ${props => props.theme.colors.tertiary};
 
   position: absolute;
   z-index: 1;
