@@ -118,7 +118,7 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(5, 135px);
   grid-template-rows: repeat(2, 170px);
 
-  @media only screen and ${props => props.theme.media.tabPort} {
+  @media only screen and (max-width: 850px) {
     margin-top: 5rem;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(3, 165px);
@@ -149,7 +149,7 @@ const IconContainer2 = styled(IconContainer1)`
   grid-row-start: 2;
   grid-row-end: 3;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
+  @media only screen and (max-width: 850px) {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -170,7 +170,7 @@ const IconContainer3 = styled(IconContainer1)`
   grid-row-start: 1;
   grid-row-end: 2;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
+  @media only screen and (max-width: 850px) {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -191,7 +191,7 @@ const IconContainer4 = styled(IconContainer1)`
   grid-row-start: 2;
   grid-row-end: 3;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
+  @media only screen and (max-width: 850px) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
@@ -211,7 +211,7 @@ const IconContainer5 = styled(IconContainer1)`
   grid-row-start: 1;
   grid-row-end: 2;
 
-  @media only screen and ${props => props.theme.media.tabPort} {
+  @media only screen and (max-width: 850px) {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
