@@ -119,13 +119,13 @@ const GridContainer = styled.div`
   grid-template-rows: repeat(2, 170px);
 
   @media only screen and (max-width: 850px) {
-    margin-top: 5rem;
+    margin-top: 3rem;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(3, 165px);
   }
 
   @media only screen and ${props => props.theme.media.phone} {
-    margin-top: 6rem;
+    margin-top: 2rem;
     margin-bottom: 0;
     grid-template-columns: 50%;
     grid-template-rows: repeat(5, 180px);
