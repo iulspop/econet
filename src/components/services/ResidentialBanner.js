@@ -6,7 +6,7 @@ import { FlexColumn, DecorativeLine } from "./common"
 export const ResidentialBanner = () => {
   // const { t } = useTranslation("Confirmation")
   return (
-    <StyledFlexColumn>
+    <FlexColumn>
       <DecorativeLine />
       <H1>Nos Services Résidentiels</H1>
       <H2>
@@ -38,23 +38,9 @@ export const ResidentialBanner = () => {
           <IconImg src="/assets/smell-icon.png" aria-label="" id="icon5" />
         </IconContainer5>
       </GridContainer>
-    </StyledFlexColumn>
+    </FlexColumn>
   )
 }
-
-const StyledFlexColumn = styled(FlexColumn)`
-  --nav-height: 130px;
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    --nav-height: 100px;
-  }
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    --nav-height: 65px;
-  }
-
-  min-height: calc(100vh - var(--nav-height));
-`
 
 const H1 = styled.h1`
   width: 80vw;
@@ -94,7 +80,6 @@ const H2 = styled.h2`
 
 const GridContainer = styled.div`
   margin-top: 6rem;
-  margin-bottom: 6rem;
   display: grid;
   grid-template-columns: repeat(5, 120px);
   grid-template-rows: repeat(2, 170px);
@@ -108,7 +93,6 @@ const GridContainer = styled.div`
 
   @media only screen and ${props => props.theme.media.phone} {
     margin-top: 2rem;
-    margin-bottom: 0;
     grid-template-columns: 50%;
     grid-template-rows: repeat(5, 70vw);
   }
