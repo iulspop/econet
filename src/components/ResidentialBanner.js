@@ -115,8 +115,8 @@ const GridContainer = styled.div`
   margin-top: 6rem;
   margin-bottom: 6rem;
   display: grid;
-  grid-template-columns: repeat(5, 120px);
-  grid-template-rows: repeat(2, 155px);
+  grid-template-columns: repeat(5, 135px);
+  grid-template-rows: repeat(2, 170px);
 
   @media only screen and ${props => props.theme.media.tabPort} {
     margin-top: 5rem;
