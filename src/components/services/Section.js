@@ -19,7 +19,9 @@ export const Section = () => {
           url="/assets/carpet-cleaning.jpg"
         />
         <ListContainer>
-          <SectionHeading>Residential Carpet Cleaning</SectionHeading>
+          <SectionHeading id="tapis">
+            Residential Carpet Cleaning
+          </SectionHeading>
           <Paragraph>
             In addition to keeping you warm, being comfortable and reducing
             noise, your carpets act like filters that retain dust and allergens,

@@ -6,7 +6,8 @@ export const Global = createGlobalStyle`
 
 	html {
 		// This defines value of 1rem
-		font-size: 62.25%; // 1rem = 10px; 10px/16px = 62.25%
+    font-size: 62.25%; // 1rem = 10px; 10px/16px = 62.25%
+    scroll-behavior: smooth;
 	}
 
 	*,

@@ -14,8 +14,10 @@ export const ResidentialBanner = () => {
       </H2>
       <GridContainer>
         <IconContainer1>
-          <IconLabel for="icon1">Nettoyage de tapis</IconLabel>
-          <IconImg src="/assets/house-icon.png" aria-label="" id="icon1" />
+          <a href="#tapis">
+            <IconLabel for="icon1">Nettoyage de tapis</IconLabel>
+            <IconImg src="/assets/house-icon.png" aria-label="" id="icon1" />
+          </a>
         </IconContainer1>
 
         <IconContainer2>
