@@ -75,9 +75,14 @@ const DecorativeLine = styled.img`
   }
 `
 
-const H1 = styled.h1``
+const H1 = styled.h1`
+  margin: 0 2rem;
+  text-align: center;
+`
 
 const H2 = styled.h2`
+  margin: 0 2rem;
+  text-align: center;
   font-weight: 400;
 `
 
