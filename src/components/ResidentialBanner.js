@@ -38,9 +38,9 @@ export const ResidentialBanner = () => {
           <IconImg src="/assets/smell-icon.png" aria-label="" id="icon5" />
         </IconContainer5>
       </GridContainer>
-      <DecoratedButton left right slim>
+      {/* <DecoratedButton left right slim>
         Demandez votre estimation
-      </DecoratedButton>
+      </DecoratedButton> */}
     </FlexColumn>
   )
 }
