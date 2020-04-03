@@ -15,27 +15,27 @@ export const ResidentialBanner = () => {
       <GridContainer>
         <IconContainer1>
           <IconLabel for="icon1">Nettoyage de tapis</IconLabel>
-          <Icon aria-label="" id="icon1" />
+          <IconImg src="/assets/house-icon.png" aria-label="" id="icon1" />
         </IconContainer1>
 
         <IconContainer2>
           <IconLabel for="icon2">Contrôle d'odeur</IconLabel>
-          <Icon aria-label="" id="icon2" />
+          <IconImg src="/assets/smell-icon.png" aria-label="" id="icon2" />
         </IconContainer2>
 
         <IconContainer3>
           <IconLabel for="icon3">Nettoyage de meubles</IconLabel>
-          <Icon aria-label="" id="icon3" />
+          <IconImg src="/assets/couch-icon.png" aria-label="" id="icon3" />
         </IconContainer3>
 
         <IconContainer4>
           <IconLabel for="icon4">Protection</IconLabel>
-          <Icon aria-label="" id="icon4" />
+          <IconImg src="/assets/sparkle-icon.png" aria-label="" id="icon4" />
         </IconContainer4>
 
         <IconContainer5>
           <IconLabel for="icon5">Détachage</IconLabel>
-          <Icon aria-label="" id="icon5" />
+          <IconImg src="/assets/spill-icon.png" aria-label="" id="icon5" />
         </IconContainer5>
       </GridContainer>
       <DecoratedButton left right slim>
@@ -235,9 +235,8 @@ const IconLabel = styled.label`
   transform: translateX(-50%);
 `
 
-const Icon = styled.img`
+const IconImg = styled.img`
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: grey;
 `
