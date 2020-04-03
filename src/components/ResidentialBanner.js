@@ -76,6 +76,7 @@ const DecorativeLine = styled.img`
 `
 
 const H1 = styled.h1`
+  width: 80vw;
   margin: 0 2rem;
   font-size: 5.5rem;
   line-height: 1.25;
@@ -85,20 +86,27 @@ const H1 = styled.h1`
     font-size: 5rem;
   }
 
-  @media only screen and (max-width: 600px) {
-    font-size: calc(0.095 * 100vw + 0.6786rem);
-  }
-
   @media only screen and ${props => props.theme.media.phone} {
+    font-size: calc(0.095 * 100vw + 0.6786rem);
     margin: 0;
+    margin-top: 2rem;
   }
 `
 
 const H2 = styled.h2`
-  margin: 0 2rem;
-  width: 80vw;
+  margin: 4rem 0;
+  width: 70vw;
   font-weight: 400;
+  line-height: 1.25;
   text-align: center;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 80vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    font-size: calc(0.065 * 100vw + 0.6786rem);
+  }
 `
 
 const GridContainer = styled.div`
