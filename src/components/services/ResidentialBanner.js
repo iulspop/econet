@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 // import { useTranslation } from "react-i18next"
-import { DecoratedButton } from "../common"
 import { DecorativeLine } from "./common"
 
 export const ResidentialBanner = () => {
@@ -39,9 +38,6 @@ export const ResidentialBanner = () => {
           <IconImg src="/assets/smell-icon.png" aria-label="" id="icon5" />
         </IconContainer5>
       </GridContainer>
-      {/* <DecoratedButton left right slim>
-        Demandez votre estimation
-      </DecoratedButton> */}
     </FlexColumn>
   )
 }
