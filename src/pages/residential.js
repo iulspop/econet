@@ -2,7 +2,7 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../theme"
 import { Layout, Header, Footer } from "../components/common"
-import { ResidentialBanner } from "../components/ResidentialBanner"
+import { ResidentialBanner } from "../components/services"
 
 export default function residentialPage() {
   return (

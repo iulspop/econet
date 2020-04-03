@@ -1,13 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 // import { useTranslation } from "react-i18next"
-import { DecoratedButton } from "./common"
+import { DecoratedButton } from "../common"
+import { DecorativeLine } from "./common"
 
 export const ResidentialBanner = () => {
   // const { t } = useTranslation("Confirmation")
   return (
     <FlexColumn>
-      <DecorativeLine src={"/assets/decorative-horizontal-line.png"} alt={""} />
+      <DecorativeLine />
       <H1>Nos Services Résidentiels</H1>
       <H2>
         Éconet vous offre une gamme de services écologique et de haute qualité
@@ -63,16 +64,6 @@ const FlexColumn = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-`
-
-const DecorativeLine = styled.img`
-  width: 80vw;
-  margin: 2rem 0;
-
-  @media only screen and ${props => props.theme.media.phone} {
-    width: 90vw;
-    margin-bottom: 0;
-  }
 `
 
 const H1 = styled.h1`
