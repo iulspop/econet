@@ -128,7 +128,7 @@ const GridContainer = styled.div`
     margin-top: 2rem;
     margin-bottom: 0;
     grid-template-columns: 50%;
-    grid-template-rows: repeat(5, 180px);
+    grid-template-rows: repeat(5, 70vw);
   }
 `
 
@@ -141,6 +141,10 @@ const IconContainer1 = styled.div`
   grid-row-end: 2;
 
   position: relative;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 50vw;
+  }
 `
 
 const IconContainer2 = styled(IconContainer1)`
@@ -228,6 +232,7 @@ const IconContainer5 = styled(IconContainer1)`
 
 const IconLabel = styled.label`
   font-size: 1.8rem;
+  font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
 
@@ -240,6 +245,9 @@ const IconLabel = styled.label`
 
 const IconImg = styled.img`
   width: 120px;
-  height: 120px;
   border-radius: 50%;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 50vw;
+  }
 `
