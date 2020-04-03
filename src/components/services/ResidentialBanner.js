@@ -95,8 +95,8 @@ const GridContainer = styled.div`
 
   @media only screen and ${props => props.theme.media.phone} {
     margin-top: 2rem;
-    grid-template-columns: 50%;
-    grid-template-rows: repeat(5, 70vw);
+    grid-template-columns: repeat(3, 21vw);
+    grid-template-rows: repeat(3, 33vw);
   }
 `
 
@@ -111,7 +111,7 @@ const IconContainer1 = styled.div`
   position: relative;
 
   @media only screen and ${props => props.theme.media.phone} {
-    width: 50vw;
+    width: 24vw;
   }
 `
 
@@ -124,15 +124,9 @@ const IconContainer2 = styled(IconContainer1)`
   @media only screen and (max-width: 850px) {
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: right;
   }
 `
 
@@ -147,13 +141,7 @@ const IconContainer3 = styled(IconContainer1)`
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    justify-self: center;
   }
 `
 
@@ -169,13 +157,6 @@ const IconContainer4 = styled(IconContainer1)`
     grid-row-start: 3;
     grid-row-end: 4;
   }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
 `
 const IconContainer5 = styled(IconContainer1)`
   grid-column-start: 5;
@@ -186,15 +167,9 @@ const IconContainer5 = styled(IconContainer1)`
   @media only screen and (max-width: 850px) {
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: right;
   }
 `
 
@@ -210,6 +185,11 @@ const IconLabel = styled.label`
   top: -4rem;
   left: 50%;
   transform: translateX(-50%);
+
+  @media only screen and ${props => props.theme.media.phone} {
+    font-size: calc(0.0277 * 100vw + 0.411rem);
+    top: calc(-0.111 * 100vw + 1.555rem);
+  }
 `
 
 const IconImg = styled.img`
@@ -217,6 +197,6 @@ const IconImg = styled.img`
   border-radius: 50%;
 
   @media only screen and ${props => props.theme.media.phone} {
-    width: 50vw;
+    width: 24vw;
   }
 `
