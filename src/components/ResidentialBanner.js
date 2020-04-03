@@ -19,8 +19,8 @@ export const ResidentialBanner = () => {
         </IconContainer1>
 
         <IconContainer2>
-          <IconLabel for="icon2">Contrôle d'odeur</IconLabel>
-          <IconImg src="/assets/smell-icon.png" aria-label="" id="icon2" />
+          <IconLabel for="icon2">Détachage</IconLabel>
+          <IconImg src="/assets/spill-icon.png" aria-label="" id="icon2" />
         </IconContainer2>
 
         <IconContainer3>
@@ -34,8 +34,8 @@ export const ResidentialBanner = () => {
         </IconContainer4>
 
         <IconContainer5>
-          <IconLabel for="icon5">Détachage</IconLabel>
-          <IconImg src="/assets/spill-icon.png" aria-label="" id="icon5" />
+          <IconLabel for="icon5">Contrôle d'odeur</IconLabel>
+          <IconImg src="/assets/smell-icon.png" aria-label="" id="icon5" />
         </IconContainer5>
       </GridContainer>
       <DecoratedButton left right slim>
