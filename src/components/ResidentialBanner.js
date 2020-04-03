@@ -77,7 +77,8 @@ const DecorativeLine = styled.img`
 
 const H1 = styled.h1`
   width: 80vw;
-  margin: 0 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   font-size: 5.5rem;
   line-height: 1.25;
   text-align: center;
@@ -94,7 +95,8 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  margin: 4rem 0;
+  margin-top: 1rem;
+  margin-bottom: 7rem;
   width: 70vw;
   font-weight: 400;
   line-height: 1.25;
@@ -110,13 +112,14 @@ const H2 = styled.h2`
 `
 
 const GridContainer = styled.div`
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   display: grid;
   grid-template-columns: repeat(5, 120px);
   grid-template-rows: repeat(2, 155px);
 
   @media only screen and ${props => props.theme.media.tabPort} {
+    margin-top: 5rem;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(3, 165px);
   }
