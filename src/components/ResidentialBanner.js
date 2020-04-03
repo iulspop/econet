@@ -92,6 +92,11 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 150px);
   grid-template-rows: repeat(2, 155px);
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 155px);
+  }
 `
 
 const IconContainer1 = styled.div`
@@ -110,6 +115,13 @@ const IconContainer2 = styled(IconContainer1)`
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 `
 
 const IconContainer3 = styled(IconContainer1)`
@@ -117,6 +129,13 @@ const IconContainer3 = styled(IconContainer1)`
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 `
 
 const IconContainer4 = styled(IconContainer1)`
@@ -124,12 +143,26 @@ const IconContainer4 = styled(IconContainer1)`
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
 `
 const IconContainer5 = styled(IconContainer1)`
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 2;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
 `
 
 const IconLabel = styled.label`
