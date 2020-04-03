@@ -7,16 +7,12 @@ export const FlexColumn = ({ className, children }) => {
 
 const StyledFlexColumn = styled.div`
   padding-top: 5rem;
-  padding-bottom: 8rem;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    padding: 5rem 0;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
     padding: 2rem 0;
   }
 `
