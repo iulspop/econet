@@ -77,13 +77,28 @@ const DecorativeLine = styled.img`
 
 const H1 = styled.h1`
   margin: 0 2rem;
+  font-size: 5.5rem;
+  line-height: 1.25;
   text-align: center;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: calc(0.095 * 100vw + 0.6786rem);
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin: 0;
+  }
 `
 
 const H2 = styled.h2`
   margin: 0 2rem;
-  text-align: center;
+  width: 80vw;
   font-weight: 400;
+  text-align: center;
 `
 
 const GridContainer = styled.div`
