@@ -66,12 +66,8 @@ const FlexColumn = styled.div`
 `
 
 const DecorativeLine = styled.img`
-  width: 70vw;
+  width: 80vw;
   margin: 2rem 0;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 80vw;
-  }
 
   @media only screen and ${props => props.theme.media.phone} {
     width: 90vw;
