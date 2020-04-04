@@ -3,16 +3,19 @@ import styled from "styled-components"
 // import { useTranslation } from "react-i18next"
 import {
   FlexColumn,
+  DecorativeLine,
   ListAndImageFlex,
   SideImage,
   ListContainer,
   SectionHeading,
 } from "../home/common"
+import { DecoratedButton } from "../common"
 
 export const Section = () => {
   // const { t } = useTranslation("Confirmation")
   return (
     <StyledFlexColumn>
+      <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
         <SideImage
           ariaLabel="carpet cleaning technician handling cleaning machine"
@@ -47,13 +50,20 @@ export const Section = () => {
               Écological carpet protector application
             </ListItemBrown>
           </BulletList>
+          <ButtonContainer>
+            <DecoratedButton left right slim>
+              Hello
+            </DecoratedButton>
+          </ButtonContainer>
         </ListContainer>
       </ListAndImageFlex>
     </StyledFlexColumn>
   )
 }
 
-const StyledFlexColumn = styled(FlexColumn)``
+const StyledFlexColumn = styled(FlexColumn)`
+  padding-bottom: 4rem;
+`
 
 const Paragraph = styled.p`
   margin-bottom: 2rem;
@@ -89,4 +99,9 @@ const ListItemBrown = styled(ListItemGreen)`
   &::before {
     background-color: ${props => props.theme.colors.secondary};
   }
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `
