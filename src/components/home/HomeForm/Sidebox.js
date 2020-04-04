@@ -8,7 +8,7 @@ export const Sidebox = () => {
   return (
     <StyledSidebox>
       <FlexContainer>
-        <SideImage aria-label="" />
+        <SideImage aria-label="" src="/assets/clock-icon.png" />
         <TextSnippet>
           <H4>{t("sideboxHeading1")}</H4>
           <Paragraph>{t("sideboxParagraph1")}</Paragraph>
@@ -16,7 +16,7 @@ export const Sidebox = () => {
       </FlexContainer>
 
       <FlexContainer>
-        <SideImage aria-label="" />
+        <SideImage aria-label="" src="/assets/communications-icon.png" />
         <TextSnippet>
           <H4>{t("sideboxHeading2")}</H4>
           <Paragraph>{t("sideboxParagraph2")}</Paragraph>
@@ -24,7 +24,7 @@ export const Sidebox = () => {
       </FlexContainer>
 
       <FlexContainer>
-        <SideImage aria-label="" />
+        <SideImage aria-label="" src="/assets/handshake-icon.png" />
         <TextSnippet>
           <H4>{t("sideboxHeading3")}</H4>
           <Paragraph>{t("sideboxParagraph3")}</Paragraph>
@@ -83,6 +83,7 @@ const SideImage = styled.img`
   height: 10vw;
   margin-top: 1.1rem;
   margin-right: 2rem;
+  border-radius: 50%;
   background-color: grey;
   align-self: center;
 
