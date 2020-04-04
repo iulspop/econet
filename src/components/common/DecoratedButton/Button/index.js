@@ -62,8 +62,8 @@ const buttonStyle = css`
 
   @media only screen and ${props => props.theme.media.phone} {
     display: block;
-    width: 150px;
-    margin: 2rem auto;
+    font-size: calc(0.00882353 * 100vw + 1.417647rem);
+    margin: 1.5rem auto;
     margin-bottom: 3rem;
   }
 

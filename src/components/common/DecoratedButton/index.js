@@ -55,6 +55,10 @@ const SideDecorationLeft = styled.img`
   @media only screen and ${props => props.theme.media.tabPort} {
     --decorationHeight: 55px;
   }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    --decorationHeight: 30px;
+  }
 `
 
 const SideDecorationRight = styled(SideDecorationLeft)`
