@@ -16,7 +16,7 @@ import {
 import { DecoratedButton } from "../../common"
 
 export const BannerCommercial = () => {
-  const { t } = useTranslation("BannerResidential")
+  const { t } = useTranslation("BannerCommercial")
   return (
     <FlexColumn>
       <DecorativeLine />
