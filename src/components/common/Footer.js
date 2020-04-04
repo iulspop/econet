@@ -13,7 +13,7 @@ export const Footer = ({ backgroundWhite }) => {
           alt="Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
         />
         <CTA>{t("cta")}</CTA>
-        <NumberLink href="tel:514-666-6601">514-666-6601</NumberLink>
+        <NumberLink href="tel:5146666601">514-666-6601</NumberLink>
       </FlexColumn>
 
       <Nav>
