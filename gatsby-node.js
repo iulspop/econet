@@ -50,6 +50,7 @@ const createI18nextInstance = language => {
     ns: [
       "AreaQuestions",
       "Banner",
+      "BannerResidential",
       "CarpetCleaning",
       "ChooseUs",
       "Confirmation",

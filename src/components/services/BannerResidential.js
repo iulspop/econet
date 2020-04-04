@@ -1,48 +1,66 @@
 import React from "react"
 import styled from "styled-components"
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 import { FlexColumn, DecorativeLine } from "../home/common"
 import { DecoratedButton } from "../common"
 
 export const BannerResidential = () => {
-  // const { t } = useTranslation("Confirmation")
+  const { t } = useTranslation("BannerResidential")
   return (
     <FlexColumn>
       <DecorativeLine />
-      <H1>Nos Services Résidentiels</H1>
-      <H2>
-        Éconet vous offre une gamme de services écologique et de haute qualité
-      </H2>
+      <H1>{t("h1")}</H1>
+      <H2>{t("h2")}</H2>
       <GridContainer>
         <IconContainer1>
           <a href="#tapis">
-            <IconLabel for="icon1">Nettoyage de tapis</IconLabel>
-            <IconImg src="/assets/house-icon.png" aria-label="" id="icon1" />
+            <IconLabel for="icon1">{t("tapisLabel")}</IconLabel>
+            <IconImg
+              src="/assets/house-icon.png"
+              aria-label={t("tapisLabel")}
+              id="icon1"
+            />
           </a>
         </IconContainer1>
 
         <IconContainer2>
-          <IconLabel for="icon2">Détachage</IconLabel>
-          <IconImg src="/assets/spill-icon.png" aria-label="" id="icon2" />
+          <IconLabel for="icon2">{t("stainLabel")}</IconLabel>
+          <IconImg
+            src="/assets/spill-icon.png"
+            aria-label={t("stainLabel")}
+            id="icon2"
+          />
         </IconContainer2>
 
         <IconContainer3>
-          <IconLabel for="icon3">Nettoyage de meubles</IconLabel>
-          <IconImg src="/assets/couch-icon.png" aria-label="" id="icon3" />
+          <IconLabel for="icon3">{t("furnitureLabel")}</IconLabel>
+          <IconImg
+            src="/assets/couch-icon.png"
+            aria-label={t("furnitureLabel")}
+            id="icon3"
+          />
         </IconContainer3>
 
         <IconContainer4>
-          <IconLabel for="icon4">Protection</IconLabel>
-          <IconImg src="/assets/sparkle-icon.png" aria-label="" id="icon4" />
+          <IconLabel for="icon4">{t("protectionLabel")}</IconLabel>
+          <IconImg
+            src="/assets/sparkle-icon.png"
+            aria-label={t("protectionLabel")}
+            id="icon4"
+          />
         </IconContainer4>
 
         <IconContainer5>
-          <IconLabel for="icon5">Contrôle d'odeur</IconLabel>
-          <IconImg src="/assets/smell-icon.png" aria-label="" id="icon5" />
+          <IconLabel for="icon5">{t("odorLabel")}</IconLabel>
+          <IconImg
+            src="/assets/smell-icon.png"
+            aria-label={t("odorLabel")}
+            id="icon5"
+          />
         </IconContainer5>
       </GridContainer>
       <DecoratedButton left right slim>
-        Demandez Votre Inspection
+        {t("CTAButton")}
       </DecoratedButton>
     </FlexColumn>
   )
