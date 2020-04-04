@@ -104,7 +104,7 @@ const ListItemParagraph = styled.p`
   font-size: 2.3rem;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    width: 28vw;
+    width: 25vw;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {

@@ -55,6 +55,7 @@ const StyledSidebox = styled.aside`
     flex-direction: row;
     justify-content: space-around;
     width: 95vw;
+    padding: 1rem 2rem;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {
@@ -85,20 +86,17 @@ const SideImage = styled.img`
   align-self: center;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    width: 8vw;
-    height: 8vw;
+    width: 7vw;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    width: 15vw;
-    height: 15vw;
+    width: 92px;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
     margin: 0;
     margin-bottom: 1rem;
     width: 25vw;
-    height: 25vw;
   }
 `
 
@@ -106,8 +104,8 @@ const TextSnippet = styled.div`
   width: 23vw;
   align-self: center;
 
-  @media only screen and (max-width: 1390px) {
-    width: 19vw;
+  @media only screen and ${props => props.theme.media.tabLand} {
+    width: 18vw;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {
@@ -120,10 +118,6 @@ const TextSnippet = styled.div`
 `
 const H4 = styled.h4`
   font-size: 3rem;
-
-  @media only screen and (max-width: 1390px) {
-    font-size: 2.8rem;
-  }
 
   @media only screen and ${props => props.theme.media.tabLand} {
     font-size: 2.3rem;
