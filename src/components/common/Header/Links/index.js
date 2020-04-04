@@ -1,7 +1,8 @@
 import styled from "styled-components"
+import { GatsbyLink } from "./GatsbyLink"
 import { linkReset } from "../../../../mixins"
 
-export const Link = styled.a`
+export const Link = styled(GatsbyLink)`
   align-self: center;
 
   ${linkReset};
@@ -80,15 +81,20 @@ export const LinkContact = styled(Link)`
       : ""};
 `
 
-export const LinkNumber = styled(Link)`
+export const LinkNumber = styled.a`
+  align-self: center;
+
+  ${linkReset};
   width: 200px;
   height: 55px;
-  transform: translateY(0px);
   font-size: 2.9rem;
   font-weight: 700;
+  text-align: center;
+  transition: 0.08s ease;
 
   &:hover {
-    border-bottom: 0px;
+    font-weight: 700;
+    color: ${props => props.theme.colors.primary};
   }
 `
 

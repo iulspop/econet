@@ -56,24 +56,24 @@ export const Navbar = () => {
   return (
     <React.Fragment>
       <StyledNavbar>
-        <LinkHome href={t("Links:home")}>{t("home")}</LinkHome>
-        <LinkAbout href={t("Links:about")}>{t("about")}</LinkAbout>
-        <LinkResidential href={t("Links:residential")}>
+        <LinkHome to={t("Links:home")}>{t("home")}</LinkHome>
+        <LinkAbout to={t("Links:about")}>{t("about")}</LinkAbout>
+        <LinkResidential to={t("Links:residential")}>
           {t("residential")}
         </LinkResidential>
-        <LinkCommercial href={t("Links:commercial")}>
+        <LinkCommercial to={t("Links:commercial")}>
           {t("commercial")}
         </LinkCommercial>
-        <LinkContact href={t("Links:contact")}>{t("contact")}</LinkContact>
+        <LinkContact to={t("Links:contact")}>{t("contact")}</LinkContact>
         <LinkNumber href="tel:5146666601">514-666-6601</LinkNumber>
         <LinkToggleLanguage
-          href={determineLanguageToggleURL(i18n.language, themeContext.page)}
+          to={determineLanguageToggleURL(i18n.language, themeContext.page)}
         >
           {i18n.language === "fr" ? "EN" : "FR"}
         </LinkToggleLanguage>
       </StyledNavbar>
       <MobileLinkToggleLanguage
-        href={determineLanguageToggleURL(i18n.language, themeContext.page)}
+        to={determineLanguageToggleURL(i18n.language, themeContext.page)}
       >
         {i18n.language === "fr" ? "EN" : "FR"}
       </MobileLinkToggleLanguage>

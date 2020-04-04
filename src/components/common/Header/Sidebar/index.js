@@ -16,18 +16,16 @@ export const Sidebar = ({ showNav }) => {
   return (
     <>
       <StyledSidebar showNav={showNav}>
-        <MobileLinkHome href={t("Links:home")}>{t("home")}</MobileLinkHome>
-        <MobileLinkAbout href={t("Links:about")}>{t("about")}</MobileLinkAbout>
-        <MobileLinkResidential href={t("Links:residential")}>
+        <LinkHome to={t("Links:home")}>{t("home")}</LinkHome>
+        <LinkAbout to={t("Links:about")}>{t("about")}</LinkAbout>
+        <LinkResidential to={t("Links:residential")}>
           {t("residential")}
-        </MobileLinkResidential>
-        <MobileLinkCommercial href={t("Links:commercial")}>
+        </LinkResidential>
+        <LinkCommercial to={t("Links:commercial")}>
           {t("commercial")}
-        </MobileLinkCommercial>
-        <MobileLinkContact href={t("Links:contact")}>
-          {t("contact")}
-        </MobileLinkContact>
-        <MobileLinkNumber href="tel:5146666601">514-666-6601</MobileLinkNumber>
+        </LinkCommercial>
+        <LinkContact to={t("Links:contact")}>{t("contact")}</LinkContact>
+        <LinkNumber href="tel:5146666601">514-666-6601</LinkNumber>
       </StyledSidebar>
     </>
   )
@@ -50,28 +48,8 @@ const StyledSidebar = styled.nav`
 
   transform: ${props => (props.showNav ? "" : "translateX(-300px)")};
   visibility: ${props => (props.showNav ? "" : "hidden")};
-`
 
-const MobileLinkHome = styled(LinkHome)`
-  margin: 1.5rem 0;
-`
-
-const MobileLinkAbout = styled(LinkAbout)`
-  margin: 1.5rem 0;
-`
-
-const MobileLinkResidential = styled(LinkResidential)`
-  margin: 1.5rem 0;
-`
-
-const MobileLinkCommercial = styled(LinkCommercial)`
-  margin: 1.5rem 0;
-`
-
-const MobileLinkContact = styled(LinkContact)`
-  margin: 1.5rem 0;
-`
-
-const MobileLinkNumber = styled(LinkNumber)`
-  margin-top: 1.5rem;
+  & > * {
+    margin: 1.5rem 0;
+  }
 `
