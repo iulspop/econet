@@ -53,12 +53,7 @@ const StyledBanner = styled.section`
 
   min-height: calc(100vh - var(--nav-height));
 
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(204, 228, 247, 1) 11.2%,
-    rgba(237, 246, 250, 1) 100.2%
-  );
-
+  background-image: ${props => props.theme.colors.background};
   display: flex;
   flex-direction: column;
   justify-content: space-around;

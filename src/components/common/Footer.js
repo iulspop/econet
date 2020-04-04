@@ -96,13 +96,7 @@ const StyledFooter = styled.div`
   min-height: 32rem;
   padding: 3rem 5rem;
   background-image: ${props =>
-    props.backgroundWhite
-      ? "unset"
-      : `linear-gradient(
-    109.6deg,
-    rgba(204, 228, 247, 1) 11.2%,
-    rgba(237, 246, 250, 1) 100.2%
-  )`};
+    props.backgroundWhite ? "unset" : `${props.theme.colors.background}`};
 
   display: flex;
   justify-content: space-between;
