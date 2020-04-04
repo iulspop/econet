@@ -58,6 +58,7 @@ const createI18nextInstance = language => {
       "ContactInfo",
       "Estimation",
       "Footer",
+      "FurnitureResidential",
       "Header",
       "HomeForm",
       "RegionsDesservies",
