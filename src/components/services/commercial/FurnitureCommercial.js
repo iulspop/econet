@@ -36,8 +36,6 @@ export const FurnitureCommercial = () => {
           <h4>{t("listHeading2")}</h4>
           <BulletList>
             <ListItemGreen>{t("listItem5")}</ListItemGreen>
-            <ListItemBrown>{t("listItem6")}</ListItemBrown>
-            <ListItemGreen>{t("listItem7")}</ListItemGreen>
           </BulletList>
           <ButtonContainer>
             <DecoratedButton left right slim>

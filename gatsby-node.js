@@ -60,6 +60,7 @@ const createI18nextInstance = language => {
       "ContactInfo",
       "Estimation",
       "Footer",
+      "FurnitureCommercial",
       "FurnitureResidential",
       "Header",
       "HomeForm",
