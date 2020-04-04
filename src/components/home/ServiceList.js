@@ -139,19 +139,16 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 5rem;
-  margin-bottom: 3rem;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    margin: 4rem 0;
+    margin-top: 2rem;
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    margin: 2rem 0;
     margin-top: 4rem;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
-    margin: 0;
     margin-top: 1rem;
   }
 `

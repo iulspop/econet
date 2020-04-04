@@ -30,7 +30,7 @@ const StyledFlexColumn = styled(FlexColumn)`
 const SectionHeadingH3 = styled.h3`
   font-size: 5rem;
   margin-top: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   width: 95vw;
   text-align: center;
 

@@ -12,7 +12,7 @@ const StyledFlexColumn = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and ${props => props.theme.media.tabLand} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     padding: 2rem 0;
   }
 `
