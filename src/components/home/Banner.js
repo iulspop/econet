@@ -100,15 +100,17 @@ const CorrectLastLetter = styled.span`
 const MainHeading2 = styled.span`
   font-size: 8.5rem;
   letter-spacing: initial;
+  white-space: nowrap;
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    font-size: 5.7rem;
     margin: 4rem auto;
+    font-size: 5.7rem;
+    white-space: normal;
+    line-height: 1;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
     font-size: 3.6rem;
-    line-height: 3;
   }
 `
 
