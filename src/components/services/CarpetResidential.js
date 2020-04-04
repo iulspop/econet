@@ -12,7 +12,7 @@ import {
 import { DecoratedButton } from "../common"
 
 export const CarpetResidential = () => {
-  const { t } = useTranslation("CarpetCleaning")
+  const { t } = useTranslation("CarpetResidential")
   return (
     <StyledFlexColumn>
       <DecorativeLine />
