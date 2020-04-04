@@ -20,8 +20,8 @@ export const ServiceList = () => {
 
       <ListAndImageFlex reverseWrap={true}>
         <SideImage
-          aria-label="Javier, nettoyage econet owner"
-          url="/assets/biopic.png"
+          ariaLabel="carpet cleaning technician handling cleaning machine"
+          url="/assets/carpet-cleaning.jpg"
           serviceList={true}
         />
 
