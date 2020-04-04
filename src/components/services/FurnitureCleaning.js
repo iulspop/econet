@@ -11,10 +11,10 @@ import {
 } from "../home/common"
 import { DecoratedButton } from "../common"
 
-export const Section = () => {
+export const FurnitureCleaning = () => {
   // const { t } = useTranslation("Confirmation")
   return (
-    <StyledFlexColumn>
+    <FlexColumn>
       <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
         <SideImage
@@ -57,13 +57,9 @@ export const Section = () => {
           </ButtonContainer>
         </ListContainer>
       </ListAndImageFlex>
-    </StyledFlexColumn>
+    </FlexColumn>
   )
 }
-
-const StyledFlexColumn = styled(FlexColumn)`
-  padding-bottom: 4rem;
-`
 
 const Paragraph = styled.p`
   margin-bottom: 2rem;

@@ -6,8 +6,8 @@ export const FlexColumn = ({ className, children }) => {
 }
 
 const StyledFlexColumn = styled.div`
-  padding-top: 5rem;
-  padding-bottom: 0;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;

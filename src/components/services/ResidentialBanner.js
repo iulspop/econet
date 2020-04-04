@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 // import { useTranslation } from "react-i18next"
-import { FlexColumn } from "./common"
-import { DecorativeLine } from "../home/common"
+import { FlexColumn, DecorativeLine } from "../home/common"
 
 export const ResidentialBanner = () => {
   // const { t } = useTranslation("Confirmation")

@@ -2,7 +2,11 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../theme"
 import { Layout, Header, Footer } from "../components/common"
-import { ResidentialBanner, Section } from "../components/services"
+import {
+  ResidentialBanner,
+  CarpetCleaning,
+  FurnitureCleaning,
+} from "../components/services"
 
 export default function residentialPage() {
   return (
@@ -10,7 +14,8 @@ export default function residentialPage() {
       <Layout>
         <Header />
         <ResidentialBanner />
-        <Section />
+        <CarpetCleaning />
+        <FurnitureCleaning />
         <Footer />
       </Layout>
     </ThemeProvider>
