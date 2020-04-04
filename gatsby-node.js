@@ -61,6 +61,7 @@ const createI18nextInstance = language => {
       "FurnitureResidential",
       "Header",
       "HomeForm",
+      "OdourResidential",
       "RegionsDesservies",
       "Service",
       "ServiceList",

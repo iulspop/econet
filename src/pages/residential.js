@@ -7,6 +7,7 @@ import {
   CarpetResidential,
   FurnitureResidential,
   StainResidential,
+  OdourResidential,
 } from "../components/services"
 
 export default function residentialPage() {
@@ -18,6 +19,7 @@ export default function residentialPage() {
         <CarpetResidential />
         <FurnitureResidential />
         <StainResidential />
+        <OdourResidential />
         <Footer />
       </Layout>
     </ThemeProvider>

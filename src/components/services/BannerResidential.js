@@ -55,12 +55,14 @@ export const BannerResidential = () => {
         </IconContainer4>
 
         <IconContainer5>
-          <IconLabel for="icon5">{t("odorLabel")}</IconLabel>
-          <IconImg
-            src="/assets/smell-icon.png"
-            aria-label={t("odorLabel")}
-            id="icon5"
-          />
+          <a href="#odour">
+            <IconLabel for="icon5">{t("odorLabel")}</IconLabel>
+            <IconImg
+              src="/assets/smell-icon.png"
+              aria-label={t("odorLabel")}
+              id="icon5"
+            />
+          </a>
         </IconContainer5>
       </GridContainer>
       <DecoratedButton left right slim>
