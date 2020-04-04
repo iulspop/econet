@@ -183,6 +183,7 @@ const IconLabel = styled.label`
   text-transform: uppercase;
   white-space: nowrap;
   color: ${props => props.theme.colors.tertiary};
+  cursor: pointer;
 
   position: absolute;
   z-index: 1;
