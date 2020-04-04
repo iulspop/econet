@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { linkReset } from "../../mixins"
 
 export const Footer = ({ backgroundWhite }) => {
-  const { t } = useTranslation(["Footer", "Header"])
+  const { t } = useTranslation(["Footer", "Header", "Links"])
   return (
     <StyledFooter backgroundWhite={backgroundWhite}>
       <FlexColumn>
@@ -18,13 +18,19 @@ export const Footer = ({ backgroundWhite }) => {
 
       <Nav>
         <LinkColumnLeft>
-          <WebsiteLink href="/">{t("Header:home")}</WebsiteLink>
-          <WebsiteLink href="/">{t("Header:about")}</WebsiteLink>
-          <WebsiteLink href="/">{t("Header:contact")}</WebsiteLink>
+          <WebsiteLink href={t("Links:home")}>{t("Header:home")}</WebsiteLink>
+          <WebsiteLink href={t("Links:about")}>{t("Header:about")}</WebsiteLink>
+          <WebsiteLink href={t("Links:contact")}>
+            {t("Header:contact")}
+          </WebsiteLink>
         </LinkColumnLeft>
         <LinkColumn>
-          <LongWebsiteLink href="/">{t("Header:residential")}</LongWebsiteLink>
-          <LongWebsiteLink href="/">{t("Header:commercial")}</LongWebsiteLink>
+          <LongWebsiteLink href={t("Links:residential")}>
+            {t("Header:residential")}
+          </LongWebsiteLink>
+          <LongWebsiteLink href={t("Links:commercial")}>
+            {t("Header:commercial")}
+          </LongWebsiteLink>
         </LinkColumn>
       </Nav>
 

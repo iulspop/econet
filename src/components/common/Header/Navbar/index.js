@@ -13,19 +13,23 @@ import {
 import { useTranslation } from "react-i18next"
 
 export const Navbar = () => {
-  const { t, i18n } = useTranslation("Header")
+  const { t, i18n } = useTranslation(["Header", "Links"])
 
   return (
     <React.Fragment>
       <StyledNavbar>
-        <LinkHome href={"/"}>{t("home")}</LinkHome>
-        <LinkAbout href={"/about"}>{t("about")}</LinkAbout>
-        <LinkResidential href={"/residential"}>
+        <LinkHome href={t("Links:home")}>{t("home")}</LinkHome>
+        <LinkAbout href={t("Links:about")}>{t("about")}</LinkAbout>
+        <LinkResidential href={t("Links:residential")}>
           {t("residential")}
         </LinkResidential>
-        <LinkCommercial href={"/commercial"}>{t("commercial")}</LinkCommercial>
-        <LinkEstimation href={"/estimation"}>{t("contact")}</LinkEstimation>
-        <LinkNumber href={"#"}>514-666-6601</LinkNumber>
+        <LinkCommercial href={t("Links:commercial")}>
+          {t("commercial")}
+        </LinkCommercial>
+        <LinkEstimation href={t("Links:estimation")}>
+          {t("contact")}
+        </LinkEstimation>
+        <LinkNumber href="tel:5146666601">514-666-6601</LinkNumber>
         <LinkToggleLanguage
           href={"#"}
           onClick={e => {
