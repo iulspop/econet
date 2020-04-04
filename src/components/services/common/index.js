@@ -24,8 +24,7 @@ export const ListItemGreen = styled.li`
     background-color: ${props => props.theme.colors.primary};
 
     position: absolute;
-    top: 53%;
-    transform: translateY(-50%);
+    top: 0.9rem;
     left: -2.4rem;
   }
 `
