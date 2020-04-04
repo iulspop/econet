@@ -52,6 +52,7 @@ const createI18nextInstance = language => {
       "Banner",
       "BannerCommercial",
       "BannerResidential",
+      "CarpetCommercial",
       "CarpetResidential",
       "ChooseUs",
       "Confirmation",
