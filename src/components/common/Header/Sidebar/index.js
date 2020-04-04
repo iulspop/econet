@@ -11,21 +11,23 @@ import {
 import { useTranslation } from "react-i18next"
 
 export const Sidebar = ({ showNav }) => {
-  const { t } = useTranslation("Header")
+  const { t } = useTranslation(["Header", "Links"])
 
   return (
     <>
       <StyledSidebar showNav={showNav}>
-        <MobileLinkHome href={"/"}>{t("home")}</MobileLinkHome>
-        <MobileLinkAbout href={"/about"}>{t("about")}</MobileLinkAbout>
-        <MobileLinkResidential href={"/residential"}>
+        <MobileLinkHome href={t("Links:home")}>{t("home")}</MobileLinkHome>
+        <MobileLinkAbout href={t("Links:about")}>{t("about")}</MobileLinkAbout>
+        <MobileLinkResidential href={t("Links:residential")}>
           {t("residential")}
         </MobileLinkResidential>
-        <MobileLinkCommercial href={"/commercial"}>
+        <MobileLinkCommercial href={t("Links:commercial")}>
           {t("commercial")}
         </MobileLinkCommercial>
-        <MobileLinkContact href={"/contact"}>{t("contact")}</MobileLinkContact>
-        <MobileLinkNumber href={"#"}>514-666-6601</MobileLinkNumber>
+        <MobileLinkContact href={t("Links:contact")}>
+          {t("contact")}
+        </MobileLinkContact>
+        <MobileLinkNumber href="tel:5146666601">514-666-6601</MobileLinkNumber>
       </StyledSidebar>
     </>
   )
