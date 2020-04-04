@@ -46,12 +46,14 @@ export const BannerResidential = () => {
         </IconContainer3>
 
         <IconContainer4>
-          <IconLabel for="icon4">{t("protectionLabel")}</IconLabel>
-          <IconImg
-            src="/assets/sparkle-icon.png"
-            aria-label={t("protectionLabel")}
-            id="icon4"
-          />
+          <a href="#protection">
+            <IconLabel for="icon4">{t("protectionLabel")}</IconLabel>
+            <IconImg
+              src="/assets/sparkle-icon.png"
+              aria-label={t("protectionLabel")}
+              id="icon4"
+            />
+          </a>
         </IconContainer4>
 
         <IconContainer5>
