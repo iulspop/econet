@@ -6,6 +6,7 @@ import {
   BannerResidential,
   CarpetResidential,
   FurnitureResidential,
+  StainResidential,
 } from "../components/services"
 
 export default function residentialPage() {
@@ -16,6 +17,7 @@ export default function residentialPage() {
         <BannerResidential />
         <CarpetResidential />
         <FurnitureResidential />
+        <StainResidential />
         <Footer />
       </Layout>
     </ThemeProvider>

@@ -65,6 +65,7 @@ const createI18nextInstance = language => {
       "Service",
       "ServiceList",
       "ServiceQuestion",
+      "StainResidential",
       "StainsQuestion",
       "Story",
       "Testimonial",
