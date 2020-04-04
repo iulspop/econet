@@ -24,21 +24,25 @@ export const BannerResidential = () => {
         </IconContainer1>
 
         <IconContainer2>
-          <IconLabel for="icon2">{t("stainLabel")}</IconLabel>
-          <IconImg
-            src="/assets/spill-icon.png"
-            aria-label={t("stainLabel")}
-            id="icon2"
-          />
+          <a href="#stain">
+            <IconLabel for="icon2">{t("stainLabel")}</IconLabel>
+            <IconImg
+              src="/assets/spill-icon.png"
+              aria-label={t("stainLabel")}
+              id="icon2"
+            />
+          </a>
         </IconContainer2>
 
         <IconContainer3>
-          <IconLabel for="icon3">{t("furnitureLabel")}</IconLabel>
-          <IconImg
-            src="/assets/couch-icon.png"
-            aria-label={t("furnitureLabel")}
-            id="icon3"
-          />
+          <a href="#furniture">
+            <IconLabel for="icon3">{t("furnitureLabel")}</IconLabel>
+            <IconImg
+              src="/assets/couch-icon.png"
+              aria-label={t("furnitureLabel")}
+              id="icon3"
+            />
+          </a>
         </IconContainer3>
 
         <IconContainer4>

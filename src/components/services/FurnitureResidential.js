@@ -1,5 +1,5 @@
 import React from "react"
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 import {
   FlexColumn,
   DecorativeLine,
@@ -18,43 +18,30 @@ import {
 import { DecoratedButton } from "../common"
 
 export const FurnitureResidential = () => {
-  // const { t } = useTranslation("Confirmation")
+  const { t } = useTranslation("FurnitureResidential")
   return (
     <FlexColumn>
       <DecorativeLine />
       <ListAndImageFlex>
         <ListContainer>
-          <SectionHeading id="tapis">
-            Residential Carpet Cleaning
-          </SectionHeading>
-          <Paragraph>
-            In addition to keeping you warm, being comfortable and reducing
-            noise, your carpets act like filters that retain dust and allergens,
-            and prevent them from being in suspension in your home. In order to
-            do their job properly, they must be vacuumed regularly and cleaned
-            professionally once or twice a year. Nettoyage Éconet's complete
-            carpet cleaning services keeps your carpets clean and looking good
-            for years to come.
-          </Paragraph>
-          <strong>Our professional carpet cleaning service includes:</strong>
+          <SectionHeading id="furniture">{t("sectionHeading")}</SectionHeading>
+          <Paragraph>{t("paragraph1")}</Paragraph>
+          <h4>{t("listHeading1")}</h4>
           <BulletList>
-            <ListItemGreen>Carpet pre-treatment</ListItemGreen>
-            <ListItemBrown>Low-moisture carpet cleaning</ListItemBrown>
-            <ListItemGreen>Basic spot removal</ListItemGreen>
-            <ListItemBrown>Basic odour control</ListItemBrown>
+            <ListItemGreen>{t("listItem1")}</ListItemGreen>
+            <ListItemBrown>{t("listItem2")}</ListItemBrown>
+            <ListItemGreen>{t("listItem3")}</ListItemGreen>
+            <ListItemBrown>{t("listItem4")}</ListItemBrown>
           </BulletList>
-          <strong>We also offer the following additional services:</strong>
+          <h4>{t("listHeading2")}</h4>
           <BulletList>
-            <ListItemGreen>Vacuuming using power-vacuum</ListItemGreen>
-            <ListItemBrown>Advanced spot removal</ListItemBrown>
-            <ListItemGreen>Advanced odour control</ListItemGreen>
-            <ListItemBrown>
-              Écological carpet protector application
-            </ListItemBrown>
+            <ListItemGreen>{t("listItem5")}</ListItemGreen>
+            <ListItemBrown>{t("listItem6")}</ListItemBrown>
+            <ListItemGreen>{t("listItem7")}</ListItemGreen>
           </BulletList>
           <ButtonContainer>
             <DecoratedButton left right slim>
-              Hello
+              {t("CTAButton")}
             </DecoratedButton>
           </ButtonContainer>
         </ListContainer>
