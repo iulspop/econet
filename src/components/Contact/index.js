@@ -5,7 +5,7 @@ import { DecoratedButton } from "../common"
 import { Form } from "./Form"
 import { ContactInfo } from "./ContactInfo"
 
-export const Estimation = () => {
+export const Contact = () => {
   const { t } = useTranslation("Estimation")
 
   const [shownForm, setShownForm] = useState("residential")

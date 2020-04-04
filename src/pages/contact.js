@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { Layout, Header, Footer } from "../components/common"
-import { Estimation } from "../components/Estimation"
+import { Contact } from "../components/Contact"
 import { theme } from "../theme"
 
 export default function contactPage() {
@@ -9,7 +9,7 @@ export default function contactPage() {
     <ThemeProvider theme={{ ...theme, page: "contact" }}>
       <Layout>
         <Header />
-        <Estimation />
+        <Contact />
         <Footer />
       </Layout>
     </ThemeProvider>
