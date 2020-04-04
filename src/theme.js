@@ -9,6 +9,5 @@ export const theme = {
     phone: "(max-width: 500px)",
     tabPort: "(max-width: 1000px)",
     tabLand: "(max-width: 1200px)",
-    bigDesktop: "(min-width: 1800px)",
   },
 }

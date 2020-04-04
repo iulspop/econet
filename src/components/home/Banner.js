@@ -31,7 +31,7 @@ export const Banner = () => {
         />
       </Container>
 
-      <SecondaryHeading>{t("secondaryHeading")}</SecondaryHeading>
+      <H2>{t("secondaryHeading")}</H2>
 
       <DecoratedButton left right link href="/estimation">
         {t("quoteRequest")}
@@ -77,12 +77,10 @@ const MainHeading = styled.h1`
   line-height: 1;
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    width: 48rem;
     font-size: 8rem;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
-    width: 30rem;
     font-size: 3.7rem;
     margin-top: 3rem;
   }
@@ -96,12 +94,11 @@ const MainHeading2 = styled.span`
   font-size: 8.5rem;
   letter-spacing: initial;
   white-space: nowrap;
+  text-align: center;
 
   @media only screen and ${props => props.theme.media.tabPort} {
     margin: 4rem auto;
     font-size: 5.7rem;
-    white-space: normal;
-    line-height: 1;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
@@ -149,5 +146,23 @@ const SecondaryHeading = styled.h2`
     width: auto;
     padding: 0 2rem;
     font-size: 2rem;
+  }
+`
+
+export const H2 = styled.h2`
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  width: 70vw;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 80vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin-bottom: 4rem;
+    font-size: calc(0.065 * 100vw + 0.6786rem);
   }
 `
