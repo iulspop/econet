@@ -16,11 +16,7 @@ export const FurnitureCleaning = () => {
   return (
     <FlexColumn>
       <DecorativeLine />
-      <ListAndImageFlex reverseWrap="true">
-        <SideImage
-          ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/carpet-cleaning.jpg"
-        />
+      <ListAndImageFlex>
         <ListContainer>
           <SectionHeading id="tapis">
             Residential Carpet Cleaning
@@ -56,6 +52,10 @@ export const FurnitureCleaning = () => {
             </DecoratedButton>
           </ButtonContainer>
         </ListContainer>
+        <SideImage
+          ariaLabel="carpet cleaning technician handling cleaning machine"
+          url="/assets/carpet-cleaning.jpg"
+        />
       </ListAndImageFlex>
     </FlexColumn>
   )
