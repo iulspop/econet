@@ -9,7 +9,7 @@ import {
   StainResidential,
   OdourResidential,
   ProtectionResidential,
-} from "../components/services"
+} from "../components/services/residential"
 
 export default function residentialPage() {
   return (

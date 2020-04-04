@@ -7,15 +7,15 @@ import {
   SideImage,
   ListContainer,
   SectionHeading,
-} from "../home/common"
+} from "../../home/common"
 import {
   Paragraph,
   BulletList,
   ListItemGreen,
   ListItemBrown,
   ButtonContainer,
-} from "./common"
-import { DecoratedButton } from "../common"
+} from "../common"
+import { DecoratedButton } from "../../common"
 
 export const FurnitureResidential = () => {
   const { t } = useTranslation("FurnitureResidential")

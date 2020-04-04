@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { FlexColumn, DecorativeLine } from "../home/common"
-import { DecoratedButton } from "../common"
+import { FlexColumn, DecorativeLine } from "../../home/common"
+import { DecoratedButton } from "../../common"
 
 export const BannerResidential = () => {
   const { t } = useTranslation("BannerResidential")

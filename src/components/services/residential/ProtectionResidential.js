@@ -8,9 +8,9 @@ import {
   SideImage,
   ListContainer,
   SectionHeading,
-} from "../home/common"
-import { Paragraph, ButtonContainer } from "./common"
-import { DecoratedButton } from "../common"
+} from "../../home/common"
+import { Paragraph, ButtonContainer } from "../common"
+import { DecoratedButton } from "../../common"
 
 export const ProtectionResidential = () => {
   const { t } = useTranslation("ProtectionResidential")
