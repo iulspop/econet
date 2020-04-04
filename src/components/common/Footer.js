@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { GatsbyLink } from "./Header/Links/GatsbyLink"
 import { useTranslation } from "react-i18next"
 import { linkReset } from "../../mixins"
 
@@ -18,17 +19,17 @@ export const Footer = ({ backgroundWhite }) => {
 
       <Nav>
         <LinkColumnLeft>
-          <WebsiteLink href={t("Links:home")}>{t("Header:home")}</WebsiteLink>
-          <WebsiteLink href={t("Links:about")}>{t("Header:about")}</WebsiteLink>
-          <WebsiteLink href={t("Links:contact")}>
+          <WebsiteLink to={t("Links:home")}>{t("Header:home")}</WebsiteLink>
+          <WebsiteLink to={t("Links:about")}>{t("Header:about")}</WebsiteLink>
+          <WebsiteLink to={t("Links:contact")}>
             {t("Header:contact")}
           </WebsiteLink>
         </LinkColumnLeft>
         <LinkColumn>
-          <LongWebsiteLink href={t("Links:residential")}>
+          <LongWebsiteLink to={t("Links:residential")}>
             {t("Header:residential")}
           </LongWebsiteLink>
-          <LongWebsiteLink href={t("Links:commercial")}>
+          <LongWebsiteLink to={t("Links:commercial")}>
             {t("Header:commercial")}
           </LongWebsiteLink>
         </LinkColumn>
@@ -184,7 +185,7 @@ const LinkColumnLeft = styled(LinkColumn)`
   margin-right: 4vw;
 `
 
-const WebsiteLink = styled.a`
+const WebsiteLink = styled(GatsbyLink)`
   ${linkReset}
   width: 15rem;
   padding-bottom: 1rem;
