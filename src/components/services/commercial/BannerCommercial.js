@@ -27,7 +27,7 @@ export const BannerCommercial = () => {
           <a href="#tapis">
             <IconLabel for="icon1">{t("tapisLabel")}</IconLabel>
             <IconImg
-              src="/assets/house-icon.png"
+              src="/assets/building-icon.png"
               aria-label={t("tapisLabel")}
               id="icon1"
             />
