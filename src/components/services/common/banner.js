@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const H1 = styled.h1`
-  width: 80vw;
+  width: 90vw;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 5.5rem;
@@ -13,7 +13,7 @@ export const H1 = styled.h1`
   }
 
   @media only screen and ${props => props.theme.media.phone} {
-    font-size: calc(0.095 * 100vw + 0.6786rem);
+    font-size: calc(0.093 * 100vw + 0.6786rem);
     margin: 0;
     margin-top: 2rem;
   }
