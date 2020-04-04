@@ -48,6 +48,12 @@ const Container = styled.header`
     height: 65px;
     padding: 0 2rem;
   }
+
+  @media only screen and (max-width: 700px) {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    z-index: 3;
+  }
 `
 
 const Overlay = styled.div`

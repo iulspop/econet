@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import { absCenterH } from "../../mixins"
 import { DecoratedButton } from "../common"
+import { linkReset } from "../../mixins"
 
 export const Banner = () => {
   const { t, i18n } = useTranslation("Banner")
@@ -30,6 +31,13 @@ export const Banner = () => {
           alt={""}
         />
       </Container>
+      <FlexColumn>
+        <LogoImg
+          src="/assets/logo.png"
+          alt="Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
+        />
+        <NumberLink href="tel:5146666601">514-666-6601</NumberLink>
+      </FlexColumn>
 
       <H2>{t("secondaryHeading")}</H2>
 
@@ -58,10 +66,18 @@ const StyledBanner = styled.section`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  @media only screen and (max-width: 700px) {
+    padding-top: 9rem;
+  }
 `
 
 const Container = styled.div`
   position: relative;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `
 
 const MainHeading = styled.h1`
@@ -126,29 +142,6 @@ const DecorativeLine = styled.img`
   }
 `
 
-const SecondaryHeading = styled.h2`
-  width: 75rem;
-  margin: 2rem auto;
-  margin-top: 0rem;
-
-  font-size: 2.5rem;
-  line-height: 5rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 4px #fff;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 475px;
-    font-size: 2rem;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    width: auto;
-    padding: 0 2rem;
-    font-size: 2rem;
-  }
-`
-
 export const H2 = styled.h2`
   margin-top: 1rem;
   margin-bottom: 4rem;
@@ -164,5 +157,32 @@ export const H2 = styled.h2`
   @media only screen and ${props => props.theme.media.phone} {
     margin-bottom: 4rem;
     font-size: calc(0.065 * 100vw + 0.6786rem);
+  }
+`
+
+const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (min-width: 701px) {
+    display: none;
+  }
+`
+
+const LogoImg = styled.img`
+  width: 80vw;
+  margin-bottom: 1rem;
+`
+
+const NumberLink = styled.a`
+  ${linkReset}
+  line-height: 1;
+  font-size: 5rem;
+  font-weight: 700;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: ${props => props.theme.colors.primary};
   }
 `

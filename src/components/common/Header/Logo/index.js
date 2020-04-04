@@ -37,4 +37,8 @@ const LogoImg = styled.img`
   @media only screen and ${props => props.theme.media.tabPort} {
     height: 43px;
   }
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `
