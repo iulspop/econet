@@ -32,6 +32,7 @@ export const H2 = styled.h2`
   }
 
   @media only screen and ${props => props.theme.media.phone} {
+    margin-bottom: 4rem;
     font-size: calc(0.065 * 100vw + 0.6786rem);
   }
 `
