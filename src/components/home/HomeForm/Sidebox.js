@@ -80,11 +80,8 @@ const FlexContainer = styled.div`
 
 const SideImage = styled.img`
   width: 10vw;
-  height: 10vw;
   margin-top: 1.1rem;
   margin-right: 2rem;
-  border-radius: 50%;
-  background-color: grey;
   align-self: center;
 
   @media only screen and ${props => props.theme.media.tabLand} {
@@ -107,6 +104,7 @@ const SideImage = styled.img`
 
 const TextSnippet = styled.div`
   width: 23vw;
+  align-self: center;
 
   @media only screen and (max-width: 1390px) {
     width: 19vw;
