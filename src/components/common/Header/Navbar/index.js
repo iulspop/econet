@@ -1,11 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
+import { ThemeContext } from "styled-components"
 import {
   LinkHome,
   LinkAbout,
   LinkResidential,
   LinkCommercial,
-  LinkEstimation,
+  LinkContact,
   LinkNumber,
   LinkToggleLanguage,
   MobileLinkToggleLanguage,
@@ -14,6 +15,43 @@ import { useTranslation } from "react-i18next"
 
 export const Navbar = () => {
   const { t, i18n } = useTranslation(["Header", "Links"])
+  const themeContext = useContext(ThemeContext)
+
+  function determineLanguageToggleURL(language, page) {
+    if (language === "fr") {
+      switch (page) {
+        case "home":
+          return "/en"
+        case "about":
+          return "/en/about"
+        case "residential":
+          return "/en/residential"
+        case "commercial":
+          return "/en/commercial"
+        case "contact":
+          return "/en/contact"
+        default:
+          throw new Error(`Invalid page. Received: ${page}`)
+      }
+    } else if (language === "en") {
+      switch (page) {
+        case "home":
+          return "/"
+        case "about":
+          return "/about"
+        case "residential":
+          return "/residential"
+        case "commercial":
+          return "/commercial"
+        case "contact":
+          return "/contact"
+        default:
+          throw new Error(`Invalid page. Received: ${page}`)
+      }
+    } else {
+      throw new Error(`Invalid language. Received: ${language}`)
+    }
+  }
 
   return (
     <React.Fragment>
@@ -26,25 +64,16 @@ export const Navbar = () => {
         <LinkCommercial href={t("Links:commercial")}>
           {t("commercial")}
         </LinkCommercial>
-        <LinkEstimation href={t("Links:estimation")}>
-          {t("contact")}
-        </LinkEstimation>
+        <LinkContact href={t("Links:contact")}>{t("contact")}</LinkContact>
         <LinkNumber href="tel:5146666601">514-666-6601</LinkNumber>
         <LinkToggleLanguage
-          href={"#"}
-          onClick={e => {
-            e.preventDefault()
-            i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr")
-          }}
+          href={determineLanguageToggleURL(i18n.language, themeContext.page)}
         >
           {i18n.language === "fr" ? "EN" : "FR"}
         </LinkToggleLanguage>
       </StyledNavbar>
       <MobileLinkToggleLanguage
-        onClick={e => {
-          e.preventDefault()
-          i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr")
-        }}
+        href={determineLanguageToggleURL(i18n.language, themeContext.page)}
       >
         {i18n.language === "fr" ? "EN" : "FR"}
       </MobileLinkToggleLanguage>

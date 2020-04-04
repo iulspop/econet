@@ -5,7 +5,7 @@ import {
   LinkAbout,
   LinkResidential,
   LinkCommercial,
-  LinkEstimation,
+  LinkContact,
   LinkNumber,
 } from "../Links"
 import { useTranslation } from "react-i18next"
@@ -24,9 +24,7 @@ export const Sidebar = ({ showNav }) => {
         <MobileLinkCommercial href={"/commercial"}>
           {t("commercial")}
         </MobileLinkCommercial>
-        <MobileLinkEstimation href={"/estimation"}>
-          {t("contact")}
-        </MobileLinkEstimation>
+        <MobileLinkContact href={"/contact"}>{t("contact")}</MobileLinkContact>
         <MobileLinkNumber href={"#"}>514-666-6601</MobileLinkNumber>
       </StyledSidebar>
     </>
@@ -68,7 +66,7 @@ const MobileLinkCommercial = styled(LinkCommercial)`
   margin: 1.5rem 0;
 `
 
-const MobileLinkEstimation = styled(LinkEstimation)`
+const MobileLinkContact = styled(LinkContact)`
   margin: 1.5rem 0;
 `
 

@@ -4,9 +4,9 @@ import { Layout, Header, Footer } from "../components/common"
 import { Estimation } from "../components/Estimation"
 import { theme } from "../theme"
 
-export default function estimationPage() {
+export default function contactPage() {
   return (
-    <ThemeProvider theme={{ ...theme, page: "estimation" }}>
+    <ThemeProvider theme={{ ...theme, page: "contact" }}>
       <Layout>
         <Header />
         <Estimation />

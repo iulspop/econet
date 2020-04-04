@@ -6,7 +6,7 @@ import { Confirmation } from "../components/Confirmation"
 
 export default function confirmationPage() {
   return (
-    <ThemeProvider theme={{ ...theme, page: "about" }}>
+    <ThemeProvider theme={{ ...theme, page: "home" }}>
       <Layout>
         <Confirmation />
       </Layout>

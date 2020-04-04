@@ -68,14 +68,14 @@ export const LinkCommercial = styled(LinkBigger)`
       : ""};
 `
 
-export const LinkEstimation = styled(Link)`
+export const LinkContact = styled(Link)`
   width: 140px;
 
-  font-weight: ${props => (props.theme.page === "estimation" ? "700" : "400")};
+  font-weight: ${props => (props.theme.page === "contact" ? "700" : "400")};
   color: ${props =>
-    props.theme.page === "estimation" ? props.theme.colors.primary : "black"};
+    props.theme.page === "contact" ? props.theme.colors.primary : "black"};
   border-bottom: ${props =>
-    props.theme.page === "estimation"
+    props.theme.page === "contact"
       ? `8px dotted ${props.theme.colors.primary}`
       : ""};
 `
