@@ -3,10 +3,10 @@ import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { linkReset } from "../../mixins"
 
-export const Footer = () => {
+export const Footer = ({ backgroundWhite }) => {
   const { t } = useTranslation(["Footer", "Header"])
   return (
-    <StyledFooter>
+    <StyledFooter backgroundWhite={backgroundWhite}>
       <FlexColumn>
         <LogoImg
           src="/assets/logo.png"
@@ -88,11 +88,14 @@ export const Footer = () => {
 const StyledFooter = styled.div`
   min-height: 32rem;
   padding: 3rem 5rem;
-  background-image: linear-gradient(
+  background-image: ${props =>
+    props.backgroundWhite
+      ? "unset"
+      : `linear-gradient(
     109.6deg,
     rgba(204, 228, 247, 1) 11.2%,
     rgba(237, 246, 250, 1) 100.2%
-  );
+  )`};
 
   display: flex;
   justify-content: space-between;

@@ -22,7 +22,7 @@ export default function residentialPage() {
         <StainResidential />
         <OdourResidential />
         <ProtectionResidential />
-        <Footer />
+        <Footer backgroundWhite="true" />
       </Layout>
     </ThemeProvider>
   )
