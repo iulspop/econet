@@ -60,6 +60,7 @@ const StyledBanner = styled.section`
   }
 
   min-height: calc(100vh - var(--nav-height));
+  padding-bottom: 3rem;
 
   background-image: ${props => props.theme.colors.background};
   display: flex;
@@ -144,7 +145,7 @@ const DecorativeLine = styled.img`
 
 export const H2 = styled.h2`
   margin-top: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   width: 70vw;
   font-weight: 400;
   line-height: 1.25;
@@ -155,6 +156,7 @@ export const H2 = styled.h2`
   }
 
   @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
     margin-bottom: 4rem;
     font-size: calc(0.065 * 100vw + 0.6786rem);
   }
@@ -178,9 +180,10 @@ const LogoImg = styled.img`
 const NumberLink = styled.a`
   ${linkReset}
   line-height: 1;
-  font-size: 5rem;
+  font-size: calc(0.026316 * 100vw + 3.1579rem);
   font-weight: 700;
   transition: 0.3s ease;
+  margin-bottom: 3rem;
 
   &:hover {
     color: ${props => props.theme.colors.primary};
