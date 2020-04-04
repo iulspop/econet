@@ -3,11 +3,7 @@ export const theme = {
     primary: "#68a336",
     secondary: "#5a4a42",
     tertiary: "#00aeef",
-    background: `linear-gradient(
-      109.6deg,
-      rgba(204, 228, 27, 1) 11.2%,
-      rgba(237, 246, 250, 1) 100.2%
-    )`,
+    background: `linear-gradient(280deg, #f6f6f6 0%, #ededed 74%)`,
   },
   media: {
     phone: "(max-width: 500px)",
