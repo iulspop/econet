@@ -1,3 +1,3 @@
-export * from "./CarpetCleaning"
-export * from "./FurnitureCleaning"
-export * from "./ResidentialBanner"
+export * from "./BannerResidential"
+export * from "./CarpetResidential"
+export * from "./FurnitureResidential"

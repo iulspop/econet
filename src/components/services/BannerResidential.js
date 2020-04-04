@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { FlexColumn, DecorativeLine } from "../home/common"
 import { DecoratedButton } from "../common"
 
-export const ResidentialBanner = () => {
+export const BannerResidential = () => {
   // const { t } = useTranslation("Confirmation")
   return (
     <FlexColumn>

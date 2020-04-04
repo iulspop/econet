@@ -11,7 +11,7 @@ import {
 } from "../home/common"
 import { DecoratedButton } from "../common"
 
-export const FurnitureCleaning = () => {
+export const FurnitureResidential = () => {
   // const { t } = useTranslation("Confirmation")
   return (
     <FlexColumn>
