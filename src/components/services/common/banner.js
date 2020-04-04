@@ -138,7 +138,6 @@ export const IconLabel = styled.label`
   cursor: pointer;
 
   position: absolute;
-  z-index: 1;
   top: -4rem;
   left: 50%;
   transform: translateX(-50%);
