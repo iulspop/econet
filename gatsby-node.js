@@ -24,85 +24,71 @@ exports.onCreatePage = ({ page, actions }) => {
     fromPath: "/NosClients.html",
     toPath: "/",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Faq.html",
     toPath: "/",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Emplois.html",
     toPath: "/",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Certifications.html",
     toPath: "/",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Contact.html",
     toPath: "/contact",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Contact.asp",
     toPath: "/contact",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/NettoyageDeTapis.html",
     toPath: "/residential",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/MeublesCuirEtTissu.html",
     toPath: "/residential",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Services.html",
     toPath: "/residential",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Procede.html",
     toPath: "/residential",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Garantie.html",
     toPath: "/residential",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Residentiel/",
     toPath: "/residential",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Commercial/",
     toPath: "/commercial",
     isPermanent: true,
-    statusCode: 301,
   })
   createRedirect({
     fromPath: "/Entreprise.html",
     toPath: "/commercial",
     isPermanent: true,
-    statusCode: 301,
   })
   // allLanguages.forEach(language =>
   //   createRedirect({
