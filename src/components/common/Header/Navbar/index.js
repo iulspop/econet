@@ -4,7 +4,7 @@ import {
   LinkHome,
   LinkAbout,
   LinkResidential,
-  LinkBigger,
+  LinkCommercial,
   LinkEstimation,
   LinkNumber,
   LinkToggleLanguage,
@@ -23,7 +23,7 @@ export const Navbar = () => {
         <LinkResidential href={"/residential"}>
           {t("residential")}
         </LinkResidential>
-        <LinkBigger href={"#"}>{t("commercial")}</LinkBigger>
+        <LinkCommercial href={"/commercial"}>{t("commercial")}</LinkCommercial>
         <LinkEstimation href={"/estimation"}>{t("contact")}</LinkEstimation>
         <LinkNumber href={"#"}>514-666-6601</LinkNumber>
         <LinkToggleLanguage

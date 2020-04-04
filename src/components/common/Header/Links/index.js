@@ -58,6 +58,16 @@ export const LinkResidential = styled(LinkBigger)`
       : ""};
 `
 
+export const LinkCommercial = styled(LinkBigger)`
+  font-weight: ${props => (props.theme.page === "commercial" ? "700" : "400")};
+  color: ${props =>
+    props.theme.page === "commercial" ? props.theme.colors.primary : "black"};
+  border-bottom: ${props =>
+    props.theme.page === "commercial"
+      ? `8px dotted ${props.theme.colors.primary}`
+      : ""};
+`
+
 export const LinkEstimation = styled(Link)`
   width: 140px;
 

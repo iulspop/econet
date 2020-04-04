@@ -4,7 +4,7 @@ import {
   LinkHome,
   LinkAbout,
   LinkResidential,
-  LinkBigger,
+  LinkCommercial,
   LinkEstimation,
   LinkNumber,
 } from "../Links"
@@ -21,7 +21,9 @@ export const Sidebar = ({ showNav }) => {
         <MobileLinkResidential href={"/residential"}>
           {t("residential")}
         </MobileLinkResidential>
-        <MobileLinkBigger href={"#"}>{t("commercial")}</MobileLinkBigger>
+        <MobileLinkCommercial href={"/commercial"}>
+          {t("commercial")}
+        </MobileLinkCommercial>
         <MobileLinkEstimation href={"/estimation"}>
           {t("contact")}
         </MobileLinkEstimation>
@@ -50,10 +52,6 @@ const StyledSidebar = styled.nav`
   visibility: ${props => (props.showNav ? "" : "hidden")};
 `
 
-const MobileLinkBigger = styled(LinkBigger)`
-  margin: 1.5rem 0;
-`
-
 const MobileLinkHome = styled(LinkHome)`
   margin: 1.5rem 0;
 `
@@ -63,6 +61,10 @@ const MobileLinkAbout = styled(LinkAbout)`
 `
 
 const MobileLinkResidential = styled(LinkResidential)`
+  margin: 1.5rem 0;
+`
+
+const MobileLinkCommercial = styled(LinkCommercial)`
   margin: 1.5rem 0;
 `
 
