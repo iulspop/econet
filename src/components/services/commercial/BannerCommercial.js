@@ -17,7 +17,7 @@ import {
 import { DecoratedButton } from "../../common"
 
 export const BannerCommercial = () => {
-  const { t } = useTranslation("BannerCommercial")
+  const { t } = useTranslation(["BannerCommercial", "Links"])
   return (
     <StyledFlexColumn>
       <DecorativeLine />
@@ -79,7 +79,7 @@ export const BannerCommercial = () => {
           </a>
         </IconContainer5>
       </GridContainer>
-      <DecoratedButton left right slim>
+      <DecoratedButton href={t("Links:contact")} link left right slim>
         {t("CTAButton")}
       </DecoratedButton>
     </StyledFlexColumn>

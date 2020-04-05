@@ -13,7 +13,7 @@ import {
 } from "./common"
 
 export const ServiceList = () => {
-  const { t } = useTranslation("ServiceList")
+  const { t } = useTranslation(["ServiceList", "Links"])
   return (
     <FlexColumn>
       <DecorativeLine />
@@ -56,7 +56,7 @@ export const ServiceList = () => {
           </List>
 
           <ButtonContainer>
-            <DecoratedButton left right link slim href="/services">
+            <DecoratedButton left right link slim href={t("Links:residential")}>
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>

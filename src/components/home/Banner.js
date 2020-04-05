@@ -7,7 +7,7 @@ import { DecoratedButton } from "../common"
 import { linkReset } from "../../mixins"
 
 export const Banner = () => {
-  const { t, i18n } = useTranslation("Banner")
+  const { t, i18n } = useTranslation(["Banner", "Links"])
 
   return (
     <StyledBanner>
@@ -41,7 +41,7 @@ export const Banner = () => {
 
       <H2>{t("secondaryHeading")}</H2>
 
-      <DecoratedButton left right link href="/estimation">
+      <DecoratedButton left right link href={t("Links:contact")}>
         {t("quoteRequest")}
       </DecoratedButton>
     </StyledBanner>

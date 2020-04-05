@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { DecoratedButton } from "./common"
 
 export const Story = () => {
-  const { t } = useTranslation("Story")
+  const { t } = useTranslation(["Story", "Links"])
   return (
     <FlexColumn>
       <DecorativeLine src={"/assets/decorative-horizontal-line.png"} alt={""} />
@@ -26,7 +26,7 @@ export const Story = () => {
             <strong>{t("conclusion")}</strong>
           </Paragraph>
           <ButtonContainer>
-            <DecoratedButton left right slim>
+            <DecoratedButton href={t("Links:contact")} link left right slim>
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>

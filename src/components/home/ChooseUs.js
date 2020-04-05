@@ -13,7 +13,7 @@ import {
 } from "./common"
 
 export const ChooseUs = () => {
-  const { t } = useTranslation("ChooseUs")
+  const { t } = useTranslation(["ChooseUs", "Links"])
   return (
     <StyledFlexColumn>
       <DecorativeLine />
@@ -55,7 +55,7 @@ export const ChooseUs = () => {
           </List>
 
           <ButtonContainer>
-            <DecoratedButton left right link slim href="/estimation">
+            <DecoratedButton left right link slim href={t("Links:contact")}>
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>

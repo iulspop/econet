@@ -13,7 +13,7 @@ import { Paragraph, ButtonContainer } from "../common"
 import { DecoratedButton } from "../../common"
 
 export const ProtectionCommercial = () => {
-  const { t } = useTranslation("ProtectionCommercial")
+  const { t } = useTranslation(["ProtectionCommercial", "Links"])
   return (
     <StyledFlexColumn>
       <DecorativeLine />
@@ -27,7 +27,7 @@ export const ProtectionCommercial = () => {
           <Paragraph>{t("paragraph1")}</Paragraph>
           <Paragraph>{t("paragraph2")}</Paragraph>
           <ButtonContainer>
-            <DecoratedButton left right slim>
+            <DecoratedButton href={t("Links:contact")} link left right slim>
               {t("CTAButton")}
             </DecoratedButton>
           </ButtonContainer>

@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { buttonReset, linkReset } from "../../../../mixins"
+import { GatsbyLink } from "../../Header/Links/GatsbyLink"
 
 export const Button = ({
   clickAction,
@@ -18,7 +19,7 @@ export const Button = ({
           onClick={clickAction}
           aria-label={ariaLabel}
           inactive={inactive}
-          href={href}
+          to={href}
           slim={slim}
         >
           {children}
@@ -102,7 +103,7 @@ const StyledButton = styled.button`
   ${buttonStyle}
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled(GatsbyLink)`
   ${linkReset}
   ${buttonStyle}
 `

@@ -18,7 +18,7 @@ import {
 import { DecoratedButton } from "../../common"
 
 export const OdourResidential = () => {
-  const { t } = useTranslation("OdourResidential")
+  const { t } = useTranslation(["OdourResidential", "Links"])
   return (
     <FlexColumn>
       <DecorativeLine />
@@ -38,7 +38,7 @@ export const OdourResidential = () => {
             <ListItemBrown>{t("listItem6")}</ListItemBrown>
           </BulletList>
           <ButtonContainer>
-            <DecoratedButton left right slim>
+            <DecoratedButton href={t("Links:contact")} link left right slim>
               {t("CTAButton")}
             </DecoratedButton>
           </ButtonContainer>

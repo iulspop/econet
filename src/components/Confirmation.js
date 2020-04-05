@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { linkReset } from "../mixins"
 
 export const Confirmation = () => {
-  const { t } = useTranslation("Confirmation")
+  const { t } = useTranslation(["Confirmation", "Links"])
   return (
     <Container>
       <Box>
@@ -14,7 +14,7 @@ export const Confirmation = () => {
           <LineBreak />
           {t("paragraphLine2")}
         </Paragraph>
-        <ReturnLink href="/">{t("return")}</ReturnLink>
+        <ReturnLink href={t("Links:home")}>{t("return")}</ReturnLink>
       </Box>
     </Container>
   )
