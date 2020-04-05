@@ -14,7 +14,7 @@ export const SideImage = ({ ariaLabel, url, serviceList, horizontal }) => {
 
 const StyledSideImage = styled.div`
   margin-top: 2rem;
-  width: ${props => (props.serviceList ? "25vw" : "30vw")};
+  width: ${props => (props.serviceList ? "25vw" : "35vw")};
   align-item: strech;
   background-image: url(${props => props.url});
   background-size: cover;

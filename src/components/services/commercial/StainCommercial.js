@@ -26,7 +26,7 @@ export const StainCommercial = () => {
       <ListAndImageFlex reverseWrap="true">
         <SideImage
           ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/carpet-cleaning.jpg"
+          url="/assets/stain-removal.jpg"
         />
         <ListContainer>
           <SectionHeading id="stain">{t("sectionHeading")}</SectionHeading>

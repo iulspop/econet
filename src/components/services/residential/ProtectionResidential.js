@@ -20,7 +20,7 @@ export const ProtectionResidential = () => {
       <ListAndImageFlex reverseWrap="true">
         <SideImage
           ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/carpet-cleaning.jpg"
+          url="/assets/carpet.jpg"
         />
         <ListContainer>
           <SectionHeading id="protection">{t("sectionHeading")}</SectionHeading>

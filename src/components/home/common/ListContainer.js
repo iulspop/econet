@@ -10,10 +10,10 @@ export const ListContainer = ({ children, serviceList }) => {
 }
 
 const StyledListContainer = styled.div`
-  width: ${props => (props.serviceList ? "60vw" : "55vw")};
+  width: ${props => (props.serviceList ? "60vw" : "50vw")};
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    width: ${props => (props.serviceList ? "60vw" : "55vw")};
+    width: ${props => (props.serviceList ? "60vw" : "50vw")};
   }
 
   @media only screen and ${props => props.theme.media.tabPort} {
