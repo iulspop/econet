@@ -3,5 +3,6 @@
   "about": "/about",
   "residential": "/residential",
   "commercial": "/commercial",
-  "contact": "/contact"
+  "contact": "/contact",
+  "confirmation": "/confirmation"
 }

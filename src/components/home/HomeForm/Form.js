@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { DecoratedButton } from "../../common"
 
 export const Form = () => {
-  const { t } = useTranslation("HomeForm")
+  const { t } = useTranslation(["HomeForm", "Links"])
 
   function handleChange(e) {
     if (e.target.value) {
@@ -17,7 +17,7 @@ export const Form = () => {
   return (
     <StyledForm
       method="POST"
-      action="/confirmation"
+      action={t("Links:confirmation")}
       data-netlify="true"
       name="homeForm"
     >

@@ -3,5 +3,6 @@
   "about": "/en/about",
   "residential": "/en/residential",
   "commercial": "/en/commercial",
-  "contact": "/en/contact"
+  "contact": "/en/contact",
+  "confirmation": "/en/confirmation"
 }
