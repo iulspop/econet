@@ -17,6 +17,15 @@ export const ContactInfo = () => {
       </Container>
 
       <Container>
+        <H4>{t("email")}</H4>
+        <p>
+          <Link href="mailto:info@nettoyageeconet.com">
+            info@nettoyageeconet.com
+          </Link>
+        </p>
+      </Container>
+
+      <Container>
         <H4>{t("hours")}</H4>
         <p>
           {t("days")}
@@ -69,12 +78,12 @@ const ContactInfoBox = styled.aside`
 `
 
 const Container = styled.div`
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `
 
 const H3 = styled.h3`
   margin: 0;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
   font-size: 3.5rem;
   line-height: 1;
 `
