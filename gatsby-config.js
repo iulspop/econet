@@ -5,5 +5,12 @@
  */
 
 module.exports = {
-  plugins: [`gatsby-plugin-styled-components`, `gatsby-plugin-netlify`],
+  siteMetadata: {
+    siteUrl: `https://nettoyageeconet.netlify.com`,
+  },
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-sitemap`,
+  ],
 }
