@@ -7,7 +7,10 @@ export const Global = createGlobalStyle`
 	html {
 		// This defines value of 1rem
     font-size: 62.25%; // 1rem = 10px; 10px/16px = 62.25%
-    scroll-behavior: smooth;
+    scroll-behavior: ${props =>
+      props.theme.page === "residential" || props.theme.page === "commercial"
+        ? "smooth"
+        : "auto"};
 	}
 
 	*,
