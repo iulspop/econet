@@ -1,5 +1,5 @@
 
-User-agent: *
-Disallow: /confirmation/
+user-agent: *
+disallow: /confirmation
 
-Sitemap: https://nettoyageeconet.netlify.com/sitemap.xml
+sitemap: https://nettoyageeconet.netlify.com/sitemap.xml
