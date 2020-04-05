@@ -1,4 +1,4 @@
-const wrapWithI18nProvider = require("./src/components/wrapWithI18nProvider")
+const wrapWithI18nProvider = require("./src/wrapWithI18nProvider")
   .wrapWithI18nProvider
 
 exports.wrapPageElement = wrapWithI18nProvider
