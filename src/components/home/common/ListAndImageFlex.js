@@ -15,4 +15,8 @@ const StyledListAndImageFlex = styled.div`
   justify-content: space-between;
   flex-wrap: ${props => (props.reverseWrap ? "wrap-reverse" : "wrap")};
   width: 90vw;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    justify-content: center;
+  }
 `
