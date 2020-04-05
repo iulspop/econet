@@ -62,8 +62,8 @@ export const ChooseUs = () => {
         </ListContainer>
 
         <SideImage
-          ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/carpet-cleaning.jpg"
+          ariaLabel="smiling Javier Romero, owner of Econet"
+          url="/assets/smiling-owner.jpg"
         />
       </ListAndImageFlex>
     </StyledFlexColumn>

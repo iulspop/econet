@@ -20,8 +20,8 @@ const StyledSideImage = styled.div`
   background-position: center;
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    width: 95vw;
-    height: 300px;
+    width: 90vw;
+    height: 120vw;
     background-position: top;
   }
 `
