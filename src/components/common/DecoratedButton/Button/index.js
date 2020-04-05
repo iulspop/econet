@@ -62,9 +62,10 @@ const buttonStyle = css`
 
   @media only screen and ${props => props.theme.media.phone} {
     display: block;
-    font-size: calc(0.00882353 * 100vw + 1.417647rem);
     margin: 1.5rem auto;
     margin-bottom: 3rem;
+    font-size: calc(0.00882353 * 100vw + 1.417647rem);
+    line-height: 1.3;
   }
 
   &::before {

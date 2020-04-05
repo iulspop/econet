@@ -66,6 +66,10 @@ const StyledMain = styled.main`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  @media only screen and ${props => props.theme.media.phone} {
+    padding: 3rem;
+  }
 `
 const Flexbox = styled.div`
   display: flex;
@@ -143,5 +147,9 @@ const FlexContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: unset;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    margin: 1rem 0;
   }
 `
