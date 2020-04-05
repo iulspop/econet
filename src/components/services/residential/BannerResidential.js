@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { FlexColumn, DecorativeLine } from "../../home/common"
 import {
@@ -19,8 +18,8 @@ import { DecoratedButton } from "../../common"
 export const BannerResidential = () => {
   const { t } = useTranslation(["BannerResidential", "Links"])
   return (
-    <StyledFlexColumn>
-      <DecorativeLine />
+    <FlexColumn>
+      <DecorativeLine isPageTop="true" />
       <H1>{t("h1")}</H1>
       <H2>{t("h2")}</H2>
       <GridContainer>
@@ -82,12 +81,6 @@ export const BannerResidential = () => {
       <DecoratedButton href={t("Links:contact")} link left right slim>
         {t("CTAButton")}
       </DecoratedButton>
-    </StyledFlexColumn>
+    </FlexColumn>
   )
 }
-
-const StyledFlexColumn = styled(FlexColumn)`
-  @media only screen and (max-width: 700px) {
-    padding-top: 7rem;
-  }
-`

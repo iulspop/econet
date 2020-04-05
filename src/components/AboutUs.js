@@ -21,7 +21,7 @@ export const AboutUs = () => {
   const { t } = useTranslation(["AboutUs", "Links"])
   return (
     <FlexColumn>
-      <DecorativeLine src={"/assets/decorative-horizontal-line.png"} alt={""} />
+      <DecorativeLine isPageTop="true" />
       <ListAndImageFlex>
         <ListContainer>
           <SectionHeading>{t("mainHeading")}</SectionHeading>

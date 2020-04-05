@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { DecoratedButton } from "../common"
 import { Form } from "./Form"
 import { ContactInfo } from "./ContactInfo"
+import { DecorativeLine } from "../home/common"
+import { DecoratedButton } from "../common"
 
 export const Contact = () => {
   const { t } = useTranslation("Estimation")
@@ -21,10 +22,7 @@ export const Contact = () => {
   return (
     <StyledMain>
       <Flexbox>
-        <DecorativeLine
-          src={"/assets/decorative-horizontal-line.png"}
-          alt={""}
-        />
+        <DecorativeLine isPageTop="true" />
 
         <MainHeading>{t("mainHeading")}</MainHeading>
 
@@ -68,11 +66,7 @@ const StyledMain = styled.main`
   align-items: center;
 
   @media only screen and ${props => props.theme.media.phone} {
-    padding: 3rem;
-  }
-
-  @media only screen and (max-width: 700px) {
-    padding-top: 6rem;
+    padding: 2rem;
   }
 `
 const Flexbox = styled.div`
@@ -87,20 +81,6 @@ const Container = styled.div`
 
   @media only screen and ${props => props.theme.media.phone} {
     margin-top: 0rem;
-  }
-`
-
-const DecorativeLine = styled.img`
-  width: 700px;
-  margin-bottom: 2rem;
-
-  @media only screen and ${props => props.theme.media.tabPort} {
-    width: 455px;
-    margin-top: 1rem;
-  }
-
-  @media only screen and ${props => props.theme.media.phone} {
-    width: 290px;
   }
 `
 
