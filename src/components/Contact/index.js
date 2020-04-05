@@ -70,6 +70,10 @@ const StyledMain = styled.main`
   @media only screen and ${props => props.theme.media.phone} {
     padding: 3rem;
   }
+
+  @media only screen and (max-width: 700px) {
+    padding-top: 6rem;
+  }
 `
 const Flexbox = styled.div`
   display: flex;

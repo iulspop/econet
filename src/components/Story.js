@@ -50,6 +50,10 @@ const DecorativeLine = styled.img`
     width: 90vw;
     margin-bottom: 0;
   }
+
+  @media only screen and (max-width: 700px) {
+    padding-top: 5rem;
+  }
 `
 
 const FlexColumn = styled.div`
