@@ -62,7 +62,7 @@ export const Footer = ({ backgroundWhite }) => {
             </a>
           </ListItemVerticalCenterLeft>
           <ListItemHorizonalCenterDown>
-            <a href="#">
+            <a href="m.me/NettoyageEconet">
               <SVGIcon
                 width="24"
                 height="24"
