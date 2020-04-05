@@ -20,7 +20,7 @@ export const RegionsDesservies = () => {
           </ButtonContainer>
         </TextContainer>
 
-        <ImageOfMap aria-label={t("mapLabel")} />
+        <ImageOfMap aria-label={t("mapLabel")} src="/assets/service-area.jpg" />
       </TextAndMapFlex>
     </FlexColumn>
   )
@@ -88,7 +88,6 @@ const ButtonContainer = styled.div`
 const ImageOfMap = styled.img`
   width: 43vw;
   height: 35vw;
-  background-color: grey;
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
