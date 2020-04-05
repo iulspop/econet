@@ -21,6 +21,12 @@ const StyledSideImage = styled.div`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
+    height: 90vw;
+    background-position: top;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    width: 90vw;
     height: 120vw;
     background-position: top;
   }

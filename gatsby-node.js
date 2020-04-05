@@ -128,6 +128,7 @@ const createI18nextInstance = language => {
   i18n.use(nodeFsBackend).init({
     lng: language,
     ns: [
+      "AboutUs",
       "AreaQuestions",
       "Banner",
       "BannerCommercial",
@@ -156,7 +157,6 @@ const createI18nextInstance = language => {
       "StainCommercial",
       "StainResidential",
       "StainsQuestion",
-      "Story",
       "Testimonial",
       "Visit",
     ],
