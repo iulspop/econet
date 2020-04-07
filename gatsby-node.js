@@ -136,6 +136,7 @@ const createI18nextInstance = language => {
       "CarpetCommercial",
       "CarpetResidential",
       "ChooseUs",
+      "Component404",
       "Confirmation",
       "Contact",
       "ContactInfo",

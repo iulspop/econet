@@ -1,26 +1,7 @@
-import React from "react"
 import styled from "styled-components"
-import { useTranslation } from "react-i18next"
-import { linkReset } from "../mixins"
+import { linkReset } from "../../../mixins"
 
-export const Confirmation = () => {
-  const { t } = useTranslation(["Confirmation", "Links"])
-  return (
-    <Container>
-      <Box>
-        <H1>{t("merci")}</H1>
-        <Paragraph>
-          {t("paragraphLine1")}
-          <LineBreak />
-          {t("paragraphLine2")}
-        </Paragraph>
-        <ReturnLink href={t("Links:home")}>{t("return")}</ReturnLink>
-      </Box>
-    </Container>
-  )
-}
-
-const Container = styled.div`
+export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${props => props.theme.colors.primary};
@@ -30,7 +11,7 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Box = styled.div`
+export const Box = styled.div`
   width: 91vw;
   max-width: 40rem;
   padding: 4rem 2rem;
@@ -47,14 +28,15 @@ const Box = styled.div`
   }
 `
 
-const H1 = styled.h1`
+export const H1 = styled.h1`
   margin: 0;
   margin-bottom: 2rem;
   font-size: 3.4rem;
   line-height: 1;
+  text-align: center;
 `
 
-const Paragraph = styled.p`
+export const Paragraph = styled.p`
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.2rem;
@@ -64,16 +46,7 @@ const Paragraph = styled.p`
   }
 `
 
-const LineBreak = styled.span`
-  &::before {
-    @media only screen and (min-width: 500px) {
-      content: "\";
-      white-space: pre;
-    }
-  }
-`
-
-const ReturnLink = styled.a`
+export const ReturnLink = styled.a`
   ${linkReset}
   width: 15rem;
   height: 4.2rem;

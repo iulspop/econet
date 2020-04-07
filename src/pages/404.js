@@ -2,13 +2,13 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../theme"
 import { Layout } from "../components/common"
-import { Confirmation } from "../components/misc/Confirmation"
+import { Component404 } from "../components/misc/Component404"
 
-export default function confirmationPage() {
+export default function page404() {
   return (
     <ThemeProvider theme={{ ...theme, page: "home" }}>
       <Layout>
-        <Confirmation />
+        <Component404 />
       </Layout>
     </ThemeProvider>
   )
