@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { DecoratedButton } from "./common"
 import {
@@ -6,7 +7,6 @@ import {
   FlexColumn,
   ListAndImageFlex,
   ListContainer,
-  SectionHeading,
   SideImage,
 } from "./home/common"
 import {
@@ -24,10 +24,10 @@ export const AboutUs = () => {
       <DecorativeLine isPageTop="true" />
       <ListAndImageFlex>
         <ListContainer>
-          <SectionHeading>{t("mainHeading")}</SectionHeading>
+          <H1>{t("mainHeading")}</H1>
           <Paragraph>{t("paragraph1")}</Paragraph>
           <Paragraph>{t("paragraph2")}</Paragraph>
-          <h4>{t("listHeading")}</h4>
+          <strong>{t("listHeading")}</strong>
           <BulletList>
             <ListItemGreen>{t("listItem1")}</ListItemGreen>
             <ListItemBrown>{t("listItem2")}</ListItemBrown>
@@ -53,3 +53,13 @@ export const AboutUs = () => {
     </FlexColumn>
   )
 }
+
+const H1 = styled.h1`
+  font-size: 5rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    font-size: calc(0.045 * 100vw + 2rem);
+  }
+`
