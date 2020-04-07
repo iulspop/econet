@@ -152,6 +152,7 @@ const createI18nextInstance = language => {
       "ProtectionCommercial",
       "ProtectionResidential",
       "RegionsDesservies",
+      "RegionsPage",
       "Service",
       "ServiceList",
       "ServiceQuestion",

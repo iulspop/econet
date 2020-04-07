@@ -17,7 +17,7 @@ export const Testimonial = () => {
       </CustomerQuote>
       <CustomerName>- {t("customer1")}</CustomerName>
       <Link href="https://goo.gl/maps/fTYwJTmaLoEuuYny9">
-        Read all Google reviews
+        {t("readReviews")}
       </Link>
     </StyledFlexColumn>
   )

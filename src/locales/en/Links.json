@@ -4,5 +4,6 @@
   "residential": "/en/residential",
   "commercial": "/en/commercial",
   "contact": "/en/contact",
-  "confirmation": "/en/confirmation"
+  "confirmation": "/en/confirmation",
+  "regions": "/en/regions-desservies"
 }

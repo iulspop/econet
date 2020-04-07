@@ -14,7 +14,7 @@ export const RegionsDesservies = () => {
           <StyledSectionHeading>{t("sectionHeading")}</StyledSectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>
           <ButtonContainer>
-            <DecoratedButton href={t("Links:contact")} link left right slim>
+            <DecoratedButton href={t("Links:regions")} link left right slim>
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>

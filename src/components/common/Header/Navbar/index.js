@@ -30,6 +30,8 @@ export const Navbar = () => {
           return "/en/commercial"
         case "contact":
           return "/en/contact"
+        case "regions":
+          return "/en/regions-desservies"
         default:
           throw new Error(`Invalid page. Received: ${page}`)
       }
@@ -45,6 +47,8 @@ export const Navbar = () => {
           return "/commercial"
         case "contact":
           return "/contact"
+        case "regions":
+          return "/regions-desservies"
         default:
           throw new Error(`Invalid page. Received: ${page}`)
       }
