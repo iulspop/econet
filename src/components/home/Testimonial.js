@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { DecorativeLine, FlexColumn } from "./common"
+import { linkReset } from "../../mixins"
 
 export const Testimonial = () => {
   const { t } = useTranslation("Testimonial")
@@ -15,6 +16,9 @@ export const Testimonial = () => {
         <QuotationMark>”</QuotationMark>
       </CustomerQuote>
       <CustomerName>- {t("customer1")}</CustomerName>
+      <Link href="https://goo.gl/maps/fTYwJTmaLoEuuYny9">
+        Read all Google reviews
+      </Link>
     </StyledFlexColumn>
   )
 }
@@ -68,5 +72,16 @@ const CustomerName = styled.strong`
 
   @media only screen and ${props => props.theme.media.tabPort} {
     font-size: calc(0.03064516 * 100vw + 1.119354839rem);
+  }
+`
+
+const Link = styled.a`
+  ${linkReset}
+  margin-top: 2rem;
+  font-size: 2rem;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: ${props => props.theme.colors.primary};
   }
 `
