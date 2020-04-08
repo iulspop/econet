@@ -14,7 +14,9 @@ export const Footer = ({ backgroundWhite }) => {
           alt="Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
         />
         <CTA>{t("cta")}</CTA>
-        <NumberLink href="tel:5146666601">514-666-6601</NumberLink>
+        <NumberLink href="tel:5146666601" target="_blank">
+          514-666-6601
+        </NumberLink>
       </FlexColumn>
 
       <Nav>
@@ -38,7 +40,7 @@ export const Footer = ({ backgroundWhite }) => {
       <FlexContainer>
         <ListOfSocialMediaLinks>
           <ListItemHorizonalCenterUp>
-            <a href="https://www.facebook.com/NettoyageEconet">
+            <a href="https://www.facebook.com/NettoyageEconet" target="_blank">
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -50,7 +52,10 @@ export const Footer = ({ backgroundWhite }) => {
             </a>
           </ListItemHorizonalCenterUp>
           <ListItemVerticalCenterLeft>
-            <a href="https://www.linkedin.com/company/nettoyageeconet/">
+            <a
+              href="https://www.linkedin.com/company/nettoyageeconet/"
+              target="_blank"
+            >
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -62,7 +67,7 @@ export const Footer = ({ backgroundWhite }) => {
             </a>
           </ListItemVerticalCenterLeft>
           <ListItemHorizonalCenterDown>
-            <a href="m.me/NettoyageEconet">
+            <a href="https://m.me/NettoyageEconet" target="_blank">
               <SVGIcon
                 width="24"
                 height="24"
@@ -75,7 +80,7 @@ export const Footer = ({ backgroundWhite }) => {
             </a>
           </ListItemHorizonalCenterDown>
           <ListItemVerticalCenterRight>
-            <a href="mailto:info@nettoyageeconet.com">
+            <a href="mailto:info@nettoyageeconet.com" target="_blank">
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

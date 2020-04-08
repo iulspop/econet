@@ -29,11 +29,7 @@ export const ListItemGreen = styled.li`
   }
 `
 
-export const ListItemBrown = styled(ListItemGreen)`
-  &::before {
-    background-color: ${props => props.theme.colors.secondary};
-  }
-`
+export const ListItemBrown = styled(ListItemGreen)``
 
 export const ButtonContainer = styled.div`
   display: flex;

@@ -12,14 +12,16 @@ export const ContactInfo = () => {
       <Container>
         <H4>{t("phone")}</H4>
         <p>
-          <Link href="tel:514-666-6601">514-666-6601</Link>
+          <Link href="tel:514-666-6601" target="_blank">
+            514-666-6601
+          </Link>
         </p>
       </Container>
 
       <Container>
         <H4>{t("email")}</H4>
         <p>
-          <Link href="mailto:info@nettoyageeconet.com">
+          <Link href="mailto:info@nettoyageeconet.com" target="_blank">
             info@nettoyageeconet.com
           </Link>
         </p>
@@ -42,7 +44,7 @@ export const ContactInfo = () => {
       <Container>
         <H4>{t("addressTitle")}</H4>
         <address>
-          <Link href="https://goo.gl/maps/fTYwJTmaLoEuuYny9">
+          <Link href="https://goo.gl/maps/fTYwJTmaLoEuuYny9" target="_blank">
             {t("address")}
           </Link>
         </address>

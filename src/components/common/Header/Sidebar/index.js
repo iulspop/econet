@@ -25,7 +25,9 @@ export const Sidebar = ({ showNav }) => {
           {t("commercial")}
         </LinkCommercial>
         <LinkContact to={t("Links:contact")}>{t("contact")}</LinkContact>
-        <LinkNumber href="tel:5146666601">514-666-6601</LinkNumber>
+        <LinkNumber href="tel:5146666601" target="_blank">
+          514-666-6601
+        </LinkNumber>
       </StyledSidebar>
     </>
   )

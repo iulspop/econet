@@ -32,27 +32,17 @@ export const ServiceList = () => {
           <List>
             <LeftListContainer>
               <ListItemGreen>{t("listItem1")}</ListItemGreen>
-              <ListItemBrown>{t("listItem2")}</ListItemBrown>
+              <ListItemGreen>{t("listItem2")}</ListItemGreen>
               <ListItemGreen>{t("listItem3")}</ListItemGreen>
-              <ListItemBrown>{t("listItem4")}</ListItemBrown>
+              <ListItemGreen>{t("listItem4")}</ListItemGreen>
               <ListItemGreen>{t("listItem5")}</ListItemGreen>
             </LeftListContainer>
             <RightListContainer>
-              <ListItemGreen switchWhenOneColumn={true}>
-                {t("listItem6")}
-              </ListItemGreen>
-              <ListItemBrown switchWhenOneColumn={true}>
-                {t("listItem7")}
-              </ListItemBrown>
-              <ListItemGreen switchWhenOneColumn={true}>
-                {t("listItem8")}
-              </ListItemGreen>
-              <ListItemBrown switchWhenOneColumn={true}>
-                {t("listItem9")}
-              </ListItemBrown>
-              <ListItemGreen switchWhenOneColumn={true}>
-                {t("listItem10")}
-              </ListItemGreen>
+              <ListItemGreen>{t("listItem6")}</ListItemGreen>
+              <ListItemGreen>{t("listItem7")}</ListItemGreen>
+              <ListItemGreen>{t("listItem8")}</ListItemGreen>
+              <ListItemGreen>{t("listItem9")}</ListItemGreen>
+              <ListItemGreen>{t("listItem10")}</ListItemGreen>
             </RightListContainer>
           </List>
 
@@ -115,23 +105,6 @@ const ListItemGreen = styled.li`
 
     @media only screen and ${props => props.theme.media.phone} {
       top: 6px;
-      background-color: ${props =>
-        props.switchWhenOneColumn
-          ? props.theme.colors.secondary
-          : props.theme.colors.primary};
-    }
-  }
-`
-
-const ListItemBrown = styled(ListItemGreen)`
-  &::before {
-    background-color: ${props => props.theme.colors.secondary};
-
-    @media only screen and ${props => props.theme.media.phone} {
-      background-color: ${props =>
-        props.switchWhenOneColumn
-          ? props.theme.colors.primary
-          : props.theme.colors.secondary};
     }
   }
 `
