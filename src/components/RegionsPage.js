@@ -14,7 +14,7 @@ export const RegionsPage = () => {
         <Flex>
           <ListContainer>
             <H2>{t("listMontreal")}</H2>
-            <BulletList>
+            <StyledBulletList>
               <ListItemGreen>Beaconsfield</ListItemGreen>
               <ListItemBrown>Baie d'Urfé</ListItemBrown>
               <ListItemGreen>Côte-Saint-Luc</ListItemGreen>
@@ -30,7 +30,7 @@ export const RegionsPage = () => {
               <ListItemGreen>Sainte-Anne-de-Bellevue</ListItemGreen>
               <ListItemBrown>Senneville</ListItemBrown>
               <ListItemGreen>Westmount</ListItemGreen>
-            </BulletList>
+            </StyledBulletList>
           </ListContainer>
 
           <ListContainer>
@@ -39,18 +39,18 @@ export const RegionsPage = () => {
 
           <ListContainer>
             <H2>{t("listLongeuil")}</H2>
-            <BulletList>
+            <StyledBulletList>
               <ListItemGreen>Boucherville</ListItemGreen>
               <ListItemBrown>Brossard</ListItemBrown>
               <ListItemGreen>Longeuil</ListItemGreen>
               <ListItemBrown>Saint-Bruno-De-Montarville</ListItemBrown>
               <ListItemGreen>Saint-Lambert</ListItemGreen>
-            </BulletList>
+            </StyledBulletList>
           </ListContainer>
 
           <ListContainer>
             <H2>{t("listRichelieu")}</H2>
-            <BulletList>
+            <StyledBulletList>
               <ListItemGreen>Beloeuil</ListItemGreen>
               <ListItemBrown>Carignon</ListItemBrown>
               <ListItemGreen>Chambly</ListItemGreen>
@@ -64,24 +64,24 @@ export const RegionsPage = () => {
               <ListItemGreen>Saint-Jean-Baptiste</ListItemGreen>
               <ListItemBrown>Saint-Marc-sur-Richelieu</ListItemBrown>
               <ListItemGreen>Saint-Mathieu-Dé-Beloeil</ListItemGreen>
-            </BulletList>
+            </StyledBulletList>
           </ListContainer>
 
           <ListContainer>
             <H2>{t("listMarguerite")}</H2>
-            <BulletList>
+            <StyledBulletList>
               <ListItemGreen>Calixa-Lavallée</ListItemGreen>
               <ListItemBrown>Contrecoeur</ListItemBrown>
               <ListItemGreen>Saint-Amable</ListItemGreen>
               <ListItemBrown>Sainte-Julie</ListItemBrown>
               <ListItemGreen>Varennes</ListItemGreen>
               <ListItemBrown>Verchères</ListItemBrown>
-            </BulletList>
+            </StyledBulletList>
           </ListContainer>
 
           <ListContainer>
             <H2>{t("listRoussillon")}</H2>
-            <BulletList>
+            <StyledBulletList>
               <ListItemGreen>Candiac</ListItemGreen>
               <ListItemBrown>Châteauguay</ListItemBrown>
               <ListItemGreen>Delson</ListItemGreen>
@@ -94,7 +94,7 @@ export const RegionsPage = () => {
               <ListItemBrown>Saint-Mathieu</ListItemBrown>
               <ListItemGreen>Saint-Phillipe</ListItemGreen>
               <ListItemBrown>Saint-Catherine</ListItemBrown>
-            </BulletList>
+            </StyledBulletList>
           </ListContainer>
         </Flex>
       </Container>
@@ -133,6 +133,10 @@ const Flex = styled.div`
 
 const ListContainer = styled.div`
   margin-right: 3rem;
+`
+
+const StyledBulletList = styled(BulletList)`
+  margin-left: 2.5rem;
 `
 
 const H2 = styled.h2`

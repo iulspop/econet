@@ -6,7 +6,7 @@ export const Paragraph = styled.p`
 
 export const BulletList = styled.ul`
   list-style: none;
-  margin-left: 2.5rem;
+  margin-left: 3.8rem;
   margin-bottom: 3rem;
 `
 

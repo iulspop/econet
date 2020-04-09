@@ -40,7 +40,11 @@ export const Footer = ({ backgroundWhite }) => {
       <FlexContainer>
         <ListOfSocialMediaLinks>
           <ListItemHorizonalCenterUp>
-            <a href="https://www.facebook.com/NettoyageEconet" target="_blank">
+            <a
+              href="https://www.facebook.com/NettoyageEconet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -55,6 +59,7 @@ export const Footer = ({ backgroundWhite }) => {
             <a
               href="https://www.linkedin.com/company/nettoyageeconet/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +72,11 @@ export const Footer = ({ backgroundWhite }) => {
             </a>
           </ListItemVerticalCenterLeft>
           <ListItemHorizonalCenterDown>
-            <a href="https://m.me/NettoyageEconet" target="_blank">
+            <a
+              href="https://m.me/NettoyageEconet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SVGIcon
                 width="24"
                 height="24"
@@ -80,7 +89,7 @@ export const Footer = ({ backgroundWhite }) => {
             </a>
           </ListItemHorizonalCenterDown>
           <ListItemVerticalCenterRight>
-            <a href="mailto:info@nettoyageeconet.com" target="_blank">
+            <a href="mailto:info@nettoyageeconet.com">
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

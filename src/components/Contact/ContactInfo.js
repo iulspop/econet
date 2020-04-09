@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { linkReset } from "../../mixins"
+import { GatsbyLink } from "../common/Header/Links/GatsbyLink"
 
 export const ContactInfo = () => {
   const { t } = useTranslation("ContactInfo")
@@ -21,7 +22,7 @@ export const ContactInfo = () => {
       <Container>
         <H4>{t("email")}</H4>
         <p>
-          <Link href="mailto:info@nettoyageeconet.com" target="_blank">
+          <Link href="mailto:info@nettoyageeconet.com">
             info@nettoyageeconet.com
           </Link>
         </p>
@@ -38,13 +39,19 @@ export const ContactInfo = () => {
 
       <Container>
         <H4>{t("area")}</H4>
-        <p>{t("cities")}</p>
+        <StyledGatsbyLink to="regions-desservies">
+          <p>{t("cities")}</p>
+        </StyledGatsbyLink>
       </Container>
 
       <Container>
         <H4>{t("addressTitle")}</H4>
         <address>
-          <Link href="https://goo.gl/maps/fTYwJTmaLoEuuYny9" target="_blank">
+          <Link
+            href="https://goo.gl/maps/fTYwJTmaLoEuuYny9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t("address")}
           </Link>
         </address>
@@ -95,6 +102,16 @@ const H4 = styled.h4`
 `
 
 const Link = styled.a`
+  ${linkReset};
+  transition: 0.3s ease;
+  color: white;
+
+  &:hover {
+    font-weight: 700;
+  }
+`
+
+const StyledGatsbyLink = styled(GatsbyLink)`
   ${linkReset};
   transition: 0.3s ease;
   color: white;

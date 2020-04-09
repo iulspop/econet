@@ -30,7 +30,7 @@ const StyledFlexColumn = styled(FlexColumn)`
 const SectionHeadingH3 = styled.h3`
   font-size: 5rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   width: 95vw;
   text-align: center;
 
@@ -44,7 +44,7 @@ const SectionHeadingH3 = styled.h3`
 `
 
 const CustomerQuote = styled.p`
-  font-size: 5rem;
+  font-size: 4rem;
   width: 66vw;
   text-align: center;
 
@@ -53,7 +53,6 @@ const CustomerQuote = styled.p`
   }
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    font-size: 4.5rem;
     width: 80vw;
   }
 
@@ -68,7 +67,7 @@ const QuotationMark = styled.span`
 
 const CustomerName = styled.strong`
   margin-top: 0.2rem;
-  font-size: 4rem;
+  font-size: 3.5rem;
 
   @media only screen and ${props => props.theme.media.tabPort} {
     font-size: calc(0.03064516 * 100vw + 1.119354839rem);
@@ -77,7 +76,7 @@ const CustomerName = styled.strong`
 
 const Link = styled.a`
   ${linkReset}
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 2rem;
   transition: 0.3s ease;
 
