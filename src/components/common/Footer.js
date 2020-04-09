@@ -34,6 +34,9 @@ export const Footer = ({ backgroundWhite }) => {
           <LongWebsiteLink to={t("Links:commercial")}>
             {t("Header:commercial")}
           </LongWebsiteLink>
+          <LongWebsiteLink to={t("Links:regions")}>
+            {t("Header:regions")}
+          </LongWebsiteLink>
         </LinkColumn>
       </Nav>
 
@@ -181,6 +184,11 @@ const Nav = styled.nav`
     margin-top: 5rem;
     width: 90vw;
   }
+
+  @media screen and ${props => props.theme.media.phone} {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const LinkColumn = styled.div`
@@ -191,6 +199,10 @@ const LinkColumn = styled.div`
 
 const LinkColumnLeft = styled(LinkColumn)`
   margin-right: 4vw;
+
+  @media screen and ${props => props.theme.media.phone} {
+    margin-right: 0;
+  }
 `
 
 const WebsiteLink = styled(GatsbyLink)`
@@ -213,7 +225,13 @@ const WebsiteLink = styled(GatsbyLink)`
 
   @media screen and (max-width: 660px) {
     width: 35vw;
-    font-size: calc(0.0105 * 100vw + 1.623529412rem);
+    // font-size: calc(0.0105 * 100vw + 1.623529412rem);
+  }
+
+  @media screen and ${props => props.theme.media.phone} {
+    width: 80vw;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
   }
 `
 
@@ -222,6 +240,10 @@ const LongWebsiteLink = styled(WebsiteLink)`
 
   @media screen and (max-width: 660px) {
     width: 47vw;
+  }
+
+  @media screen and ${props => props.theme.media.phone} {
+    width: 80vw;
   }
 `
 
