@@ -90,14 +90,12 @@ exports.onCreatePage = ({ page, actions }) => {
     toPath: "/commercial",
     isPermanent: true,
   })
-  // allLanguages.forEach(language =>
-  //   createRedirect({
-  //     fromPath: `/${language}/*`,
-  //     toPath: `/${language}/404`,
-  //     statusCode: 404,
-  //   })
-  // )
-  // createRedirect({ fromPath: "/*", toPath: "/404", statusCode: 404 })
+  createRedirect({
+    fromPath: `/en/*`,
+    toPath: `/en/404`,
+    statusCode: 404,
+  })
+  createRedirect({ fromPath: "/*", toPath: "/404", statusCode: 404 })
 
   allLanguages.map(language => {
     const localizedPath =
