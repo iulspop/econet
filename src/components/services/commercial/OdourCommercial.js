@@ -45,7 +45,7 @@ export const OdourCommercial = () => {
         </ListContainer>
         <SideImage
           ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/carpet-cleaning.jpg"
+          url="/assets/odour-control.jpg"
         />
       </ListAndImageFlex>
     </FlexColumn>
