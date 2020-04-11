@@ -39,9 +39,9 @@ export const Form = () => {
           <option value="no">{t("noNewCustomer")}</option>
           <option value="neither">{t("neitherNewCustomer")}</option>
         </Select>
-        <CustomerQuestionLabel htmlFor="newCustomer">
+        <SmallerFontLabel htmlFor="newCustomer">
           {t("newCustomer")}
-        </CustomerQuestionLabel>
+        </SmallerFontLabel>
       </InputContainer>
 
       <InputContainerMarginRight>
@@ -67,7 +67,7 @@ export const Form = () => {
           <option value="spanish">{t("spanish")}</option>
           <option value="indifferent">{t("indifferent")}</option>
         </Select>
-        <Label htmlFor="language">{t("language")}</Label>
+        <SmallerFontLabel htmlFor="language">{t("language")}</SmallerFontLabel>
       </InputContainerMarginRight>
 
       <InputContainer>
@@ -80,7 +80,9 @@ export const Form = () => {
           <option value="text message">{t("textCom")}</option>
           <option value="email">{t("emailCom")}</option>
         </Select>
-        <Label htmlFor="prefCommunication">{t("prefCommunication")}</Label>
+        <SmallerFontLabel htmlFor="prefCommunication">
+          {t("prefCommunication")}
+        </SmallerFontLabel>
       </InputContainer>
 
       <InputContainer>
@@ -103,7 +105,7 @@ export const Form = () => {
   )
 }
 
-const StyledForm = styled.form`
+export const StyledForm = styled.form`
   display: flex;
   width: 45vw;
   flex-wrap: wrap;
@@ -121,7 +123,7 @@ const StyledForm = styled.form`
   }
 `
 
-const InputContainer = styled.div`
+export const InputContainer = styled.div`
   display: inline-block;
   position: relative;
   margin: 2.5rem 0;
@@ -151,11 +153,11 @@ const InputContainer = styled.div`
   }
 `
 
-const InputContainerMarginRight = styled(InputContainer)`
+export const InputContainerMarginRight = styled(InputContainer)`
   margin-right: 3vw;
 `
 
-const Label = styled.label`
+export const Label = styled.label`
   position: absolute;
   padding: 0.8rem 1rem;
   height: 80%;
@@ -168,11 +170,11 @@ const Label = styled.label`
   white-space: nowrap;
 `
 
-const CustomerQuestionLabel = styled(Label)`
+export const SmallerFontLabel = styled(Label)`
   font-size: 1.7rem;
 `
 
-const Input = styled.input`
+export const Input = styled.input`
   padding: 1rem 1rem;
   width: 21vw;
   height: 50px;
@@ -200,7 +202,7 @@ const Input = styled.input`
   }
 `
 
-const TextArea = styled.textarea`
+export const TextArea = styled.textarea`
   padding: 1rem 1rem;
   width: 45vw;
 
@@ -221,7 +223,7 @@ const TextArea = styled.textarea`
   }
 `
 
-const Select = styled.select`
+export const Select = styled.select`
   padding: 1rem 1rem;
   padding-right: 4rem;
   width: 21vw;
@@ -270,7 +272,7 @@ const Select = styled.select`
   }
 `
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 45vw;

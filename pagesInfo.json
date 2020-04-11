@@ -93,6 +93,7 @@
     "component": "src/templates/contact.js",
     "namespaces": [
       "Header",
+      "HomeForm",
       "Estimation",
       "ContactInfo",
       "Contact",

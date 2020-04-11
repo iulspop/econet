@@ -63,7 +63,6 @@ export const ContactInfo = () => {
 const ContactInfoBox = styled.aside`
   width: 25vw;
   min-width: 330px;
-  height: 587.56px;
   margin-left: 4rem;
   padding: 2rem 1.5rem;
   border-radius: 3px;
@@ -74,14 +73,9 @@ const ContactInfoBox = styled.aside`
   line-height: 1.5;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    width: 30vw;
-  }
-
-  @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
-    max-width: 531px;
+    max-width: 600px;
     min-width: unset;
-    margin-top: 5rem;
     margin-left: 0;
   }
 `

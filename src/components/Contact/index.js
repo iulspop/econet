@@ -116,17 +116,13 @@ const SecondaryHeading = styled.h2`
 `
 
 const FlexContainer = styled.div`
-  width: 75vw;
+  width: 90vw;
   margin: 5rem 0;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   @media only screen and ${props => props.theme.media.tabLand} {
-    width: 75vw;
-  }
-
-  @media only screen and ${props => props.theme.media.tabPort} {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
