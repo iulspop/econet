@@ -12,14 +12,51 @@ const removeTrailingSlash = path =>
 
 const allLanguages = ["fr", "en"]
 
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage, createRedirect } = actions
+var pagesInfoJSON = fs.readFileSync("./pagesInfo.json")
+var pagesInfo = JSON.parse(pagesInfoJSON)
 
-  // First delete the incoming page that was automatically created by Gatsby
-  // So everything in src/pages/
-  deletePage(page)
+exports.createPages = ({ actions }) => {
+  const { createPage, createRedirect } = actions
 
-  // redirect from old econet website links
+  createAllRedirects(createRedirect)
+
+  for (let pageName in pagesInfo) {
+    allLanguages.map(language => {
+      const i18n = createI18nextInstance(
+        language,
+        pagesInfo[pageName].namespaces
+      )
+
+      const pageTemplate = path.resolve(pagesInfo[pageName].component)
+
+      return createPage({
+        path: pagesInfo[pageName][language].path,
+        component: pageTemplate,
+        context: {
+          language: language,
+          i18nResources: i18n.services.resourceStore.data,
+          title: pagesInfo[pageName][language].title,
+          metaDescription: pagesInfo[pageName][language].metaDescription,
+        },
+      })
+    })
+  }
+}
+
+const createI18nextInstance = (language, namespaces) => {
+  const i18n = i18next.createInstance()
+  i18n.use(nodeFsBackend).init({
+    lng: language,
+    ns: namespaces,
+    fallbackLng: "fr",
+    initImmediate: false,
+    interpolation: { escapeValue: false },
+    backend: { loadPath: `${srcPath}/locales/{{lng}}/{{ns}}.json` },
+  })
+  return i18n
+}
+
+const createAllRedirects = createRedirect => {
   createRedirect({
     fromPath: "/NosClients.html",
     toPath: "/",
@@ -91,79 +128,9 @@ exports.onCreatePage = ({ page, actions }) => {
     isPermanent: true,
   })
   createRedirect({
-    fromPath: `/en/*`,
-    toPath: `/en/404`,
+    fromPath: "/en/*",
+    toPath: "/en/404",
     statusCode: 404,
   })
   createRedirect({ fromPath: "/*", toPath: "/404", statusCode: 404 })
-
-  allLanguages.map(language => {
-    const localizedPath =
-      language === "fr" ? page.path : `${language}${page.path}`
-
-    const i18n = createI18nextInstance(language)
-
-    return createPage({
-      // Pass on everything from the original page
-      ...page,
-      // Since page.path returns with a trailing slash (e.g. "/de/")
-      // We want to remove that
-      path: removeTrailingSlash(localizedPath),
-      // Pass in the locale as context to every page
-      // This context also gets passed to the src/components/layout file
-      // This should ensure that the locale is available on every page
-      context: {
-        ...page.context,
-        language: language,
-        i18nResources: i18n.services.resourceStore.data,
-      },
-    })
-  })
-}
-
-const createI18nextInstance = language => {
-  const i18n = i18next.createInstance()
-  i18n.use(nodeFsBackend).init({
-    lng: language,
-    ns: [
-      "AboutUs",
-      "AreaQuestions",
-      "Banner",
-      "BannerCommercial",
-      "BannerResidential",
-      "CarpetCommercial",
-      "CarpetResidential",
-      "ChooseUs",
-      "Component404",
-      "Confirmation",
-      "Contact",
-      "ContactInfo",
-      "Estimation",
-      "Footer",
-      "FurnitureCommercial",
-      "FurnitureResidential",
-      "Header",
-      "HomeForm",
-      "Links",
-      "OdourCommercial",
-      "OdourResidential",
-      "ProtectionCommercial",
-      "ProtectionResidential",
-      "RegionsDesservies",
-      "RegionsPage",
-      "Service",
-      "ServiceList",
-      "ServiceQuestion",
-      "StainCommercial",
-      "StainResidential",
-      "StainsQuestion",
-      "Testimonial",
-      "Visit",
-    ],
-    fallbackLng: "fr",
-    initImmediate: false,
-    interpolation: { escapeValue: false },
-    backend: { loadPath: `${srcPath}/locales/{{lng}}/{{ns}}.json` },
-  })
-  return i18n
 }

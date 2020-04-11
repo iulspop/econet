@@ -1,9 +1,9 @@
 {
   "home": "/en",
-  "about": "/en/about",
-  "residential": "/en/residential",
-  "commercial": "/en/commercial",
+  "about": "/en/about-us",
+  "residential": "/en/residential-carpet-upholstery-cleaning",
+  "commercial": "/en/commercial-carpet-upholstery-cleaning",
   "contact": "/en/contact",
-  "confirmation": "/en/confirmation",
-  "regions": "/en/regions-desservies"
+  "regions": "/en/areas-we-serve",
+  "confirmation": "/en/confirmation"
 }

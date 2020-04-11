@@ -1,9 +1,9 @@
 {
   "home": "/",
-  "about": "/about",
-  "residential": "/residential",
-  "commercial": "/commercial",
+  "about": "/a-propos",
+  "residential": "/nettoyage-tapis-meubles-residentiel",
+  "commercial": "/nettoyage-tapis-meubles-commercial",
   "contact": "/contact",
-  "confirmation": "/confirmation",
-  "regions": "/regions-desservies"
+  "regions": "/villes-desservies",
+  "confirmation": "/confirmation"
 }

@@ -1,0 +1,163 @@
+{
+  "/": {
+    "component": "src/templates/index.js",
+    "namespaces": [
+      "Header",
+      "Banner",
+      "ServiceList",
+      "ChooseUs",
+      "HomeForm",
+      "Testimonial",
+      "RegionsDesservies",
+      "Footer",
+      "Links"
+    ],
+    "en": {
+      "path": "/en",
+      "title": "Montreal’s #1 Ecological Carpet & Upholstery Cleaning Service | Nettoyage Econet",
+      "metaDescription": "Ecological carpet & upholstery cleaning for your home & your business. Fast drying times. Free quote. Book in under 5 minutes. Safe for you & the environment!"
+    },
+    "fr": {
+      "path": "/",
+      "title": "Le nettoyage écologique de tapis meubles No1 à Montréal | Nettoyage Econet",
+      "metaDescription": "Nettoyage écologique de tapis & meubles pour votre maison & entreprise. Estimation gratuite. Réservez en moins de 5 minutes. Sécuritaire pour vous & l’environnement."
+    }
+  },
+
+  "/about/": {
+    "component": "src/templates/about.js",
+    "namespaces": ["Header", "AboutUs", "Footer", "Links"],
+    "en": {
+      "path": "/en/about-us",
+      "title": "About Nettoyage Econet | Montreal Carpet and Upholstery Cleaning",
+      "metaDescription": "Econet is the ecological family-owned carpet and upholstery cleaning company that puts their customers first. Contact us for a free quote at 514-666-6601."
+    },
+    "fr": {
+      "path": "/a-propos",
+      "title": "À propos Nettoyage Econet | Nettoyage de tapis et de meubles Montréal",
+      "metaDescription": "L'entreprise familiale de nettoyage de tapis et meubles écologique, qui met leurs clients en avant. Contactez-nous pour une estimation gratuite au 514-666-6601."
+    }
+  },
+
+  "/residential/": {
+    "component": "src/templates/residential.js",
+    "namespaces": [
+      "Header",
+      "BannerResidential",
+      "CarpetResidential",
+      "FurnitureResidential",
+      "StainResidential",
+      "OdourResidential",
+      "ProtectionResidential",
+      "Footer",
+      "Links"
+    ],
+    "en": {
+      "path": "/en/residential-carpet-upholstery-cleaning",
+      "title": "Residential Carpet and Upholstery Cleaning Services Montreal | Nettoyage Econet",
+      "metaDescription": "Ecological carpet & upholstery cleaning in the Montreal area. Non-toxic products. Safe for your kids, your pets & the environment. Free quote. Book in 5 minutes."
+    },
+    "fr": {
+      "path": "/nettoyage-tapis-meubles-residentiel",
+      "title": "Nettoyage de tapis et de meubles résidentiel Montréal | Nettoyage Econet",
+      "metaDescription": "Nettoyage écologique de tapis & meubles dans le Grand Montréal. Produits non-toxiques. Sécuritaires pour vos enfants & vos animaux. Estimation gratuite."
+    }
+  },
+
+  "/commercial/": {
+    "component": "src/templates/commercial.js",
+    "namespaces": [
+      "Header",
+      "BannerCommercial",
+      "CarpetCommercial",
+      "FurnitureCommercial",
+      "StainCommercial",
+      "OdourCommercial",
+      "ProtectionCommercial",
+      "Footer",
+      "Links"
+    ],
+    "en": {
+      "path": "/en/commercial-carpet-upholstery-cleaning",
+      "title": "Commercial Carpet and Upholstery Cleaning Services Montreal | Nettoyage Econet",
+      "metaDescription": "Ecological commercial carpet & upholstery cleaning in Greater Montreal. Fast drying time. Free quote. Certified cleaners."
+    },
+    "fr": {
+      "path": "/nettoyage-tapis-meubles-commercial",
+      "title": "Nettoyage de tapis et de meubles commercial Montréal | Nettoyage Econet",
+      "metaDescription": "Nettoyage écologique commercial de tapis & meubles dans le Grand Montréal. Temps de séchage rapide. Estimation gratuite. Nettoyeurs certifiés. Plus de 30 ans d'expérience dans le nettoyage de tapis et meubles pour les tours de condo, les maisons retraités et les tours de bureaux."
+    }
+  },
+
+  "/contact/": {
+    "component": "src/templates/contact.js",
+    "namespaces": [
+      "Header",
+      "Estimation",
+      "ContactInfo",
+      "Contact",
+      "AreaQuestions",
+      "ServiceQuestion",
+      "StainsQuestion",
+      "Service",
+      "Visit",
+      "Footer",
+      "Links"
+    ],
+    "en": {
+      "path": "/en/contact",
+      "title": "Contact Nettoyage Econet | Upholstery and Carpet Cleaning Montreal",
+      "metaDescription": "Réservez votre nettoyage de tapis & meubles en moins de 5 minutes ou moins. Obtenez votre estimation gratuite au 514-666-6601."
+    },
+    "fr": {
+      "path": "/contact",
+      "title": "Contactez Nettoyage Econet | Nettoyage de tapis et de meubles Montréal",
+      "metaDescription": "Book your ecological carpet & upholstery cleaning in 5 minutes or less. Get your free quote at 514-666-6601."
+    }
+  },
+
+  "/regions-desservies/": {
+    "component": "src/templates/regions-desservies.js",
+    "namespaces": ["Header", "RegionsPage", "Footer", "Links"],
+    "en": {
+      "path": "/en/areas-we-serve",
+      "title": "Areas We Serve | Nettoyage Econet",
+      "metaDescription": "Ecological carpet & upholstery cleaning in Montreal, Laval, Longueuil, La Vallée-du-Richelieu area, Roussillon area & Marguerite D'Youville area."
+    },
+    "fr": {
+      "path": "/villes-desservies",
+      "title": "Villes Desservies | Nettoyage Econet",
+      "metaDescription": "Nettoyage de tapis & meubles à Montréal, Laval et Longueuil et dans la région de La Vallée-du-Richelieu, du Roussillon & de Marguerite D’Youville."
+    }
+  },
+
+  "/confirmation/": {
+    "component": "src/templates/confirmation.js",
+    "namespaces": ["Confirmation", "Links"],
+    "en": {
+      "path": "/en/thank-you",
+      "title": "Thank You! - Form Received",
+      "metaDescription": ""
+    },
+    "fr": {
+      "path": "/merci",
+      "title": "Merci! - Votre Formulaire a été reçu",
+      "metaDescription": ""
+    }
+  },
+
+  "/404/": {
+    "component": "src/templates/404.js",
+    "namespaces": ["Component404", "Links"],
+    "en": {
+      "path": "/en/404",
+      "title": "Page Not Found",
+      "metaDescription": ""
+    },
+    "fr": {
+      "path": "/404",
+      "title": "Page Introuvable",
+      "metaDescription": ""
+    }
+  }
+}

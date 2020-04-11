@@ -23,15 +23,15 @@ export const Navbar = () => {
         case "home":
           return "/en"
         case "about":
-          return "/en/about"
+          return "/en/about-us"
         case "residential":
-          return "/en/residential"
+          return "/en/residential-carpet-upholstery-cleaning"
         case "commercial":
-          return "/en/commercial"
+          return "/en/commercial-carpet-upholstery-cleaning"
         case "contact":
           return "/en/contact"
         case "regions":
-          return "/en/regions-desservies"
+          return "/en/areas-we-serve"
         default:
           throw new Error(`Invalid page. Received: ${page}`)
       }
@@ -40,15 +40,15 @@ export const Navbar = () => {
         case "home":
           return "/"
         case "about":
-          return "/about"
+          return "/a-propos"
         case "residential":
-          return "/residential"
+          return "/nettoyage-tapis-meubles-residentiel"
         case "commercial":
-          return "/commercial"
+          return "/nettoyage-tapis-meubles-commercial"
         case "contact":
           return "/contact"
         case "regions":
-          return "/regions-desservies"
+          return "/villes-desservies"
         default:
           throw new Error(`Invalid page. Received: ${page}`)
       }
