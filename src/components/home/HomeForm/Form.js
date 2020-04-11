@@ -19,9 +19,9 @@ export const Form = () => {
       method="POST"
       action={t("Links:confirmation")}
       data-netlify="true"
-      name="homeForm"
+      name={t("homeFormName")}
     >
-      <input type="hidden" name="form-name" value="homeForm" />
+      <input type="hidden" name="form-name" value={t("homeFormName")} />
       <InputContainerMarginRight>
         <Input
           type="text"

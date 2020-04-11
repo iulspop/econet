@@ -16,5 +16,6 @@
   "neitherNewCustomer": "I'm neither.",
   "newCustomer": "Are you a new customer?",
   "message": "Message",
-  "send": "Send your request"
+  "send": "Send your request",
+  "homeFormName": "homeFormEN"
 }
