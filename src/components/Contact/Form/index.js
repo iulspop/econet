@@ -63,6 +63,20 @@ export const Form = ({ shownForm, formName }) => {
         name="form-name"
         value={determineFormName(i18n.language, formName)}
       />
+      {formName === "commercial" ? (
+        <InputContainerMarginRight>
+          <Input
+            type="text"
+            name="company"
+            id="company"
+            placeholder=""
+            onChange={handleChange}
+          />
+          <Label htmlFor="company">{t("company")}</Label>
+        </InputContainerMarginRight>
+      ) : (
+        <></>
+      )}
       <InputContainerMarginRight>
         <Input
           type="text"

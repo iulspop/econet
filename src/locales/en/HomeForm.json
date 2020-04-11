@@ -24,5 +24,6 @@
   "emailCom": "Email",
   "message": "Message",
   "send": "Send your request",
-  "homeFormName": "homeFormEN"
+  "homeFormName": "homeFormEN",
+  "company": "Company"
 }

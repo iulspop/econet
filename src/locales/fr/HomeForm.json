@@ -24,5 +24,6 @@
   "emailCom": "Courriel",
   "message": "Message",
   "send": "Envoyez votre demande",
-  "homeFormName": "homeFormFR"
+  "homeFormName": "homeFormFR",
+  "company": "Compagnie"
 }
