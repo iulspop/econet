@@ -17,11 +17,8 @@ export function wrapWithI18nProvider({ element, props }) {
   return (
     <ReactI18next.I18nextProvider i18n={i18n}>
       <Helmet htmlAttributes={{ lang: props.pageContext.language }}>
-        <title>Nettoyage Econet</title>
-        <meta
-          name="description"
-          content="Carpet and Upholstery Cleaning Company"
-        />
+        <title>{props.pageContext.title}</title>
+        <meta name="description" content={props.pageContext.metaDescription} />
       </Helmet>
       {element}
     </ReactI18next.I18nextProvider>
