@@ -34,6 +34,22 @@ export const Form = () => {
       </InputContainerMarginRight>
 
       <InputContainer>
+        <Select name="newCustomer" id="newCustomer" onClick={handleChange}>
+          <option value="yes">{t("yesNewCustomer")}</option>
+          <option value="no">{t("noNewCustomer")}</option>
+          <option value="neither">{t("neitherNewCustomer")}</option>
+        </Select>
+        <CustomerQuestionLabel htmlFor="newCustomer">
+          {t("newCustomer")}
+        </CustomerQuestionLabel>
+      </InputContainer>
+
+      <InputContainerMarginRight>
+        <Input type="phone" name="phone" id="phone" onChange={handleChange} />
+        <Label htmlFor="phone">{t("phone")}</Label>
+      </InputContainerMarginRight>
+
+      <InputContainer>
         <Input
           type="email"
           name="email"
@@ -45,62 +61,26 @@ export const Form = () => {
       </InputContainer>
 
       <InputContainerMarginRight>
-        <DateInput
-          type="date"
-          name="date"
-          id="date"
-          placeholder=""
-          onChange={handleChange}
-        />
-        <Label htmlFor="date">{t("date")}</Label>
-      </InputContainerMarginRight>
-
-      <InputContainer>
-        <Select name="time" id="time" onClick={handleChange}>
-          <option value="8 AM">8 AM</option>
-          <option value="8:30 AM">8:30 AM</option>
-          <option value="9 AM">9 AM</option>
-          <option value="9:30 AM">9:30 AM</option>
-          <option value="10 AM">10 AM</option>
-          <option value="10:30 AM">10:30 AM</option>
-          <option value="11 AM">11 AM</option>
-          <option value="11:30 AM">11:30 AM</option>
-          <option value="12 AM">12 AM</option>
-          <option value="12:30 AM">12:30 AM</option>
-          <option value="1 PM">1 PM</option>
-          <option value="1:30 PM">1:30 PM</option>
-          <option value="2 PM">2 PM</option>
-          <option value="2:30 PM">2:30 PM</option>
-          <option value="3 PM">3 PM</option>
-          <option value="3:30 PM">3:30 PM</option>
-          <option value="4 PM">4 PM</option>
-          <option value="4:30 PM">4:30 PM</option>
-          <option value="5 PM">5 PM</option>
-          <option value="5:30 PM">5:30 PM</option>
-          <option value="6 PM">6 PM</option>
-          <option value="6:30 PM">6:30 PM</option>
+        <Select name="language" id="language" onClick={handleChange}>
+          <option value="french">{t("french")}</option>
+          <option value="english">{t("english")}</option>
+          <option value="spanish">{t("spanish")}</option>
+          <option value="indifferent">{t("indifferent")}</option>
         </Select>
-        <Label htmlFor="time">{t("time")}</Label>
-      </InputContainer>
-
-      <InputContainerMarginRight>
-        <Input type="phone" name="phone" id="phone" onChange={handleChange} />
-        <Label htmlFor="phone">{t("phone")}</Label>
+        <Label htmlFor="language">{t("language")}</Label>
       </InputContainerMarginRight>
 
       <InputContainer>
-        <CustomerQuestionSelect
-          name="newCustomer"
-          id="newCustomer"
+        <Select
+          name="prefCommunication"
+          id="prefCommunication"
           onClick={handleChange}
         >
-          <option value="yes">{t("yesNewCustomer")}</option>
-          <option value="no">{t("noNewCustomer")}</option>
-          <option value="neither">{t("neitherNewCustomer")}</option>
-        </CustomerQuestionSelect>
-        <CustomerQuestionLabel htmlFor="newCustomer">
-          {t("newCustomer")}
-        </CustomerQuestionLabel>
+          <option value="phone">{t("phoneCom")}</option>
+          <option value="text message">{t("textCom")}</option>
+          <option value="email">{t("emailCom")}</option>
+        </Select>
+        <Label htmlFor="prefCommunication">{t("prefCommunication")}</Label>
       </InputContainer>
 
       <InputContainer>
@@ -215,20 +195,8 @@ const Input = styled.input`
     width: 43.5vw;
   }
 
-  @media only screen and ${props => props.theme.media.phone} {
+  @media only screen and (max-width: 670px) {
     width: 90vw;
-  }
-`
-
-const DateInput = styled(Input)`
-  color: transparent;
-  transition: 0.3s ease;
-
-  &:focus {
-    color: black;
-  }
-  &.filled {
-    color: black;
   }
 `
 
@@ -297,13 +265,7 @@ const Select = styled.select`
     width: 43.5vw;
   }
 
-  @media only screen and ${props => props.theme.media.phone} {
-    width: 90vw;
-  }
-`
-
-const CustomerQuestionSelect = styled(Select)`
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 670px) {
     width: 90vw;
   }
 `
