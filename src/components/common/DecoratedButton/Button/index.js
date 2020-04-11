@@ -70,7 +70,7 @@ const buttonStyle = css`
   }
 
   &::before {
-    width: 130%;
+    width: 115%;
     height: 3px;
     content: "";
     background: radial-gradient(
@@ -80,11 +80,12 @@ const buttonStyle = css`
     );
     position: absolute;
     top: 0;
-    left: -15%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &::after {
-    width: 130%;
+    width: 115%;
     height: 3px;
     content: "";
     background: radial-gradient(
@@ -94,7 +95,8 @@ const buttonStyle = css`
     );
     position: absolute;
     top: 100%;
-    left: -15%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `
 
