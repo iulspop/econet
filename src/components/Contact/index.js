@@ -65,7 +65,7 @@ const StyledMain = styled.main`
   justify-content: space-around;
   align-items: center;
 
-  @media only screen and ${props => props.theme.media.phone} {
+  @media only screen and ${props => props.theme.media.tabPort} {
     padding: 2rem;
   }
 `

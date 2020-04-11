@@ -15,7 +15,7 @@ import {
 import { DecoratedButton } from "../../common"
 
 export const Form = ({ shownForm, formName }) => {
-  const { t } = useTranslation(["HomeForm", "Links"])
+  const { t, i18n } = useTranslation(["HomeForm", "Links"])
 
   function handleChange(e) {
     if (e.target.value) {
@@ -25,74 +25,142 @@ export const Form = ({ shownForm, formName }) => {
     }
   }
 
+  function determineFormName(language, formName) {
+    if (language === "fr") {
+      switch (formName) {
+        case "residential":
+          return "residentialFR"
+        case "commercial":
+          return "commercialFR"
+        default:
+          throw new Error(`Invalid formName. Received: ${formName}`)
+      }
+    } else if (language === "en") {
+      switch (formName) {
+        case "residential":
+          return "residentialEN"
+        case "commercial":
+          return "commercialEN"
+        default:
+          throw new Error(`Invalid formName. Received: ${formName}`)
+      }
+    } else {
+      throw new Error(`Invalid language. Received: ${language}`)
+    }
+  }
+
   return (
     <NewForm
       shownForm={shownForm}
       method="POST"
       action={t("Links:confirmation")}
       data-netlify="true"
-      name={formName}
+      name={determineFormName(i18n.language, formName)}
+      formName={formName}
     >
-      <input type="hidden" name="form-name" value={formName} />
+      <input
+        type="hidden"
+        name="form-name"
+        value={determineFormName(i18n.language, formName)}
+      />
       <InputContainerMarginRight>
         <Input
           type="text"
           name="firstName"
-          id="firstName"
+          id={formName === "residential" ? "firstNameRES" : "firstNameCOM"}
           placeholder=""
           onChange={handleChange}
         />
-        <Label htmlFor="firstName">{t("firstName")}</Label>
+        <Label
+          htmlFor={formName === "residential" ? "firstNameRES" : "firstNameCOM"}
+        >
+          {t("firstName")}
+        </Label>
       </InputContainerMarginRight>
 
       <InputContainer>
-        <Select name="newCustomer" id="newCustomer" onClick={handleChange}>
+        <Select
+          name="newCustomer"
+          id={formName === "residential" ? "newCustomerRES" : "newCustomerCOM"}
+          onClick={handleChange}
+        >
           <option value="yes">{t("yesNewCustomer")}</option>
           <option value="no">{t("noNewCustomer")}</option>
           <option value="neither">{t("neitherNewCustomer")}</option>
         </Select>
-        <SmallerFontLabel htmlFor="newCustomer">
+        <SmallerFontLabel
+          htmlFor={
+            formName === "residential" ? "newCustomerRES" : "newCustomerCOM"
+          }
+        >
           {t("newCustomer")}
         </SmallerFontLabel>
       </InputContainer>
 
       <InputContainerMarginRight>
-        <Input type="phone" name="phone" id="phone" onChange={handleChange} />
-        <Label htmlFor="phone">{t("phone")}</Label>
+        <Input
+          type="phone"
+          name="phone"
+          id={formName === "residential" ? "phoneRES" : "phoneCOM"}
+          onChange={handleChange}
+        />
+        <Label htmlFor={formName === "residential" ? "phoneRES" : "phoneCOM"}>
+          {t("phone")}
+        </Label>
       </InputContainerMarginRight>
 
       <InputContainer>
         <Input
           type="email"
           name="email"
-          id="email"
+          id={formName === "residential" ? "emailRES" : "emailCOM"}
           placeholder=""
           onChange={handleChange}
         />
-        <Label htmlFor="email">{t("email")}</Label>
+        <Label htmlFor={formName === "residential" ? "emailRES" : "emailCOM"}>
+          {t("email")}
+        </Label>
       </InputContainer>
 
       <InputContainerMarginRight>
-        <Select name="language" id="language" onClick={handleChange}>
+        <Select
+          name="language"
+          id={formName === "residential" ? "languageRES" : "languageCOM"}
+          onClick={handleChange}
+        >
           <option value="french">{t("french")}</option>
           <option value="english">{t("english")}</option>
           <option value="spanish">{t("spanish")}</option>
           <option value="indifferent">{t("indifferent")}</option>
         </Select>
-        <SmallerFontLabel htmlFor="language">{t("language")}</SmallerFontLabel>
+        <SmallerFontLabel
+          htmlFor={formName === "residential" ? "languageRES" : "languageCOM"}
+        >
+          {t("language")}
+        </SmallerFontLabel>
       </InputContainerMarginRight>
 
       <InputContainer>
         <Select
           name="prefCommunication"
-          id="prefCommunication"
+          id={
+            formName === "residential"
+              ? "prefCommunicationRES"
+              : "prefCommunicationCOM"
+          }
           onClick={handleChange}
         >
           <option value="phone">{t("phoneCom")}</option>
           <option value="text message">{t("textCom")}</option>
           <option value="email">{t("emailCom")}</option>
         </Select>
-        <SmallerFontLabel htmlFor="prefCommunication">
+        <SmallerFontLabel
+          htmlFor={
+            formName === "residential"
+              ? "prefCommunicationRES"
+              : "prefCommunicationCOM"
+          }
+        >
           {t("prefCommunication")}
         </SmallerFontLabel>
       </InputContainer>
@@ -100,12 +168,16 @@ export const Form = ({ shownForm, formName }) => {
       <InputContainer>
         <TextArea
           name="message"
-          id="message"
+          id={formName === "residential" ? "messageRES" : "messageCOM"}
           rows="5"
           cols="33"
           onChange={handleChange}
         />
-        <Label htmlFor="message">{t("message")}</Label>
+        <Label
+          htmlFor={formName === "residential" ? "messageRES" : "messageCOM"}
+        >
+          {t("message")}
+        </Label>
       </InputContainer>
 
       <ButtonContainer>
@@ -119,9 +191,9 @@ export const Form = ({ shownForm, formName }) => {
 
 const NewForm = styled(StyledForm)`
   display: ${props => {
-    if (props.name === "commercial") {
+    if (props.formName === "commercial") {
       return props.shownForm === "commercial" ? "flex" : "none"
-    } else if (props.name === "residential") {
+    } else if (props.formName === "residential") {
       return props.shownForm === "residential" ? "flex" : "none"
     } else {
       throw Error("invalid form name")
