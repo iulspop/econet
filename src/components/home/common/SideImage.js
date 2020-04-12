@@ -23,7 +23,11 @@ export const SideImage = ({ className, ariaLabel, imageName }) => {
         ...fluidImage
       }
       familyEconet: file(relativePath: { eq: "family-econet.jpg" }) {
-        ...fluidImage
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
       odourRemoval: file(relativePath: { eq: "odour-removal.jpg" }) {
         ...fluidImage
@@ -50,12 +54,9 @@ export const SideImage = ({ className, ariaLabel, imageName }) => {
 
   return (
     <StyledSideImage
-      aria-label={ariaLabel}
-      serviceList={serviceList}
-      horizontal={horizontal}
-      fluid={data[imageName || "carpet"].childImageSharp.fluid}
-      loading="lazy"
       className={className}
+      aria-label={ariaLabel}
+      fluid={data[imageName || "carpet"].childImageSharp.fluid}
     />
   )
 }
@@ -63,19 +64,13 @@ export const SideImage = ({ className, ariaLabel, imageName }) => {
 const StyledSideImage = styled(Image)`
   margin-top: 2rem;
   width: 35vw;
-  align-item: strech;
-  background-image: url(${props => props.url});
-  background-size: cover;
-  background-position: center;
 
   @media only screen and ${props => props.theme.media.tabPort} {
     width: 90vw;
-    height: 120vw;
-    background-position: top;
+    height: 100vw;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
     height: 120vw;
-    background-position: top;
   }
 `

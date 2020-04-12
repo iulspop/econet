@@ -1,22 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 
-export const ListContainer = ({ children, serviceList }) => {
+export const ListContainer = ({ children, className }) => {
   return (
-    <StyledListContainer serviceList={serviceList}>
-      {children}
-    </StyledListContainer>
+    <StyledListContainer className={className}>{children}</StyledListContainer>
   )
 }
 
 const StyledListContainer = styled.div`
-  width: ${props => (props.serviceList ? "60vw" : "50vw")};
-
-  @media only screen and ${props => props.theme.media.tabLand} {
-    width: ${props => (props.serviceList ? "60vw" : "50vw")};
-  }
+  width: 50vw;
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    width: 95vw;
+    width: 90vw;
   }
 `

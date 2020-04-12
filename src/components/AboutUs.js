@@ -22,8 +22,12 @@ export const AboutUs = () => {
   return (
     <FlexColumn>
       <DecorativeLine isPageTop="true" />
-      <ListAndImageFlex reverseWrap="true">
-        <ListContainer>
+      <StyledListAndImageFlex>
+        <StyledSideImage
+          ariaLabel={t("sideImageLabel")}
+          imageName="familyEconet"
+        />
+        <StyledListContainer>
           <H1>{t("mainHeading")}</H1>
           <Paragraph>{t("paragraph1")}</Paragraph>
           <Paragraph>{t("paragraph2")}</Paragraph>
@@ -44,12 +48,33 @@ export const AboutUs = () => {
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>
-        </ListContainer>
-        <SideImage ariaLabel={t("sideImageLabel")} imageName="familyEconet" />
-      </ListAndImageFlex>
+        </StyledListContainer>
+      </StyledListAndImageFlex>
     </FlexColumn>
   )
 }
+
+const StyledSideImage = styled(SideImage)`
+  width: 90vw;
+  height: 40vw;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    height: 60vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    height: 70vw;
+  }
+`
+
+const StyledListContainer = styled(ListContainer)`
+  width: 90vw;
+  max-width: 900px;
+`
+
+const StyledListAndImageFlex = styled(ListAndImageFlex)`
+  justify-content: center;
+`
 
 const H1 = styled.h1`
   font-size: 5rem;

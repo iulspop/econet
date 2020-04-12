@@ -24,7 +24,7 @@ export const ServiceList = () => {
           imageName="vacuumCloseup"
         />
 
-        <ListContainer serviceList={true}>
+        <StyledListContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
 
           <List>
@@ -49,7 +49,7 @@ export const ServiceList = () => {
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>
-        </ListContainer>
+        </StyledListContainer>
       </ListAndImageFlex>
     </FlexColumn>
   )
@@ -59,12 +59,16 @@ const StyledSideImage = styled(SideImage)`
   width: 25vw;
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    width: 80vw;
+    width: 90vw;
     height: 50vw;
   }
+`
 
-  @media only screen and ${props => props.theme.media.phone} {
-    height: 50vw;
+const StyledListContainer = styled(ListContainer)`
+  width: 60vw;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 90vw;
   }
 `
 
