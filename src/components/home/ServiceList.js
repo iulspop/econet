@@ -19,11 +19,9 @@ export const ServiceList = () => {
       <DecorativeLine />
 
       <ListAndImageFlex reverseWrap={true}>
-        <SideImage
+        <StyledSideImage
           ariaLabel={t("sideImageLabel")}
           imageName="vacuumCloseup"
-          serviceList={true}
-          horizontal="true"
         />
 
         <ListContainer serviceList={true}>
@@ -56,6 +54,19 @@ export const ServiceList = () => {
     </FlexColumn>
   )
 }
+
+const StyledSideImage = styled(SideImage)`
+  width: 25vw;
+
+  @media only screen and ${props => props.theme.media.tabPort} {
+    width: 80vw;
+    height: 50vw;
+  }
+
+  @media only screen and ${props => props.theme.media.phone} {
+    height: 50vw;
+  }
+`
 
 const RightListContainer = styled.div`
   list-style: none;

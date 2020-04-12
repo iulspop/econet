@@ -22,7 +22,7 @@ export const AboutUs = () => {
   return (
     <FlexColumn>
       <DecorativeLine isPageTop="true" />
-      <ListAndImageFlex>
+      <ListAndImageFlex reverseWrap="true">
         <ListContainer>
           <H1>{t("mainHeading")}</H1>
           <Paragraph>{t("paragraph1")}</Paragraph>

@@ -3,16 +3,11 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-export const SideImage = ({
-  ariaLabel,
-  imageName,
-  serviceList,
-  horizontal,
-}) => {
+export const SideImage = ({ className, ariaLabel, imageName }) => {
   const fluidImage = graphql`
     fragment fluidImage on File {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -60,27 +55,27 @@ export const SideImage = ({
       horizontal={horizontal}
       fluid={data[imageName || "carpet"].childImageSharp.fluid}
       loading="lazy"
+      className={className}
     />
   )
 }
 
 const StyledSideImage = styled(Image)`
   margin-top: 2rem;
-  width: ${props => (props.serviceList ? "25vw" : "35vw")};
+  width: 35vw;
   align-item: strech;
   background-image: url(${props => props.url});
   background-size: cover;
   background-position: center;
 
   @media only screen and ${props => props.theme.media.tabPort} {
-    width: ${props => (props.horizontal ? "80vw" : "90vw")};
-    height: ${props => (props.horizontal ? "50vw" : "90vw")};
+    width: 90vw;
+    height: 120vw;
     background-position: top;
   }
 
   @media only screen and ${props => props.theme.media.phone} {
-    width: 90vw;
-    height: ${props => (props.horizontal ? "50vw" : "120vw")};
+    height: 120vw;
     background-position: top;
   }
 `
