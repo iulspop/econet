@@ -43,10 +43,7 @@ export const OdourResidential = () => {
             </DecoratedButton>
           </ButtonContainer>
         </ListContainer>
-        <SideImage
-          ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/odour-control.jpg"
-        />
+        <SideImage ariaLabel={t("sideImageLabel")} imageName="odourRemoval" />
       </ListAndImageFlex>
     </FlexColumn>
   )

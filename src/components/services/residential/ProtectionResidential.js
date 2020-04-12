@@ -18,10 +18,7 @@ export const ProtectionResidential = () => {
     <StyledFlexColumn>
       <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
-        <SideImage
-          ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/protection.jpg"
-        />
+        <SideImage ariaLabel={t("sideImageLabel")} imageName="protection" />
         <ListContainer>
           <SectionHeading id="protection">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>

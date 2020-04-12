@@ -24,10 +24,7 @@ export const StainResidential = () => {
     <StyledFlexColumn>
       <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
-        <SideImage
-          ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/stain-removal.jpg"
-        />
+        <SideImage ariaLabel={t("sideImageLabel")} imageName="stainRemoval" />
         <ListContainer>
           <SectionHeading id="stain">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>
