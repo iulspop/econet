@@ -24,10 +24,7 @@ export const CarpetCommercial = () => {
     <StyledFlexColumn>
       <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
-        <SideImage
-          ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/carpet-cleaning.jpg"
-        />
+        <SideImage ariaLabel={t("sideImageLabel")} imageName="carpetCleaning" />
         <ListContainer>
           <SectionHeading id="tapis">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>

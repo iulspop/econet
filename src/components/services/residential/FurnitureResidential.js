@@ -46,8 +46,8 @@ export const FurnitureResidential = () => {
           </ButtonContainer>
         </ListContainer>
         <SideImage
-          ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/carpet-cleaning.jpg"
+          ariaLabel={t("sideImageLabel")}
+          imageName="upholsteryCleaning"
         />
       </ListAndImageFlex>
     </FlexColumn>
