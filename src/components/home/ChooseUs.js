@@ -61,10 +61,7 @@ export const ChooseUs = () => {
           </ButtonContainer>
         </ListContainer>
 
-        <SideImage
-          ariaLabel="smiling Javier Romero, owner of Econet"
-          imageName="ownerPicture"
-        />
+        <SideImage ariaLabel={t("sideImageLabel")} imageName="ownerPicture" />
       </ListAndImageFlex>
     </StyledFlexColumn>
   )

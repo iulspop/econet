@@ -12,7 +12,7 @@ export const SideImage = ({
   const fluidImage = graphql`
     fragment fluidImage on File {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -59,6 +59,7 @@ export const SideImage = ({
       serviceList={serviceList}
       horizontal={horizontal}
       fluid={data[imageName || "carpet"].childImageSharp.fluid}
+      loading="lazy"
     />
   )
 }

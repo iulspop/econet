@@ -45,10 +45,7 @@ export const AboutUs = () => {
             </DecoratedButton>
           </ButtonContainer>
         </ListContainer>
-        <SideImage
-          ariaLabel="smiling Javier Romero, owner of Econet"
-          imageName="familyEconet"
-        />
+        <SideImage ariaLabel={t("sideImageLabel")} imageName="familyEconet" />
       </ListAndImageFlex>
     </FlexColumn>
   )
