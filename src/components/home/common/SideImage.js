@@ -1,18 +1,69 @@
 import React from "react"
 import styled from "styled-components"
+import Image from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
-export const SideImage = ({ ariaLabel, url, serviceList, horizontal }) => {
+export const SideImage = ({
+  ariaLabel,
+  imageName,
+  serviceList,
+  horizontal,
+}) => {
+  const fluidImage = graphql`
+    fragment fluidImage on File {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  `
+
+  const data = useStaticQuery(graphql`
+    query {
+      carpetCleaning: file(relativePath: { eq: "carpet-cleaning.jpg" }) {
+        ...fluidImage
+      }
+      carpet: file(relativePath: { eq: "carpet.jpg" }) {
+        ...fluidImage
+      }
+      familyEconet: file(relativePath: { eq: "family-econet.jpg" }) {
+        ...fluidImage
+      }
+      odourRemoval: file(relativePath: { eq: "odour-removal.jpg" }) {
+        ...fluidImage
+      }
+      ownerPicture: file(relativePath: { eq: "owner-picture.jpg" }) {
+        ...fluidImage
+      }
+      protection: file(relativePath: { eq: "protection.jpg" }) {
+        ...fluidImage
+      }
+      stainRemoval: file(relativePath: { eq: "stain-removal.jpg" }) {
+        ...fluidImage
+      }
+      upholsteryCleaning: file(
+        relativePath: { eq: "upholstery-cleaning.jpg" }
+      ) {
+        ...fluidImage
+      }
+      vacuumCloseup: file(relativePath: { eq: "vacuum-closeup.jpg" }) {
+        ...fluidImage
+      }
+    }
+  `)
+
   return (
     <StyledSideImage
       aria-label={ariaLabel}
-      url={url}
       serviceList={serviceList}
       horizontal={horizontal}
+      fluid={data[imageName || "carpet"].childImageSharp.fluid}
     />
   )
 }
 
-const StyledSideImage = styled.div`
+const StyledSideImage = styled(Image)`
   margin-top: 2rem;
   width: ${props => (props.serviceList ? "25vw" : "35vw")};
   align-item: strech;

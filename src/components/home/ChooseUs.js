@@ -63,7 +63,7 @@ export const ChooseUs = () => {
 
         <SideImage
           ariaLabel="smiling Javier Romero, owner of Econet"
-          url="/assets/smiling-owner.jpg"
+          imageName="ownerPicture"
         />
       </ListAndImageFlex>
     </StyledFlexColumn>

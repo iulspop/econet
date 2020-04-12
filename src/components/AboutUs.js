@@ -47,7 +47,7 @@ export const AboutUs = () => {
         </ListContainer>
         <SideImage
           ariaLabel="smiling Javier Romero, owner of Econet"
-          url="/assets/family-photo.jpg"
+          imageName="familyEconet"
         />
       </ListAndImageFlex>
     </FlexColumn>

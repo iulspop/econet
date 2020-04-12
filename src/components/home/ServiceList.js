@@ -21,7 +21,7 @@ export const ServiceList = () => {
       <ListAndImageFlex reverseWrap={true}>
         <SideImage
           ariaLabel="carpet cleaning technician handling cleaning machine"
-          url="/assets/carpet-vacuum-closeup.jpg"
+          imageName="vacuumCloseup"
           serviceList={true}
           horizontal="true"
         />
