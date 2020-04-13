@@ -8,26 +8,32 @@ export const Sidebox = () => {
   return (
     <StyledSidebox>
       <FlexContainer>
-        <SideImage aria-label="" src="/assets/clock-icon.png" />
+        <SideImage alt="" src="/assets/clock-icon.png" id="clockIcon" />
         <TextSnippet>
           <H4>{t("sideboxHeading1")}</H4>
-          <Paragraph>{t("sideboxParagraph1")}</Paragraph>
+          <Paragraph for="clockIcon">{t("sideboxParagraph1")}</Paragraph>
         </TextSnippet>
       </FlexContainer>
 
       <FlexContainer>
-        <SideImage aria-label="" src="/assets/communications-icon.png" />
+        <SideImage
+          alt=""
+          src="/assets/communications-icon.png"
+          id="communicationsIcon"
+        />
         <TextSnippet>
           <H4>{t("sideboxHeading2")}</H4>
-          <Paragraph>{t("sideboxParagraph2")}</Paragraph>
+          <Paragraph for="communicationsIcon">
+            {t("sideboxParagraph2")}
+          </Paragraph>
         </TextSnippet>
       </FlexContainer>
 
       <FlexContainer>
-        <SideImage aria-label="" src="/assets/handshake-icon.png" />
+        <SideImage alt="" src="/assets/handshake-icon.png" id="handshakeIcon" />
         <TextSnippet>
           <H4>{t("sideboxHeading3")}</H4>
-          <Paragraph>{t("sideboxParagraph3")}</Paragraph>
+          <Paragraph for="handshakeIcon">{t("sideboxParagraph3")}</Paragraph>
         </TextSnippet>
       </FlexContainer>
     </StyledSidebox>
@@ -128,7 +134,7 @@ const H4 = styled.h4`
   }
 `
 
-const Paragraph = styled.p`
+const Paragraph = styled.label`
   font-size: 2.3rem;
 
   @media only screen and (max-width: 1390px) {
