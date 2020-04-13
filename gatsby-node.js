@@ -12,7 +12,7 @@ const removeTrailingSlash = path =>
 
 const allLanguages = ["fr", "en"]
 
-var pagesInfoJSON = fs.readFileSync("./pagesInfo.json")
+var pagesInfoJSON = fs.readFileSync("./src/pagesInfo.json")
 var pagesInfo = JSON.parse(pagesInfoJSON)
 
 exports.createPages = ({ actions }) => {
