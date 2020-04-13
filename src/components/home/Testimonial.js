@@ -16,7 +16,11 @@ export const Testimonial = () => {
         <QuotationMark>”</QuotationMark>
       </CustomerQuote>
       <CustomerName>- {t("customer1")}</CustomerName>
-      <Link href="https://goo.gl/maps/fTYwJTmaLoEuuYny9" target="_blank">
+      <Link
+        href="https://goo.gl/maps/fTYwJTmaLoEuuYny9"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {t("readReviews")}
       </Link>
     </StyledFlexColumn>

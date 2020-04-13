@@ -1,3 +1,7 @@
 {
-  "cta": "Schedule your service"
+  "cta": "Schedule your service",
+  "facebookLabel": "Go to Nettoyage Econet's Facebook page",
+  "linkedInLabel": "Go to Nettoyage Econet's LinkedIn page",
+  "messengerLabel": "Connect with Nettoyage Econet by Facebook Messenger",
+  "emailLabel": "Send an email to Nettoyage Econet"
 }

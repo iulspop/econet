@@ -47,6 +47,7 @@ export const Footer = ({ backgroundWhite }) => {
               href="https://www.facebook.com/NettoyageEconet"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={t("facebookLabel")}
             >
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +64,7 @@ export const Footer = ({ backgroundWhite }) => {
               href="https://www.linkedin.com/company/nettoyageeconet/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={t("linkedInLabel")}
             >
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +81,7 @@ export const Footer = ({ backgroundWhite }) => {
               href="https://m.me/NettoyageEconet"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={t("messengerLabel")}
             >
               <SVGIcon
                 width="24"
@@ -92,7 +95,10 @@ export const Footer = ({ backgroundWhite }) => {
             </a>
           </ListItemHorizonalCenterDown>
           <ListItemVerticalCenterRight>
-            <a href="mailto:info@nettoyageeconet.com">
+            <a
+              href="mailto:info@nettoyageeconet.com"
+              aria-label={t("emailLabel")}
+            >
               <SVGIcon
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
