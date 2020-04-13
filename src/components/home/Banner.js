@@ -30,7 +30,7 @@ export const Banner = () => {
       </Container>
       <FlexColumn>
         <LogoImg
-          src="/assets/big-logo.svg"
+          src="/assets/big-logo.png"
           alt="Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
         />
         <NumberLink href="tel:5146666601">514-666-6601</NumberLink>
