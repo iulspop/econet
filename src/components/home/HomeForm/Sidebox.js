@@ -8,7 +8,7 @@ export const Sidebox = () => {
   return (
     <StyledSidebox>
       <FlexContainer>
-        <SideImage alt="" src="/assets/clock-icon.png" id="clockIcon" />
+        <SideImage alt="" src="/assets/clock-icon.svg" id="clockIcon" />
         <TextSnippet>
           <H4>{t("sideboxHeading1")}</H4>
           <Paragraph for="clockIcon">{t("sideboxParagraph1")}</Paragraph>
@@ -18,7 +18,7 @@ export const Sidebox = () => {
       <FlexContainer>
         <SideImage
           alt=""
-          src="/assets/communications-icon.png"
+          src="/assets/communications-icon.svg"
           id="communicationsIcon"
         />
         <TextSnippet>
@@ -30,7 +30,7 @@ export const Sidebox = () => {
       </FlexContainer>
 
       <FlexContainer>
-        <SideImage alt="" src="/assets/handshake-icon.png" id="handshakeIcon" />
+        <SideImage alt="" src="/assets/handshake-icon.svg" id="handshakeIcon" />
         <TextSnippet>
           <H4>{t("sideboxHeading3")}</H4>
           <Paragraph for="handshakeIcon">{t("sideboxParagraph3")}</Paragraph>

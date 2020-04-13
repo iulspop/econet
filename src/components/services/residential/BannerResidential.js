@@ -27,7 +27,7 @@ export const BannerResidential = () => {
           <a href="#tapis">
             <IconLabel for="icon1">{t("tapisLabel")}</IconLabel>
             <IconImg
-              src="/assets/house-icon.png"
+              src="/assets/house-icon.svg"
               aria-label={t("tapisLabel")}
               id="icon1"
             />
@@ -38,7 +38,7 @@ export const BannerResidential = () => {
           <a href="#stain">
             <IconLabel for="icon2">{t("stainLabel")}</IconLabel>
             <IconImg
-              src="/assets/spill-icon.png"
+              src="/assets/spill-icon.svg"
               aria-label={t("stainLabel")}
               id="icon2"
             />
@@ -49,7 +49,7 @@ export const BannerResidential = () => {
           <a href="#furniture">
             <IconLabel for="icon3">{t("furnitureLabel")}</IconLabel>
             <IconImg
-              src="/assets/couch-icon.png"
+              src="/assets/couch-icon.svg"
               aria-label={t("furnitureLabel")}
               id="icon3"
             />
@@ -60,7 +60,7 @@ export const BannerResidential = () => {
           <a href="#protection">
             <IconLabel for="icon4">{t("protectionLabel")}</IconLabel>
             <IconImg
-              src="/assets/sparkle-icon.png"
+              src="/assets/sparkle-icon.svg"
               aria-label={t("protectionLabel")}
               id="icon4"
             />
@@ -71,7 +71,7 @@ export const BannerResidential = () => {
           <a href="#odour">
             <IconLabel for="icon5">{t("odorLabel")}</IconLabel>
             <IconImg
-              src="/assets/smell-icon.png"
+              src="/assets/smell-icon.svg"
               aria-label={t("odorLabel")}
               id="icon5"
             />
