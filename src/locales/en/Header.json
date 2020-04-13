@@ -4,5 +4,6 @@
   "residential": "Residential services",
   "commercial": "Commercial services",
   "contact": "Contact",
-  "regions": "Service Area"
+  "regions": "Service Area",
+  "languageToggleLabel": "Changez la langue du site web au français"
 }

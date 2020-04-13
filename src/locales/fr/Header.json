@@ -4,5 +4,6 @@
   "residential": "Services résidentiels",
   "commercial": "Services commerciaux",
   "contact": "Nous joindre",
-  "regions": "Villes Desservies"
+  "regions": "Villes Desservies",
+  "languageToggleLabel": "Change the website language to English"
 }

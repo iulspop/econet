@@ -73,12 +73,18 @@ export const Navbar = () => {
           514-666-6601
         </LinkNumber>
         <LinkToggleLanguage
+          rel="alternate"
+          aria-label={t("languageToggleLabel")}
+          hreflang={i18n.language === "fr" ? "en" : "fr"}
           to={determineLanguageToggleURL(i18n.language, themeContext.page)}
         >
           {i18n.language === "fr" ? "EN" : "FR"}
         </LinkToggleLanguage>
       </StyledNavbar>
       <MobileLinkToggleLanguage
+        rel="alternate"
+        aria-label={t("languageToggleLabel")}
+        hreflang={i18n.language === "fr" ? "en" : "fr"}
         to={determineLanguageToggleURL(i18n.language, themeContext.page)}
       >
         {i18n.language === "fr" ? "EN" : "FR"}
