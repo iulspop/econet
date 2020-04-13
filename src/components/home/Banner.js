@@ -26,14 +26,11 @@ export const Banner = () => {
           </MainHeading>
         )}
 
-        <DecorativeLine
-          src={"/assets/decorative-horizontal-line.png"}
-          alt={""}
-        />
+        <DecorativeLine src="/assets/decorative-horizontal-line.svg" alt="" />
       </Container>
       <FlexColumn>
         <LogoImg
-          src="/assets/logo.png"
+          src="/assets/big-logo.svg"
           alt="Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
         />
         <NumberLink href="tel:5146666601">514-666-6601</NumberLink>

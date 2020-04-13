@@ -10,7 +10,7 @@ export const Footer = ({ backgroundWhite }) => {
     <StyledFooter backgroundWhite={backgroundWhite}>
       <FlexColumn>
         <LogoImg
-          src="/assets/logo.png"
+          src="/assets/big-logo.svg"
           alt="Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
         />
         <CTA>{t("cta")}</CTA>
@@ -281,7 +281,7 @@ const ListOfSocialMediaLinks = styled.ul`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(/assets/tiny-logo.png);
+    background-image: url(/assets/tiny-logo.svg);
     height: 2.7rem;
     width: 2.7rem;
     background-size: contain;

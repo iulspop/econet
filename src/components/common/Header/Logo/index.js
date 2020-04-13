@@ -7,10 +7,13 @@ export const Logo = () => {
       <picture>
         <source
           media={"(max-width: 1200px)"}
-          srcSet={"/assets/logo-slim.png"}
+          srcSet={"/assets/logo-slim.svg"}
+          alt={
+            "Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
+          }
         />
         <LogoImg
-          src={"/assets/logo.png"}
+          src={"/assets/big-logo.svg"}
           alt={
             "Nettoyage écologique de tapis et de meubles. Nettoyage Éconet Logo."
           }

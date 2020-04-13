@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const DecorativeLine = ({ isPageTop }) => {
   return (
     <StyledDecorativeLine
-      src="/assets/decorative-horizontal-line.png"
+      src="/assets/decorative-horizontal-line.svg"
       alt=""
       isPageTop={isPageTop}
     />

@@ -23,7 +23,7 @@ export const DecoratedButton = ({
       slim={slim}
     >
       <SideDecorationLeft
-        src={"/assets/side-decoration.png"}
+        src={"/assets/side-decoration.svg"}
         alt={""}
         left={left}
         inactive={inactive}
@@ -31,7 +31,7 @@ export const DecoratedButton = ({
       />
       {children}
       <SideDecorationRight
-        src={"/assets/side-decoration.png"}
+        src={"/assets/side-decoration.svg"}
         alt={""}
         right={right}
         inactive={inactive}
