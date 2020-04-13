@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://nettoyageeconet.netlify.com`,
+    siteUrl: `https://nettoyageeconet.com`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
