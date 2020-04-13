@@ -19,6 +19,16 @@ export function wrapWithI18nProvider({ element, props }) {
       <Helmet htmlAttributes={{ lang: props.pageContext.language }}>
         <title>{props.pageContext.title}</title>
         <meta name="description" content={props.pageContext.metaDescription} />
+        <link
+          rel="alternate"
+          hreflang={props.pageContext.altLanguage}
+          href={props.pageContext.altPath}
+        />
+        <link
+          rel="alternate"
+          hreflang={props.pageContext.language}
+          href={props.pageContext.myPath}
+        />
       </Helmet>
       {element}
     </ReactI18next.I18nextProvider>

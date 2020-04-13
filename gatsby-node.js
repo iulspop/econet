@@ -29,14 +29,19 @@ exports.createPages = ({ actions }) => {
 
       const pageTemplate = path.resolve(pagesInfo[pageName].component)
 
+      const altLanguage = language === "fr" ? "en" : "fr"
+
       return createPage({
         path: pagesInfo[pageName][language].path,
         component: pageTemplate,
         context: {
           language: language,
-          i18nResources: i18n.services.resourceStore.data,
+          altLanguage: altLanguage,
+          myPath: pagesInfo[pageName][language].path,
+          altPath: pagesInfo[pageName][altLanguage].path,
           title: pagesInfo[pageName][language].title,
           metaDescription: pagesInfo[pageName][language].metaDescription,
+          i18nResources: i18n.services.resourceStore.data,
         },
       })
     })

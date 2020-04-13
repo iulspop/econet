@@ -25,6 +25,7 @@ module.exports = {
       options: {
         createLinkInHead: true,
       },
+      exclude: [`/en/404`],
     },
   ],
 }
