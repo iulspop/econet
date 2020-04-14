@@ -45,7 +45,7 @@ export const Form = () => {
       </InputContainer>
 
       <InputContainerMarginRight>
-        <Input type="phone" name="phone" id="phone" onChange={handleChange} />
+        <Input type="tel" name="phone" id="phone" onChange={handleChange} />
         <Label htmlFor="phone">{t("phone")}</Label>
       </InputContainerMarginRight>
 

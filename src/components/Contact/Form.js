@@ -113,7 +113,7 @@ export const Form = ({ shownForm, formName }) => {
 
       <InputContainerMarginRight>
         <Input
-          type="phone"
+          type="tel"
           name="phone"
           id={formName === "residential" ? "phoneRES" : "phoneCOM"}
           onChange={handleChange}
