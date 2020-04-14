@@ -11,8 +11,8 @@ import {
   Select,
   TextArea,
   ButtonContainer,
-} from "../../home/HomeForm/Form"
-import { DecoratedButton } from "../../common"
+} from "../home/HomeForm/Form"
+import { DecoratedButton } from "../common"
 
 export const Form = ({ shownForm, formName }) => {
   const { t, i18n } = useTranslation(["HomeForm", "Links"])
