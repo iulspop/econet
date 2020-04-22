@@ -12,7 +12,6 @@ export function wrapWithI18nProvider({ element, props }) {
       resources: props.pageContext.i18nResources,
     })
     .use(ReactI18next.initReactI18next)
-  // noinspection JSIgnoredPromiseFromCall
   i18n.init()
   return (
     <ReactI18next.I18nextProvider i18n={i18n}>
@@ -22,12 +21,12 @@ export function wrapWithI18nProvider({ element, props }) {
         <link
           rel="alternate"
           hreflang={props.pageContext.altLanguage}
-          href={props.pageContext.altPath}
+          href={props.pageContext.altUrl}
         />
         <link
           rel="alternate"
           hreflang={props.pageContext.language}
-          href={props.pageContext.myPath}
+          href={props.pageContext.url}
         />
       </Helmet>
       {element}

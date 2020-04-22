@@ -3,44 +3,33 @@ const path = require("path")
 const i18next = require("i18next")
 const nodeFsBackend = require("i18next-sync-fs-backend")
 
-const appDirectory = fs.realpathSync(process.cwd())
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
-const srcPath = resolveApp("src")
-
-const removeTrailingSlash = path =>
-  path === `/` ? path : path.replace(/\/$/, ``)
-
-const allLanguages = ["fr", "en"]
-
-var pagesInfoJSON = fs.readFileSync("./src/pagesInfo.json")
-var pagesInfo = JSON.parse(pagesInfoJSON)
+const languages = ["fr", "en"]
+var pagesJSON = fs.readFileSync("./src/pages.json")
+var pages = JSON.parse(pagesJSON)
 
 exports.createPages = ({ actions }) => {
   const { createPage, createRedirect } = actions
 
   createAllRedirects(createRedirect)
 
-  for (let pageName in pagesInfo) {
-    allLanguages.map(language => {
-      const i18n = createI18nextInstance(
-        language,
-        pagesInfo[pageName].namespaces
-      )
+  for (let page in pages) {
+    languages.forEach(language => {
+      const i18n = createI18nextInstance(language, pages[page].namespaces)
 
-      const pageTemplate = path.resolve(pagesInfo[pageName].component)
+      const pageTemplate = path.resolve(pages[page].component)
 
       const altLanguage = language === "fr" ? "en" : "fr"
 
       return createPage({
-        path: pagesInfo[pageName][language].path,
+        path: pages[page][language].path,
         component: pageTemplate,
         context: {
           language: language,
           altLanguage: altLanguage,
-          myPath: pagesInfo[pageName][language].path,
-          altPath: pagesInfo[pageName][altLanguage].path,
-          title: pagesInfo[pageName][language].title,
-          metaDescription: pagesInfo[pageName][language].metaDescription,
+          url: pages[page][language].path,
+          altUrl: pages[page][altLanguage].path,
+          title: pages[page][language].title,
+          metaDescription: pages[page][language].metaDescription,
           i18nResources: i18n.services.resourceStore.data,
         },
       })
@@ -56,7 +45,7 @@ const createI18nextInstance = (language, namespaces) => {
     fallbackLng: "fr",
     initImmediate: false,
     interpolation: { escapeValue: false },
-    backend: { loadPath: `${srcPath}/locales/{{lng}}/{{ns}}.json` },
+    backend: { loadPath: `${__dirname}/src/locales/{{lng}}/{{ns}}.json` },
   })
   return i18n
 }
