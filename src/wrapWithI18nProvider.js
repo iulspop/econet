@@ -26,7 +26,10 @@ export function wrapWithI18nProvider({ element, props }) {
         <link
           rel="alternate"
           hreflang={props.pageContext.language}
-          href={`https://nettoyageeconet.com` + props.pageContext.url}
+          href={
+            `https://nettoyageeconet.com` +
+            (props.pageContext.url === "/" ? "" : props.pageContext.url)
+          }
         />
       </Helmet>
       {element}
