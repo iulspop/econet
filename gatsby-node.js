@@ -52,6 +52,11 @@ const createI18nextInstance = (language, namespaces) => {
 
 const createAllRedirects = createRedirect => {
   createRedirect({
+    fromPath: "/Temoignages/",
+    toPath: "/",
+    isPermanent: true,
+  })
+  createRedirect({
     fromPath: "/NosClients.html",
     toPath: "/",
     isPermanent: true,
@@ -83,42 +88,42 @@ const createAllRedirects = createRedirect => {
   })
   createRedirect({
     fromPath: "/NettoyageDeTapis.html",
-    toPath: "/residential",
+    toPath: "/nettoyage-tapis-meubles-residentiel",
     isPermanent: true,
   })
   createRedirect({
     fromPath: "/MeublesCuirEtTissu.html",
-    toPath: "/residential",
+    toPath: "/nettoyage-tapis-meubles-residentiel",
     isPermanent: true,
   })
   createRedirect({
     fromPath: "/Services.html",
-    toPath: "/residential",
+    toPath: "/nettoyage-tapis-meubles-residentiel",
     isPermanent: true,
   })
   createRedirect({
     fromPath: "/Procede.html",
-    toPath: "/residential",
+    toPath: "/nettoyage-tapis-meubles-residentiel",
     isPermanent: true,
   })
   createRedirect({
     fromPath: "/Garantie.html",
-    toPath: "/residential",
+    toPath: "/nettoyage-tapis-meubles-residentiel",
     isPermanent: true,
   })
   createRedirect({
     fromPath: "/Residentiel/",
-    toPath: "/residential",
+    toPath: "/nettoyage-tapis-meubles-residentiel",
     isPermanent: true,
   })
   createRedirect({
     fromPath: "/Commercial/",
-    toPath: "/commercial",
+    toPath: "/nettoyage-tapis-meubles-commercial",
     isPermanent: true,
   })
   createRedirect({
     fromPath: "/Entreprise.html",
-    toPath: "/commercial",
+    toPath: "/nettoyage-tapis-meubles-commercial",
     isPermanent: true,
   })
   createRedirect({
