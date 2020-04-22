@@ -6,7 +6,7 @@ import {
   DecorativeLine,
   ListAndImageFlex,
   SideImage,
-  ListContainer,
+  TextContainer,
   SectionHeading,
 } from "../../home/common"
 import { Paragraph, ButtonContainer } from "../common"
@@ -19,7 +19,7 @@ export const ProtectionResidential = () => {
       <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
         <SideImage alt={t("sideImageLabel")} imageName="protection" />
-        <ListContainer>
+        <TextContainer>
           <SectionHeading id="protection">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>
           <Paragraph>{t("paragraph2")}</Paragraph>
@@ -28,7 +28,7 @@ export const ProtectionResidential = () => {
               {t("CTAButton")}
             </DecoratedButton>
           </ButtonContainer>
-        </ListContainer>
+        </TextContainer>
       </ListAndImageFlex>
     </StyledFlexColumn>
   )

@@ -6,7 +6,7 @@ import {
   DecorativeLine,
   FlexColumn,
   ListAndImageFlex,
-  ListContainer,
+  TextContainer,
   SideImage,
 } from "./home/common"
 import {
@@ -24,7 +24,7 @@ export const AboutUs = () => {
       <DecorativeLine isPageTop="true" />
       <StyledListAndImageFlex>
         <StyledSideImage alt={t("sideImageLabel")} imageName="familyEconet" />
-        <StyledListContainer>
+        <StyledTextContainer>
           <H1>{t("mainHeading")}</H1>
           <Paragraph>{t("paragraph1")}</Paragraph>
           <Paragraph>{t("paragraph2")}</Paragraph>
@@ -45,7 +45,7 @@ export const AboutUs = () => {
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>
-        </StyledListContainer>
+        </StyledTextContainer>
       </StyledListAndImageFlex>
     </FlexColumn>
   )
@@ -64,7 +64,7 @@ const StyledSideImage = styled(SideImage)`
   }
 `
 
-const StyledListContainer = styled(ListContainer)`
+const StyledTextContainer = styled(TextContainer)`
   width: 90vw;
   max-width: 900px;
 `

@@ -5,9 +5,9 @@ import { DecoratedButton } from "../common"
 import {
   DecorativeLine,
   FlexColumn,
-  List,
-  ListAndImageFlex,
   ListContainer,
+  ListAndImageFlex,
+  TextContainer,
   SectionHeading,
   SideImage,
 } from "./common"
@@ -19,11 +19,11 @@ export const ChooseUs = () => {
       <DecorativeLine />
 
       <ListAndImageFlex>
-        <ListContainer>
+        <TextContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
 
-          <List>
-            <div>
+          <ListContainer>
+            <LeftList>
               <ListItem>
                 <ListItemHeading>{t("listItemHeading1")}</ListItemHeading>
                 <ListItemParagraph>{t("listItemParagraph1")}</ListItemParagraph>
@@ -36,9 +36,9 @@ export const ChooseUs = () => {
                 <ListItemHeading>{t("listItemHeading3")}</ListItemHeading>
                 <ListItemParagraph>{t("listItemParagraph3")}</ListItemParagraph>
               </ListItem>
-            </div>
+            </LeftList>
 
-            <RightListContainer>
+            <RightList>
               <ListItem>
                 <ListItemHeading>{t("listItemHeading4")}</ListItemHeading>
                 <ListItemParagraph>{t("listItemParagraph4")}</ListItemParagraph>
@@ -51,15 +51,15 @@ export const ChooseUs = () => {
                 <ListItemHeading>{t("listItemHeading6")}</ListItemHeading>
                 <ListItemParagraph>{t("listItemParagraph6")}</ListItemParagraph>
               </ListItem>
-            </RightListContainer>
-          </List>
+            </RightList>
+          </ListContainer>
 
           <ButtonContainer>
             <DecoratedButton left right link slim href={t("Links:contact")}>
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>
-        </ListContainer>
+        </TextContainer>
 
         <SideImage alt={t("sideImageLabel")} imageName="ownerPicture" />
       </ListAndImageFlex>
@@ -71,7 +71,11 @@ const StyledFlexColumn = styled(FlexColumn)`
   background-image: ${props => props.theme.colors.background};
 `
 
-const RightListContainer = styled.div`
+const LeftList = styled.ol`
+  list-style: none;
+`
+
+const RightList = styled(LeftList)`
   margin-left: 5rem;
 
   @media only screen and ${props => props.theme.media.tabPort} {

@@ -6,7 +6,7 @@ import {
   DecorativeLine,
   ListAndImageFlex,
   SideImage,
-  ListContainer,
+  TextContainer,
   SectionHeading,
 } from "../../home/common"
 import {
@@ -25,7 +25,7 @@ export const StainResidential = () => {
       <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
         <SideImage alt={t("sideImageLabel")} imageName="stainRemoval" />
-        <ListContainer>
+        <TextContainer>
           <SectionHeading id="stain">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>
           <h4>{t("listHeading1")}</h4>
@@ -45,7 +45,7 @@ export const StainResidential = () => {
               {t("CTAButton")}
             </DecoratedButton>
           </ButtonContainer>
-        </ListContainer>
+        </TextContainer>
       </ListAndImageFlex>
     </StyledFlexColumn>
   )

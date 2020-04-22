@@ -5,9 +5,9 @@ import { DecoratedButton } from "../common"
 import {
   DecorativeLine,
   FlexColumn,
-  List,
-  ListAndImageFlex,
   ListContainer,
+  ListAndImageFlex,
+  TextContainer,
   SectionHeading,
   SideImage,
 } from "./common"
@@ -21,32 +21,32 @@ export const ServiceList = () => {
       <ListAndImageFlex reverseWrap={true}>
         <StyledSideImage alt={t("sideImageLabel")} imageName="vacuumCloseup" />
 
-        <StyledListContainer>
+        <StyledTextContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>
 
-          <List>
-            <LeftListContainer>
+          <ListContainer>
+            <LeftTextContainer>
               <ListItemGreen>{t("listItem1")}</ListItemGreen>
               <ListItemGreen>{t("listItem2")}</ListItemGreen>
               <ListItemGreen>{t("listItem3")}</ListItemGreen>
               <ListItemGreen>{t("listItem4")}</ListItemGreen>
               <ListItemGreen>{t("listItem5")}</ListItemGreen>
-            </LeftListContainer>
-            <RightListContainer>
+            </LeftTextContainer>
+            <RightTextContainer>
               <ListItemGreen>{t("listItem6")}</ListItemGreen>
               <ListItemGreen>{t("listItem7")}</ListItemGreen>
               <ListItemGreen>{t("listItem8")}</ListItemGreen>
               <ListItemGreen>{t("listItem9")}</ListItemGreen>
               <ListItemGreen>{t("listItem10")}</ListItemGreen>
-            </RightListContainer>
-          </List>
+            </RightTextContainer>
+          </ListContainer>
 
           <ButtonContainer>
             <DecoratedButton left right link slim href={t("Links:residential")}>
               {t("button")}
             </DecoratedButton>
           </ButtonContainer>
-        </StyledListContainer>
+        </StyledTextContainer>
       </ListAndImageFlex>
     </FlexColumn>
   )
@@ -61,7 +61,7 @@ const StyledSideImage = styled(SideImage)`
   }
 `
 
-const StyledListContainer = styled(ListContainer)`
+const StyledTextContainer = styled(TextContainer)`
   width: 60vw;
 
   @media only screen and ${props => props.theme.media.tabPort} {
@@ -69,7 +69,7 @@ const StyledListContainer = styled(ListContainer)`
   }
 `
 
-const RightListContainer = styled.div`
+const RightTextContainer = styled.ul`
   list-style: none;
   margin-left: 6rem;
   font-size: calc(0.00932203 * 100vw + 1.60169rem); // (3rem to 1.9rem)
@@ -81,7 +81,7 @@ const RightListContainer = styled.div`
   }
 `
 
-const LeftListContainer = styled(RightListContainer)`
+const LeftTextContainer = styled(RightTextContainer)`
   margin-left: 3rem;
 
   @media only screen and ${props => props.theme.media.tabLand} {

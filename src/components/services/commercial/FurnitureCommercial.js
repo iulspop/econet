@@ -5,7 +5,7 @@ import {
   DecorativeLine,
   ListAndImageFlex,
   SideImage,
-  ListContainer,
+  TextContainer,
   SectionHeading,
 } from "../../home/common"
 import {
@@ -23,7 +23,7 @@ export const FurnitureCommercial = () => {
     <FlexColumn>
       <DecorativeLine />
       <ListAndImageFlex>
-        <ListContainer>
+        <TextContainer>
           <SectionHeading id="furniture">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>
           <h4>{t("listHeading1")}</h4>
@@ -44,7 +44,7 @@ export const FurnitureCommercial = () => {
               {t("CTAButton")}
             </DecoratedButton>
           </ButtonContainer>
-        </ListContainer>
+        </TextContainer>
         <SideImage alt={t("sideImageLabel")} imageName="upholsteryCleaning" />
       </ListAndImageFlex>
     </FlexColumn>

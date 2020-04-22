@@ -5,7 +5,7 @@ import {
   DecorativeLine,
   ListAndImageFlex,
   SideImage,
-  ListContainer,
+  TextContainer,
   SectionHeading,
 } from "../../home/common"
 import {
@@ -23,7 +23,7 @@ export const OdourCommercial = () => {
     <FlexColumn>
       <DecorativeLine />
       <ListAndImageFlex>
-        <ListContainer>
+        <TextContainer>
           <SectionHeading id="odour">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>
           <h4>{t("listHeading1")}</h4>
@@ -42,7 +42,7 @@ export const OdourCommercial = () => {
               {t("CTAButton")}
             </DecoratedButton>
           </ButtonContainer>
-        </ListContainer>
+        </TextContainer>
         <SideImage alt={t("sideImageLabel")} imageName="odourRemoval" />
       </ListAndImageFlex>
     </FlexColumn>
