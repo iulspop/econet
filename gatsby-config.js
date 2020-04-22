@@ -9,6 +9,13 @@ module.exports = {
     siteUrl: `https://nettoyageeconet.com`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        createLinkInHead: true,
+        exclude: [`/en/404`, `/en/thank-you`, `/merci`],
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,12 +28,5 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        createLinkInHead: true,
-      },
-      exclude: [`/en/404`],
-    },
   ],
 }
