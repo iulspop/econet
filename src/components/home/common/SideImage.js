@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-export const SideImage = ({ className, ariaLabel, imageName }) => {
+export const SideImage = ({ className, alt, imageName }) => {
   const fluidImage = graphql`
     fragment fluidImage on File {
       childImageSharp {
@@ -55,7 +55,7 @@ export const SideImage = ({ className, ariaLabel, imageName }) => {
   return (
     <StyledSideImage
       className={className}
-      aria-label={ariaLabel}
+      alt={alt}
       fluid={data[imageName || "carpet"].childImageSharp.fluid}
     />
   )

@@ -45,10 +45,7 @@ export const FurnitureResidential = () => {
             </DecoratedButton>
           </ButtonContainer>
         </ListContainer>
-        <SideImage
-          ariaLabel={t("sideImageLabel")}
-          imageName="upholsteryCleaning"
-        />
+        <SideImage alt={t("sideImageLabel")} imageName="upholsteryCleaning" />
       </ListAndImageFlex>
     </FlexColumn>
   )

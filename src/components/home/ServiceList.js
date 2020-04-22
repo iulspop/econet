@@ -19,10 +19,7 @@ export const ServiceList = () => {
       <DecorativeLine />
 
       <ListAndImageFlex reverseWrap={true}>
-        <StyledSideImage
-          ariaLabel={t("sideImageLabel")}
-          imageName="vacuumCloseup"
-        />
+        <StyledSideImage alt={t("sideImageLabel")} imageName="vacuumCloseup" />
 
         <StyledListContainer>
           <SectionHeading>{t("sectionHeading")}</SectionHeading>

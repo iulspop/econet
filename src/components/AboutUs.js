@@ -23,10 +23,7 @@ export const AboutUs = () => {
     <FlexColumn>
       <DecorativeLine isPageTop="true" />
       <StyledListAndImageFlex>
-        <StyledSideImage
-          ariaLabel={t("sideImageLabel")}
-          imageName="familyEconet"
-        />
+        <StyledSideImage alt={t("sideImageLabel")} imageName="familyEconet" />
         <StyledListContainer>
           <H1>{t("mainHeading")}</H1>
           <Paragraph>{t("paragraph1")}</Paragraph>

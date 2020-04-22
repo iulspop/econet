@@ -28,7 +28,7 @@ export const BannerCommercial = () => {
             <IconLabel for="icon1">{t("tapisLabel")}</IconLabel>
             <IconImg
               src="/assets/building-icon.svg"
-              aria-label={t("tapisLabel")}
+              alt={t("tapisLabel")}
               id="icon1"
             />
           </a>
@@ -39,7 +39,7 @@ export const BannerCommercial = () => {
             <IconLabel for="icon2">{t("stainLabel")}</IconLabel>
             <IconImg
               src="/assets/spill-icon.svg"
-              aria-label={t("stainLabel")}
+              alt={t("stainLabel")}
               id="icon2"
             />
           </a>
@@ -50,7 +50,7 @@ export const BannerCommercial = () => {
             <IconLabel for="icon3">{t("furnitureLabel")}</IconLabel>
             <IconImg
               src="/assets/couch-icon.svg"
-              aria-label={t("furnitureLabel")}
+              alt={t("furnitureLabel")}
               id="icon3"
             />
           </a>
@@ -61,7 +61,7 @@ export const BannerCommercial = () => {
             <IconLabel for="icon4">{t("protectionLabel")}</IconLabel>
             <IconImg
               src="/assets/sparkle-icon.svg"
-              aria-label={t("protectionLabel")}
+              alt={t("protectionLabel")}
               id="icon4"
             />
           </a>
@@ -72,7 +72,7 @@ export const BannerCommercial = () => {
             <IconLabel for="icon5">{t("odorLabel")}</IconLabel>
             <IconImg
               src="/assets/smell-icon.svg"
-              aria-label={t("odorLabel")}
+              alt={t("odorLabel")}
               id="icon5"
             />
           </a>

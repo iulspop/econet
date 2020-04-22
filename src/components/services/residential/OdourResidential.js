@@ -43,7 +43,7 @@ export const OdourResidential = () => {
             </DecoratedButton>
           </ButtonContainer>
         </ListContainer>
-        <SideImage ariaLabel={t("sideImageLabel")} imageName="odourRemoval" />
+        <SideImage alt={t("sideImageLabel")} imageName="odourRemoval" />
       </ListAndImageFlex>
     </FlexColumn>
   )

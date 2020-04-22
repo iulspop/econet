@@ -20,7 +20,7 @@ export const RegionsDesservies = () => {
           </ButtonContainer>
         </TextContainer>
 
-        <ImageOfMap aria-label={t("mapLabel")} src="/assets/service-area.jpg" />
+        <ImageOfMap alt={t("mapLabel")} src="/assets/service-area.jpg" />
       </TextAndMapFlex>
     </FlexColumn>
   )
