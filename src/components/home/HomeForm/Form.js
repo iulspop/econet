@@ -28,6 +28,7 @@ export const Form = () => {
           name="firstName"
           id="firstName"
           placeholder=""
+          required
           onChange={handleChange}
         />
         <Label htmlFor="firstName">{t("firstName")}</Label>
@@ -45,7 +46,13 @@ export const Form = () => {
       </InputContainer>
 
       <InputContainerMarginRight>
-        <Input type="tel" name="phone" id="phone" onChange={handleChange} />
+        <Input
+          type="tel"
+          name="phone"
+          id="phone"
+          required
+          onChange={handleChange}
+        />
         <Label htmlFor="phone">{t("phone")}</Label>
       </InputContainerMarginRight>
 
@@ -55,6 +62,7 @@ export const Form = () => {
           name="email"
           id="email"
           placeholder=""
+          required
           onChange={handleChange}
         />
         <Label htmlFor="email">{t("email")}</Label>
@@ -91,6 +99,7 @@ export const Form = () => {
           id="message"
           rows="5"
           cols="33"
+          required
           onChange={handleChange}
         />
         <Label htmlFor="message">{t("message")}</Label>

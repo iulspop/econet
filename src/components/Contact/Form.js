@@ -70,6 +70,7 @@ export const Form = ({ shownForm, formName }) => {
             name="company"
             id="company"
             placeholder=""
+            required
             onChange={handleChange}
           />
           <Label htmlFor="company">{t("company")}</Label>
@@ -83,6 +84,7 @@ export const Form = ({ shownForm, formName }) => {
           name="firstName"
           id={formName === "residential" ? "firstNameRES" : "firstNameCOM"}
           placeholder=""
+          required
           onChange={handleChange}
         />
         <Label
@@ -116,6 +118,7 @@ export const Form = ({ shownForm, formName }) => {
           type="tel"
           name="phone"
           id={formName === "residential" ? "phoneRES" : "phoneCOM"}
+          required
           onChange={handleChange}
         />
         <Label htmlFor={formName === "residential" ? "phoneRES" : "phoneCOM"}>
@@ -129,6 +132,7 @@ export const Form = ({ shownForm, formName }) => {
           name="email"
           id={formName === "residential" ? "emailRES" : "emailCOM"}
           placeholder=""
+          required
           onChange={handleChange}
         />
         <Label htmlFor={formName === "residential" ? "emailRES" : "emailCOM"}>
@@ -185,6 +189,7 @@ export const Form = ({ shownForm, formName }) => {
           id={formName === "residential" ? "messageRES" : "messageCOM"}
           rows="5"
           cols="33"
+          required
           onChange={handleChange}
         />
         <Label
