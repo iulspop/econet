@@ -24,7 +24,10 @@ export const CarpetCommercial = () => {
     <StyledFlexColumn>
       <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
-        <SideImage alt={t("sideImageLabel")} imageName="carpetCleaning" />
+        <SideImage
+          alt={t("sideImageLabel")}
+          imageName="carpetCleaningCommercial"
+        />
         <TextContainer>
           <SectionHeading id="tapis">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>

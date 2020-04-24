@@ -24,7 +24,10 @@ export const StainCommercial = () => {
     <StyledFlexColumn>
       <DecorativeLine />
       <ListAndImageFlex reverseWrap="true">
-        <SideImage alt={t("sideImageLabel")} imageName="stainRemoval" />
+        <SideImage
+          alt={t("sideImageLabel")}
+          imageName="stainRemovalCommercial"
+        />
         <TextContainer>
           <SectionHeading id="stain">{t("sectionHeading")}</SectionHeading>
           <Paragraph>{t("paragraph1")}</Paragraph>

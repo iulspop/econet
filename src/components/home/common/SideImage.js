@@ -16,6 +16,11 @@ export const SideImage = ({ className, alt, imageName }) => {
 
   const data = useStaticQuery(graphql`
     query {
+      carpetCleaningCommercial: file(
+        relativePath: { eq: "carpet-cleaning-commercial.jpg" }
+      ) {
+        ...fluidImage
+      }
       carpetCleaning: file(relativePath: { eq: "carpet-cleaning.jpg" }) {
         ...fluidImage
       }
@@ -36,6 +41,11 @@ export const SideImage = ({ className, alt, imageName }) => {
         ...fluidImage
       }
       protection: file(relativePath: { eq: "protection.jpg" }) {
+        ...fluidImage
+      }
+      stainRemovalCommercial: file(
+        relativePath: { eq: "stain-removal-commercial.jpg" }
+      ) {
         ...fluidImage
       }
       stainRemoval: file(relativePath: { eq: "stain-removal.jpg" }) {
