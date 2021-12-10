@@ -1,9 +1,8 @@
 # Nettoyage Econet Website
 
-## Dependencies
+I created this website for a client when I ran my digital agency. Here's a [live demo](https://nettoyageeconet.netlify.app/).
 
-styled-components
-styled-normalize
+It uses the Gastby framework and is hosted on a CDN for ultra-fast load times. Implemented servers-side rendered translations using the I18next internationalization-framework. The CSS was done all custom to get the style just right in collaboration with the client.
 
 ## 🚀 Quick start
 
